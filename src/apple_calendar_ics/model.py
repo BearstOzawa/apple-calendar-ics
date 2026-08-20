@@ -107,3 +107,9 @@ class Feed:
     name: str
     description: str
     events: tuple[CalendarEvent, ...]
+    category: str
+    cadence: str
+    source_type: str
+    density: str
+    overlaps: tuple[str, ...] = ()
+    featured: bool = False

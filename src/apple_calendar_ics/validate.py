@@ -103,6 +103,11 @@ def validate_file(path: Path, *, max_active_events_per_day: int = 3) -> dict[str
         )
         if not kind or not concepts:
             raise CalendarValidationError(f"{path}: {uid} lacks semantic metadata")
+        data_status = str(component.get("X-CN-CALENDAR-DATA-STATUS", ""))
+        if data_status not in {"CONFIRMED", "COMPUTED", "REVIEWED"}:
+            raise CalendarValidationError(
+                f"{path}: {uid} has an unknown data status {data_status!r}"
+            )
         semantic_key = (start, end, kind, concepts)
         if semantic_key in semantic_keys:
             raise CalendarValidationError(f"{path}: duplicate semantic event {uid}")
@@ -151,11 +156,46 @@ def validate_directory(path: Path) -> dict[str, dict[str, Any]]:
     feed_entries = manifest.get("feeds")
     if not isinstance(feed_entries, dict) or not feed_entries:
         raise CalendarValidationError(f"{manifest_path}: feeds must be non-empty")
+    if manifest.get("schema_version") != 2:
+        raise CalendarValidationError(f"{manifest_path}: schema_version must be 2")
+
+    expected_files = set(feed_entries)
+    actual_files = {item.name for item in path.glob("*.ics")}
+    if actual_files != expected_files:
+        missing = sorted(expected_files - actual_files)
+        extra = sorted(actual_files - expected_files)
+        raise CalendarValidationError(
+            f"{path}: calendar file set differs; missing={missing}, extra={extra}"
+        )
 
     results: dict[str, dict[str, Any]] = {}
     for filename, expected in sorted(feed_entries.items()):
         if not isinstance(expected, dict) or not filename.endswith(".ics"):
             raise CalendarValidationError(f"{manifest_path}: invalid feed entry")
+        for key in (
+            "name",
+            "description",
+            "category",
+            "cadence",
+            "source_type",
+            "density",
+        ):
+            if not isinstance(expected.get(key), str) or not expected[key]:
+                raise CalendarValidationError(
+                    f"{manifest_path}: {filename} lacks {key}"
+                )
+        overlaps = expected.get("overlaps")
+        if not isinstance(overlaps, list) or any(
+            not isinstance(item, str) or item not in feed_entries or item == filename
+            for item in overlaps
+        ):
+            raise CalendarValidationError(
+                f"{manifest_path}: {filename} has invalid overlaps"
+            )
+        if not isinstance(expected.get("featured"), bool):
+            raise CalendarValidationError(
+                f"{manifest_path}: {filename} lacks featured state"
+            )
         result = validate_file(path / filename)
         for key in ("event_count", "first_date", "last_date", "sha256"):
             if result[key] != expected.get(key):

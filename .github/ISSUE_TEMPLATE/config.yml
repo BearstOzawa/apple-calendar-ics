@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: 订阅首页
-    url: https://bearstozawa.github.io/apple-calendar-ics/
+    url: https://apple-calendar.lili.uno/
     about: 直接订阅日历，并查看当前内容范围和避免重复的建议。
   - name: 使用说明与能力边界
-    url: https://github.com/BearstOzawa/apple-calendar-ics#快速订阅
+    url: https://github.com/BearstOzawa/apple-calendar-ics#安装方式
     about: 提交问题前，先确认安装方式、刷新机制和 ICS 能力边界。

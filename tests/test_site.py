@@ -63,7 +63,7 @@ class SiteTests(unittest.TestCase):
 
         for filename in manifest["feeds"]:
             self.assertIn(
-                f"webcal://bearstozawa.github.io/apple-calendar-ics/{filename}",
+                f"webcal://apple-calendar.lili.uno/{filename}",
                 links,
             )
             self.assertIn(filename, copy_targets)

@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="面向 iPhone、iPad 与 Mac 的中国法定班休、传统节日和二十四节气订阅。数据可追溯，自动更新，不占用忙闲状态。"
+      content="面向 iPhone、iPad 与 Mac 的中国日历频道中心：法定班休、传统黄历、二十八星宿、中国时令、月相、重要天象与星座季节。"
     />
     <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="light" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
-    <meta property="og:title" content="中国日历订阅" />
+    <meta property="og:title" content="中国日历频道" />
     <meta
       property="og:description"
-      content="为 Apple 日历提供清晰、安静、可追溯的中国日期信息。"
+      content="为 Apple 日历提供清晰、可组合、可追溯的中国日期信息。"
     />
     <meta
       property="og:url"
-      content="https://bearstozawa.github.io/apple-calendar-ics/"
+      content="https://apple-calendar.lili.uno/"
     />
     <link
       rel="canonical"
-      href="https://bearstozawa.github.io/apple-calendar-ics/"
+      href="https://apple-calendar.lili.uno/"
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <title>中国日历订阅｜适用于 Apple 日历</title>
+    <title>中国日历频道｜适用于 Apple 日历</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="tarot.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -34,18 +35,19 @@
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="./" aria-label="中国日历订阅首页">
+        <a class="brand" href="./" aria-label="中国日历频道首页">
           <svg class="brand-icon" viewBox="0 0 40 40" aria-hidden="true">
             <rect x="4" y="5" width="32" height="31" rx="8" />
             <path d="M4 15h32M13 3v6M27 3v6" />
             <path d="m14 25 4 4 8-9" />
           </svg>
-          <span>中国日历订阅</span>
+          <span>中国日历频道</span>
         </a>
 
         <nav class="site-nav" aria-label="主要导航">
-          <a href="#subscriptions">订阅方案</a>
-          <a href="#standards">日历标准</a>
+          <a href="#recommended">基础日历</a>
+          <a href="#channels">频道中心</a>
+          <a href="#tarot">塔罗工具</a>
           <a href="#guide">使用指南</a>
         </nav>
 
@@ -66,111 +68,67 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-content">
-            <h1>
-              中国日期信息，<br />准确进入<br class="mobile-only" />
-              Apple 日历。
-            </h1>
+            <h1>把中国日期信息，按你需要的方式放进 Apple 日历。</h1>
             <p class="hero-summary">
-              依据国务院正式通知与固定版本历法规则生成。按需订阅、自动更新，并完整保留来源和版本信息。
+              从法定班休到传统黄历、星宿时令与月相天象。每个频道独立订阅，来源和计算版本公开，不把所有内容塞进同一个日历。
             </p>
             <div class="hero-actions">
-              <a
-                class="button button-primary"
-                href="webcal://bearstozawa.github.io/apple-calendar-ics/essential.ics"
-              >
-                添加精选日历
+              <a class="button button-primary" href="#channels">
+                浏览全部频道
                 <svg viewBox="0 0 18 18" aria-hidden="true">
                   <path d="M3.5 9h11M10 4.5 14.5 9 10 13.5" />
                 </svg>
               </a>
-              <a class="button button-link" href="#subscriptions"
-                >比较订阅方案</a
+              <a
+                class="button button-link"
+                href="webcal://apple-calendar.lili.uno/essential.ics"
+                >直接添加精选</a
               >
             </div>
-            <p class="compatibility">适用于 iPhone、iPad 与 Mac · 只读订阅</p>
+            <p class="compatibility">
+              适用于 iPhone、iPad 与 Mac · 只读订阅 · 无默认提醒
+            </p>
           </div>
 
-          <div
-            class="calendar-preview"
-            role="group"
-            aria-label="2026 年 10 月日历示例"
-          >
-            <div class="preview-header">
+          <div class="channel-preview" aria-label="多频道日历展示示例">
+            <div class="preview-topline">
               <div>
-                <strong>2026 年 10 月</strong>
-                <span>中国日历・精选</span>
+                <strong>8 月 20 日</strong>
+                <span>星期四 · 农历七月初八</span>
               </div>
-              <span class="preview-status"><i></i>已审核</span>
+              <time datetime="2026-08-20">20</time>
             </div>
-
-            <div class="calendar-weekdays" aria-hidden="true">
-              <span>一</span><span>二</span><span>三</span><span>四</span
-              ><span>五</span><span>六</span><span>日</span>
+            <div class="preview-stream">
+              <div class="preview-row preview-row-red">
+                <span>精选</span>
+                <div>
+                  <strong>中国日期信息</strong>
+                  <small>安静保留真正重要的日期</small>
+                </div>
+              </div>
+              <div class="preview-row preview-row-gold">
+                <span>黄历</span>
+                <div>
+                  <strong>丙寅日 · 宜破屋、坏垣</strong>
+                  <small>冲猴煞北 · 传统民俗参考</small>
+                </div>
+              </div>
+              <div class="preview-row preview-row-indigo">
+                <span>星宿</span>
+                <div>
+                  <strong>角木蛟 · 吉</strong>
+                  <small>破日 · 天刑 · 一白水天枢</small>
+                </div>
+              </div>
+              <div class="preview-row preview-row-blue">
+                <span>月相</span>
+                <div>
+                  <strong>上弦月</strong>
+                  <small>北京时间 10:46</small>
+                </div>
+              </div>
             </div>
-            <div class="calendar-days">
-              <span class="day empty"></span>
-              <span class="day empty"></span>
-              <span class="day empty"></span>
-              <time
-                class="day holiday"
-                datetime="2026-10-01"
-                title="10月1日，国庆节假期"
-                ><b>1</b><small>休</small></time
-              >
-              <time class="day holiday" datetime="2026-10-02"><b>2</b></time>
-              <time class="day holiday weekend" datetime="2026-10-03"
-                ><b>3</b></time
-              >
-              <time class="day holiday weekend" datetime="2026-10-04"
-                ><b>4</b></time
-              >
-              <time class="day holiday" datetime="2026-10-05"><b>5</b></time>
-              <time class="day holiday" datetime="2026-10-06"><b>6</b></time>
-              <time class="day holiday" datetime="2026-10-07"><b>7</b></time>
-              <time class="day term" datetime="2026-10-08" title="10月8日，寒露"
-                ><b>8</b><small>寒露</small></time
-              >
-              <time class="day" datetime="2026-10-09"><b>9</b></time>
-              <time
-                class="day workday weekend"
-                datetime="2026-10-10"
-                title="10月10日，国庆节调休上班"
-                ><b>10</b><small>班</small></time
-              >
-              <time class="day weekend" datetime="2026-10-11"><b>11</b></time>
-              <time class="day" datetime="2026-10-12"><b>12</b></time>
-              <time class="day" datetime="2026-10-13"><b>13</b></time>
-              <time class="day" datetime="2026-10-14"><b>14</b></time>
-              <time class="day" datetime="2026-10-15"><b>15</b></time>
-              <time class="day" datetime="2026-10-16"><b>16</b></time>
-              <time class="day weekend" datetime="2026-10-17"><b>17</b></time>
-              <time class="day weekend" datetime="2026-10-18"><b>18</b></time>
-              <time class="day" datetime="2026-10-19"><b>19</b></time>
-              <time class="day" datetime="2026-10-20"><b>20</b></time>
-              <time class="day" datetime="2026-10-21"><b>21</b></time>
-              <time class="day" datetime="2026-10-22"><b>22</b></time>
-              <time
-                class="day term"
-                datetime="2026-10-23"
-                title="10月23日，霜降"
-                ><b>23</b><small>霜降</small></time
-              >
-              <time class="day weekend" datetime="2026-10-24"><b>24</b></time>
-              <time class="day weekend" datetime="2026-10-25"><b>25</b></time>
-              <time class="day" datetime="2026-10-26"><b>26</b></time>
-              <time class="day" datetime="2026-10-27"><b>27</b></time>
-              <time class="day" datetime="2026-10-28"><b>28</b></time>
-              <time class="day" datetime="2026-10-29"><b>29</b></time>
-              <time class="day" datetime="2026-10-30"><b>30</b></time>
-              <time class="day weekend" datetime="2026-10-31"><b>31</b></time>
-              <span class="day empty"></span>
-            </div>
-
-            <div class="preview-event">
-              <span class="event-date">10月1—7日</span>
-              <span class="event-dot holiday-dot"></span>
-              <strong>休｜国庆节假期（7天）</strong>
-            </div>
+            <p>每个频道都可以单独开关和设置颜色。</p>
           </div>
         </div>
       </section>
@@ -178,16 +136,16 @@
       <section class="data-snapshot" aria-label="当前数据状态">
         <div class="container snapshot-grid">
           <div>
+            <span>可订阅频道</span>
+            <strong><b data-channel-count>8</b> 个</strong>
+          </div>
+          <div>
             <span>法定班休</span>
             <strong>确认至 <b data-work-rest-year>2026</b> 年</strong>
           </div>
           <div>
-            <span>文化日期</span>
+            <span>算法日期</span>
             <strong>覆盖至 <b data-culture-year>2030</b> 年</strong>
-          </div>
-          <div>
-            <span>精选日历</span>
-            <strong><b data-feed-count="essential.ics">224</b> 条事件</strong>
           </div>
           <div>
             <span>数据版本</span>
@@ -196,48 +154,40 @@
         </div>
       </section>
 
-      <section class="subscriptions section" id="subscriptions">
+      <section class="section recommended" id="recommended">
         <div class="container">
-          <div class="section-intro">
-            <h2>选择一个订阅方案</h2>
-            <p>“精选”已经包含全部班休内容。两个方案同时订阅会产生重复事件。</p>
+          <div class="section-intro split-intro">
+            <h2>先选一个基础日历</h2>
+            <p>
+              “精选”包含全部班休内容。基础日历只需二选一，再从频道中心添加你真正关心的内容。
+            </p>
           </div>
 
           <div class="plan-comparison">
             <article class="plan plan-featured">
               <div class="plan-heading">
                 <div>
-                  <p class="plan-role">默认方案</p>
+                  <span class="plan-label">默认推荐</span>
                   <h3>中国日历・精选</h3>
                 </div>
-                <span><b data-feed-count="essential.ics">224</b> 条事件</span>
+                <strong><b data-feed-count="essential.ics">224</b> 条</strong>
               </div>
-              <p class="plan-description">
-                在一个日历中查看法定放假、调休上班、核心传统节日与二十四节气。
+              <p>
+                法定放假、调休上班、核心传统节日与二十四节气，已经完成语义去重。
               </p>
-              <ul class="plan-features">
-                <li>法定班休：2025—<b data-work-rest-year>2026</b></li>
-                <li>传统节日与节气：2025—<b data-culture-year>2030</b></li>
-                <li>适合没有其他中国日期订阅的用户</li>
+              <ul>
+                <li>一段连续假期只生成一条事件</li>
+                <li>传统节日与节气覆盖至 2030 年</li>
+                <li>适合希望一个订阅解决基础需求的用户</li>
               </ul>
               <div class="plan-actions">
                 <a
                   class="button button-primary"
-                  href="webcal://bearstozawa.github.io/apple-calendar-ics/essential.ics"
-                  >添加到 Apple 日历</a
+                  href="webcal://apple-calendar.lili.uno/essential.ics"
+                  >添加精选日历</a
                 >
-                <button
-                  class="copy-button"
-                  type="button"
-                  data-copy="essential.ics"
-                >
-                  <svg viewBox="0 0 18 18" aria-hidden="true">
-                    <rect x="6" y="6" width="9" height="9" rx="2" />
-                    <path
-                      d="M12 6V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"
-                    />
-                  </svg>
-                  复制 HTTPS 地址
+                <button class="copy-button" type="button" data-copy="essential.ics">
+                  复制地址
                 </button>
               </div>
             </article>
@@ -245,147 +195,340 @@
             <article class="plan">
               <div class="plan-heading">
                 <div>
-                  <p class="plan-role">最小方案</p>
+                  <span class="plan-label">最小方案</span>
                   <h3>中国班休</h3>
                 </div>
-                <span><b data-feed-count="work-rest.ics">24</b> 条事件</span>
+                <strong><b data-feed-count="work-rest.ics">24</b> 条</strong>
               </div>
-              <p class="plan-description">
-                只提供国务院正式公布的放假与调休上班信息，不包含传统节日和节气。
+              <p>
+                只发布国务院正式公布的放假与调休上班信息，不附加节日、节气或民俗内容。
               </p>
-              <ul class="plan-features">
-                <li>法定班休：2025—<b data-work-rest-year>2026</b></li>
-                <li>不包含传统节日和二十四节气</li>
-                <li>适合已经使用其他农历或节日来源的用户</li>
+              <ul>
+                <li>正式通知发布并人工复核后更新</li>
+                <li>标题明确区分“休”与“班”</li>
+                <li>适合已经使用其他中国日历来源的用户</li>
               </ul>
               <div class="plan-actions">
                 <a
                   class="button button-secondary"
-                  href="webcal://bearstozawa.github.io/apple-calendar-ics/work-rest.ics"
+                  href="webcal://apple-calendar.lili.uno/work-rest.ics"
                   >添加班休日历</a
                 >
-                <button
-                  class="copy-button"
-                  type="button"
-                  data-copy="work-rest.ics"
-                >
-                  <svg viewBox="0 0 18 18" aria-hidden="true">
-                    <rect x="6" y="6" width="9" height="9" rx="2" />
-                    <path
-                      d="M12 6V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1"
-                    />
-                  </svg>
-                  复制 HTTPS 地址
+                <button class="copy-button" type="button" data-copy="work-rest.ics">
+                  复制地址
                 </button>
               </div>
             </article>
           </div>
 
           <p class="duplicate-note">
-            选择“精选”后，请关闭 Apple
-            自带的“中国大陆节假日”和其他综合日历源，以避免同一节日重复显示。
+            请勿同时订阅“精选”和“班休”。若使用“精选”，也建议关闭 Apple
+            自带的“中国大陆节假日”和其他综合节日源。
           </p>
         </div>
       </section>
 
-      <section class="standards section" id="standards">
+      <section class="section channel-center" id="channels">
+        <div class="container">
+          <div class="section-intro split-intro">
+            <h2>再添加你真正需要的频道</h2>
+            <p>
+              每个频道都有明确的频率、来源类型和内容边界。高频频道默认不进入精选。
+            </p>
+          </div>
+
+          <section class="channel-group" aria-labelledby="traditional-title">
+            <div class="channel-group-heading">
+              <div>
+                <h3 id="traditional-title">传统历法</h3>
+                <p>固定版本历法规则生成，统一标注为传统民俗参考。</p>
+              </div>
+              <span>3 个频道</span>
+            </div>
+
+            <div class="channel-list">
+              <article class="channel-item channel-gold">
+                <div class="channel-mark" aria-hidden="true">历</div>
+                <div class="channel-copy">
+                  <h4>中国黄历</h4>
+                  <p>
+                    每日农历、干支、宜忌、冲煞、彭祖百忌、神位与星宿摘要。
+                  </p>
+                  <div class="channel-facts">
+                    <span>每日一条</span><span>算法生成</span
+                    ><span><b data-feed-count="almanac.ics">2191</b> 条</span>
+                  </div>
+                </div>
+                <div class="channel-actions">
+                  <a
+                    href="webcal://apple-calendar.lili.uno/almanac.ics"
+                    >添加频道</a
+                  >
+                  <button type="button" data-copy="almanac.ics">复制</button>
+                </div>
+              </article>
+
+              <article class="channel-item channel-indigo">
+                <div class="channel-mark" aria-hidden="true">宿</div>
+                <div class="channel-copy">
+                  <h4>二十八星宿</h4>
+                  <p>
+                    每日星宿与吉凶、十二值星、值日天神、九星和星宿歌。
+                  </p>
+                  <div class="channel-facts">
+                    <span>每日一条</span><span>算法生成</span
+                    ><span><b data-feed-count="lunar-mansions.ics">2191</b> 条</span>
+                  </div>
+                </div>
+                <div class="channel-actions">
+                  <a
+                    href="webcal://apple-calendar.lili.uno/lunar-mansions.ics"
+                    >添加频道</a
+                  >
+                  <button type="button" data-copy="lunar-mansions.ics">复制</button>
+                </div>
+              </article>
+
+              <aside class="overlap-note" role="note">
+                <strong>避免重复：</strong>
+                黄历已经包含星宿摘要。只有希望查看完整星宿歌和专门信息时，才单独选择“二十八星宿”。
+              </aside>
+
+              <article class="channel-item channel-green">
+                <div class="channel-mark" aria-hidden="true">候</div>
+                <div class="channel-copy">
+                  <h4>中国时令</h4>
+                  <p>七十二候、数九与三伏，只在时令发生变化时发布事件。</p>
+                  <div class="channel-facts">
+                    <span>约每五日</span><span>算法生成</span
+                    ><span><b data-feed-count="seasonal.ics">504</b> 条</span>
+                  </div>
+                </div>
+                <div class="channel-actions">
+                  <a
+                    href="webcal://apple-calendar.lili.uno/seasonal.ics"
+                    >添加频道</a
+                  >
+                  <button type="button" data-copy="seasonal.ics">复制</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="channel-group" aria-labelledby="sky-title">
+            <div class="channel-group-heading">
+              <div>
+                <h3 id="sky-title">天文与星象</h3>
+                <p>以北京时间呈现确定性天象；不生成随机或模板化运势。</p>
+              </div>
+              <span>3 个频道</span>
+            </div>
+
+            <div class="channel-list">
+              <article class="channel-item channel-blue">
+                <div class="channel-mark" aria-hidden="true">月</div>
+                <div class="channel-copy">
+                  <h4>月相</h4>
+                  <p>新月、上弦月、满月与下弦月，详情保留准确北京时间。</p>
+                  <div class="channel-facts">
+                    <span>每月四次</span><span>天文算法</span
+                    ><span><b data-feed-count="moon-phases.ics">297</b> 条</span>
+                  </div>
+                </div>
+                <div class="channel-actions">
+                  <a
+                    href="webcal://apple-calendar.lili.uno/moon-phases.ics"
+                    >添加频道</a
+                  >
+                  <button type="button" data-copy="moon-phases.ics">复制</button>
+                </div>
+              </article>
+
+              <article class="channel-item channel-sky">
+                <div class="channel-mark" aria-hidden="true">象</div>
+                <div class="channel-copy">
+                  <h4>重要天象</h4>
+                  <p>
+                    日月食、九场主要流星雨、火木土星冲日，以及水星金星大距。
+                  </p>
+                  <div class="channel-facts">
+                    <span>不定期</span><span>算法 + IMO 年表</span
+                    ><span><b data-feed-count="sky-events.ics">141</b> 条</span>
+                  </div>
+                </div>
+                <div class="channel-actions">
+                  <a
+                    href="webcal://apple-calendar.lili.uno/sky-events.ics"
+                    >添加频道</a
+                  >
+                  <button type="button" data-copy="sky-events.ics">复制</button>
+                </div>
+              </article>
+
+              <article class="channel-item channel-violet">
+                <div class="channel-mark" aria-hidden="true">座</div>
+                <div class="channel-copy">
+                  <h4>星座季节</h4>
+                  <p>
+                    太阳进入十二热带黄道区段的时间，只发布星象，不提供个人运势。
+                  </p>
+                  <div class="channel-facts">
+                    <span>每月一次</span><span>天文算法</span
+                    ><span><b data-feed-count="zodiac-seasons.ics">72</b> 条</span>
+                  </div>
+                </div>
+                <div class="channel-actions">
+                  <a
+                    href="webcal://apple-calendar.lili.uno/zodiac-seasons.ics"
+                    >添加频道</a
+                  >
+                  <button type="button" data-copy="zodiac-seasons.ics">复制</button>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="tarot-section" id="tarot">
+        <div class="container tarot-layout">
+          <div class="tarot-intro">
+            <h2>塔罗不应该是一份所有人相同的公共订阅。</h2>
+            <p>
+              因此这里提供本地抽牌和个人研习日历。抽取、排序与 ICS
+              生成全部在浏览器内完成，不上传生日、问题或抽牌结果。
+            </p>
+            <ul>
+              <li>今日牌卡在同一设备上保持稳定</li>
+              <li>可把结果作为一条私人全天事件加入日历</li>
+              <li>78 日研习由你选择开始日期并一次生成</li>
+            </ul>
+            <p class="tarot-disclaimer">
+              用于文化学习与自我反思，不构成心理、医疗、财务或其他专业建议。
+            </p>
+          </div>
+
+          <div class="tarot-tools">
+            <section class="tarot-tool tarot-daily" aria-labelledby="daily-tarot-title">
+              <div class="tool-heading">
+                <div>
+                  <span>个人工具</span>
+                  <h3 id="daily-tarot-title">每日一牌</h3>
+                </div>
+                <small>仅保存在本设备</small>
+              </div>
+              <div class="tarot-card-result" data-tarot-result hidden>
+                <div class="tarot-card-face">
+                  <span data-tarot-symbol>XVII</span>
+                  <strong data-tarot-name>星星</strong>
+                  <small data-tarot-orientation>正位</small>
+                </div>
+                <div class="tarot-reading">
+                  <span data-tarot-arcana>大阿卡那</span>
+                  <strong data-tarot-keywords>希望 · 疗愈 · 指引</strong>
+                  <p data-tarot-reflection>
+                    有什么微小但真实的希望值得继续照料？
+                  </p>
+                </div>
+              </div>
+              <div class="tool-actions">
+                <button class="button tarot-primary" type="button" data-tarot-draw>
+                  抽取今日牌卡
+                </button>
+                <button
+                  class="button tarot-secondary"
+                  type="button"
+                  data-tarot-daily-download
+                  hidden
+                >
+                  加入今日日历
+                </button>
+              </div>
+            </section>
+
+            <section class="tarot-tool tarot-study" aria-labelledby="study-title">
+              <div class="tool-heading">
+                <div>
+                  <span>个人日历</span>
+                  <h3 id="study-title">塔罗 78 日研习</h3>
+                </div>
+                <small>生成 78 条私人事件</small>
+              </div>
+              <p>
+                每天认识一张牌，阅读关键词并留下一次自省。下载后由你决定是否导入 Apple 日历。
+              </p>
+              <form data-tarot-study-form>
+                <label for="study-start">开始日期</label>
+                <div class="study-controls">
+                  <input
+                    id="study-start"
+                    type="date"
+                    required
+                    data-tarot-study-start
+                  />
+                  <button class="button tarot-primary" type="submit">
+                    生成个人 ICS
+                  </button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section standards" id="standards">
         <div class="container standards-grid">
           <div class="standards-intro">
-            <h2>为日历行为设定明确标准</h2>
+            <h2>不同内容，不混用同一种可信度标签</h2>
             <p>
-              不以“内容越多越好”为目标。每一条事件都必须清晰、低干扰，并能在更新后保持身份稳定。
+              页面和日历详情都会区分官方数据、算法计算、年表校对与民俗参考。
             </p>
+            <a
+              href="https://github.com/BearstOzawa/apple-calendar-ics/blob/main/DATA_LICENSE.md"
+              >查看完整数据与许可说明</a
+            >
           </div>
 
           <div class="standard-list">
             <article>
-              <span>01</span>
+              <span>官方</span>
               <div>
-                <h3>一段假期，一条事件</h3>
-                <p>连续假期统一为跨日事件，不按天拆分，也不生成“第 N 天”。</p>
+                <h3>法定班休只采用正式通知</h3>
+                <p>不把预测日期、媒体报道或第三方接口直接写入正式订阅。</p>
               </div>
             </article>
             <article>
-              <span>02</span>
+              <span>算法</span>
               <div>
-                <h3>默认不打扰</h3>
-                <p>全天、透明、无默认提醒；不会占用个人日程的忙闲状态。</p>
+                <h3>固定版本，结果可复现</h3>
+                <p>历法与天文库锁定版本，输入范围、时区和生成逻辑进入测试。</p>
               </div>
             </article>
             <article>
-              <span>03</span>
+              <span>民俗</span>
               <div>
-                <h3>更新后不制造重复</h3>
-                <p>稳定 UID 与受控 SEQUENCE 保证同一事件在版本间持续可识别。</p>
+                <h3>黄历与星宿不包装成决策建议</h3>
+                <p>不同传统可能存在口径差异，事件详情始终保留文化参考说明。</p>
               </div>
             </article>
             <article>
-              <span>04</span>
+              <span>安静</span>
               <div>
-                <h3>Apple 增强不是依赖</h3>
-                <p>
-                  私有字段只增强显示；即使被忽略，“休｜”与“班｜”仍保留完整语义。
-                </p>
+                <h3>全天、透明、无默认提醒</h3>
+                <p>所有公共频道不占用忙闲状态，稳定 UID 避免更新后重复。</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="governance section">
-        <div class="container">
-          <div class="section-intro governance-heading">
-            <h2>正式来源进入日历之前，经过四个环节</h2>
-            <p>自动化用于发现变化与保证一致性，不替代对法定安排的人工核对。</p>
-          </div>
-
-          <ol class="process">
-            <li>
-              <span>1</span>
-              <h3>来源确认</h3>
-              <p>仅以国务院办公厅正式通知作为班休依据。</p>
-            </li>
-            <li>
-              <span>2</span>
-              <h3>结构化复核</h3>
-              <p>核对日期区间、调休日、文号和原始链接。</p>
-            </li>
-            <li>
-              <span>3</span>
-              <h3>确定性生成</h3>
-              <p>使用固定规则生成稳定 UID、标题和事件属性。</p>
-            </li>
-            <li>
-              <span>4</span>
-              <h3>校验后发布</h3>
-              <p>通过格式、语义、重复和哈希检查后部署。</p>
-            </li>
-          </ol>
-
-          <div class="source-line">
-            <div>
-              <span class="source-status"><i></i>当前正式班休已确认</span>
-              <strong>2025—<b data-work-rest-year>2026</b></strong>
-            </div>
-            <p>
-              2027
-              年安排尚未正式公布。项目不会以预测数据填充，候选上游的变化只会进入审核流程。
-            </p>
-            <a
-              href="https://github.com/BearstOzawa/apple-calendar-ics/blob/main/DATA_LICENSE.md"
-              >查看数据来源与许可</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="guide section" id="guide">
+      <section class="section guide" id="guide">
         <div class="container guide-grid">
           <div class="guide-intro">
-            <h2>在 Apple 设备上添加订阅</h2>
+            <h2>添加到 Apple 日历</h2>
             <p>
-              通过页面按钮可以直接唤起日历。也可以复制 HTTPS
-              地址，在系统设置中手动添加。
+              点击“添加频道”可以唤起系统订阅。也可以复制 HTTPS
+              地址，在日历设置中手动添加。
             </p>
             <div class="platform-tabs" role="tablist" aria-label="选择设备">
               <button
@@ -421,17 +564,12 @@
               aria-labelledby="tab-mobile"
               data-panel="mobile"
             >
+              <li><span>1</span><p>在 Safari 打开本页并选择一个频道。</p></li>
               <li>
-                <span>1</span>
-                <p>在 Safari 打开本页，选择一个订阅方案。</p>
+                <span>2</span><p>点击“添加频道”，确认打开系统日历。</p>
               </li>
               <li>
-                <span>2</span>
-                <p>点击“添加到 Apple 日历”，确认打开系统日历。</p>
-              </li>
-              <li>
-                <span>3</span>
-                <p>核对日历名称后完成订阅，并按需要设置颜色。</p>
+                <span>3</span><p>核对名称后完成订阅，再按需要设置颜色。</p>
               </li>
             </ol>
             <ol
@@ -443,54 +581,47 @@
               hidden
             >
               <li>
-                <span>1</span>
-                <p>打开“日历”，选择“文件 → 新建日历订阅”。</p>
+                <span>1</span><p>打开“日历”，选择“文件 → 新建日历订阅”。</p>
               </li>
+              <li><span>2</span><p>粘贴频道的 HTTPS 地址并确认。</p></li>
               <li>
-                <span>2</span>
-                <p>粘贴对应方案的 HTTPS 地址并确认。</p>
-              </li>
-              <li>
-                <span>3</span>
-                <p>选择日历位置、颜色和自动刷新频率后保存。</p>
+                <span>3</span><p>选择颜色和自动刷新频率后保存。</p>
               </li>
             </ol>
           </div>
         </div>
       </section>
 
-      <section class="faq section">
+      <section class="section faq">
         <div class="container faq-grid">
           <div>
             <h2>使用边界</h2>
-            <p>订阅前需要了解的同步、兼容性和隐私说明。</p>
+            <p>订阅前需要了解的同步、重叠、天象和隐私说明。</p>
           </div>
           <div class="faq-list">
             <details>
               <summary>为什么发布后没有立即出现在设备上？</summary>
               <p>
-                设备端刷新由 iOS、iPadOS 或 macOS 控制，GitHub Pages
-                更新并不等同于实时推送。Mac 可以在订阅设置中选择自动刷新频率。
+                刷新时机由 iOS、iPadOS 或 macOS 控制。GitHub Pages
+                更新不等于实时推送，Mac 可以在订阅设置中调整刷新频率。
               </p>
             </details>
             <details>
-              <summary>这个订阅会读取我的个人日程吗？</summary>
+              <summary>天象事件一定能在我所在城市看到吗？</summary>
               <p>
-                不会。ICS
-                是单向、只读的公开订阅，本项目无法访问、修改或上传你的个人日程。
+                不一定。日月食、流星雨与行星观测还受到地理位置、昼夜、天气、月光和光污染影响；频道只提供全球事件和参考时间。
               </p>
             </details>
             <details>
-              <summary>能完全还原国产手机系统的日历体验吗？</summary>
+              <summary>黄历、星宿和星座内容是什么性质？</summary>
               <p>
-                不能。系统级农历、桌面组件和专用班休样式不属于标准 ICS
-                能力。本项目优先保证日期内容、事件语义和更新稳定性。
+                黄历与星宿属于传统民俗文化；星座季节采用可复现的热带黄道计算。项目不发布个人运势，也不把这些内容作为现实决策依据。
               </p>
             </details>
             <details>
-              <summary>为什么没有提前提供下一年的法定安排？</summary>
+              <summary>塔罗工具会收集我的问题或抽牌结果吗？</summary>
               <p>
-                班休只在国务院正式通知公布并完成核对后发布。项目不会使用预测日期填充正式订阅。
+                不会。抽牌与 ICS 生成在浏览器本地完成，没有账号、上传接口或远程存储。生成文件只有在你主动导入后才进入个人日历。
               </p>
             </details>
           </div>
@@ -507,12 +638,15 @@
               <path d="M4 15h32M13 3v6M27 3v6" />
               <path d="m14 25 4 4 8-9" />
             </svg>
-            <span>中国日历订阅</span>
+            <span>中国日历频道</span>
           </a>
-          <p>面向 Apple 日历的开源中国日期信息订阅。</p>
+          <p>面向 Apple 日历的开源中国日期信息服务。</p>
         </div>
         <nav aria-label="页脚导航">
           <a href="manifest.json">版本清单</a>
+          <a href="https://bearstozawa.github.io/apple-calendar-ics/"
+            >GitHub Pages 源站</a
+          >
           <a
             href="https://github.com/BearstOzawa/apple-calendar-ics/blob/main/DATA_LICENSE.md"
             >数据与许可</a

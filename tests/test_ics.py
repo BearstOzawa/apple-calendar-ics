@@ -49,9 +49,22 @@ class IcsTests(unittest.TestCase):
                 {path.name: path.read_bytes() for path in output.iterdir()},
             )
             results = validate_directory(output)
+            self.assertEqual(
+                {
+                    "almanac.ics",
+                    "essential.ics",
+                    "lunar-mansions.ics",
+                    "moon-phases.ics",
+                    "seasonal.ics",
+                    "sky-events.ics",
+                    "work-rest.ics",
+                    "zodiac-seasons.ics",
+                },
+                set(results),
+            )
             self.assertEqual(224, results["essential.ics"]["event_count"])
             self.assertEqual(24, results["work-rest.ics"]["event_count"])
-            for filename in ("essential.ics", "work-rest.ics"):
+            for filename in results:
                 calendar = Calendar.from_ical((output / filename).read_bytes())
                 self.assertGreater(len(tuple(calendar.walk("VEVENT"))), 0)
 
