@@ -1,0 +1,98 @@
+name: Apple 日历兼容性反馈
+description: 报告 iPhone、iPad 或 Mac 上的订阅、刷新、重复或显示问题
+title: "[兼容性] "
+labels:
+  - apple-compatibility
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Apple 系统决定订阅刷新的具体时机。请提供设备和系统版本，并先排除同时订阅多个综合日历源造成的重复。
+
+  - type: dropdown
+    id: feed
+    attributes:
+      label: 使用的订阅
+      options:
+        - 中国日历・精选（essential.ics）
+        - 中国班休（work-rest.ics）
+        - 两个订阅都已添加
+        - 暂不确定
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: 设备
+      placeholder: 例如：iPhone 17 Pro、iPad Air、MacBook Pro
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: 系统版本
+      placeholder: 例如：iOS 20.0、iPadOS 20.0、macOS 27.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: 问题类型
+      options:
+        - 无法添加订阅
+        - 订阅未刷新或内容过旧
+        - 事件重复
+        - 标题、日期或全天状态显示异常
+        - 颜色、图标或特殊样式异常
+        - 其他兼容性问题
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际表现
+      description: 说明你看到的结果、首次发生时间以及问题是否持续存在。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 从添加订阅开始，列出能够稳定复现问题的最短步骤。
+      placeholder: |
+        1. 打开……
+        2. 添加……
+        3. 查看……
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望表现
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 脱敏诊断信息
+      description: 可附订阅设置、事件详情或 manifest 版本截图；请裁掉个人日程、Apple ID 和其他隐私信息。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我已检查 `essential.ics`、`work-rest.ics`、Apple 自带节假日及其他综合日历源是否同时启用。
+          required: true
+        - label: 我已搜索现有 Issue，确认没有相同设备与系统版本的报告。
+          required: true
+        - label: 我提供的截图和文本不含个人日程、账户信息或其他敏感数据。
+          required: true
