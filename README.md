@@ -1,73 +1,115 @@
-# Apple Calendar ICS
+# 中国日历订阅
 
-面向 iPhone 和 Mac 的中国日历订阅：清爽、可审核、可组合。
+面向 iPhone、iPad 与 Mac 的中国日期信息订阅服务。提供法定放假与调休、核心传统节日和二十四节气；数据来源可追溯，构建结果可复现，发布过程可审核。
 
-这个项目不追求把所有节日都塞进一份大日历。它把国务院正式班休安排、核心传统节日和二十四节气规范化后重新生成，重点解决重复事件、逐日假期、默认闹钟、忙碌占用和 UID 不稳定等问题。
+[![Verify calendars](https://github.com/BearstOzawa/apple-calendar-ics/actions/workflows/ci.yml/badge.svg)](https://github.com/BearstOzawa/apple-calendar-ics/actions/workflows/ci.yml)
+[![Publish calendars](https://github.com/BearstOzawa/apple-calendar-ics/actions/workflows/publish.yml/badge.svg)](https://github.com/BearstOzawa/apple-calendar-ics/actions/workflows/publish.yml)
 
-## 订阅
+[订阅首页](https://bearstozawa.github.io/apple-calendar-ics/) · [版本清单](https://bearstozawa.github.io/apple-calendar-ics/manifest.json) · [数据与许可](DATA_LICENSE.md)
 
-GitHub Pages 启用后，可以使用以下稳定地址：
+## 产品定位
 
-| 订阅 | 内容 | 地址 |
-| --- | --- | --- |
-| 中国日历・精选 | 法定班休、核心传统节日、二十四节气 | `https://bearstozawa.github.io/apple-calendar-ics/essential.ics` |
-| 中国班休 | 仅法定放假和调休上班 | `https://bearstozawa.github.io/apple-calendar-ics/work-rest.ics` |
+国内手机系统通常在操作系统层整合农历、节气、法定班休和专用视觉标记。Apple 日历可以订阅区域节假日，但难以同时满足内容可组合、事件不重复、班休语义明确和数据来源可审核等需求。
 
-当前数据范围：
+本项目在标准 ICS 能力范围内提供一层稳定的数据服务：
 
-- 法定放假和调休：2025—2026 年，均附国务院正式通知。
-- 传统节日和二十四节气：2025—2030 年，由固定版本历法库计算。
-- 2027 年法定班休尚未正式公布，因此不会用预测数据填充。
+- **清晰**：连续假期合并为一条跨日事件，补班与休假使用明确标题。
+- **安静**：所有事件均为全天、透明事件，不占用忙闲状态，不附带默认提醒。
+- **可组合**：提供综合日历与纯班休日历，用户按已有日历配置选择其一。
+- **可追溯**：法定班休仅采用国务院正式通知，保留来源、文号和发布日期。
+- **可持续**：稳定 UID、确定性构建和自动校验降低更新后重复或漂移的风险。
 
-不要同时订阅 `essential.ics`、`work-rest.ics` 和 Apple 自带“中国大陆节假日”，否则相同班休会重复。一般用户只需要 `essential.ics`。
+本项目不是 Apple 官方产品，也不替代系统级农历、桌面组件或双向日历同步。
 
-### iPhone
+## 快速订阅
 
-最简单的方法是在项目 Pages 首页点击“在 Apple 日历中订阅”。也可以在系统设置中进入“日历账户”，选择“添加账户 → 其他 → 添加已订阅的日历”，粘贴 HTTPS 地址。不同 iOS 版本的菜单名称可能略有差异。
+| 方案               | 内容                               | 适用场景                                   | 订阅地址                                                                               |
+| ------------------ | ---------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------- |
+| **中国日历・精选** | 法定班休、核心传统节日、二十四节气 | 默认推荐；希望一个订阅覆盖日常中国日期信息 | [订阅 `essential.ics`](https://bearstozawa.github.io/apple-calendar-ics/essential.ics) |
+| **中国班休**       | 仅法定放假与调休上班               | 已使用其他节日或农历来源，只补充班休信息   | [订阅 `work-rest.ics`](https://bearstozawa.github.io/apple-calendar-ics/work-rest.ics) |
 
-### Mac
+> [!IMPORTANT]
+> `essential.ics` 已包含 `work-rest.ics` 的班休内容，请勿同时订阅。若选择“精选”，建议同时关闭 Apple 自带的“中国大陆节假日”和其他综合中国日历源，避免重复事件。
 
-打开“日历”，选择“文件 → 新建日历订阅”，粘贴 HTTPS 地址。建议把位置设为 iCloud，并根据需要设置自动刷新频率。
+最简单的安装方式是访问[订阅首页](https://bearstozawa.github.io/apple-calendar-ics/)，选择方案后点击“添加到 Apple 日历”。也可以复制 HTTPS 地址手动添加：
 
-这是只读订阅。GitHub Pages 更新后，何时重新拉取由 macOS/iOS 决定，不是实时双向同步。
+- **iPhone / iPad**：设置 → 日历账户 → 添加账户 → 其他 → 添加已订阅的日历。
+- **Mac**：日历 → 文件 → 新建日历订阅。
 
-## 设计原则
+不同系统版本的菜单名称可能略有差异。订阅为只读模式，刷新时机由 iOS、iPadOS 或 macOS 决定。
 
-- 连续假期使用一条跨日事件，不生成“第 N 天/共 N 天”。
-- 补班是全天、透明事件，不模拟 09:00—18:00 会议。
-- 默认没有 `VALARM`，不会突然在补班日前一小时提醒。
-- 所有事件都是 `TRANSP:TRANSPARENT`，不会占用忙闲状态。
-- UID 来自固定逻辑 ID，不依赖标题、随机数或构建时间。
-- 只有事件实质变化时才调整 `SEQUENCE` 和数据版本。
-- 未正式确认的数据不能进入班休订阅。
-- `X-APPLE-SPECIAL-DAY` 仅作为 Apple 渐进增强；即使客户端忽略它，标题中的“休｜”“班｜”仍能表达完整语义。
+## 数据范围
 
-## 数据与发布流程
+| 数据集         | 当前覆盖  | 权威来源                       | 发布策略                       |
+| -------------- | --------- | ------------------------------ | ------------------------------ |
+| 法定放假与调休 | 2025—2026 | 国务院办公厅正式通知           | 人工核对后发布；不使用预测数据 |
+| 传统节日       | 2025—2030 | 固定版本 `lunar-python==1.4.8` | 由明确历法规则生成             |
+| 二十四节气     | 2025—2030 | 固定版本 `lunar-python==1.4.8` | 由明确历法规则生成             |
+
+2027 年法定班休尚未正式公布，因此当前订阅不会提前填充推测安排。正式通知发布后，项目会在核对来源和语义差异后更新。
+
+## 日历行为标准
+
+每次发布都必须满足以下产品约束：
+
+1. **事件归一化**：一段连续假期对应一个跨日事件，不生成“第 N 天”等重复信息。
+2. **低干扰**：事件使用 `TRANSP:TRANSPARENT`，且不包含 `VALARM`。
+3. **身份稳定**：UID 来自固定逻辑 ID，不依赖标题、随机数或构建时间。
+4. **更新可控**：仅当事件实质变化时调整 `SEQUENCE` 和数据版本。
+5. **兼容优先**：标题中的“休｜”与“班｜”承载完整语义；`X-APPLE-SPECIAL-DAY` 仅作为 Apple 客户端的渐进增强。
+6. **正式数据优先**：未经正式来源确认的内容不能进入班休订阅。
+
+## 数据治理与发布架构
 
 ```text
-国务院正式通知 ──→ data/official/*.json ──┐
-                                            ├─→ 确定性生成 ─→ 校验 ─→ GitHub Pages
-固定版本历法规则 ─→ data/culture.json ─────┘
+国务院正式通知 ──→ 人工结构化与复核 ──→ data/official/*.json ──┐
+                                                               ├─→ 确定性构建
+固定版本历法规则 ───────────────────────→ data/culture.json ─────┘
+                                                                       │
+                                     RFC 5545 校验与语义测试 ←─────────┘
+                                                                       │
+                                              main ──→ GitHub Pages ──→ ICS
 
-候选开源上游 ─→ 每日监测 ─→ 差异报告 PR ─→ 人工核对正式通知
+候选开源上游 ──→ 每日差异监测 ──→ 审核 PR ──→ 核对国务院正式通知
 ```
 
-`monitor.yml` 每天检查一次 `NateScarlet/holiday-cn`。该上游只用于发现候选变化；Action 只会创建或更新审核 PR，不会直接修改正式数据或发布订阅。
+候选开源项目 `NateScarlet/holiday-cn` 只用于发现可能的数据变化。监测工作流可以创建差异报告 PR，但不会自动修改正式数据、合并 PR 或发布候选安排。
 
-`publish.yml` 只从 `main` 构建。发布前会检查：
+### 发布前检查
 
-- RFC 5545 的 CRLF 和 75 字节折行。
-- ICS 能被独立解析器完整读取。
-- UID 和语义事件不重复。
-- 事件均为全天、透明、无默认提醒。
-- 每日同时显示的事件数量不超过上限。
-- 生成结果和清单哈希完全一致。
+- RFC 5545 的 CRLF 行尾与 75 字节折行。
+- 两份 ICS 均可被独立解析器完整读取。
+- UID、逻辑事件与日期语义不存在重复。
+- 所有事件均为全天、透明且无默认提醒。
+- 单日事件密度不超过产品上限。
+- 构建产物与 `manifest.json` 的 SHA-256 完全一致。
+- 重复构建保持字节级一致。
 
-GitHub 的定时工作流只在默认分支运行，高峰期可能延迟；公共仓库连续 60 天没有活动时，定时任务也可能被暂停。仓库保留 `workflow_dispatch`，可以随时手动运行监测。
+### GitHub Actions
+
+| 工作流        | 触发条件              | 职责                                       |
+| ------------- | --------------------- | ------------------------------------------ |
+| `ci.yml`      | push、pull request    | 代码规范、构建、ICS 校验、测试与产物一致性 |
+| `publish.yml` | `main` 更新、手动触发 | 重新构建并发布 GitHub Pages                |
+| `monitor.yml` | 每日定时、手动触发    | 对比候选上游；有差异时创建审核 PR          |
+
+GitHub 的定时任务可能在高峰期延迟；公共仓库连续 60 天没有活动时，计划任务也可能被暂停。`monitor.yml` 保留了手动触发入口。
+
+## 项目结构
+
+```text
+data/                 已审核的正式班休数据与文化规则
+dist/                 可直接订阅的 ICS 与版本清单
+site/                 GitHub Pages 产品页
+src/apple_calendar_ics/
+                      构建、校验与上游监测逻辑
+tests/                数据、ICS 与监测测试
+.github/workflows/    校验、发布与监测工作流
+```
 
 ## 本地开发
 
-需要 Python 3.11 或更高版本。
+要求 Python 3.11 或更高版本。
 
 ```bash
 python3 -m venv .venv
@@ -81,28 +123,32 @@ ruff format --check src tests
 python -m unittest discover -s tests -v
 ```
 
-生成内容位于 `dist/`。同一份数据重复构建时，文件必须保持字节级一致。
+生成文件位于 `dist/`。使用同一份输入数据重复执行 `calendar-build` 时，输出必须保持不变。
 
-## 更新正式班休数据
+## 更新法定班休数据
 
-1. 找到国务院正式通知，不能只依据媒体文章或其他 ICS。
-2. 新建或修改 `data/official/YYYY.json`，保留来源 URL、文号和发布日期。
-3. 假期使用一个起止区间；每个补班日使用稳定的 `makeup-N` 逻辑 ID。
-4. 如果是对既有事件的修正，保留 ID 并递增相应 `sequence`。
+1. 获取国务院正式通知，不以媒体报道或第三方 ICS 作为最终依据。
+2. 新建或修改 `data/official/YYYY.json`，记录来源 URL、文号和发布日期。
+3. 使用一个起止区间表示连续假期；为每个补班日分配稳定逻辑 ID。
+4. 修正既有事件时保留 ID，并递增对应 `sequence`。
 5. 更新 `data/metadata.json` 中的 `dataset_version`。
-6. 重新生成、运行测试并检查 `dist/` 的语义差异。
+6. 重新生成并执行全部检查，重点审核 `dist/` 的语义差异。
+7. 通过 pull request 合并到 `main`，由发布工作流部署。
 
-## GitHub Pages 初次设置
+## 能力边界
 
-进入仓库 Settings → Pages，把 Source 设为 **GitHub Actions**。合并到 `main` 后，`publish.yml` 会部署 `site/` 与最新 ICS 文件。
+- ICS 无法完整复制小米、华为等系统在日历应用内部提供的农历层、组件和系统级班休样式。
+- Apple 私有扩展的呈现方式可能随 iOS、iPadOS 和 macOS 版本变化；标准标题始终保留完整语义。
+- 订阅是单向只读发布，不会读取或修改用户的个人日程。
+- GitHub Pages 更新后，设备端何时重新拉取由 Apple 系统控制，并非实时推送。
 
-如果要让定时监测自动创建审核 PR，还需要在 Settings → Actions → General 中给工作流读写权限，并启用“Allow GitHub Actions to create and approve pull requests”。监测工作流不会自动合并 PR。
+## 路线图
 
-## 后续计划
+- 在主流 iOS、iPadOS 与 macOS 版本上建立兼容性测试矩阵。
+- 提供独立的传统节日与节气订阅，支持更细粒度组合。
+- 为地区节庆、考试等内容建立独立频道与严格收录标准。
+- 增加版本变更摘要，帮助订阅者识别新增、修正与来源变化。
 
-- 独立的 `culture.ics`，方便用户自行组合颜色和内容。
-- 有严格收录标准的 `observances.ics`。
-- 地区节庆、考试等完全独立的可选频道。
-- 在不同 iOS/macOS 版本上验证 Apple 私有“班/休”显示效果。
+## 许可
 
-代码采用 MIT License。数据和第三方来源边界见 [DATA_LICENSE.md](DATA_LICENSE.md)。
+代码采用 [MIT License](LICENSE)。数据、政府公开信息和第三方历法库的许可边界见 [DATA_LICENSE.md](DATA_LICENSE.md)。
