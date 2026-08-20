@@ -17,12 +17,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250107
 DTEND;VALUE=DATE:20250108
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年01月07日
-  07:56。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  07:56。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -39,12 +36,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250114
 DTEND;VALUE=DATE:20250115
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年01月14日 06
- :27。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :27。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -61,12 +55,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250122
 DTEND;VALUE=DATE:20250123
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年01月22日
-  04:31。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  04:31。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -83,12 +74,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250129
 DTEND;VALUE=DATE:20250130
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年01月29日 20
- :36。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :36。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -105,12 +93,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250205
 DTEND;VALUE=DATE:20250206
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年02月05日
-  16:02。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  16:02。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -127,12 +112,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250212
 DTEND;VALUE=DATE:20250213
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年02月12日 21
- :54。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :54。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -149,12 +131,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250221
 DTEND;VALUE=DATE:20250222
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年02月21日
-  01:33。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  01:33。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -171,12 +150,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250228
 DTEND;VALUE=DATE:20250301
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年02月28日 08
- :45。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :45。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -193,12 +169,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250307
 DTEND;VALUE=DATE:20250308
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年03月07日
-  00:32。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  00:32。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -215,12 +188,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250314
 DTEND;VALUE=DATE:20250315
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年03月14日 14
- :55。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :55。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -237,12 +207,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250322
 DTEND;VALUE=DATE:20250323
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年03月22日
-  19:30。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:30。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -259,12 +226,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250329
 DTEND;VALUE=DATE:20250330
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年03月29日 18
- :58。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :58。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -281,12 +245,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250405
 DTEND;VALUE=DATE:20250406
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年04月05日
-  10:15。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  10:15。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -303,12 +264,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250413
 DTEND;VALUE=DATE:20250414
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年04月13日 08
- :22。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :22。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -325,12 +283,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250421
 DTEND;VALUE=DATE:20250422
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年04月21日
-  09:36。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  09:36。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -347,12 +302,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250428
 DTEND;VALUE=DATE:20250429
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年04月28日 03
- :31。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :31。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -369,12 +321,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250504
 DTEND;VALUE=DATE:20250505
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年05月04日
-  21:52。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  21:52。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -391,12 +340,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250513
 DTEND;VALUE=DATE:20250514
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年05月13日 00
- :56。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :56。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -413,12 +359,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250520
 DTEND;VALUE=DATE:20250521
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年05月20日
-  19:59。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:59。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -435,12 +378,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250527
 DTEND;VALUE=DATE:20250528
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年05月27日 11
- :02。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :02。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -457,12 +397,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250603
 DTEND;VALUE=DATE:20250604
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年06月03日
-  11:41。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  11:41。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -479,12 +416,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250611
 DTEND;VALUE=DATE:20250612
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年06月11日 15
- :44。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :44。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -501,12 +435,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250619
 DTEND;VALUE=DATE:20250620
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年06月19日
-  03:19。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:19。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -523,12 +454,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250625
 DTEND;VALUE=DATE:20250626
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年06月25日 18
- :32。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :32。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -545,12 +473,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250703
 DTEND;VALUE=DATE:20250704
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年07月03日
-  03:30。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:30。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -567,12 +492,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250711
 DTEND;VALUE=DATE:20250712
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年07月11日 04
- :37。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :37。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -589,12 +511,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250718
 DTEND;VALUE=DATE:20250719
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年07月18日
-  08:38。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  08:38。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -611,12 +530,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250725
 DTEND;VALUE=DATE:20250726
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年07月25日 03
- :11。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :11。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -633,12 +549,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250801
 DTEND;VALUE=DATE:20250802
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年08月01日
-  20:42。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  20:42。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -655,12 +568,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250809
 DTEND;VALUE=DATE:20250810
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年08月09日 15
- :55。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :55。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -677,12 +587,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250816
 DTEND;VALUE=DATE:20250817
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年08月16日
-  13:12。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  13:12。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -699,12 +606,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250823
 DTEND;VALUE=DATE:20250824
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年08月23日 14
- :07。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :07。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -721,12 +625,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250831
 DTEND;VALUE=DATE:20250901
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年08月31日
-  14:25。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  14:25。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -743,12 +644,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250908
 DTEND;VALUE=DATE:20250909
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年09月08日 02
- :09。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :09。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -765,12 +663,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250914
 DTEND;VALUE=DATE:20250915
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年09月14日
-  18:33。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  18:33。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -787,12 +682,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250922
 DTEND;VALUE=DATE:20250923
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年09月22日 03
- :54。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :54。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -809,12 +701,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250930
 DTEND;VALUE=DATE:20251001
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年09月30日
-  07:54。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  07:54。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -831,12 +720,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251007
 DTEND;VALUE=DATE:20251008
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年10月07日 11
- :48。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :48。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -853,12 +739,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251014
 DTEND;VALUE=DATE:20251015
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年10月14日
-  02:13。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  02:13。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -875,12 +758,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251021
 DTEND;VALUE=DATE:20251022
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年10月21日 20
- :25。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :25。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -897,12 +777,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251030
 DTEND;VALUE=DATE:20251031
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年10月30日
-  00:21。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  00:21。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -919,12 +796,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251105
 DTEND;VALUE=DATE:20251106
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年11月05日 21
- :19。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :19。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -941,12 +815,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251112
 DTEND;VALUE=DATE:20251113
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年11月12日
-  13:28。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  13:28。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -963,12 +834,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251120
 DTEND;VALUE=DATE:20251121
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年11月20日 14
- :47。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :47。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -985,12 +853,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251128
 DTEND;VALUE=DATE:20251129
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年11月28日
-  14:59。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  14:59。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1007,12 +872,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251205
 DTEND;VALUE=DATE:20251206
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2025年12月05日 07
- :14。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :14。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1029,12 +891,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251212
 DTEND;VALUE=DATE:20251213
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2025年12月12日
-  04:52。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  04:52。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1051,12 +910,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251220
 DTEND;VALUE=DATE:20251221
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2025年12月20日 09
- :44。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :44。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1073,12 +929,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251228
 DTEND;VALUE=DATE:20251229
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2025年12月28日
-  03:10。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:10。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1095,12 +948,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260103
 DTEND;VALUE=DATE:20260104
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年01月03日 18
- :03。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :03。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1117,12 +967,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260110
 DTEND;VALUE=DATE:20260111
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年01月10日
-  23:49。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  23:49。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1139,12 +986,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260119
 DTEND;VALUE=DATE:20260120
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年01月19日 03
- :52。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :52。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1161,12 +1005,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260126
 DTEND;VALUE=DATE:20260127
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年01月26日
-  12:47。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  12:47。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1183,12 +1024,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260202
 DTEND;VALUE=DATE:20260203
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年02月02日 06
- :09。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :09。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1205,12 +1043,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260209
 DTEND;VALUE=DATE:20260210
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年02月09日
-  20:43。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  20:43。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1227,12 +1062,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260217
 DTEND;VALUE=DATE:20260218
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年02月17日 20
- :01。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :01。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1249,12 +1081,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260224
 DTEND;VALUE=DATE:20260225
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年02月24日
-  20:28。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  20:28。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1271,12 +1100,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260303
 DTEND;VALUE=DATE:20260304
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年03月03日 19
- :38。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :38。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1293,12 +1119,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260311
 DTEND;VALUE=DATE:20260312
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年03月11日
-  17:39。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  17:39。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1315,12 +1138,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260319
 DTEND;VALUE=DATE:20260320
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年03月19日 09
- :24。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :24。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1337,12 +1157,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260326
 DTEND;VALUE=DATE:20260327
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年03月26日
-  03:18。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:18。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1359,12 +1176,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260402
 DTEND;VALUE=DATE:20260403
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年04月02日 10
- :12。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :12。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1381,12 +1195,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260410
 DTEND;VALUE=DATE:20260411
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年04月10日
-  12:52。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  12:52。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1403,12 +1214,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260417
 DTEND;VALUE=DATE:20260418
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年04月17日 19
- :52。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :52。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1425,12 +1233,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260424
 DTEND;VALUE=DATE:20260425
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年04月24日
-  10:32。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  10:32。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1447,12 +1252,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260502
 DTEND;VALUE=DATE:20260503
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年05月02日 01
- :23。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :23。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1469,12 +1271,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260510
 DTEND;VALUE=DATE:20260511
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年05月10日
-  05:11。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  05:11。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1491,12 +1290,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260517
 DTEND;VALUE=DATE:20260518
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年05月17日 04
- :01。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :01。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1513,12 +1309,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260523
 DTEND;VALUE=DATE:20260524
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年05月23日
-  19:11。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:11。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1535,12 +1328,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260531
 DTEND;VALUE=DATE:20260601
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年05月31日 16
- :45。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :45。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1557,12 +1347,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260608
 DTEND;VALUE=DATE:20260609
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年06月08日
-  18:00。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  18:00。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1579,12 +1366,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260615
 DTEND;VALUE=DATE:20260616
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年06月15日 10
- :54。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :54。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1601,12 +1385,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260622
 DTEND;VALUE=DATE:20260623
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年06月22日
-  05:55。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  05:55。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1623,12 +1404,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260630
 DTEND;VALUE=DATE:20260701
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年06月30日 07
- :57。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1645,12 +1423,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260708
 DTEND;VALUE=DATE:20260709
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年07月08日
-  03:29。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:29。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1667,12 +1442,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260714
 DTEND;VALUE=DATE:20260715
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年07月14日 17
- :44。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :44。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1689,12 +1461,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260721
 DTEND;VALUE=DATE:20260722
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年07月21日
-  19:06。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:06。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1711,12 +1480,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260730
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年07月29日 22
- :36。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :36。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1733,12 +1499,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260806
 DTEND;VALUE=DATE:20260807
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年08月06日
-  10:21。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  10:21。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1755,12 +1518,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260813
 DTEND;VALUE=DATE:20260814
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年08月13日 01
- :37。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :37。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1777,12 +1537,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260820
 DTEND;VALUE=DATE:20260821
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年08月20日
-  10:46。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  10:46。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1799,12 +1556,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260828
 DTEND;VALUE=DATE:20260829
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年08月28日 12
- :19。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :19。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1821,12 +1575,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260904
 DTEND;VALUE=DATE:20260905
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年09月04日
-  15:51。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  15:51。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1843,12 +1594,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260911
 DTEND;VALUE=DATE:20260912
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年09月11日 11
- :27。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :27。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1865,12 +1613,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260919
 DTEND;VALUE=DATE:20260920
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年09月19日
-  04:44。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  04:44。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1887,12 +1632,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260927
 DTEND;VALUE=DATE:20260928
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年09月27日 00
- :49。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :49。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1909,12 +1651,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261003
 DTEND;VALUE=DATE:20261004
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年10月03日
-  21:25。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  21:25。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1931,12 +1670,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261011
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年10月10日 23
- :50。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :50。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1953,12 +1689,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年10月19日
-  00:13。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  00:13。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1975,12 +1708,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年10月26日 12
- :12。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :12。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1997,12 +1727,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261103
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年11月02日
-  04:28。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  04:28。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2019,12 +1746,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261109
 DTEND;VALUE=DATE:20261110
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年11月09日 15
- :02。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :02。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2041,12 +1765,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年11月17日
-  19:48。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:48。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2063,12 +1784,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年11月24日 22
- :54。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :54。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2085,12 +1803,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年12月01日
-  14:09。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  14:09。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2107,12 +1822,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2026年12月09日 08
- :52。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :52。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2129,12 +1841,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2026年12月17日
-  13:43。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  13:43。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2151,12 +1860,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2026年12月24日 09
- :28。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :28。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2173,12 +1879,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2026年12月31日
-  03:00。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:00。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2195,12 +1898,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年01月08日 04
- :25。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :25。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2217,12 +1917,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270116
 DTEND;VALUE=DATE:20270117
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年01月16日
-  04:35。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  04:35。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2239,12 +1936,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年01月22日 20
- :17。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :17。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2261,12 +1955,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年01月29日
-  18:56。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  18:56。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2283,12 +1974,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270206
 DTEND;VALUE=DATE:20270207
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年02月06日 23
- :56。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :56。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2305,12 +1993,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270214
 DTEND;VALUE=DATE:20270215
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年02月14日
-  15:59。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  15:59。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2327,12 +2012,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270221
 DTEND;VALUE=DATE:20270222
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年02月21日 07
- :24。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :24。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2349,12 +2031,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270228
 DTEND;VALUE=DATE:20270301
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年02月28日
-  13:17。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  13:17。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2371,12 +2050,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270308
 DTEND;VALUE=DATE:20270309
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年03月08日 17
- :30。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :30。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2393,12 +2069,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270316
 DTEND;VALUE=DATE:20270317
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年03月16日
-  00:25。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  00:25。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2415,12 +2088,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270322
 DTEND;VALUE=DATE:20270323
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年03月22日 18
- :44。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :44。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2437,12 +2107,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270330
 DTEND;VALUE=DATE:20270331
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年03月30日
-  08:54。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  08:54。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2459,12 +2126,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270407
 DTEND;VALUE=DATE:20270408
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年04月07日 07
- :51。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :51。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2481,12 +2145,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270414
 DTEND;VALUE=DATE:20270415
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年04月14日
-  06:57。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  06:57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2503,12 +2164,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270422
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年04月21日 06
- :27。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :27。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2525,12 +2183,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270429
 DTEND;VALUE=DATE:20270430
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年04月29日
-  04:18。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  04:18。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2547,12 +2202,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270506
 DTEND;VALUE=DATE:20270507
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年05月06日 18
- :59。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :59。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2569,12 +2221,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270513
 DTEND;VALUE=DATE:20270514
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年05月13日
-  12:44。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  12:44。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2591,12 +2240,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270520
 DTEND;VALUE=DATE:20270521
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年05月20日 18
- :59。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :59。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2613,12 +2259,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270528
 DTEND;VALUE=DATE:20270529
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年05月28日
-  21:58。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  21:58。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2635,12 +2278,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270605
 DTEND;VALUE=DATE:20270606
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年06月05日 03
- :40。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :40。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2657,12 +2297,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270611
 DTEND;VALUE=DATE:20270612
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年06月11日
-  18:56。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  18:56。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2679,12 +2316,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270619
 DTEND;VALUE=DATE:20270620
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年06月19日 08
- :45。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :45。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2701,12 +2335,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270627
 DTEND;VALUE=DATE:20270628
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年06月27日
-  12:54。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  12:54。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2723,12 +2354,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270704
 DTEND;VALUE=DATE:20270705
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年07月04日 11
- :02。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :02。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2745,12 +2373,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270711
 DTEND;VALUE=DATE:20270712
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年07月11日
-  02:39。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  02:39。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2767,12 +2392,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270718
 DTEND;VALUE=DATE:20270719
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年07月18日 23
- :45。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :45。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2789,12 +2411,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270727
 DTEND;VALUE=DATE:20270728
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年07月27日
-  00:55。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  00:55。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2811,12 +2430,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270802
 DTEND;VALUE=DATE:20270803
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年08月02日 18
- :05。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :05。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2833,12 +2449,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270809
 DTEND;VALUE=DATE:20270810
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年08月09日
-  12:54。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  12:54。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2855,12 +2468,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270817
 DTEND;VALUE=DATE:20270818
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年08月17日 15
- :29。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :29。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2877,12 +2487,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270825
 DTEND;VALUE=DATE:20270826
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年08月25日
-  10:27。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  10:27。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2899,12 +2506,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270901
 DTEND;VALUE=DATE:20270902
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年09月01日 01
- :41。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :41。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2921,12 +2525,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270908
 DTEND;VALUE=DATE:20270909
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年09月08日
-  02:31。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  02:31。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2943,12 +2544,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270916
 DTEND;VALUE=DATE:20270917
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年09月16日 07
- :04。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :04。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2965,12 +2563,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270923
 DTEND;VALUE=DATE:20270924
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年09月23日
-  18:21。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  18:21。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -2987,12 +2582,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270930
 DTEND;VALUE=DATE:20271001
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年09月30日 10
- :36。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :36。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3009,12 +2601,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271007
 DTEND;VALUE=DATE:20271008
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年10月07日
-  19:48。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:48。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3031,12 +2620,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271015
 DTEND;VALUE=DATE:20271016
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年10月15日 21
- :47。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :47。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3053,12 +2639,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271023
 DTEND;VALUE=DATE:20271024
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年10月23日
-  01:29。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  01:29。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3075,12 +2658,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271029
 DTEND;VALUE=DATE:20271030
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年10月29日 21
- :37。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :37。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3097,12 +2677,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271106
 DTEND;VALUE=DATE:20271107
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年11月06日
-  16:00。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  16:00。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3119,12 +2696,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271114
 DTEND;VALUE=DATE:20271115
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年11月14日 11
- :26。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :26。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3141,12 +2715,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271121
 DTEND;VALUE=DATE:20271122
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年11月21日
-  08:48。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  08:48。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3163,12 +2734,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271128
 DTEND;VALUE=DATE:20271129
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年11月28日 11
- :24。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :24。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3185,12 +2753,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271206
 DTEND;VALUE=DATE:20271207
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2027年12月06日
-  13:22。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  13:22。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3207,12 +2772,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271214
 DTEND;VALUE=DATE:20271215
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2027年12月14日 00
- :09。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :09。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3229,12 +2791,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271220
 DTEND;VALUE=DATE:20271221
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2027年12月20日
-  17:11。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  17:11。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3251,12 +2810,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271228
 DTEND;VALUE=DATE:20271229
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2027年12月28日 04
- :12。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :12。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3273,12 +2829,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280105
 DTEND;VALUE=DATE:20280106
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年01月05日
-  09:41。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  09:41。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3295,12 +2848,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280112
 DTEND;VALUE=DATE:20280113
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年01月12日 12
- :03。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :03。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3317,12 +2867,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280119
 DTEND;VALUE=DATE:20280120
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年01月19日
-  03:26。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:26。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3339,12 +2886,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280126
 DTEND;VALUE=DATE:20280127
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年01月26日 23
- :13。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :13。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3361,12 +2905,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280204
 DTEND;VALUE=DATE:20280205
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年02月04日
-  03:11。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:11。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3383,12 +2924,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280210
 DTEND;VALUE=DATE:20280211
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年02月10日 23
- :04。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :04。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3405,12 +2943,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280217
 DTEND;VALUE=DATE:20280218
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年02月17日
-  16:08。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  16:08。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3427,12 +2962,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280225
 DTEND;VALUE=DATE:20280226
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年02月25日 18
- :38。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :38。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3449,12 +2981,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280304
 DTEND;VALUE=DATE:20280305
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年03月04日
-  17:02。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  17:02。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3471,12 +3000,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280311
 DTEND;VALUE=DATE:20280312
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年03月11日 09
- :06。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :06。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3493,12 +3019,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280318
 DTEND;VALUE=DATE:20280319
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年03月18日
-  07:23。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  07:23。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3515,12 +3038,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280326
 DTEND;VALUE=DATE:20280327
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年03月26日 12
- :31。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :31。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3537,12 +3057,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280403
 DTEND;VALUE=DATE:20280404
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年04月03日
-  03:16。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:16。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3559,12 +3076,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280409
 DTEND;VALUE=DATE:20280410
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年04月09日 18
- :27。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :27。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3581,12 +3095,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280417
 DTEND;VALUE=DATE:20280418
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年04月17日
-  00:37。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  00:37。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3603,12 +3114,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280425
 DTEND;VALUE=DATE:20280426
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年04月25日 03
- :47。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :47。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3625,12 +3133,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280502
 DTEND;VALUE=DATE:20280503
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年05月02日
-  10:26。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  10:26。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3647,12 +3152,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280509
 DTEND;VALUE=DATE:20280510
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年05月09日 03
- :49。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :49。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3669,12 +3171,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280516
 DTEND;VALUE=DATE:20280517
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年05月16日
-  18:43。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  18:43。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3691,12 +3190,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280524
 DTEND;VALUE=DATE:20280525
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年05月24日 16
- :16。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :16。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3713,12 +3209,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280531
 DTEND;VALUE=DATE:20280601
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年05月31日
-  15:37。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  15:37。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3735,12 +3228,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280607
 DTEND;VALUE=DATE:20280608
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年06月07日 14
- :09。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :09。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3757,12 +3247,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280615
 DTEND;VALUE=DATE:20280616
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年06月15日
-  12:28。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  12:28。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3779,12 +3266,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280623
 DTEND;VALUE=DATE:20280624
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年06月23日 02
- :28。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :28。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3801,12 +3285,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280629
 DTEND;VALUE=DATE:20280630
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年06月29日
-  20:11。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  20:11。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3823,12 +3304,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280707
 DTEND;VALUE=DATE:20280708
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年07月07日 02
- :11。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :11。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3845,12 +3323,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280715
 DTEND;VALUE=DATE:20280716
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年07月15日
-  04:57。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  04:57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3867,12 +3342,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280722
 DTEND;VALUE=DATE:20280723
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年07月22日 11
- :02。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :02。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3889,12 +3361,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280729
 DTEND;VALUE=DATE:20280730
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年07月29日
-  01:40。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  01:40。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3911,12 +3380,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280805
 DTEND;VALUE=DATE:20280806
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年08月05日 16
- :10。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :10。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3933,12 +3399,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280813
 DTEND;VALUE=DATE:20280814
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年08月13日
-  19:45。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:45。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3955,12 +3418,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280820
 DTEND;VALUE=DATE:20280821
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年08月20日 18
- :44。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :44。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3977,12 +3437,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280827
 DTEND;VALUE=DATE:20280828
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年08月27日
-  09:36。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  09:36。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -3999,12 +3456,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280904
 DTEND;VALUE=DATE:20280905
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年09月04日 07
- :48。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :48。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4021,12 +3475,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280912
 DTEND;VALUE=DATE:20280913
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年09月12日
-  08:46。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  08:46。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4043,12 +3494,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280919
 DTEND;VALUE=DATE:20280920
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年09月19日 02
- :24。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :24。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4065,12 +3513,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280925
 DTEND;VALUE=DATE:20280926
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年09月25日
-  21:10。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  21:10。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4087,12 +3532,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281004
 DTEND;VALUE=DATE:20281005
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年10月04日 00
- :25。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :25。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4109,12 +3551,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281011
 DTEND;VALUE=DATE:20281012
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年10月11日
-  19:57。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4131,12 +3570,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281018
 DTEND;VALUE=DATE:20281019
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年10月18日 10
- :57。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4153,12 +3589,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281025
 DTEND;VALUE=DATE:20281026
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年10月25日
-  12:53。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  12:53。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4175,12 +3608,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281102
 DTEND;VALUE=DATE:20281103
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年11月02日 17
- :17。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :17。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4197,12 +3627,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281110
 DTEND;VALUE=DATE:20281111
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年11月10日
-  05:26。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  05:26。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4219,12 +3646,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281116
 DTEND;VALUE=DATE:20281117
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年11月16日 21
- :18。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :18。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4241,12 +3665,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281124
 DTEND;VALUE=DATE:20281125
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年11月24日
-  08:15。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  08:15。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4263,12 +3684,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281202
 DTEND;VALUE=DATE:20281203
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2028年12月02日 09
- :40。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :40。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4285,12 +3703,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281209
 DTEND;VALUE=DATE:20281210
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2028年12月09日
-  13:39。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  13:39。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4307,12 +3722,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281216
 DTEND;VALUE=DATE:20281217
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2028年12月16日 10
- :06。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :06。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4329,12 +3741,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281224
 DTEND;VALUE=DATE:20281225
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2028年12月24日
-  05:45。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  05:45。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4351,12 +3760,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290101
 DTEND;VALUE=DATE:20290102
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年01月01日 00
- :48。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :48。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4373,12 +3779,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290107
 DTEND;VALUE=DATE:20290108
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年01月07日
-  21:26。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  21:26。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4395,12 +3798,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290115
 DTEND;VALUE=DATE:20290116
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年01月15日 01
- :25。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :25。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4417,12 +3817,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290123
 DTEND;VALUE=DATE:20290124
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年01月23日
-  03:23。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:23。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4439,12 +3836,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290130
 DTEND;VALUE=DATE:20290131
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年01月30日 14
- :04。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :04。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4461,12 +3855,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290206
 DTEND;VALUE=DATE:20290207
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年02月06日
-  05:52。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  05:52。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4483,12 +3874,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290213
 DTEND;VALUE=DATE:20290214
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年02月13日 18
- :32。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :32。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4505,12 +3893,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290221
 DTEND;VALUE=DATE:20290222
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年02月21日
-  23:10。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  23:10。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4527,12 +3912,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290301
 DTEND;VALUE=DATE:20290302
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年03月01日 01
- :10。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :10。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4549,12 +3931,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290307
 DTEND;VALUE=DATE:20290308
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年03月07日
-  15:52。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  15:52。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4571,12 +3950,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290315
 DTEND;VALUE=DATE:20290316
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年03月15日 12
- :19。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :19。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4593,12 +3969,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290323
 DTEND;VALUE=DATE:20290324
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年03月23日
-  15:33。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  15:33。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4615,12 +3988,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290330
 DTEND;VALUE=DATE:20290331
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年03月30日 10
- :26。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :26。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4637,12 +4007,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290406
 DTEND;VALUE=DATE:20290407
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年04月06日
-  03:52。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:52。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4659,12 +4026,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290414
 DTEND;VALUE=DATE:20290415
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年04月14日 05
- :40。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :40。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4681,12 +4045,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290422
 DTEND;VALUE=DATE:20290423
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年04月22日
-  03:50。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:50。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4703,12 +4064,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290428
 DTEND;VALUE=DATE:20290429
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年04月28日 18
- :37。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :37。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4725,12 +4083,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290505
 DTEND;VALUE=DATE:20290506
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年05月05日
-  17:48。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  17:48。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4747,12 +4102,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290513
 DTEND;VALUE=DATE:20290514
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年05月13日 21
- :42。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :42。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4769,12 +4121,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290521
 DTEND;VALUE=DATE:20290522
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年05月21日
-  12:16。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  12:16。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4791,12 +4140,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290528
 DTEND;VALUE=DATE:20290529
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年05月28日 02
- :38。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :38。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4813,12 +4159,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290604
 DTEND;VALUE=DATE:20290605
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年06月04日
-  09:19。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  09:19。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4835,12 +4178,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290612
 DTEND;VALUE=DATE:20290613
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年06月12日 11
- :51。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :51。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4857,12 +4197,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290619
 DTEND;VALUE=DATE:20290620
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年06月19日
-  17:54。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  17:54。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4879,12 +4216,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290626
 DTEND;VALUE=DATE:20290627
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年06月26日 11
- :22。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :22。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4901,12 +4235,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290704
 DTEND;VALUE=DATE:20290705
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年07月04日
-  01:58。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  01:58。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4923,12 +4254,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290711
 DTEND;VALUE=DATE:20290712
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年07月11日 23
- :51。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :51。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4945,12 +4273,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290718
 DTEND;VALUE=DATE:20290719
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年07月18日
-  22:14。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  22:14。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4967,12 +4292,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290725
 DTEND;VALUE=DATE:20290726
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年07月25日 21
- :36。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :36。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -4989,12 +4311,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290802
 DTEND;VALUE=DATE:20290803
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年08月02日
-  19:15。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:15。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5011,12 +4330,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290810
 DTEND;VALUE=DATE:20290811
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年08月10日 09
- :56。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :56。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5033,12 +4349,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290817
 DTEND;VALUE=DATE:20290818
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年08月17日
-  02:55。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  02:55。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5055,12 +4368,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290824
 DTEND;VALUE=DATE:20290825
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年08月24日 09
- :51。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :51。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5077,12 +4387,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290901
 DTEND;VALUE=DATE:20290902
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年09月01日
-  12:33。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  12:33。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5099,12 +4406,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290908
 DTEND;VALUE=DATE:20290909
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年09月08日 18
- :44。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :44。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5121,12 +4425,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290915
 DTEND;VALUE=DATE:20290916
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年09月15日
-  09:29。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  09:29。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5143,12 +4444,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290923
 DTEND;VALUE=DATE:20290924
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年09月23日 00
- :29。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :29。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5165,12 +4463,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291001
 DTEND;VALUE=DATE:20291002
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年10月01日
-  04:57。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  04:57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5187,12 +4482,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291008
 DTEND;VALUE=DATE:20291009
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年10月08日 03
- :15。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :15。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5209,12 +4501,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291014
 DTEND;VALUE=DATE:20291015
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年10月14日
-  19:09。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:09。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5231,12 +4520,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291022
 DTEND;VALUE=DATE:20291023
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年10月22日 17
- :28。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :28。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5253,12 +4539,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291030
 DTEND;VALUE=DATE:20291031
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年10月30日
-  19:32。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:32。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5275,12 +4558,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291106
 DTEND;VALUE=DATE:20291107
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年11月06日 12
- :24。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :24。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5297,12 +4577,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291113
 DTEND;VALUE=DATE:20291114
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年11月13日
-  08:35。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  08:35。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5319,12 +4596,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291121
 DTEND;VALUE=DATE:20291122
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年11月21日 12
- :03。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :03。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5341,12 +4615,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291129
 DTEND;VALUE=DATE:20291130
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年11月29日
-  07:48。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  07:48。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5363,12 +4634,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291205
 DTEND;VALUE=DATE:20291206
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2029年12月05日 22
- :52。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :52。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5385,12 +4653,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291213
 DTEND;VALUE=DATE:20291214
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2029年12月13日
-  01:50。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  01:50。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5407,12 +4672,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291221
 DTEND;VALUE=DATE:20291222
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2029年12月21日 06
- :47。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :47。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5429,12 +4691,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291228
 DTEND;VALUE=DATE:20291229
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2029年12月28日
-  17:49。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  17:49。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5451,12 +4710,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300104
 DTEND;VALUE=DATE:20300105
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年01月04日 10
- :50。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :50。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5473,12 +4729,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300111
 DTEND;VALUE=DATE:20300112
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年01月11日
-  22:06。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  22:06。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5495,12 +4748,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300119
 DTEND;VALUE=DATE:20300120
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年01月19日 23
- :54。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :54。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5517,12 +4767,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300127
 DTEND;VALUE=DATE:20300128
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年01月27日
-  02:14。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  02:14。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5539,12 +4786,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300203
 DTEND;VALUE=DATE:20300204
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年02月03日 00
- :08。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :08。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5561,12 +4805,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300210
 DTEND;VALUE=DATE:20300211
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年02月10日
-  19:50。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:50。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5583,12 +4824,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300218
 DTEND;VALUE=DATE:20300219
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年02月18日 14
- :20。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :20。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5605,12 +4843,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300225
 DTEND;VALUE=DATE:20300226
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年02月25日
-  09:58。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  09:58。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5627,12 +4862,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300304
 DTEND;VALUE=DATE:20300305
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年03月04日 14
- :35。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :35。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5649,12 +4881,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300312
 DTEND;VALUE=DATE:20300313
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年03月12日
-  16:48。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  16:48。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5671,12 +4900,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300320
 DTEND;VALUE=DATE:20300321
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年03月20日 01
- :57。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5693,12 +4919,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300326
 DTEND;VALUE=DATE:20300327
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年03月26日
-  17:51。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  17:51。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5715,12 +4938,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300403
 DTEND;VALUE=DATE:20300404
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年04月03日 06
- :03。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :03。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5737,12 +4957,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300411
 DTEND;VALUE=DATE:20300412
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年04月11日
-  10:57。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  10:57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5759,12 +4976,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300418
 DTEND;VALUE=DATE:20300419
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年04月18日 11
- :20。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :20。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5781,12 +4995,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300425
 DTEND;VALUE=DATE:20300426
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年04月25日
-  02:39。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  02:39。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5803,12 +5014,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300502
 DTEND;VALUE=DATE:20300503
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年05月02日 22
- :12。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :12。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5825,12 +5033,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300511
 DTEND;VALUE=DATE:20300512
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年05月11日
-  01:12。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  01:12。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5847,12 +5052,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300517
 DTEND;VALUE=DATE:20300518
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年05月17日 19
- :19。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :19。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5869,12 +5071,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300524
 DTEND;VALUE=DATE:20300525
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年05月24日
-  12:57。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  12:57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5891,12 +5090,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300601
 DTEND;VALUE=DATE:20300602
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年06月01日 14
- :22。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :22。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5913,12 +5109,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300609
 DTEND;VALUE=DATE:20300610
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年06月09日
-  11:36。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  11:36。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5935,12 +5128,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300616
 DTEND;VALUE=DATE:20300617
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年06月16日 02
- :41。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :41。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5957,12 +5147,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300623
 DTEND;VALUE=DATE:20300624
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年06月23日
-  01:20。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  01:20。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -5979,12 +5166,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300701
 DTEND;VALUE=DATE:20300702
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年07月01日 05
- :35。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :35。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6001,12 +5185,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300708
 DTEND;VALUE=DATE:20300709
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年07月08日
-  19:02。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:02。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6023,12 +5204,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300715
 DTEND;VALUE=DATE:20300716
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年07月15日 10
- :12。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :12。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6045,12 +5223,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300722
 DTEND;VALUE=DATE:20300723
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年07月22日
-  16:08。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  16:08。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6067,12 +5242,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300730
 DTEND;VALUE=DATE:20300731
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年07月30日 19
- :11。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :11。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6089,12 +5261,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300807
 DTEND;VALUE=DATE:20300808
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年08月07日
-  00:43。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  00:43。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6111,12 +5280,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300813
 DTEND;VALUE=DATE:20300814
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年08月13日 18
- :44。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :44。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6133,12 +5299,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300821
 DTEND;VALUE=DATE:20300822
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年08月21日
-  09:15。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  09:15。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6155,12 +5318,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300829
 DTEND;VALUE=DATE:20300830
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年08月29日 07
- :07。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :07。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6177,12 +5337,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300905
 DTEND;VALUE=DATE:20300906
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年09月05日
-  05:56。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  05:56。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6199,12 +5356,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300912
 DTEND;VALUE=DATE:20300913
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年09月12日 05
- :18。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :18。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6221,12 +5375,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300920
 DTEND;VALUE=DATE:20300921
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年09月20日
-  03:57。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  03:57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6243,12 +5394,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300927
 DTEND;VALUE=DATE:20300928
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年09月27日 17
- :55。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :55。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6265,12 +5413,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301004
 DTEND;VALUE=DATE:20301005
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年10月04日
-  11:56。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  11:56。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6287,12 +5432,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301011
 DTEND;VALUE=DATE:20301012
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年10月11日 18
- :47。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :47。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6309,12 +5451,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301019
 DTEND;VALUE=DATE:20301020
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年10月19日
-  22:50。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  22:50。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6331,12 +5470,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301027
 DTEND;VALUE=DATE:20301028
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年10月27日 04
- :17。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :17。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6353,12 +5489,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301102
 DTEND;VALUE=DATE:20301103
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年11月02日
-  19:56。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  19:56。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6375,12 +5508,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301110
 DTEND;VALUE=DATE:20301111
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年11月10日 11
- :30。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :30。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6397,12 +5527,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301118
 DTEND;VALUE=DATE:20301119
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年11月18日
-  16:32。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  16:32。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6419,12 +5546,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301125
 DTEND;VALUE=DATE:20301126
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年11月25日 14
- :46。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :46。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6441,12 +5565,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301202
 DTEND;VALUE=DATE:20301203
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年12月02日
-  06:57。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  06:57。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6463,12 +5584,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301210
 DTEND;VALUE=DATE:20301211
-SUMMARY;LANGUAGE=zh-CN:月相｜满月
+SUMMARY;LANGUAGE=zh-CN:满月
 DESCRIPTION;LANGUAGE=zh-CN:满月发生于北京时间 2030年12月10日 06
- :41。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :41。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6485,12 +5603,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301218
 DTEND;VALUE=DATE:20301219
-SUMMARY;LANGUAGE=zh-CN:月相｜下弦月
+SUMMARY;LANGUAGE=zh-CN:下弦月
 DESCRIPTION;LANGUAGE=zh-CN:下弦月发生于北京时间 2030年12月18日
-  08:01。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  08:01。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6507,12 +5622,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301225
 DTEND;VALUE=DATE:20301226
-SUMMARY;LANGUAGE=zh-CN:月相｜新月
+SUMMARY;LANGUAGE=zh-CN:新月
 DESCRIPTION;LANGUAGE=zh-CN:新月发生于北京时间 2030年12月25日 01
- :32。\n月相时刻为地心视角计算值。\n计算：Astronomy Engine
-  2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astronom
- y
-URL:https://github.com/cosinekitty/astronomy
+ :32。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -6529,12 +5641,9 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301231
 DTEND;VALUE=DATE:20310101
-SUMMARY;LANGUAGE=zh-CN:月相｜上弦月
+SUMMARY;LANGUAGE=zh-CN:上弦月
 DESCRIPTION;LANGUAGE=zh-CN:上弦月发生于北京时间 2030年12月31日
-  21:36。\n月相时刻为地心视角计算值。\n计算：Astronomy Eng
- ine 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astro
- nomy
-URL:https://github.com/cosinekitty/astronomy
+  21:36。\n月相时刻为地心视角计算值。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT

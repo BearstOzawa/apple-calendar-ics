@@ -10,7 +10,9 @@ from .celestial import moon_phase_events, sky_event_events, zodiac_season_events
 from .culture import culture_events
 from .ics import serialize_feed
 from .loader import load_culture_config, load_metadata, load_official_years
+from .loader import load_observance_config
 from .model import CalendarEvent, Feed
+from .observances import observance_events
 from .official import official_events
 from .paths import DEFAULT_DATA_DIR, DEFAULT_OUTPUT_DIR
 from .traditional import almanac_events, lunar_mansion_events, seasonal_events
@@ -39,8 +41,12 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
     metadata = load_metadata(data_dir)
     years = load_official_years(data_dir)
     culture_config = load_culture_config(data_dir)
+    observance_config = load_observance_config(data_dir)
     official = official_events(years)
     culture = culture_events(culture_config, metadata)
+    festivals = [event for event in culture if event.kind == "festival"]
+    solar_terms = [event for event in culture if event.kind == "solar-term"]
+    observances = observance_events(observance_config, metadata)
     almanac = almanac_events(culture_config, metadata)
     lunar_mansions = lunar_mansion_events(culture_config, metadata)
     seasonal = seasonal_events(culture_config, metadata)
@@ -51,12 +57,12 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
     holiday_periods = [event for event in official if event.kind == "holiday-period"]
     essential_culture: list[CalendarEvent] = []
     for event in culture:
-        same_start_official = any(
-            event.start == period.start
+        covered_by_official = any(
+            period.start <= event.start < period.end
             and bool(set(event.concepts) & set(period.concepts))
             for period in holiday_periods
         )
-        if not same_start_official:
+        if not covered_by_official:
             essential_culture.append(event)
 
     work_rest = Feed(
@@ -68,6 +74,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
         cadence="按官方通知更新",
         source_type="官方",
         density="低频",
+        tier="core",
+        overlaps=("essential.ics",),
         featured=True,
     )
     essential = Feed(
@@ -79,21 +87,58 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
         cadence="按官方通知更新",
         source_type="官方 + 算法",
         density="低频",
-        overlaps=("work-rest.ics",),
+        tier="core",
+        overlaps=("work-rest.ics", "festivals.ics", "solar-terms.ics"),
         featured=True,
     )
     return (
         essential,
         work_rest,
         Feed(
+            slug="festivals",
+            name="传统节日",
+            description="除夕、元宵、龙抬头、七夕、中元、重阳等传统节日。",
+            events=_deduplicate(list(festivals)),
+            category="基础日期",
+            cadence="每年约十次",
+            source_type="历法算法",
+            density="低频",
+            tier="core",
+            overlaps=("essential.ics",),
+        ),
+        Feed(
+            slug="solar-terms",
+            name="二十四节气",
+            description="立春、春分、夏至、冬至等二十四节气。",
+            events=_deduplicate(list(solar_terms)),
+            category="基础日期",
+            cadence="每月两次",
+            source_type="历法算法",
+            density="低频",
+            tier="core",
+            overlaps=("essential.ics",),
+        ),
+        Feed(
+            slug="observances",
+            name="公众节日与纪念日",
+            description="妇女节、青年节、教师节及全国性纪念日；详情注明是否放假。",
+            events=_deduplicate(list(observances)),
+            category="基础日期",
+            cadence="每年十三次",
+            source_type="国务院行政法规",
+            density="低频",
+            tier="optional",
+        ),
+        Feed(
             slug="almanac",
-            name="中国黄历",
-            description="每日农历、干支、宜忌、冲煞与传统黄历信息；民俗参考。",
+            name="黄历宜忌",
+            description="每日一条宜忌摘要，完整农历、干支、冲煞与民俗信息放在详情中。",
             events=_deduplicate(list(almanac)),
-            category="传统历法",
+            category="高频文化",
             cadence="每日一条",
             source_type="算法",
             density="高频",
+            tier="dense",
             overlaps=("lunar-mansions.ics",),
         ),
         Feed(
@@ -101,10 +146,11 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             name="二十八星宿",
             description="每日星宿、十二值星、值日天神与九星；民俗参考。",
             events=_deduplicate(list(lunar_mansions)),
-            category="传统历法",
+            category="高频文化",
             cadence="每日一条",
             source_type="算法",
             density="高频",
+            tier="dense",
             overlaps=("almanac.ics",),
         ),
         Feed(
@@ -116,6 +162,7 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             cadence="约每五日",
             source_type="算法",
             density="中频",
+            tier="optional",
         ),
         Feed(
             slug="moon-phases",
@@ -126,6 +173,7 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             cadence="每月四次",
             source_type="天文算法",
             density="低频",
+            tier="optional",
         ),
         Feed(
             slug="sky-events",
@@ -136,6 +184,7 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             cadence="不定期",
             source_type="天文算法 + 年表",
             density="低频",
+            tier="optional",
         ),
         Feed(
             slug="zodiac-seasons",
@@ -146,6 +195,7 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             cadence="每月一次",
             source_type="天文算法",
             density="低频",
+            tier="optional",
         ),
     )
 
@@ -162,12 +212,29 @@ def build(data_dir: Path, output_dir: Path) -> dict[str, object]:
     metadata = load_metadata(data_dir)
     official_years = load_official_years(data_dir)
     culture_config = load_culture_config(data_dir)
+    observance_config = load_observance_config(data_dir)
     feeds = build_feeds(data_dir)
     feed_manifest: dict[str, object] = {}
     for feed in feeds:
         payload = serialize_feed(feed, metadata)
         path = output_dir / f"{feed.slug}.ics"
         changed = _write_if_changed(path, payload)
+        coverage_years = (
+            max(event.start.year for event in feed.events)
+            - min(event.start.year for event in feed.events)
+            + 1
+        )
+        preview_events = [
+            event
+            for event in feed.events
+            if event.start.year == 2026 and event.start.month == 4
+        ] or [event for event in feed.events if event.start.year == 2026]
+        sample_titles: list[str] = []
+        for event in preview_events:
+            if event.title not in sample_titles:
+                sample_titles.append(event.title)
+            if len(sample_titles) == 3:
+                break
         feed_manifest[f"{feed.slug}.ics"] = {
             "name": feed.name,
             "description": feed.description,
@@ -181,17 +248,24 @@ def build(data_dir: Path, output_dir: Path) -> dict[str, object]:
             "cadence": feed.cadence,
             "source_type": feed.source_type,
             "density": feed.density,
+            "tier": feed.tier,
+            "events_per_year": round(len(feed.events) / coverage_years, 1),
+            "sample_titles": sample_titles,
             "overlaps": list(feed.overlaps),
             "featured": feed.featured,
             "changed": changed,
         }
 
     manifest = {
-        "schema_version": 2,
+        "schema_version": 3,
         "dataset_version": metadata.dataset_version.isoformat(),
         "confirmed_work_rest_years": [year.year for year in official_years],
         "confirmed_work_rest_through": max(year.year for year in official_years),
         "culture_years": [culture_config.start_year, culture_config.end_year],
+        "observance_years": [
+            observance_config.start_year,
+            observance_config.end_year,
+        ],
         "algorithm_sources": [
             {
                 "title": culture_config.source.title,

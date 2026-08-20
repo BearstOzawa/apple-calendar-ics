@@ -61,6 +61,24 @@ class LunarFestivalRule:
 
 
 @dataclass(frozen=True)
+class ObservanceRule:
+    id: str
+    concept: str
+    name: str
+    month: int
+    day: int
+    note: str
+    source: Source
+
+
+@dataclass(frozen=True)
+class ObservanceConfig:
+    start_year: int
+    end_year: int
+    rules: tuple[ObservanceRule, ...]
+
+
+@dataclass(frozen=True)
 class CultureConfig:
     start_year: int
     end_year: int
@@ -80,7 +98,6 @@ class CalendarEvent:
     end: date
     description: str
     categories: tuple[str, ...]
-    source_url: str
     last_modified: datetime
     sequence: int = 0
     data_status: str = "confirmed"
@@ -111,5 +128,6 @@ class Feed:
     cadence: str
     source_type: str
     density: str
+    tier: str = "optional"
     overlaps: tuple[str, ...] = ()
     featured: bool = False

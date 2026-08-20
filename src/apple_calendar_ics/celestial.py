@@ -9,9 +9,6 @@ import astronomy
 from .model import CalendarEvent, CultureConfig, Metadata
 
 
-ASTRONOMY_SOURCE = "https://github.com/cosinekitty/astronomy"
-IMO_SOURCE = "https://www.imo.net/resources/calendar/"
-
 PHASES = {
     0: ("new-moon", "新月"),
     1: ("first-quarter", "上弦月"),
@@ -101,11 +98,10 @@ def _format_local(value: astronomy.Time, metadata: Metadata) -> str:
     return _local_datetime(value, metadata).strftime("%Y年%m月%d日 %H:%M")
 
 
-def _astronomy_lines() -> list[str]:
-    return [
-        "计算：Astronomy Engine 2.1.19（MIT License）",
-        f"来源：{ASTRONOMY_SOURCE}",
-    ]
+def _eclipse_title(body: str, kind_name: str) -> str:
+    if body in kind_name:
+        return kind_name
+    return f"{body}{kind_name}"
 
 
 def moon_phase_events(
@@ -128,18 +124,16 @@ def moon_phase_events(
                 logical_id=f"astro-{current.isoformat()}-{slug}",
                 kind="moon-phase",
                 concepts=(slug,),
-                title=f"月相｜{name}",
+                title=name,
                 start=current,
                 end=current + timedelta(days=1),
                 description="\n".join(
                     [
                         f"{name}发生于北京时间 {_format_local(quarter.time, metadata)}。",
                         "月相时刻为地心视角计算值。",
-                        *_astronomy_lines(),
                     ]
                 ),
                 categories=("中国日历", "月相", "天文"),
-                source_url=ASTRONOMY_SOURCE,
                 last_modified=modified,
                 data_status="computed",
             )
@@ -159,7 +153,7 @@ def _eclipse_events(config: CultureConfig, metadata: Metadata) -> list[CalendarE
         local_value = _local_datetime(lunar.peak, metadata)
         current = local_value.date()
         kind_name = ECLIPSE_NAMES[lunar.kind]
-        title = f"月食｜{kind_name}"
+        title = _eclipse_title("月", kind_name)
         events.append(
             CalendarEvent(
                 logical_id=f"astro-{current.isoformat()}-lunar-eclipse-{lunar.kind.name.lower()}",
@@ -172,11 +166,9 @@ def _eclipse_events(config: CultureConfig, metadata: Metadata) -> list[CalendarE
                     [
                         f"食甚：北京时间 {_format_local(lunar.peak, metadata)}。",
                         "实际可见情况取决于所在地是否处于夜间及天气条件。",
-                        *_astronomy_lines(),
                     ]
                 ),
                 categories=("中国日历", "天象", "月食"),
-                source_url=ASTRONOMY_SOURCE,
                 last_modified=modified,
                 data_status="computed",
             )
@@ -199,7 +191,7 @@ def _eclipse_events(config: CultureConfig, metadata: Metadata) -> list[CalendarE
                 logical_id=f"astro-{current.isoformat()}-solar-eclipse-{solar.kind.name.lower()}",
                 kind="solar-eclipse",
                 concepts=("solar-eclipse", solar.kind.name.lower()),
-                title=f"日食｜{kind_name}",
+                title=_eclipse_title("日", kind_name),
                 start=current,
                 end=current + timedelta(days=1),
                 description="\n".join(
@@ -207,11 +199,9 @@ def _eclipse_events(config: CultureConfig, metadata: Metadata) -> list[CalendarE
                         f"食甚：北京时间 {_format_local(solar.peak, metadata)}。",
                         location or "本事件为全球日食；具体可见区域需另行查询。",
                         "请勿在没有合格日食观测设备的情况下直视太阳。",
-                        *_astronomy_lines(),
                     ]
                 ),
                 categories=("中国日历", "天象", "日食"),
-                source_url=ASTRONOMY_SOURCE,
                 last_modified=modified,
                 data_status="computed",
             )
@@ -237,7 +227,7 @@ def _meteor_events(config: CultureConfig, metadata: Metadata) -> list[CalendarEv
                     logical_id=f"astro-{year}-{shower.slug}-maximum",
                     kind="meteor-shower",
                     concepts=("meteor-shower", shower.slug),
-                    title=f"流星雨｜{shower.name}极大",
+                    title=f"{shower.name}极大",
                     start=current,
                     end=current + timedelta(days=1),
                     description="\n".join(
@@ -246,12 +236,9 @@ def _meteor_events(config: CultureConfig, metadata: Metadata) -> list[CalendarEv
                             f"常见活跃期：{shower.active}；参考 ZHR：{shower.zhr}。",
                             "极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动。",
                             "观测效果取决于月光、天气、光污染和辐射点高度。",
-                            "数据依据：International Meteor Organization 年度流星雨日历。",
-                            f"来源：{IMO_SOURCE}",
                         ]
                     ),
                     categories=("中国日历", "天象", "流星雨"),
-                    source_url=IMO_SOURCE,
                     last_modified=modified,
                     data_status="computed",
                 )
@@ -280,18 +267,16 @@ def _planet_events(config: CultureConfig, metadata: Metadata) -> list[CalendarEv
                     logical_id=f"astro-{current.isoformat()}-{body.name.lower()}-opposition",
                     kind="planetary-event",
                     concepts=("opposition", body.name.lower()),
-                    title=f"行星｜{body_name}冲日",
+                    title=f"{body_name}冲日",
                     start=current,
                     end=current + timedelta(days=1),
                     description="\n".join(
                         [
                             f"{body_name}冲日发生于北京时间 {_format_local(event_time, metadata)}。",
                             "冲日前后通常是观测外行星的良好时段，实际效果受天气和位置影响。",
-                            *_astronomy_lines(),
                         ]
                     ),
                     categories=("中国日历", "天象", "行星"),
-                    source_url=ASTRONOMY_SOURCE,
                     last_modified=modified,
                     data_status="computed",
                 )
@@ -320,7 +305,7 @@ def _planet_events(config: CultureConfig, metadata: Metadata) -> list[CalendarEv
                     logical_id=f"astro-{current.isoformat()}-{body.name.lower()}-elongation",
                     kind="planetary-event",
                     concepts=("maximum-elongation", body.name.lower()),
-                    title=f"行星｜{body_name}{visibility[:3]}",
+                    title=f"{body_name}{visibility[:3]}",
                     start=current,
                     end=current + timedelta(days=1),
                     description="\n".join(
@@ -328,11 +313,9 @@ def _planet_events(config: CultureConfig, metadata: Metadata) -> list[CalendarEv
                             f"{body_name}{visibility}。",
                             f"北京时间：{_format_local(elongation.time, metadata)}。",
                             f"与太阳最大角距约 {elongation.elongation:.1f}°。",
-                            *_astronomy_lines(),
                         ]
                     ),
                     categories=("中国日历", "天象", "行星"),
-                    source_url=ASTRONOMY_SOURCE,
                     last_modified=modified,
                     data_status="computed",
                 )
@@ -370,7 +353,7 @@ def zodiac_season_events(
                     logical_id=f"astro-{year}-zodiac-{slug}",
                     kind="zodiac-season",
                     concepts=("tropical-zodiac", slug),
-                    title=f"星座季节｜{name}",
+                    title=f"{name}季节开始",
                     start=current,
                     end=current + timedelta(days=1),
                     description="\n".join(
@@ -378,11 +361,9 @@ def zodiac_season_events(
                             f"太阳进入{name}黄道区段：北京时间 {_format_local(ingress, metadata)}。",
                             "这里采用热带黄道的十二等分定义，不等同于 IAU 天文学星座边界。",
                             "本频道只发布可复现的星象时间，不提供个人运势解读。",
-                            *_astronomy_lines(),
                         ]
                     ),
                     categories=("中国日历", "星象", "星座季节"),
-                    source_url=ASTRONOMY_SOURCE,
                     last_modified=modified,
                     data_status="computed",
                 )

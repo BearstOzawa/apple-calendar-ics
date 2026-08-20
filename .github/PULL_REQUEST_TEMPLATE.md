@@ -30,8 +30,6 @@
 - [ ] `ruff check src tests`
 - [ ] `ruff format --check src tests`
 - [ ] `node --check site/app.js`
-- [ ] `node --check site/tarot.js`
-- [ ] `node tests/test_tarot.js`
 - [ ] `node --check worker/src/index.mjs`
 - [ ] `node tests/test_worker.mjs`
 - [ ] `python -m unittest discover -s tests -v`

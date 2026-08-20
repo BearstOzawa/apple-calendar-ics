@@ -88,10 +88,29 @@ def validate_file(path: Path, *, max_active_events_per_day: int = 3) -> dict[str
             raise CalendarValidationError(f"{path}: {uid} contains a default alarm")
 
         summary = str(component.get("SUMMARY", ""))
-        if not summary or re.search(r"第\s*\d+\s*天", summary):
+        if (
+            not summary
+            or len(summary) > 24
+            or "｜" in summary
+            or re.search(r"第\s*\d+\s*天", summary)
+        ):
             raise CalendarValidationError(f"{path}: noisy or missing title for {uid}")
-        if not str(component.get("URL", "")).startswith("https://"):
-            raise CalendarValidationError(f"{path}: {uid} must contain an HTTPS source")
+        if component.get("URL") is not None:
+            raise CalendarValidationError(
+                f"{path}: {uid} must not expose a per-event source URL"
+            )
+        description = str(component.get("DESCRIPTION", ""))
+        forbidden_detail_tails = (
+            "计算库：",
+            "计算：Astronomy Engine",
+            "来源：http",
+            "说明：传统民俗信息仅供文化参考",
+            "数据依据：International Meteor Organization",
+        )
+        if any(marker in description for marker in forbidden_detail_tails):
+            raise CalendarValidationError(
+                f"{path}: {uid} contains a repeated implementation/source tail"
+            )
 
         kind = str(component.get("X-CN-CALENDAR-KIND", ""))
         concepts = tuple(
@@ -156,8 +175,8 @@ def validate_directory(path: Path) -> dict[str, dict[str, Any]]:
     feed_entries = manifest.get("feeds")
     if not isinstance(feed_entries, dict) or not feed_entries:
         raise CalendarValidationError(f"{manifest_path}: feeds must be non-empty")
-    if manifest.get("schema_version") != 2:
-        raise CalendarValidationError(f"{manifest_path}: schema_version must be 2")
+    if manifest.get("schema_version") != 3:
+        raise CalendarValidationError(f"{manifest_path}: schema_version must be 3")
 
     expected_files = set(feed_entries)
     actual_files = {item.name for item in path.glob("*.ics")}
@@ -179,11 +198,31 @@ def validate_directory(path: Path) -> dict[str, dict[str, Any]]:
             "cadence",
             "source_type",
             "density",
+            "tier",
         ):
             if not isinstance(expected.get(key), str) or not expected[key]:
                 raise CalendarValidationError(
                     f"{manifest_path}: {filename} lacks {key}"
                 )
+        if expected["tier"] not in {"core", "optional", "dense"}:
+            raise CalendarValidationError(
+                f"{manifest_path}: {filename} has invalid tier"
+            )
+        events_per_year = expected.get("events_per_year")
+        if not isinstance(events_per_year, (int, float)) or events_per_year <= 0:
+            raise CalendarValidationError(
+                f"{manifest_path}: {filename} lacks events_per_year"
+            )
+        sample_titles = expected.get("sample_titles")
+        if (
+            not isinstance(sample_titles, list)
+            or not sample_titles
+            or len(sample_titles) > 3
+            or any(not isinstance(item, str) or not item for item in sample_titles)
+        ):
+            raise CalendarValidationError(
+                f"{manifest_path}: {filename} has invalid sample_titles"
+            )
         overlaps = expected.get("overlaps")
         if not isinstance(overlaps, list) or any(
             not isinstance(item, str) or item not in feed_entries or item == filename

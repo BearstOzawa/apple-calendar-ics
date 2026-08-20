@@ -9,6 +9,8 @@ from .model import (
     CultureConfig,
     LunarFestivalRule,
     Metadata,
+    ObservanceConfig,
+    ObservanceRule,
     OfficialPeriod,
     OfficialYear,
     Source,
@@ -284,4 +286,85 @@ def load_culture_config(data_dir: Path) -> CultureConfig:
         include_lunar_new_years_eve=include_lunar_new_years_eve,
         source=source,
         lunar_festivals=tuple(rules),
+    )
+
+
+def load_observance_config(data_dir: Path) -> ObservanceConfig:
+    path = data_dir / "observances.json"
+    raw = _read_json(path)
+    _require_schema_version(raw, path)
+    start_year = raw.get("start_year")
+    end_year = raw.get("end_year")
+    if (
+        not isinstance(start_year, int)
+        or not isinstance(end_year, int)
+        or start_year < 1900
+        or end_year < start_year
+        or end_year > 2100
+    ):
+        raise DataValidationError(f"{path}: invalid observance year range")
+
+    rules_raw = raw.get("observances")
+    if not isinstance(rules_raw, list) or not rules_raw:
+        raise DataValidationError(f"{path}: observances must be a non-empty list")
+
+    rules: list[ObservanceRule] = []
+    ids: set[str] = set()
+    dates: set[tuple[int, int]] = set()
+    for index, item in enumerate(rules_raw):
+        if not isinstance(item, dict):
+            raise DataValidationError(f"{path}: observances[{index}] invalid")
+        rule_id = _require_string(item.get("id"), f"observances[{index}].id", path)
+        concept = _require_string(
+            item.get("concept"), f"observances[{index}].concept", path
+        )
+        month = item.get("month")
+        day = item.get("day")
+        source_raw = item.get("source")
+        if not isinstance(source_raw, dict):
+            raise DataValidationError(
+                f"{path}: observances[{index}].source must be an object"
+            )
+        source = Source(
+            title=_require_string(
+                source_raw.get("title"), f"observances[{index}].source.title", path
+            ),
+            url=_require_string(
+                source_raw.get("url"), f"observances[{index}].source.url", path
+            ),
+        )
+        if (
+            not rule_id.isascii()
+            or not concept.isascii()
+            or rule_id in ids
+            or not isinstance(month, int)
+            or not isinstance(day, int)
+            or not 1 <= month <= 12
+            or not 1 <= day <= 31
+            or (month, day) in dates
+            or not source.url.startswith("https://www.gov.cn/")
+        ):
+            raise DataValidationError(f"{path}: invalid observance {rule_id!r}")
+        ids.add(rule_id)
+        dates.add((month, day))
+        rules.append(
+            ObservanceRule(
+                id=rule_id,
+                concept=concept,
+                name=_require_string(
+                    item.get("name"), f"observances[{index}].name", path
+                ),
+                month=month,
+                day=day,
+                note=_require_string(
+                    item.get("note"), f"observances[{index}].note", path
+                ),
+                source=source,
+            )
+        )
+
+    return ObservanceConfig(
+        start_year=start_year,
+        end_year=end_year,
+        rules=tuple(rules),
     )
