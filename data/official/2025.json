@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "year": 2025,
+  "published_at": "2024-11-12",
+  "source": {
+    "title": "国务院办公厅关于2025年部分节假日安排的通知",
+    "url": "https://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm",
+    "document_number": "国办发明电〔2024〕12号"
+  },
+  "periods": [
+    {
+      "id": "new-year",
+      "name": "元旦",
+      "concepts": ["new-year"],
+      "start": "2025-01-01",
+      "end_inclusive": "2025-01-01",
+      "sequence": 0,
+      "workdays": []
+    },
+    {
+      "id": "spring-festival",
+      "name": "春节",
+      "concepts": ["spring-festival"],
+      "start": "2025-01-28",
+      "end_inclusive": "2025-02-04",
+      "sequence": 0,
+      "workdays": [
+        {"id": "makeup-1", "date": "2025-01-26", "sequence": 0},
+        {"id": "makeup-2", "date": "2025-02-08", "sequence": 0}
+      ]
+    },
+    {
+      "id": "qingming",
+      "name": "清明节",
+      "concepts": ["qingming"],
+      "start": "2025-04-04",
+      "end_inclusive": "2025-04-06",
+      "sequence": 0,
+      "workdays": []
+    },
+    {
+      "id": "labour-day",
+      "name": "劳动节",
+      "concepts": ["labour-day"],
+      "start": "2025-05-01",
+      "end_inclusive": "2025-05-05",
+      "sequence": 0,
+      "workdays": [
+        {"id": "makeup-1", "date": "2025-04-27", "sequence": 0}
+      ]
+    },
+    {
+      "id": "dragon-boat",
+      "name": "端午节",
+      "concepts": ["dragon-boat"],
+      "start": "2025-05-31",
+      "end_inclusive": "2025-06-02",
+      "sequence": 0,
+      "workdays": []
+    },
+    {
+      "id": "national-day-mid-autumn",
+      "name": "国庆、中秋",
+      "concepts": ["national-day", "mid-autumn"],
+      "start": "2025-10-01",
+      "end_inclusive": "2025-10-08",
+      "sequence": 0,
+      "workdays": [
+        {"id": "makeup-1", "date": "2025-09-28", "sequence": 0},
+        {"id": "makeup-2", "date": "2025-10-11", "sequence": 0}
+      ]
+    }
+  ]
+}
+

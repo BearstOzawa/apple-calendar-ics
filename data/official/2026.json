@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "year": 2026,
+  "published_at": "2025-11-04",
+  "source": {
+    "title": "国务院办公厅关于2026年部分节假日安排的通知",
+    "url": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+    "document_number": "国办发明电〔2025〕7号"
+  },
+  "periods": [
+    {
+      "id": "new-year",
+      "name": "元旦",
+      "concepts": ["new-year"],
+      "start": "2026-01-01",
+      "end_inclusive": "2026-01-03",
+      "sequence": 0,
+      "workdays": [
+        {"id": "makeup-1", "date": "2026-01-04", "sequence": 0}
+      ]
+    },
+    {
+      "id": "spring-festival",
+      "name": "春节",
+      "concepts": ["spring-festival"],
+      "start": "2026-02-15",
+      "end_inclusive": "2026-02-23",
+      "sequence": 0,
+      "workdays": [
+        {"id": "makeup-1", "date": "2026-02-14", "sequence": 0},
+        {"id": "makeup-2", "date": "2026-02-28", "sequence": 0}
+      ]
+    },
+    {
+      "id": "qingming",
+      "name": "清明节",
+      "concepts": ["qingming"],
+      "start": "2026-04-04",
+      "end_inclusive": "2026-04-06",
+      "sequence": 0,
+      "workdays": []
+    },
+    {
+      "id": "labour-day",
+      "name": "劳动节",
+      "concepts": ["labour-day"],
+      "start": "2026-05-01",
+      "end_inclusive": "2026-05-05",
+      "sequence": 0,
+      "workdays": [
+        {"id": "makeup-1", "date": "2026-05-09", "sequence": 0}
+      ]
+    },
+    {
+      "id": "dragon-boat",
+      "name": "端午节",
+      "concepts": ["dragon-boat"],
+      "start": "2026-06-19",
+      "end_inclusive": "2026-06-21",
+      "sequence": 0,
+      "workdays": []
+    },
+    {
+      "id": "mid-autumn",
+      "name": "中秋节",
+      "concepts": ["mid-autumn"],
+      "start": "2026-09-25",
+      "end_inclusive": "2026-09-27",
+      "sequence": 0,
+      "workdays": []
+    },
+    {
+      "id": "national-day",
+      "name": "国庆节",
+      "concepts": ["national-day"],
+      "start": "2026-10-01",
+      "end_inclusive": "2026-10-07",
+      "sequence": 0,
+      "workdays": [
+        {"id": "makeup-1", "date": "2026-09-20", "sequence": 0},
+        {"id": "makeup-2", "date": "2026-10-10", "sequence": 0}
+      ]
+    }
+  ]
+}

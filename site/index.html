@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="为 iPhone 和 Mac 整理的中国法定班休、传统节日与二十四节气订阅。"
+    />
+    <meta name="theme-color" content="#f4efe5" />
+    <title>中国日历・为 Apple 日历整理</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="中国日历首页">
+          <span class="brand-mark" aria-hidden="true">历</span>
+          <span>中国日历</span>
+        </a>
+        <a
+          class="github-link"
+          href="https://github.com/BearstOzawa/apple-calendar-ics"
+          rel="noreferrer"
+        >
+          查看源码
+        </a>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <h1 id="hero-title">少一点重复，<br />多一点中国日历该有的样子。</h1>
+          <p class="hero-copy">
+            法定班休、传统节日、二十四节气。全天显示，不占忙闲，没有突然出现的默认闹钟。
+          </p>
+          <div class="status-row" aria-label="数据状态">
+            <span class="status"
+              ><i></i>班休确认至 <b data-work-rest-year>2026</b></span
+            >
+            <span class="status">文化日历至 <b data-culture-year>2030</b></span>
+            <span class="status"
+              >数据版本 <b data-dataset-version>2026-08-20</b></span
+            >
+          </div>
+        </section>
+
+        <section class="feeds" aria-labelledby="feeds-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">选择订阅</p>
+              <h2 id="feeds-title">一般只选一个</h2>
+            </div>
+            <p>两个源都包含班休，同时订阅会重复。</p>
+          </div>
+
+          <article class="feed-card featured">
+            <div class="card-topline">
+              <span class="recommendation">推荐</span>
+              <span class="event-count"
+                ><b data-feed-count="essential.ics">224</b> 条事件</span
+              >
+            </div>
+            <h3>中国日历・精选</h3>
+            <p>法定放假与调休，加上核心传统节日和二十四节气。适合日常使用。</p>
+            <ul>
+              <li>连续假期只显示一条</li>
+              <li>保留春节、元宵、七夕、中秋等日期</li>
+              <li>覆盖 2025—2030 年文化内容</li>
+            </ul>
+            <div class="actions">
+              <a
+                class="button primary"
+                href="webcal://bearstozawa.github.io/apple-calendar-ics/essential.ics"
+                >在 Apple 日历中订阅</a
+              >
+              <button
+                class="button ghost"
+                type="button"
+                data-copy="essential.ics"
+              >
+                复制 HTTPS 地址
+              </button>
+            </div>
+          </article>
+
+          <article class="feed-card compact">
+            <div class="card-topline">
+              <span class="plain-label">极简</span>
+              <span class="event-count"
+                ><b data-feed-count="work-rest.ics">24</b> 条事件</span
+              >
+            </div>
+            <h3>中国班休</h3>
+            <p>只看哪天放假、哪天补班。适合已经使用其他节日或农历来源的人。</p>
+            <div class="actions">
+              <a
+                class="button secondary"
+                href="webcal://bearstozawa.github.io/apple-calendar-ics/work-rest.ics"
+                >订阅班休</a
+              >
+              <button
+                class="button ghost"
+                type="button"
+                data-copy="work-rest.ics"
+              >
+                复制 HTTPS 地址
+              </button>
+            </div>
+          </article>
+        </section>
+
+        <section class="principles" aria-labelledby="principles-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">为什么更清爽</p>
+              <h2 id="principles-title">把日历当日历，而不是消息流</h2>
+            </div>
+          </div>
+          <div class="principle-grid">
+            <article>
+              <span>01</span>
+              <h3>一个假期，一条事件</h3>
+              <p>春节九天使用一条跨日事件，不在每天重复“第几天”。</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>默认安静</h3>
+              <p>补班是全天透明提示，不会占用工作时间，也不带默认提醒。</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>有来源，也有人审核</h3>
+              <p>自动化只发现变化；法定班休必须核对国务院正式通知后发布。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="instructions" aria-labelledby="instructions-title">
+          <div>
+            <p class="eyebrow">订阅前请注意</p>
+            <h2 id="instructions-title">先关闭重复来源</h2>
+          </div>
+          <p>
+            如果选择“精选”，请关闭 Apple
+            自带的“中国大陆节假日”和其他综合中国日历源。Apple
+            日历的刷新时间由系统决定，因此 GitHub
+            发布后不会保证立即出现在手机上。
+          </p>
+        </section>
+
+        <p class="copy-status" role="status" aria-live="polite"></p>
+      </main>
+
+      <footer>
+        <p>基于公开正式通知与可审计规则生成。</p>
+        <div>
+          <a
+            href="https://github.com/BearstOzawa/apple-calendar-ics/blob/main/DATA_LICENSE.md"
+            >数据来源</a
+          >
+          <a href="manifest.json">版本清单</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

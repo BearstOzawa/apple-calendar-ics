@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "start_year": 2025,
+  "end_year": 2030,
+  "include_solar_terms": true,
+  "include_lunar_new_years_eve": true,
+  "source": {
+    "name": "lunar-python 1.4.8",
+    "url": "https://github.com/6tail/lunar-python",
+    "license": "MIT"
+  },
+  "lunar_festivals": [
+    {
+      "id": "spring-festival",
+      "concept": "spring-festival",
+      "name": "春节",
+      "month": 1,
+      "day": 1
+    },
+    {
+      "id": "lantern-festival",
+      "concept": "lantern-festival",
+      "name": "元宵节",
+      "month": 1,
+      "day": 15
+    },
+    {
+      "id": "dragon-head-raising-day",
+      "concept": "dragon-head-raising-day",
+      "name": "龙抬头",
+      "month": 2,
+      "day": 2
+    },
+    {
+      "id": "dragon-boat",
+      "concept": "dragon-boat",
+      "name": "端午节",
+      "month": 5,
+      "day": 5
+    },
+    {
+      "id": "qixi-festival",
+      "concept": "qixi-festival",
+      "name": "七夕",
+      "month": 7,
+      "day": 7
+    },
+    {
+      "id": "ghost-festival",
+      "concept": "ghost-festival",
+      "name": "中元节",
+      "month": 7,
+      "day": 15
+    },
+    {
+      "id": "mid-autumn",
+      "concept": "mid-autumn",
+      "name": "中秋节",
+      "month": 8,
+      "day": 15
+    },
+    {
+      "id": "double-ninth-festival",
+      "concept": "double-ninth-festival",
+      "name": "重阳节",
+      "month": 9,
+      "day": 9
+    },
+    {
+      "id": "laba-festival",
+      "concept": "laba-festival",
+      "name": "腊八节",
+      "month": 12,
+      "day": 8
+    }
+  ]
+}
+

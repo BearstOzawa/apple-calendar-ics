@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apple-calendar-ics"
+version = "0.1.0"
+description = "Clean, auditable Chinese calendar subscriptions for Apple Calendar"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "BearstOzawa" }]
+dependencies = [
+  "icalendar==7.3.0",
+  "lunar_python==1.4.8",
+]
+
+[project.optional-dependencies]
+dev = ["ruff==0.14.14"]
+
+[project.scripts]
+calendar-build = "apple_calendar_ics.build:main"
+calendar-validate = "apple_calendar_ics.validate:main"
+calendar-check-upstream = "apple_calendar_ics.monitor:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

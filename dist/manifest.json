@@ -1,0 +1,45 @@
+{
+  "confirmed_work_rest_through": 2026,
+  "confirmed_work_rest_years": [
+    2025,
+    2026
+  ],
+  "culture_years": [
+    2025,
+    2030
+  ],
+  "dataset_version": "2026-08-20",
+  "feeds": {
+    "essential.ics": {
+      "description": "法定班休、核心传统节日与二十四节气；清爽去重版。",
+      "event_count": 224,
+      "first_date": "2025-01-01",
+      "last_date": "2030-12-22",
+      "name": "中国日历・精选",
+      "sha256": "a76c736fbba4c6ec3c0d48898b92c23517354607a8df6ce123d5a1ba97026087"
+    },
+    "work-rest.ics": {
+      "description": "中国大陆法定放假与调休上班；全天、透明、无默认提醒。",
+      "event_count": 24,
+      "first_date": "2025-01-01",
+      "last_date": "2026-10-10",
+      "name": "中国班休",
+      "sha256": "2817962225a11e970e656bddec51f5e148787260d6f06d39ab89c3f3c7bc5156"
+    }
+  },
+  "schema_version": 1,
+  "sources": [
+    {
+      "published_at": "2024-11-12",
+      "title": "国务院办公厅关于2025年部分节假日安排的通知",
+      "url": "https://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm",
+      "year": 2025
+    },
+    {
+      "published_at": "2025-11-04",
+      "title": "国务院办公厅关于2026年部分节假日安排的通知",
+      "url": "https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm",
+      "year": 2026
+    }
+  ]
+}
