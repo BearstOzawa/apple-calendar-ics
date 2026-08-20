@@ -80,7 +80,7 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
     )
     essential = Feed(
         slug="essential",
-        name="中国日历・精选",
+        name="中国日历",
         description="法定班休、核心传统节日与二十四节气；清爽去重版。",
         events=_deduplicate(list(official) + essential_culture),
         category="推荐",

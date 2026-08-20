@@ -60,7 +60,7 @@
       "featured": true,
       "first_date": "2025-01-01",
       "last_date": "2030-12-22",
-      "name": "中国日历・精选",
+      "name": "中国日历",
       "overlaps": [
         "work-rest.ics",
         "festivals.ics",
@@ -70,7 +70,7 @@
         "清明节假期（3天）",
         "谷雨"
       ],
-      "sha256": "df3234aa9a715c67eddcab78b802b4229b6874a290f0f162a04e977acceb221c",
+      "sha256": "91aa7b688f2e2a9748169214bc98b167ee30151961a22fe98ad5e29ddcfdb7e1",
       "source_type": "官方 + 算法",
       "tier": "core"
     },

@@ -36,7 +36,7 @@ const displayOrder = [
 
 const fallbackFeeds = {
   "essential.ics": {
-    name: "中国日历・精选",
+    name: "中国日历",
     description: "班休、核心传统节日与二十四节气，已做跨频道去重。",
     cadence: "约每月 3 条",
     density: "低频",
@@ -391,7 +391,7 @@ function renderSummary() {
   } else if ([...selected].some((filename) => feeds[filename].tier === "dense")) {
     message.textContent = "当前包含每日频道：月视图会在每一天增加一条全天事件。";
   } else if (selected.has("essential.ics")) {
-    message.textContent = "“精选”已经包含班休、传统节日和二十四节气，不需要重复添加。";
+    message.textContent = "“中国日历”已经包含班休、传统节日和二十四节气，不需要重复添加。";
   } else {
     message.textContent = "你正在拆分基础频道，可以为班休、节日和节气分别设置颜色。";
   }

@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//BearstOzawa//Apple Calendar ICS//ZH-CN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME;LANGUAGE=zh-CN:中国日历・精选
+X-WR-CALNAME;LANGUAGE=zh-CN:中国日历
 X-WR-CALDESC;LANGUAGE=zh-CN:法定班休、核心传统节日与二十四
  节气；清爽去重版。
 X-WR-TIMEZONE:Asia/Shanghai
