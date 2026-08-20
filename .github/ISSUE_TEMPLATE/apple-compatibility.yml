@@ -15,7 +15,7 @@ body:
     attributes:
       label: 使用的订阅
       options:
-        - 中国日历・精选（essential.ics）
+        - 中国日历（essential.ics）
         - 中国班休（work-rest.ics）
         - 中国黄历（almanac.ics）
         - 二十八星宿（lunar-mansions.ics）
