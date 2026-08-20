@@ -175,8 +175,42 @@ def validate_directory(path: Path) -> dict[str, dict[str, Any]]:
     feed_entries = manifest.get("feeds")
     if not isinstance(feed_entries, dict) or not feed_entries:
         raise CalendarValidationError(f"{manifest_path}: feeds must be non-empty")
-    if manifest.get("schema_version") != 3:
-        raise CalendarValidationError(f"{manifest_path}: schema_version must be 3")
+    if manifest.get("schema_version") != 4:
+        raise CalendarValidationError(f"{manifest_path}: schema_version must be 4")
+
+    culture_years = manifest.get("culture_years")
+    calendar_days = manifest.get("calendar_days")
+    if (
+        not isinstance(culture_years, list)
+        or len(culture_years) != 2
+        or any(not isinstance(year, int) for year in culture_years)
+        or not isinstance(calendar_days, dict)
+    ):
+        raise CalendarValidationError(
+            f"{manifest_path}: invalid culture years or calendar days"
+        )
+    first_year, last_year = culture_years
+    expected_day_count = (date(last_year + 1, 1, 1) - date(first_year, 1, 1)).days
+    if len(calendar_days) != expected_day_count:
+        raise CalendarValidationError(
+            f"{manifest_path}: calendar_days does not cover culture range"
+        )
+    for raw_date, lunar_label in calendar_days.items():
+        try:
+            current = date.fromisoformat(raw_date)
+        except (TypeError, ValueError) as error:
+            raise CalendarValidationError(
+                f"{manifest_path}: invalid calendar day {raw_date!r}"
+            ) from error
+        if (
+            not first_year <= current.year <= last_year
+            or not isinstance(lunar_label, str)
+            or not lunar_label
+            or len(lunar_label) > 5
+        ):
+            raise CalendarValidationError(
+                f"{manifest_path}: invalid lunar label for {raw_date}"
+            )
 
     expected_files = set(feed_entries)
     actual_files = {item.name for item in path.glob("*.ics")}
@@ -235,6 +269,39 @@ def validate_directory(path: Path) -> dict[str, dict[str, Any]]:
             raise CalendarValidationError(
                 f"{manifest_path}: {filename} lacks featured state"
             )
+        preview_events = expected.get("preview_events")
+        if not isinstance(preview_events, list):
+            raise CalendarValidationError(
+                f"{manifest_path}: {filename} lacks preview_events"
+            )
+        if expected["tier"] == "dense" and preview_events:
+            raise CalendarValidationError(
+                f"{manifest_path}: {filename} must not publish dense preview events"
+            )
+        if expected["tier"] != "dense" and len(preview_events) != expected.get(
+            "event_count"
+        ):
+            raise CalendarValidationError(
+                f"{manifest_path}: {filename} preview count differs"
+            )
+        for preview in preview_events:
+            if not isinstance(preview, dict) or not isinstance(
+                preview.get("title"), str
+            ):
+                raise CalendarValidationError(
+                    f"{manifest_path}: {filename} has an invalid preview event"
+                )
+            try:
+                preview_start = date.fromisoformat(preview.get("start"))
+                preview_end = date.fromisoformat(preview.get("end"))
+            except (TypeError, ValueError) as error:
+                raise CalendarValidationError(
+                    f"{manifest_path}: {filename} has invalid preview dates"
+                ) from error
+            if preview_end <= preview_start or not preview["title"]:
+                raise CalendarValidationError(
+                    f"{manifest_path}: {filename} has invalid preview range"
+                )
         result = validate_file(path / filename)
         for key in ("event_count", "first_date", "last_date", "sha256"):
             if result[key] != expected.get(key):

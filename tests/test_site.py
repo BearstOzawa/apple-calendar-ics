@@ -88,6 +88,41 @@ class SiteTests(unittest.TestCase):
         self.assertNotIn("塔罗", html)
         self.assertFalse((SITE_DIR / "tarot.js").exists())
 
+    def test_catalogue_prefers_useful_low_frequency_extensions(self) -> None:
+        manifest = json.loads((DIST_DIR / "manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual(4, manifest["schema_version"])
+        self.assertEqual(
+            {
+                "holiday-reminders.ics",
+                "life-festivals.ics",
+                "lunar-days.ics",
+            },
+            {
+                filename
+                for filename in manifest["feeds"]
+                if filename
+                in {
+                    "holiday-reminders.ics",
+                    "life-festivals.ics",
+                    "lunar-days.ics",
+                }
+            },
+        )
+        self.assertNotIn("zodiac-seasons.ics", manifest["feeds"])
+        self.assertFalse((DIST_DIR / "zodiac-seasons.ics").exists())
+
+    def test_preview_uses_device_today_instead_of_fixed_april_demo(self) -> None:
+        source = "\n".join(
+            (SITE_DIR / filename).read_text(encoding="utf-8")
+            for filename in ("index.html", "app.js", "calendar-core.js")
+        )
+        self.assertIn("calendarContext", source)
+        self.assertNotIn("2026 年 4 月", source)
+        self.assertNotIn("4 月 20 日", source)
+        manifest = json.loads((DIST_DIR / "manifest.json").read_text(encoding="utf-8"))
+        self.assertEqual("初九", manifest["calendar_days"]["2026-08-21"])
+        self.assertTrue(manifest["feeds"]["essential.ics"]["preview_events"])
+
 
 if __name__ == "__main__":
     unittest.main()

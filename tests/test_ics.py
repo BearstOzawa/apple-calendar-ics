@@ -54,6 +54,9 @@ class IcsTests(unittest.TestCase):
                     "almanac.ics",
                     "essential.ics",
                     "festivals.ics",
+                    "holiday-reminders.ics",
+                    "life-festivals.ics",
+                    "lunar-days.ics",
                     "lunar-mansions.ics",
                     "moon-phases.ics",
                     "observances.ics",
@@ -61,7 +64,6 @@ class IcsTests(unittest.TestCase):
                     "sky-events.ics",
                     "solar-terms.ics",
                     "work-rest.ics",
-                    "zodiac-seasons.ics",
                 },
                 set(results),
             )

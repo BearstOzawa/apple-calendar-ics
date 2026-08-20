@@ -17,12 +17,14 @@ body:
       options:
         - 中国日历（essential.ics）
         - 中国班休（work-rest.ics）
-        - 中国黄历（almanac.ics）
+        - 黄历宜忌（almanac.ics）
         - 二十八星宿（lunar-mansions.ics）
         - 中国时令（seasonal.ics）
+        - 假期提醒（holiday-reminders.ics）
+        - 生活节日（life-festivals.ics）
+        - 农历初一十五（lunar-days.ics）
         - 月相（moon-phases.ics）
         - 重要天象（sky-events.ics）
-        - 星座季节（zodiac-seasons.ics）
         - 多个订阅都受影响
         - 暂不确定
     validations:

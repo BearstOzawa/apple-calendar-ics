@@ -79,6 +79,26 @@ class ObservanceConfig:
 
 
 @dataclass(frozen=True)
+class LifestyleRule:
+    id: str
+    concept: str
+    name: str
+    month: int
+    day: int | None
+    weekday: int | None
+    occurrence: int | None
+    note: str
+
+
+@dataclass(frozen=True)
+class LifestyleConfig:
+    start_year: int
+    end_year: int
+    source: Source
+    rules: tuple[LifestyleRule, ...]
+
+
+@dataclass(frozen=True)
 class CultureConfig:
     start_year: int
     end_year: int

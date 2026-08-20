@@ -31,21 +31,6 @@ BODY_NAMES = {
     astronomy.Body.Saturn: "土星",
 }
 
-ZODIAC = (
-    ("aquarius", "水瓶座", 300.0, 1, 18),
-    ("pisces", "双鱼座", 330.0, 2, 17),
-    ("aries", "白羊座", 0.0, 3, 18),
-    ("taurus", "金牛座", 30.0, 4, 18),
-    ("gemini", "双子座", 60.0, 5, 19),
-    ("cancer", "巨蟹座", 90.0, 6, 19),
-    ("leo", "狮子座", 120.0, 7, 21),
-    ("virgo", "处女座", 150.0, 8, 21),
-    ("libra", "天秤座", 180.0, 9, 21),
-    ("scorpio", "天蝎座", 210.0, 10, 21),
-    ("sagittarius", "射手座", 240.0, 11, 20),
-    ("capricorn", "摩羯座", 270.0, 12, 20),
-)
-
 
 @dataclass(frozen=True)
 class MeteorShower:
@@ -332,40 +317,4 @@ def sky_event_events(
         *_meteor_events(config, metadata),
         *_planet_events(config, metadata),
     ]
-    return tuple(sorted(events, key=lambda event: event.sort_key))
-
-
-def zodiac_season_events(
-    config: CultureConfig, metadata: Metadata
-) -> tuple[CalendarEvent, ...]:
-    events: list[CalendarEvent] = []
-    modified = _modified(metadata)
-    for year in range(config.start_year, config.end_year + 1):
-        for slug, name, longitude, month, day in ZODIAC:
-            start = astronomy.Time.Make(year, month, day, 0, 0, 0)
-            ingress = astronomy.SearchSunLongitude(longitude, start, 8.0)
-            if ingress is None:
-                raise ValueError(f"cannot calculate {name} ingress for {year}")
-            local_value = _local_datetime(ingress, metadata)
-            current = local_value.date()
-            events.append(
-                CalendarEvent(
-                    logical_id=f"astro-{year}-zodiac-{slug}",
-                    kind="zodiac-season",
-                    concepts=("tropical-zodiac", slug),
-                    title=f"{name}季节开始",
-                    start=current,
-                    end=current + timedelta(days=1),
-                    description="\n".join(
-                        [
-                            f"太阳进入{name}黄道区段：北京时间 {_format_local(ingress, metadata)}。",
-                            "这里采用热带黄道的十二等分定义，不等同于 IAU 天文学星座边界。",
-                            "本频道只发布可复现的星象时间，不提供个人运势解读。",
-                        ]
-                    ),
-                    categories=("中国日历", "星象", "星座季节"),
-                    last_modified=modified,
-                    data_status="computed",
-                )
-            )
     return tuple(sorted(events, key=lambda event: event.sort_key))

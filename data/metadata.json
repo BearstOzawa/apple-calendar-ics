@@ -1,8 +1,7 @@
 {
   "schema_version": 1,
-  "dataset_version": "2026-08-20",
+  "dataset_version": "2026-08-21",
   "default_language": "zh-CN",
   "timezone": "Asia/Shanghai",
   "uid_domain": "apple-calendar-ics.bearstozawa.github.io"
 }
-

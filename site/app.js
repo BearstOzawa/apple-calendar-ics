@@ -4,7 +4,9 @@ const publishedBase = "https://apple-calendar.lili.uno/";
 const selectionStorageKey = "cn-calendar-selected-feeds-v2";
 const statusNode = document.querySelector(".copy-status");
 const dialog = document.querySelector("[data-subscribe-dialog]");
+const previewClock = CalendarPreview.calendarContext();
 let statusTimer;
+let lunarDays = {};
 
 const colors = {
   "essential.ics": "#de3d32",
@@ -12,10 +14,12 @@ const colors = {
   "festivals.ics": "#d66b2c",
   "solar-terms.ics": "#bf8626",
   "observances.ics": "#5b708f",
+  "holiday-reminders.ics": "#cc5f3b",
+  "life-festivals.ics": "#ba506d",
+  "lunar-days.ics": "#52705e",
   "seasonal.ics": "#8a6235",
   "moon-phases.ics": "#47749f",
   "sky-events.ics": "#b72f59",
-  "zodiac-seasons.ics": "#7558a6",
   "almanac.ics": "#9a4fa5",
   "lunar-mansions.ics": "#765d45",
 };
@@ -26,10 +30,12 @@ const displayOrder = [
   "festivals.ics",
   "solar-terms.ics",
   "observances.ics",
+  "holiday-reminders.ics",
+  "life-festivals.ics",
+  "lunar-days.ics",
   "seasonal.ics",
   "moon-phases.ics",
   "sky-events.ics",
-  "zodiac-seasons.ics",
   "almanac.ics",
   "lunar-mansions.ics",
 ];
@@ -82,6 +88,33 @@ const fallbackFeeds = {
     events_per_year: 13,
     sample_titles: ["妇女节", "青年节", "教师节"],
   },
+  "holiday-reminders.ics": {
+    name: "假期提醒",
+    description: "每个已确认法定假期开始前 7 天提示一次，不做逐日倒计时。",
+    cadence: "每个假期一次",
+    density: "低频",
+    tier: "optional",
+    events_per_year: 6.5,
+    sample_titles: ["春节假期还有 7 天"],
+  },
+  "life-festivals.ics": {
+    name: "生活节日",
+    description: "母亲节、父亲节、情人节、520、感恩节与圣诞节等常用日期。",
+    cadence: "每年九次",
+    density: "低频",
+    tier: "optional",
+    events_per_year: 9,
+    sample_titles: ["母亲节", "父亲节", "圣诞节"],
+  },
+  "lunar-days.ics": {
+    name: "农历初一十五",
+    description: "每个农历月的初一和十五；不生成每日农历事件。",
+    cadence: "每月两次",
+    density: "低频",
+    tier: "optional",
+    events_per_year: 24.7,
+    sample_titles: ["四月初一", "四月十五"],
+  },
   "seasonal.ics": {
     name: "中国时令",
     description: "七十二候、数九与三伏节点。",
@@ -109,15 +142,6 @@ const fallbackFeeds = {
     events_per_year: 23.5,
     sample_titles: ["水星西大距", "天琴座流星雨极大"],
   },
-  "zodiac-seasons.ics": {
-    name: "星座季节",
-    description: "太阳进入十二热带黄道区段的时间。",
-    cadence: "每月一次",
-    density: "低频",
-    tier: "optional",
-    events_per_year: 12,
-    sample_titles: ["金牛座季节开始"],
-  },
   "almanac.ics": {
     name: "黄历宜忌",
     description: "每天一条宜忌摘要，完整信息在事件详情。",
@@ -142,6 +166,7 @@ const presets = {
   quiet: ["essential.ics"],
   custom: ["work-rest.ics", "festivals.ics", "solar-terms.ics"],
   sky: ["essential.ics", "seasonal.ics", "moon-phases.ics", "sky-events.ics"],
+  life: ["essential.ics", "holiday-reminders.ics", "life-festivals.ics"],
 };
 
 const exclusive = {
@@ -151,45 +176,6 @@ const exclusive = {
   "solar-terms.ics": ["essential.ics"],
   "almanac.ics": ["lunar-mansions.ics"],
   "lunar-mansions.ics": ["almanac.ics"],
-};
-
-const lunarLabels = [
-  "十四", "十五", "十六", "十七", "十八", "十九", "二十", "廿一", "廿二", "廿三",
-  "廿四", "廿五", "廿六", "廿七", "廿八", "廿九", "三月初一", "初二", "初三", "初四",
-  "初五", "初六", "初七", "初八", "初九", "初十", "十一", "十二", "十三", "十四",
-];
-
-const previewDefinitions = {
-  "essential.ics": [
-    { day: 4, span: 3, title: "清明节假期（3天）" },
-    { day: 20, title: "谷雨" },
-  ],
-  "work-rest.ics": [{ day: 4, span: 3, title: "清明节假期（3天）" }],
-  "festivals.ics": [],
-  "solar-terms.ics": [
-    { day: 5, title: "清明" },
-    { day: 20, title: "谷雨" },
-  ],
-  "observances.ics": [],
-  "seasonal.ics": [
-    { day: 5, title: "桐始华" },
-    { day: 10, title: "田鼠化为鴽" },
-    { day: 15, title: "虹始见" },
-    { day: 20, title: "萍始生" },
-    { day: 25, title: "鸣鸠拂其羽" },
-    { day: 30, title: "戴胜降于桑" },
-  ],
-  "moon-phases.ics": [
-    { day: 2, title: "满月" },
-    { day: 10, title: "下弦月" },
-    { day: 17, title: "新月" },
-    { day: 24, title: "上弦月" },
-  ],
-  "sky-events.ics": [
-    { day: 4, title: "水星西大距" },
-    { day: 22, title: "天琴座流星雨极大" },
-  ],
-  "zodiac-seasons.ics": [{ day: 20, title: "金牛座季节开始" }],
 };
 
 let feeds = structuredClone(fallbackFeeds);
@@ -292,9 +278,11 @@ function toggleFeed(filename, enabled) {
 
 function denseEvents(filename) {
   const titles = feeds[filename].sample_titles;
-  return Array.from({ length: 30 }, (_, index) => ({
-    day: index + 1,
+  const daysInMonth = new Date(previewClock.year, previewClock.month, 0).getDate();
+  return Array.from({ length: daysInMonth }, (_, index) => ({
+    key: CalendarPreview.dateKey(previewClock.year, previewClock.month, index + 1),
     title: titles[index % titles.length],
+    continuation: false,
   }));
 }
 
@@ -304,35 +292,31 @@ function selectedEvents() {
     if (!selected.has(filename)) continue;
     const definitions = feeds[filename].tier === "dense"
       ? denseEvents(filename)
-      : previewDefinitions[filename] || [];
+      : CalendarPreview.expandEvents(
+        feeds[filename].preview_events,
+        previewClock.year,
+        previewClock.month,
+      );
     for (const definition of definitions) {
-      const span = definition.span || 1;
-      for (let offset = 0; offset < span; offset += 1) {
-        result.push({
-          day: definition.day + offset,
-          filename,
-          title: offset === 0 ? definition.title : "",
-          continuation: offset > 0,
-        });
-      }
+      result.push({ ...definition, filename });
     }
   }
   return result;
 }
 
-function dayCell(day, month, events) {
-  const inApril = month === 4;
-  const lunar = inApril ? lunarLabels[day - 1] : "";
+function dayCell(cell, events) {
+  const lunar = cell.currentMonth ? lunarDays[cell.key] || "" : "";
   const lines = events
-    .filter((event) => inApril && event.day === day)
+    .filter((event) => cell.currentMonth && event.key === cell.key)
     .map((event) => `
       <span class="preview-event${event.continuation ? " continuation" : ""}" style="--feed-color:${colors[event.filename]}" title="${escapeHtml(feeds[event.filename].name)}：${escapeHtml(event.title)}">
         ${event.title ? escapeHtml(event.title) : "&nbsp;"}
       </span>`)
     .join("");
+  const today = cell.key === previewClock.todayKey;
   return `
-    <div class="calendar-day${inApril ? "" : " outside"}">
-      <div class="calendar-date"><span>${escapeHtml(lunar)}</span><b>${day}${inApril ? "" : "日"}</b></div>
+    <div class="calendar-day${cell.currentMonth ? "" : " outside"}${today ? " today" : ""}">
+      <div class="calendar-date"><span>${escapeHtml(lunar)}</span><b>${cell.day}${cell.currentMonth ? "" : "日"}</b></div>
       <div class="calendar-events">${lines}</div>
     </div>`;
 }
@@ -341,26 +325,29 @@ function renderCalendar() {
   const events = selectedEvents();
   const grid = document.querySelector("[data-calendar-grid]");
   if (!grid) return;
-  const cells = [
-    dayCell(30, 3, events),
-    dayCell(31, 3, events),
-    ...Array.from({ length: 30 }, (_, index) => dayCell(index + 1, 4, events)),
-    ...Array.from({ length: 10 }, (_, index) => dayCell(index + 1, 5, events)),
-  ];
-  grid.innerHTML = cells.join("");
+  document.querySelector("#preview-title").textContent = `${previewClock.year} 年 ${previewClock.month} 月`;
+  grid.innerHTML = CalendarPreview.monthCells(previewClock.year, previewClock.month)
+    .map((cell) => dayCell(cell, events))
+    .join("");
 
-  const agendaDays = [4, 10, 17, 20, 22, 24];
+  const eventKeys = [...new Set(events.filter((event) => event.title).map((event) => event.key))].sort();
+  const upcoming = eventKeys.filter((key) => key >= previewClock.todayKey);
+  const previous = eventKeys.filter((key) => key < previewClock.todayKey).reverse();
+  const agendaKeys = [...new Set([previewClock.todayKey, ...upcoming, ...previous])]
+    .slice(0, 6)
+    .sort();
   const agenda = document.querySelector("[data-mobile-agenda]");
-  agenda.innerHTML = agendaDays
-    .map((day) => {
-      const dayEvents = events.filter((event) => event.day === day && !event.continuation);
+  agenda.innerHTML = agendaKeys
+    .map((key) => {
+      const [, month, day] = key.split("-").map(Number);
+      const dayEvents = events.filter((event) => event.key === key && !event.continuation);
       const lines = dayEvents.length
         ? dayEvents.map((event) => `
             <span class="agenda-event" style="--feed-color:${colors[event.filename]}">
               <i></i><b>${escapeHtml(event.title)}</b><small>${escapeHtml(feeds[event.filename].name)}</small>
             </span>`).join("")
         : '<span class="agenda-empty">没有订阅事件</span>';
-      return `<div class="agenda-day"><time><b>${day}</b><span>4 月</span></time><div>${lines}</div></div>`;
+      return `<div class="agenda-day${key === previewClock.todayKey ? " today" : ""}"><time><b>${day}</b><span>${month} 月</span></time><div>${lines}</div></div>`;
     })
     .join("");
 }
@@ -425,8 +412,27 @@ function renderSubscriptionList() {
     </article>`).join("");
 }
 
+function renderDensityDemo() {
+  for (const node of document.querySelectorAll("[data-demo-month]")) {
+    node.textContent = `${previewClock.year} 年 ${previewClock.month} 月`;
+  }
+  for (const node of document.querySelectorAll("[data-demo-today]")) {
+    node.textContent = String(previewClock.day);
+  }
+  for (const node of document.querySelectorAll("[data-demo-date]")) {
+    node.textContent = `${previewClock.month} 月 ${previewClock.day} 日`;
+  }
+  const quietEvent = document.querySelector("[data-demo-quiet-event]");
+  const currentEvent = feeds["essential.ics"].preview_events?.find(
+    (event) => event.start <= previewClock.todayKey && previewClock.todayKey < event.end,
+  );
+  quietEvent.textContent = currentEvent?.title || "今天没有额外事件";
+  quietEvent.classList.toggle("empty", !currentEvent);
+}
+
 function render() {
   renderFeedOptions();
+  renderDensityDemo();
   renderCalendar();
   renderSummary();
   renderSubscriptionList();
@@ -497,8 +503,9 @@ fetch("manifest.json", { cache: "no-store" })
     return response.json();
   })
   .then((manifest) => {
-    if (manifest.schema_version < 3) throw new Error("manifest schema is outdated");
+    if (manifest.schema_version < 4) throw new Error("manifest schema is outdated");
     feeds = { ...feeds, ...manifest.feeds };
+    lunarDays = manifest.calendar_days || {};
     selected = new Set([...selected].filter((filename) => feeds[filename]));
     document.querySelector("[data-work-rest-year]").textContent = manifest.confirmed_work_rest_through;
     document.querySelector("[data-culture-year]").textContent = manifest.culture_years[1];

@@ -331,6 +331,7 @@ input:focus-visible + .feed-check {
 }
 
 .event-essential { background: #f9d9d6; color: #a82d25; }
+.event-essential.empty { background: #f0f1f2; color: #737982; }
 .event-sky { background: #dfe9f3; color: #345f87; }
 .event-dense { background: #eadcf0; color: #7d3889; }
 .event-dense-alt { background: #e8dfd6; color: #6e5138; }
@@ -821,6 +822,16 @@ input:focus-visible + .feed-check {
 .calendar-date b {
   flex: 0 0 auto;
   font-size: 11px;
+}
+
+.calendar-day.today .calendar-date b {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
 }
 
 .outside .calendar-date span {
@@ -1649,7 +1660,7 @@ input:focus-visible + .feed-check {
   .preset-switcher {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .preset-switcher button {
@@ -1707,6 +1718,16 @@ input:focus-visible + .feed-check {
   .agenda-day time span {
     color: var(--muted);
     font-size: 9px;
+  }
+
+  .agenda-day.today time b {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
   }
 
   .agenda-day > div {

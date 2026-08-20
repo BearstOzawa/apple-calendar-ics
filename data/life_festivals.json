@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "start_year": 2025,
+  "end_year": 2030,
+  "source": {
+    "title": "公开通行节日日期规则，经公开 ICS 项目交叉核对",
+    "url": "https://github.com/10-peta/china-holiday-calendar"
+  },
+  "festivals": [
+    {
+      "id": "valentines-day",
+      "concept": "valentines-day",
+      "name": "情人节",
+      "month": 2,
+      "day": 14,
+      "note": "常见生活节日，不属于中国法定节假日。"
+    },
+    {
+      "id": "april-fools-day",
+      "concept": "april-fools-day",
+      "name": "愚人节",
+      "month": 4,
+      "day": 1,
+      "note": "常见生活节日，不属于中国法定节假日。"
+    },
+    {
+      "id": "mothers-day",
+      "concept": "mothers-day",
+      "name": "母亲节",
+      "month": 5,
+      "weekday": 6,
+      "occurrence": 2,
+      "note": "每年五月第二个星期日，不属于中国法定节假日。"
+    },
+    {
+      "id": "520-day",
+      "concept": "520-day",
+      "name": "520",
+      "month": 5,
+      "day": 20,
+      "note": "国内常见网络文化日期，不属于中国法定节假日。"
+    },
+    {
+      "id": "fathers-day",
+      "concept": "fathers-day",
+      "name": "父亲节",
+      "month": 6,
+      "weekday": 6,
+      "occurrence": 3,
+      "note": "每年六月第三个星期日，不属于中国法定节假日。"
+    },
+    {
+      "id": "halloween-eve",
+      "concept": "halloween-eve",
+      "name": "万圣夜",
+      "month": 10,
+      "day": 31,
+      "note": "常见生活节日，不属于中国法定节假日。"
+    },
+    {
+      "id": "thanksgiving-day",
+      "concept": "thanksgiving-day",
+      "name": "感恩节",
+      "month": 11,
+      "weekday": 3,
+      "occurrence": 4,
+      "note": "每年十一月第四个星期四，不属于中国法定节假日。"
+    },
+    {
+      "id": "christmas-eve",
+      "concept": "christmas-eve",
+      "name": "平安夜",
+      "month": 12,
+      "day": 24,
+      "note": "常见生活节日，不属于中国法定节假日。"
+    },
+    {
+      "id": "christmas-day",
+      "concept": "christmas-day",
+      "name": "圣诞节",
+      "month": 12,
+      "day": 25,
+      "note": "常见生活节日，不属于中国法定节假日。"
+    }
+  ]
+}
