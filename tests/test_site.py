@@ -73,11 +73,14 @@ class SiteTests(unittest.TestCase):
 
     def test_primary_feed_uses_simple_product_name(self) -> None:
         manifest = json.loads((DIST_DIR / "manifest.json").read_text(encoding="utf-8"))
+        essential_ics = (DIST_DIR / "essential.ics").read_text(encoding="utf-8")
         site_source = "\n".join(
             (SITE_DIR / filename).read_text(encoding="utf-8")
             for filename in ("index.html", "app.js")
         )
         self.assertEqual("中国日历", manifest["feeds"]["essential.ics"]["name"])
+        self.assertIn("X-WR-CALNAME;LANGUAGE=zh-CN:中国日历", essential_ics)
+        self.assertNotIn("中国日历・精选", essential_ics)
         self.assertNotIn("中国日历・精选", site_source)
 
     def test_tarot_is_not_part_of_calendar_product(self) -> None:
