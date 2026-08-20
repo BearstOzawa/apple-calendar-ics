@@ -142,6 +142,10 @@ python -m unittest discover -s tests -v
 - 订阅是单向只读发布，不会读取或修改用户的个人日程。
 - GitHub Pages 更新后，设备端何时重新拉取由 Apple 系统控制，并非实时推送。
 
+## 反馈与参与
+
+请通过分类后的 [Issue 表单](https://github.com/BearstOzawa/apple-calendar-ics/issues/new/choose) 报告日历数据、Apple 设备兼容性、网站与自动化故障，或提出功能建议。提交代码和数据前请阅读 [参与贡献](CONTRIBUTING.md)；安全漏洞请按照 [安全策略](SECURITY.md) 私下报告。
+
 ## 路线图
 
 - 在主流 iOS、iPadOS 与 macOS 版本上建立兼容性测试矩阵。
