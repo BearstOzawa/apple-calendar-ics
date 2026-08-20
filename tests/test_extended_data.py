@@ -5,7 +5,6 @@ import unittest
 from apple_calendar_ics.celestial import (
     moon_phase_events,
     sky_event_events,
-    zodiac_season_events,
 )
 from apple_calendar_ics.loader import load_culture_config, load_metadata
 from apple_calendar_ics.paths import DEFAULT_DATA_DIR
@@ -70,15 +69,6 @@ class ExtendedDataTests(unittest.TestCase):
         self.assertIn(("2026-08-13", "英仙座流星雨极大"), lookup)
         self.assertIn(("2026-08-13", "日全食"), lookup)
         self.assertIn(("2026-10-04", "土星冲日"), lookup)
-
-    def test_zodiac_seasons_are_events_not_horoscope_copy(self) -> None:
-        events = zodiac_season_events(self.config, self.metadata)
-        aries = next(
-            item for item in events if item.logical_id == "astro-2026-zodiac-aries"
-        )
-        self.assertEqual("白羊座季节开始", aries.title)
-        self.assertIn("不提供个人运势解读", aries.description)
-        self.assertEqual(12 * 6, len(events))
 
 
 if __name__ == "__main__":

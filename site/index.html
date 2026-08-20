@@ -18,6 +18,7 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <title>中国日历频道｜先预览，再订阅</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="calendar-core.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -60,25 +61,23 @@
 
           <div class="density-demo" aria-label="清爽日历与高频日历对比示意">
             <div class="demo-toolbar">
-              <div><strong>2026 年 4 月</strong><span>同一个月，两种密度</span></div>
-              <span class="demo-today">20</span>
+              <div><strong data-demo-month>当前月份</strong><span>同一天，两种密度</span></div>
+              <span class="demo-today" data-demo-today>今</span>
             </div>
             <div class="demo-columns">
               <section>
-                <div class="demo-label"><span>清爽组合</span><b>约 4 条 / 月</b></div>
+                <div class="demo-label"><span>清爽组合</span><b>只在有事时出现</b></div>
                 <div class="demo-day">
-                  <span>4 月 20 日</span>
-                  <i class="event event-essential">谷雨</i>
-                  <i class="event event-sky">金牛座季节开始</i>
+                  <span data-demo-date>今天</span>
+                  <i class="event event-essential" data-demo-quiet-event>今天没有额外事件</i>
                 </div>
               </section>
               <section>
                 <div class="demo-label"><span>每日频道</span><b>30 条 / 月</b></div>
                 <div class="demo-day crowded">
-                  <span>4 月 20 日</span>
+                  <span data-demo-date>今天</span>
                   <i class="event event-dense">宜 祭祀 · 忌 嫁娶</i>
                   <i class="event event-dense-alt">毕月乌 · 吉</i>
-                  <i class="event event-essential">谷雨</i>
                 </div>
               </section>
             </div>
@@ -89,7 +88,7 @@
 
       <section class="facts" aria-label="数据范围">
         <div class="container facts-grid">
-          <div><span>可选频道</span><strong><b data-channel-count>11</b> 个</strong></div>
+          <div><span>可选频道</span><strong><b data-channel-count>13</b> 个</strong></div>
           <div><span>法定班休</span><strong>确认至 <b data-work-rest-year>2026</b> 年</strong></div>
           <div><span>历法与天文</span><strong>覆盖至 <b data-culture-year>2030</b> 年</strong></div>
           <div><span>数据版本</span><strong data-dataset-version>2026.08.20</strong></div>
@@ -103,6 +102,7 @@
             <button type="button" data-preset="quiet" aria-pressed="true">清爽推荐</button>
             <button type="button" data-preset="custom" aria-pressed="false">拆分基础</button>
             <button type="button" data-preset="sky" aria-pressed="false">观星时令</button>
+            <button type="button" data-preset="life" aria-pressed="false">生活提醒</button>
           </div>
         </div>
 
@@ -126,7 +126,7 @@
 
             <section class="feed-tier">
               <div class="tier-heading">
-                <div><h3>时令与天文</h3><p>低频出现，不会每天占用日历。</p></div>
+                <div><h3>按需扩展</h3><p>生活提醒、传统历法与天文内容，均控制为低频。</p></div>
                 <span>按需</span>
               </div>
               <div class="feed-options" data-feed-tier="optional"></div>
@@ -145,7 +145,7 @@
           <div class="preview-column">
             <section class="calendar-preview" aria-labelledby="preview-title">
               <div class="preview-toolbar">
-                <div><span>月视图预览</span><h3 id="preview-title">2026 年 4 月</h3></div>
+                <div><span>月视图预览</span><h3 id="preview-title">当前月份</h3></div>
                 <div class="density-score" data-density="quiet"><span>预计密度</span><strong data-density-label>清爽</strong></div>
               </div>
               <div class="calendar-weekdays" aria-hidden="true">
@@ -175,7 +175,7 @@
             <p>市面上的订阅源常把天气、股市、影视、赛事和运势全部塞进全天事件。它们看起来丰富，却会把真正的行程挤出月视图。</p>
           </div>
           <div class="principle-list">
-            <article><span>保留</span><div><h3>低频、日期本身有意义</h3><p>班休、节日、节气、纪念日、月相和重要天象。</p></div></article>
+            <article><span>保留</span><div><h3>低频、日期本身有意义</h3><p>班休、生活节日、初一十五、节气、纪念日、月相和重要天象。</p></div></article>
             <article><span>隔离</span><div><h3>高频但有人明确需要</h3><p>黄历和星宿独立、折叠、互斥，并在选择前展示 365 天占用。</p></div></article>
             <article><span>不做</span><div><h3>更新快、位置化或不可审计</h3><p>天气、限行、股价、影视上新和模板化运势不进入公共频道。</p></div></article>
           </div>
@@ -215,6 +215,7 @@
           <dl>
             <div><dt>法定班休</dt><dd>国务院办公厅正式通知，逐年人工复核</dd></div>
             <div><dt>公众纪念日</dt><dd>《全国年节及纪念日放假办法》</dd></div>
+            <div><dt>生活节日</dt><dd>固定日期与星期规则，明确区分法定假日</dd></div>
             <div><dt>传统历法</dt><dd>固定版本 lunar-python，可重复计算</dd></div>
             <div><dt>天文事件</dt><dd>Astronomy Engine + IMO 参考年表</dd></div>
           </dl>

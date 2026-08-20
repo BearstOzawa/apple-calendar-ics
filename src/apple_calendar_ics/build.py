@@ -3,18 +3,28 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-from datetime import timedelta
+from datetime import date, timedelta
 from pathlib import Path
 
-from .celestial import moon_phase_events, sky_event_events, zodiac_season_events
+from lunar_python import Solar
+
+from .celestial import moon_phase_events, sky_event_events
 from .culture import culture_events
 from .ics import serialize_feed
-from .loader import load_culture_config, load_metadata, load_official_years
-from .loader import load_observance_config
+from .lifestyle import lifestyle_events
+from .loader import (
+    load_culture_config,
+    load_lifestyle_config,
+    load_metadata,
+    load_observance_config,
+    load_official_years,
+)
+from .lunar_days import lunar_day_events
 from .model import CalendarEvent, Feed
 from .observances import observance_events
 from .official import official_events
 from .paths import DEFAULT_DATA_DIR, DEFAULT_OUTPUT_DIR
+from .reminders import holiday_reminder_events
 from .traditional import almanac_events, lunar_mansion_events, seasonal_events
 
 
@@ -42,17 +52,20 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
     years = load_official_years(data_dir)
     culture_config = load_culture_config(data_dir)
     observance_config = load_observance_config(data_dir)
+    lifestyle_config = load_lifestyle_config(data_dir)
     official = official_events(years)
     culture = culture_events(culture_config, metadata)
     festivals = [event for event in culture if event.kind == "festival"]
     solar_terms = [event for event in culture if event.kind == "solar-term"]
     observances = observance_events(observance_config, metadata)
+    lifestyle = lifestyle_events(lifestyle_config, metadata)
+    lunar_days = lunar_day_events(culture_config, metadata)
+    holiday_reminders = holiday_reminder_events(years)
     almanac = almanac_events(culture_config, metadata)
     lunar_mansions = lunar_mansion_events(culture_config, metadata)
     seasonal = seasonal_events(culture_config, metadata)
     moon_phases = moon_phase_events(culture_config, metadata)
     sky_events = sky_event_events(culture_config, metadata)
-    zodiac_seasons = zodiac_season_events(culture_config, metadata)
 
     holiday_periods = [event for event in official if event.kind == "holiday-period"]
     essential_culture: list[CalendarEvent] = []
@@ -130,6 +143,40 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             tier="optional",
         ),
         Feed(
+            slug="holiday-reminders",
+            name="假期提醒",
+            description="每个已确认法定假期开始前 7 天提示一次，不做逐日倒计时。",
+            events=_deduplicate(list(holiday_reminders)),
+            category="生活提醒",
+            cadence="每个假期一次",
+            source_type="官方",
+            density="低频",
+            tier="optional",
+        ),
+        Feed(
+            slug="life-festivals",
+            name="生活节日",
+            description="母亲节、父亲节、情人节、520、感恩节与圣诞节等常用日期。",
+            events=_deduplicate(list(lifestyle)),
+            category="生活提醒",
+            cadence="每年九次",
+            source_type="通行日期规则",
+            density="低频",
+            tier="optional",
+        ),
+        Feed(
+            slug="lunar-days",
+            name="农历初一十五",
+            description="每个农历月的初一和十五；不生成每日农历事件。",
+            events=_deduplicate(list(lunar_days)),
+            category="传统历法",
+            cadence="每月两次",
+            source_type="历法算法",
+            density="低频",
+            tier="optional",
+            overlaps=("festivals.ics",),
+        ),
+        Feed(
             slug="almanac",
             name="黄历宜忌",
             description="每日一条宜忌摘要，完整农历、干支、冲煞与民俗信息放在详情中。",
@@ -186,18 +233,23 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             density="低频",
             tier="optional",
         ),
-        Feed(
-            slug="zodiac-seasons",
-            name="星座季节",
-            description="太阳进入十二黄道区段的时间；不提供模板化运势。",
-            events=_deduplicate(list(zodiac_seasons)),
-            category="天文与星象",
-            cadence="每月一次",
-            source_type="天文算法",
-            density="低频",
-            tier="optional",
-        ),
     )
+
+
+def _lunar_calendar_days(start_year: int, end_year: int) -> dict[str, str]:
+    result: dict[str, str] = {}
+    current = date(start_year, 1, 1)
+    end = date(end_year + 1, 1, 1)
+    while current < end:
+        lunar = Solar.fromYmd(current.year, current.month, current.day).getLunar()
+        if lunar.getDay() == 1:
+            month = lunar.getMonthInChinese()
+            label = f"{'闰' if lunar.getMonth() < 0 else ''}{month}月"
+        else:
+            label = lunar.getDayInChinese()
+        result[current.isoformat()] = label
+        current += timedelta(days=1)
+    return result
 
 
 def _write_if_changed(path: Path, payload: bytes) -> bool:
@@ -213,7 +265,12 @@ def build(data_dir: Path, output_dir: Path) -> dict[str, object]:
     official_years = load_official_years(data_dir)
     culture_config = load_culture_config(data_dir)
     observance_config = load_observance_config(data_dir)
+    lifestyle_config = load_lifestyle_config(data_dir)
     feeds = build_feeds(data_dir)
+    expected_files = {f"{feed.slug}.ics" for feed in feeds}
+    for stale_path in output_dir.glob("*.ics"):
+        if stale_path.name not in expected_files:
+            stale_path.unlink()
     feed_manifest: dict[str, object] = {}
     for feed in feeds:
         payload = serialize_feed(feed, metadata)
@@ -251,13 +308,25 @@ def build(data_dir: Path, output_dir: Path) -> dict[str, object]:
             "tier": feed.tier,
             "events_per_year": round(len(feed.events) / coverage_years, 1),
             "sample_titles": sample_titles,
+            "preview_events": (
+                [
+                    {
+                        "start": event.start.isoformat(),
+                        "end": event.end.isoformat(),
+                        "title": event.title,
+                    }
+                    for event in feed.events
+                ]
+                if feed.tier != "dense"
+                else []
+            ),
             "overlaps": list(feed.overlaps),
             "featured": feed.featured,
             "changed": changed,
         }
 
     manifest = {
-        "schema_version": 3,
+        "schema_version": 4,
         "dataset_version": metadata.dataset_version.isoformat(),
         "confirmed_work_rest_years": [year.year for year in official_years],
         "confirmed_work_rest_through": max(year.year for year in official_years),
@@ -266,6 +335,13 @@ def build(data_dir: Path, output_dir: Path) -> dict[str, object]:
             observance_config.start_year,
             observance_config.end_year,
         ],
+        "lifestyle_years": [
+            lifestyle_config.start_year,
+            lifestyle_config.end_year,
+        ],
+        "calendar_days": _lunar_calendar_days(
+            culture_config.start_year, culture_config.end_year
+        ),
         "algorithm_sources": [
             {
                 "title": culture_config.source.title,

@@ -7,6 +7,8 @@ from typing import Any
 
 from .model import (
     CultureConfig,
+    LifestyleConfig,
+    LifestyleRule,
     LunarFestivalRule,
     Metadata,
     ObservanceConfig,
@@ -366,5 +368,89 @@ def load_observance_config(data_dir: Path) -> ObservanceConfig:
     return ObservanceConfig(
         start_year=start_year,
         end_year=end_year,
+        rules=tuple(rules),
+    )
+
+
+def load_lifestyle_config(data_dir: Path) -> LifestyleConfig:
+    path = data_dir / "life_festivals.json"
+    raw = _read_json(path)
+    _require_schema_version(raw, path)
+    start_year = raw.get("start_year")
+    end_year = raw.get("end_year")
+    if (
+        not isinstance(start_year, int)
+        or not isinstance(end_year, int)
+        or start_year < 1900
+        or end_year < start_year
+        or end_year > 2100
+    ):
+        raise DataValidationError(f"{path}: invalid lifestyle year range")
+
+    source_raw = raw.get("source")
+    if not isinstance(source_raw, dict):
+        raise DataValidationError(f"{path}: source must be an object")
+    source = Source(
+        title=_require_string(source_raw.get("title"), "source.title", path),
+        url=_require_string(source_raw.get("url"), "source.url", path),
+    )
+    if not source.url.startswith("https://"):
+        raise DataValidationError(f"{path}: source URL must use HTTPS")
+
+    rules_raw = raw.get("festivals")
+    if not isinstance(rules_raw, list) or not rules_raw:
+        raise DataValidationError(f"{path}: festivals must be a non-empty list")
+
+    rules: list[LifestyleRule] = []
+    ids: set[str] = set()
+    for index, item in enumerate(rules_raw):
+        if not isinstance(item, dict):
+            raise DataValidationError(f"{path}: festivals[{index}] invalid")
+        rule_id = _require_string(item.get("id"), f"festivals[{index}].id", path)
+        concept = _require_string(
+            item.get("concept"), f"festivals[{index}].concept", path
+        )
+        month = item.get("month")
+        day = item.get("day")
+        weekday = item.get("weekday")
+        occurrence = item.get("occurrence")
+        fixed = isinstance(day, int) and weekday is None and occurrence is None
+        floating = (
+            day is None and isinstance(weekday, int) and isinstance(occurrence, int)
+        )
+        if (
+            not rule_id.isascii()
+            or not concept.isascii()
+            or rule_id in ids
+            or not isinstance(month, int)
+            or not 1 <= month <= 12
+            or not (fixed or floating)
+            or (fixed and not 1 <= day <= 31)
+            or (floating and not 0 <= weekday <= 6)
+            or (floating and not 1 <= occurrence <= 5)
+        ):
+            raise DataValidationError(f"{path}: invalid lifestyle rule {rule_id!r}")
+        ids.add(rule_id)
+        rules.append(
+            LifestyleRule(
+                id=rule_id,
+                concept=concept,
+                name=_require_string(
+                    item.get("name"), f"festivals[{index}].name", path
+                ),
+                month=month,
+                day=day,
+                weekday=weekday,
+                occurrence=occurrence,
+                note=_require_string(
+                    item.get("note"), f"festivals[{index}].note", path
+                ),
+            )
+        )
+
+    return LifestyleConfig(
+        start_year=start_year,
+        end_year=end_year,
+        source=source,
         rules=tuple(rules),
     )
