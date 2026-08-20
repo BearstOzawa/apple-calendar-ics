@@ -12,7 +12,13 @@ def _event_date(year: int, rule: LifestyleRule) -> date:
         raise ValueError(f"incomplete lifestyle rule: {rule.id}")
     first = date(year, rule.month, 1)
     offset = (rule.weekday - first.weekday()) % 7
-    return first + timedelta(days=offset + 7 * (rule.occurrence - 1))
+    candidate = first + timedelta(days=offset + 7 * (rule.occurrence - 1))
+    if candidate.month != rule.month:
+        raise ValueError(
+            f"lifestyle rule {rule.id!r} has no occurrence {rule.occurrence} "
+            f"of weekday {rule.weekday} in {year}-{rule.month:02d}"
+        )
+    return candidate
 
 
 def lifestyle_events(

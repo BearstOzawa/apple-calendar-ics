@@ -10,12 +10,13 @@ from apple_calendar_ics.loader import (
     load_observance_config,
     load_official_years,
 )
-from apple_calendar_ics.lifestyle import lifestyle_events
+from apple_calendar_ics.lifestyle import _event_date, lifestyle_events
 from apple_calendar_ics.lunar_days import lunar_day_events
 from apple_calendar_ics.observances import observance_events
 from apple_calendar_ics.official import official_events
 from apple_calendar_ics.paths import DEFAULT_DATA_DIR
 from apple_calendar_ics.reminders import holiday_reminder_events
+from apple_calendar_ics.model import LifestyleRule
 
 
 class DataTests(unittest.TestCase):
@@ -82,6 +83,20 @@ class DataTests(unittest.TestCase):
         self.assertTrue(
             all("不属于中国法定节假日" in item.description for item in events)
         )
+
+    def test_lifestyle_weekday_rule_cannot_spill_into_next_month(self) -> None:
+        rule = LifestyleRule(
+            id="fifth-sunday",
+            concept="fifth-sunday",
+            name="第五个星期日",
+            month=2,
+            day=None,
+            weekday=6,
+            occurrence=5,
+            note="测试规则。",
+        )
+        with self.assertRaisesRegex(ValueError, "has no occurrence 5"):
+            _event_date(2026, rule)
 
     def test_lunar_days_keep_daily_lunar_text_out_of_calendar(self) -> None:
         metadata = load_metadata(DEFAULT_DATA_DIR)
