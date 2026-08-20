@@ -33,7 +33,7 @@ body:
     attributes:
       label: 事件名称
       description: 填写日历中看到的完整标题。
-      placeholder: 例如：休｜国庆节、黄历｜农历七月初八、月相｜满月
+      placeholder: 例如：国庆节假期（7天）、宜 祭祀 · 忌 嫁娶、满月
     validations:
       required: true
 

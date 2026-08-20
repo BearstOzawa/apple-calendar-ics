@@ -29,42 +29,81 @@
   "feeds": {
     "almanac.ics": {
       "cadence": "每日一条",
-      "category": "传统历法",
+      "category": "高频文化",
       "density": "高频",
-      "description": "每日农历、干支、宜忌、冲煞与传统黄历信息；民俗参考。",
+      "description": "每日一条宜忌摘要，完整农历、干支、冲煞与民俗信息放在详情中。",
       "event_count": 2191,
+      "events_per_year": 365.2,
       "featured": false,
       "first_date": "2025-01-01",
       "last_date": "2030-12-31",
-      "name": "中国黄历",
+      "name": "黄历宜忌",
       "overlaps": [
         "lunar-mansions.ics"
       ],
-      "sha256": "d6288d8e91490172c16dc29433ee410f8137c00852c3edc7c858e3467b87691c",
-      "source_type": "算法"
+      "sample_titles": [
+        "宜 纳财 · 忌 移徙",
+        "宜 嫁娶 · 忌 开市",
+        "宜 嫁娶 · 忌 纳畜"
+      ],
+      "sha256": "4b9a8fc47307b5de3cc1d512f784dbebea1d308c06098d26537c524be77e4ef6",
+      "source_type": "算法",
+      "tier": "dense"
     },
     "essential.ics": {
       "cadence": "按官方通知更新",
       "category": "推荐",
       "density": "低频",
       "description": "法定班休、核心传统节日与二十四节气；清爽去重版。",
-      "event_count": 224,
+      "event_count": 220,
+      "events_per_year": 36.7,
       "featured": true,
       "first_date": "2025-01-01",
       "last_date": "2030-12-22",
       "name": "中国日历・精选",
       "overlaps": [
-        "work-rest.ics"
+        "work-rest.ics",
+        "festivals.ics",
+        "solar-terms.ics"
       ],
-      "sha256": "a76c736fbba4c6ec3c0d48898b92c23517354607a8df6ce123d5a1ba97026087",
-      "source_type": "官方 + 算法"
+      "sample_titles": [
+        "清明节假期（3天）",
+        "谷雨"
+      ],
+      "sha256": "df3234aa9a715c67eddcab78b802b4229b6874a290f0f162a04e977acceb221c",
+      "source_type": "官方 + 算法",
+      "tier": "core"
+    },
+    "festivals.ics": {
+      "cadence": "每年约十次",
+      "category": "基础日期",
+      "density": "低频",
+      "description": "除夕、元宵、龙抬头、七夕、中元、重阳等传统节日。",
+      "event_count": 60,
+      "events_per_year": 10.0,
+      "featured": false,
+      "first_date": "2025-01-07",
+      "last_date": "2030-10-05",
+      "name": "传统节日",
+      "overlaps": [
+        "essential.ics"
+      ],
+      "sample_titles": [
+        "腊八节",
+        "除夕",
+        "春节"
+      ],
+      "sha256": "b5f74660242fd8c91f84d8825eb0f33044681d631847afb068867f8a548fb365",
+      "source_type": "历法算法",
+      "tier": "core"
     },
     "lunar-mansions.ics": {
       "cadence": "每日一条",
-      "category": "传统历法",
+      "category": "高频文化",
       "density": "高频",
       "description": "每日星宿、十二值星、值日天神与九星；民俗参考。",
       "event_count": 2191,
+      "events_per_year": 365.2,
       "featured": false,
       "first_date": "2025-01-01",
       "last_date": "2030-12-31",
@@ -72,8 +111,14 @@
       "overlaps": [
         "almanac.ics"
       ],
-      "sha256": "b75bbdc4ad83f97e8e105a4deeff3f9856ea2d48dbb12fc16f1a96a9544ce45b",
-      "source_type": "算法"
+      "sample_titles": [
+        "轸水蚓 · 吉",
+        "角木蛟 · 吉",
+        "亢金龙 · 凶"
+      ],
+      "sha256": "cc22fa47b65f6983bcbe2d2c509795283a5cd7fd0c671d407231ab5be89a62ba",
+      "source_type": "算法",
+      "tier": "dense"
     },
     "moon-phases.ics": {
       "cadence": "每月四次",
@@ -81,13 +126,41 @@
       "density": "低频",
       "description": "新月、上弦月、满月与下弦月，北京时间。",
       "event_count": 297,
+      "events_per_year": 49.5,
       "featured": false,
       "first_date": "2025-01-07",
       "last_date": "2030-12-31",
       "name": "月相",
       "overlaps": [],
-      "sha256": "a3097ddf3f307b2e3a9c9ae9a5f33beca052467b2180537086dd12c30096f0b9",
-      "source_type": "天文算法"
+      "sample_titles": [
+        "满月",
+        "下弦月",
+        "新月"
+      ],
+      "sha256": "10f97ee05db2d9e3c9a1be8a2446072af3e395d5ec70842e7c0ef8884c0474dd",
+      "source_type": "天文算法",
+      "tier": "optional"
+    },
+    "observances.ics": {
+      "cadence": "每年十三次",
+      "category": "基础日期",
+      "density": "低频",
+      "description": "妇女节、青年节、教师节及全国性纪念日；详情注明是否放假。",
+      "event_count": 78,
+      "events_per_year": 13.0,
+      "featured": false,
+      "first_date": "2025-02-07",
+      "last_date": "2030-11-08",
+      "name": "公众节日与纪念日",
+      "overlaps": [],
+      "sample_titles": [
+        "二七纪念日",
+        "妇女节",
+        "植树节"
+      ],
+      "sha256": "54b3677c4bdd5fe7ca21cb1523f1dc8108196da54ea1fe93785da0bee92567f2",
+      "source_type": "国务院行政法规",
+      "tier": "optional"
     },
     "seasonal.ics": {
       "cadence": "约每五日",
@@ -95,13 +168,20 @@
       "density": "中频",
       "description": "七十二候、数九与三伏的时令节点。",
       "event_count": 504,
+      "events_per_year": 84.0,
       "featured": false,
       "first_date": "2025-01-01",
       "last_date": "2030-12-31",
       "name": "中国时令",
       "overlaps": [],
-      "sha256": "b4cfcd9b002d275e9f47931b584733a01012c56acfdb116f10afc89c351a0842",
-      "source_type": "算法"
+      "sample_titles": [
+        "桐始华",
+        "田鼠化为鴽",
+        "虹始见"
+      ],
+      "sha256": "3b140f06035bbe6ce242d2c2483d4367c46367b87a3e2b6a7c229d39d6bc7b80",
+      "source_type": "算法",
+      "tier": "optional"
     },
     "sky-events.ics": {
       "cadence": "不定期",
@@ -109,13 +189,41 @@
       "density": "低频",
       "description": "日月食、主要流星雨、行星冲日与水星金星大距。",
       "event_count": 141,
+      "events_per_year": 23.5,
       "featured": false,
       "first_date": "2025-01-03",
       "last_date": "2030-12-22",
       "name": "重要天象",
       "overlaps": [],
-      "sha256": "15f0d4b50175e5c8c2a31c8de147e410604e64630bad5bb816165183d8b78c8f",
-      "source_type": "天文算法 + 年表"
+      "sample_titles": [
+        "水星西大距",
+        "天琴座流星雨极大"
+      ],
+      "sha256": "ec2f641f9f3e2e5ce784cc27b56978211d7addb6754553d5d46cd8552fbbb117",
+      "source_type": "天文算法 + 年表",
+      "tier": "optional"
+    },
+    "solar-terms.ics": {
+      "cadence": "每月两次",
+      "category": "基础日期",
+      "density": "低频",
+      "description": "立春、春分、夏至、冬至等二十四节气。",
+      "event_count": 144,
+      "events_per_year": 24.0,
+      "featured": false,
+      "first_date": "2025-01-05",
+      "last_date": "2030-12-22",
+      "name": "二十四节气",
+      "overlaps": [
+        "essential.ics"
+      ],
+      "sample_titles": [
+        "清明",
+        "谷雨"
+      ],
+      "sha256": "cfd49773a09bf6e4ceec33c58574fde2a0a3332e81b17c1168d8adf602490ea8",
+      "source_type": "历法算法",
+      "tier": "core"
     },
     "work-rest.ics": {
       "cadence": "按官方通知更新",
@@ -123,13 +231,20 @@
       "density": "低频",
       "description": "中国大陆法定放假与调休上班；全天、透明、无默认提醒。",
       "event_count": 24,
+      "events_per_year": 12.0,
       "featured": true,
       "first_date": "2025-01-01",
       "last_date": "2026-10-10",
       "name": "中国班休",
-      "overlaps": [],
-      "sha256": "2817962225a11e970e656bddec51f5e148787260d6f06d39ab89c3f3c7bc5156",
-      "source_type": "官方"
+      "overlaps": [
+        "essential.ics"
+      ],
+      "sample_titles": [
+        "清明节假期（3天）"
+      ],
+      "sha256": "6aa336199ed6e8f9a5d56170a46c866e71ac4473b7e82ce13e8830aae0e402d4",
+      "source_type": "官方",
+      "tier": "core"
     },
     "zodiac-seasons.ics": {
       "cadence": "每月一次",
@@ -137,16 +252,25 @@
       "density": "低频",
       "description": "太阳进入十二黄道区段的时间；不提供模板化运势。",
       "event_count": 72,
+      "events_per_year": 12.0,
       "featured": false,
       "first_date": "2025-01-20",
       "last_date": "2030-12-22",
       "name": "星座季节",
       "overlaps": [],
-      "sha256": "f9a02532ac5856ed1bc8a644d1dcfaac0bc36dbb8a56a81a488d261950f9da26",
-      "source_type": "天文算法"
+      "sample_titles": [
+        "金牛座季节开始"
+      ],
+      "sha256": "0b3d98c0e89127fb94f1d8a53252e27622d33532ca3f863718a62e8bbe330751",
+      "source_type": "天文算法",
+      "tier": "optional"
     }
   },
-  "schema_version": 2,
+  "observance_years": [
+    2025,
+    2030
+  ],
+  "schema_version": 3,
   "sources": [
     {
       "published_at": "2024-11-12",

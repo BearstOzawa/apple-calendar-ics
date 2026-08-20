@@ -17,14 +17,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250120
 DTEND;VALUE=DATE:20250121
-SUMMARY;LANGUAGE=zh-CN:星座季节｜水瓶座
+SUMMARY;LANGUAGE=zh-CN:水瓶座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入水瓶座黄道区段：北京时间
   2025年01月20日 04:00。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -41,14 +38,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250218
 DTEND;VALUE=DATE:20250219
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双鱼座
+SUMMARY;LANGUAGE=zh-CN:双鱼座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双鱼座黄道区段：北京时间
   2025年02月18日 18:06。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -65,14 +59,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250320
 DTEND;VALUE=DATE:20250321
-SUMMARY;LANGUAGE=zh-CN:星座季节｜白羊座
+SUMMARY;LANGUAGE=zh-CN:白羊座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入白羊座黄道区段：北京时间
   2025年03月20日 17:01。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -89,14 +80,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250420
 DTEND;VALUE=DATE:20250421
-SUMMARY;LANGUAGE=zh-CN:星座季节｜金牛座
+SUMMARY;LANGUAGE=zh-CN:金牛座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入金牛座黄道区段：北京时间
   2025年04月20日 03:56。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -113,14 +101,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250521
 DTEND;VALUE=DATE:20250522
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双子座
+SUMMARY;LANGUAGE=zh-CN:双子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双子座黄道区段：北京时间
   2025年05月21日 02:54。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -137,14 +122,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250621
 DTEND;VALUE=DATE:20250622
-SUMMARY;LANGUAGE=zh-CN:星座季节｜巨蟹座
+SUMMARY;LANGUAGE=zh-CN:巨蟹座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入巨蟹座黄道区段：北京时间
   2025年06月21日 10:42。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -161,14 +143,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250722
 DTEND;VALUE=DATE:20250723
-SUMMARY;LANGUAGE=zh-CN:星座季节｜狮子座
+SUMMARY;LANGUAGE=zh-CN:狮子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入狮子座黄道区段：北京时间
   2025年07月22日 21:29。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -185,14 +164,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250823
 DTEND;VALUE=DATE:20250824
-SUMMARY;LANGUAGE=zh-CN:星座季节｜处女座
+SUMMARY;LANGUAGE=zh-CN:处女座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入处女座黄道区段：北京时间
   2025年08月23日 04:33。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -209,14 +185,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20250923
 DTEND;VALUE=DATE:20250924
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天秤座
+SUMMARY;LANGUAGE=zh-CN:天秤座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天秤座黄道区段：北京时间
   2025年09月23日 02:19。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -233,14 +206,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251023
 DTEND;VALUE=DATE:20251024
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天蝎座
+SUMMARY;LANGUAGE=zh-CN:天蝎座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天蝎座黄道区段：北京时间
   2025年10月23日 11:51。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -257,14 +227,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251122
 DTEND;VALUE=DATE:20251123
-SUMMARY;LANGUAGE=zh-CN:星座季节｜射手座
+SUMMARY;LANGUAGE=zh-CN:射手座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入射手座黄道区段：北京时间
   2025年11月22日 09:35。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -281,14 +248,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20251221
 DTEND;VALUE=DATE:20251222
-SUMMARY;LANGUAGE=zh-CN:星座季节｜摩羯座
+SUMMARY;LANGUAGE=zh-CN:摩羯座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入摩羯座黄道区段：北京时间
   2025年12月21日 23:03。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -305,14 +269,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260120
 DTEND;VALUE=DATE:20260121
-SUMMARY;LANGUAGE=zh-CN:星座季节｜水瓶座
+SUMMARY;LANGUAGE=zh-CN:水瓶座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入水瓶座黄道区段：北京时间
   2026年01月20日 09:44。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -329,14 +290,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260218
 DTEND;VALUE=DATE:20260219
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双鱼座
+SUMMARY;LANGUAGE=zh-CN:双鱼座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双鱼座黄道区段：北京时间
   2026年02月18日 23:51。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -353,14 +311,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260320
 DTEND;VALUE=DATE:20260321
-SUMMARY;LANGUAGE=zh-CN:星座季节｜白羊座
+SUMMARY;LANGUAGE=zh-CN:白羊座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入白羊座黄道区段：北京时间
   2026年03月20日 22:45。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -377,14 +332,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260420
 DTEND;VALUE=DATE:20260421
-SUMMARY;LANGUAGE=zh-CN:星座季节｜金牛座
+SUMMARY;LANGUAGE=zh-CN:金牛座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入金牛座黄道区段：北京时间
   2026年04月20日 09:39。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -401,14 +353,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260521
 DTEND;VALUE=DATE:20260522
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双子座
+SUMMARY;LANGUAGE=zh-CN:双子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双子座黄道区段：北京时间
   2026年05月21日 08:37。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -425,14 +374,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260621
 DTEND;VALUE=DATE:20260622
-SUMMARY;LANGUAGE=zh-CN:星座季节｜巨蟹座
+SUMMARY;LANGUAGE=zh-CN:巨蟹座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入巨蟹座黄道区段：北京时间
   2026年06月21日 16:25。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -449,14 +395,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260723
 DTEND;VALUE=DATE:20260724
-SUMMARY;LANGUAGE=zh-CN:星座季节｜狮子座
+SUMMARY;LANGUAGE=zh-CN:狮子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入狮子座黄道区段：北京时间
   2026年07月23日 03:13。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -473,14 +416,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260823
 DTEND;VALUE=DATE:20260824
-SUMMARY;LANGUAGE=zh-CN:星座季节｜处女座
+SUMMARY;LANGUAGE=zh-CN:处女座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入处女座黄道区段：北京时间
   2026年08月23日 10:18。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -497,14 +437,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20260924
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天秤座
+SUMMARY;LANGUAGE=zh-CN:天秤座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天秤座黄道区段：北京时间
   2026年09月23日 08:05。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -521,14 +458,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261023
 DTEND;VALUE=DATE:20261024
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天蝎座
+SUMMARY;LANGUAGE=zh-CN:天蝎座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天蝎座黄道区段：北京时间
   2026年10月23日 17:38。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -545,14 +479,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
-SUMMARY;LANGUAGE=zh-CN:星座季节｜射手座
+SUMMARY;LANGUAGE=zh-CN:射手座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入射手座黄道区段：北京时间
   2026年11月22日 15:23。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -569,14 +500,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
-SUMMARY;LANGUAGE=zh-CN:星座季节｜摩羯座
+SUMMARY;LANGUAGE=zh-CN:摩羯座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入摩羯座黄道区段：北京时间
   2026年12月22日 04:50。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -593,14 +521,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
-SUMMARY;LANGUAGE=zh-CN:星座季节｜水瓶座
+SUMMARY;LANGUAGE=zh-CN:水瓶座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入水瓶座黄道区段：北京时间
   2027年01月20日 15:30。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -617,14 +542,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270219
 DTEND;VALUE=DATE:20270220
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双鱼座
+SUMMARY;LANGUAGE=zh-CN:双鱼座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双鱼座黄道区段：北京时间
   2027年02月19日 05:33。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -641,14 +563,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270321
 DTEND;VALUE=DATE:20270322
-SUMMARY;LANGUAGE=zh-CN:星座季节｜白羊座
+SUMMARY;LANGUAGE=zh-CN:白羊座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入白羊座黄道区段：北京时间
   2027年03月21日 04:24。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -665,14 +584,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270420
 DTEND;VALUE=DATE:20270421
-SUMMARY;LANGUAGE=zh-CN:星座季节｜金牛座
+SUMMARY;LANGUAGE=zh-CN:金牛座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入金牛座黄道区段：北京时间
   2027年04月20日 15:17。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -689,14 +605,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270521
 DTEND;VALUE=DATE:20270522
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双子座
+SUMMARY;LANGUAGE=zh-CN:双子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双子座黄道区段：北京时间
   2027年05月21日 14:17。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -713,14 +626,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270621
 DTEND;VALUE=DATE:20270622
-SUMMARY;LANGUAGE=zh-CN:星座季节｜巨蟹座
+SUMMARY;LANGUAGE=zh-CN:巨蟹座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入巨蟹座黄道区段：北京时间
   2027年06月21日 22:10。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -737,14 +647,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270723
 DTEND;VALUE=DATE:20270724
-SUMMARY;LANGUAGE=zh-CN:星座季节｜狮子座
+SUMMARY;LANGUAGE=zh-CN:狮子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入狮子座黄道区段：北京时间
   2027年07月23日 09:04。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -761,14 +668,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270823
 DTEND;VALUE=DATE:20270824
-SUMMARY;LANGUAGE=zh-CN:星座季节｜处女座
+SUMMARY;LANGUAGE=zh-CN:处女座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入处女座黄道区段：北京时间
   2027年08月23日 16:13。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -785,14 +689,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20270923
 DTEND;VALUE=DATE:20270924
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天秤座
+SUMMARY;LANGUAGE=zh-CN:天秤座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天秤座黄道区段：北京时间
   2027年09月23日 14:01。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -809,14 +710,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271023
 DTEND;VALUE=DATE:20271024
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天蝎座
+SUMMARY;LANGUAGE=zh-CN:天蝎座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天蝎座黄道区段：北京时间
   2027年10月23日 23:32。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -833,14 +731,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271122
 DTEND;VALUE=DATE:20271123
-SUMMARY;LANGUAGE=zh-CN:星座季节｜射手座
+SUMMARY;LANGUAGE=zh-CN:射手座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入射手座黄道区段：北京时间
   2027年11月22日 21:16。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -857,14 +752,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20271222
 DTEND;VALUE=DATE:20271223
-SUMMARY;LANGUAGE=zh-CN:星座季节｜摩羯座
+SUMMARY;LANGUAGE=zh-CN:摩羯座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入摩羯座黄道区段：北京时间
   2027年12月22日 10:42。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -881,14 +773,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280120
 DTEND;VALUE=DATE:20280121
-SUMMARY;LANGUAGE=zh-CN:星座季节｜水瓶座
+SUMMARY;LANGUAGE=zh-CN:水瓶座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入水瓶座黄道区段：北京时间
   2028年01月20日 21:21。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -905,14 +794,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280219
 DTEND;VALUE=DATE:20280220
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双鱼座
+SUMMARY;LANGUAGE=zh-CN:双鱼座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双鱼座黄道区段：北京时间
   2028年02月19日 11:25。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -929,14 +815,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280320
 DTEND;VALUE=DATE:20280321
-SUMMARY;LANGUAGE=zh-CN:星座季节｜白羊座
+SUMMARY;LANGUAGE=zh-CN:白羊座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入白羊座黄道区段：北京时间
   2028年03月20日 10:17。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -953,14 +836,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280419
 DTEND;VALUE=DATE:20280420
-SUMMARY;LANGUAGE=zh-CN:星座季节｜金牛座
+SUMMARY;LANGUAGE=zh-CN:金牛座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入金牛座黄道区段：北京时间
   2028年04月19日 21:09。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -977,14 +857,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280520
 DTEND;VALUE=DATE:20280521
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双子座
+SUMMARY;LANGUAGE=zh-CN:双子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双子座黄道区段：北京时间
   2028年05月20日 20:09。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1001,14 +878,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280621
 DTEND;VALUE=DATE:20280622
-SUMMARY;LANGUAGE=zh-CN:星座季节｜巨蟹座
+SUMMARY;LANGUAGE=zh-CN:巨蟹座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入巨蟹座黄道区段：北京时间
   2028年06月21日 04:01。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1025,14 +899,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280722
 DTEND;VALUE=DATE:20280723
-SUMMARY;LANGUAGE=zh-CN:星座季节｜狮子座
+SUMMARY;LANGUAGE=zh-CN:狮子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入狮子座黄道区段：北京时间
   2028年07月22日 14:53。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1049,14 +920,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280822
 DTEND;VALUE=DATE:20280823
-SUMMARY;LANGUAGE=zh-CN:星座季节｜处女座
+SUMMARY;LANGUAGE=zh-CN:处女座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入处女座黄道区段：北京时间
   2028年08月22日 22:00。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1073,14 +941,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20280922
 DTEND;VALUE=DATE:20280923
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天秤座
+SUMMARY;LANGUAGE=zh-CN:天秤座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天秤座黄道区段：北京时间
   2028年09月22日 19:45。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1097,14 +962,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281023
 DTEND;VALUE=DATE:20281024
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天蝎座
+SUMMARY;LANGUAGE=zh-CN:天蝎座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天蝎座黄道区段：北京时间
   2028年10月23日 05:13。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1121,14 +983,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281122
 DTEND;VALUE=DATE:20281123
-SUMMARY;LANGUAGE=zh-CN:星座季节｜射手座
+SUMMARY;LANGUAGE=zh-CN:射手座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入射手座黄道区段：北京时间
   2028年11月22日 02:54。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1145,14 +1004,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20281221
 DTEND;VALUE=DATE:20281222
-SUMMARY;LANGUAGE=zh-CN:星座季节｜摩羯座
+SUMMARY;LANGUAGE=zh-CN:摩羯座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入摩羯座黄道区段：北京时间
   2028年12月21日 16:20。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1169,14 +1025,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290120
 DTEND;VALUE=DATE:20290121
-SUMMARY;LANGUAGE=zh-CN:星座季节｜水瓶座
+SUMMARY;LANGUAGE=zh-CN:水瓶座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入水瓶座黄道区段：北京时间
   2029年01月20日 03:01。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1193,14 +1046,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290218
 DTEND;VALUE=DATE:20290219
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双鱼座
+SUMMARY;LANGUAGE=zh-CN:双鱼座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双鱼座黄道区段：北京时间
   2029年02月18日 17:07。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1217,14 +1067,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290320
 DTEND;VALUE=DATE:20290321
-SUMMARY;LANGUAGE=zh-CN:星座季节｜白羊座
+SUMMARY;LANGUAGE=zh-CN:白羊座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入白羊座黄道区段：北京时间
   2029年03月20日 16:01。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1241,14 +1088,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290420
 DTEND;VALUE=DATE:20290421
-SUMMARY;LANGUAGE=zh-CN:星座季节｜金牛座
+SUMMARY;LANGUAGE=zh-CN:金牛座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入金牛座黄道区段：北京时间
   2029年04月20日 02:55。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1265,14 +1109,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290521
 DTEND;VALUE=DATE:20290522
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双子座
+SUMMARY;LANGUAGE=zh-CN:双子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双子座黄道区段：北京时间
   2029年05月21日 01:55。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1289,14 +1130,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290621
 DTEND;VALUE=DATE:20290622
-SUMMARY;LANGUAGE=zh-CN:星座季节｜巨蟹座
+SUMMARY;LANGUAGE=zh-CN:巨蟹座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入巨蟹座黄道区段：北京时间
   2029年06月21日 09:48。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1313,14 +1151,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290722
 DTEND;VALUE=DATE:20290723
-SUMMARY;LANGUAGE=zh-CN:星座季节｜狮子座
+SUMMARY;LANGUAGE=zh-CN:狮子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入狮子座黄道区段：北京时间
   2029年07月22日 20:41。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1337,14 +1172,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290823
 DTEND;VALUE=DATE:20290824
-SUMMARY;LANGUAGE=zh-CN:星座季节｜处女座
+SUMMARY;LANGUAGE=zh-CN:处女座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入处女座黄道区段：北京时间
   2029年08月23日 03:51。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1361,14 +1193,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20290923
 DTEND;VALUE=DATE:20290924
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天秤座
+SUMMARY;LANGUAGE=zh-CN:天秤座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天秤座黄道区段：北京时间
   2029年09月23日 01:37。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1385,14 +1214,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291023
 DTEND;VALUE=DATE:20291024
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天蝎座
+SUMMARY;LANGUAGE=zh-CN:天蝎座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天蝎座黄道区段：北京时间
   2029年10月23日 11:07。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1409,14 +1235,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291122
 DTEND;VALUE=DATE:20291123
-SUMMARY;LANGUAGE=zh-CN:星座季节｜射手座
+SUMMARY;LANGUAGE=zh-CN:射手座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入射手座黄道区段：北京时间
   2029年11月22日 08:49。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1433,14 +1256,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20291221
 DTEND;VALUE=DATE:20291222
-SUMMARY;LANGUAGE=zh-CN:星座季节｜摩羯座
+SUMMARY;LANGUAGE=zh-CN:摩羯座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入摩羯座黄道区段：北京时间
   2029年12月21日 22:14。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1457,14 +1277,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300120
 DTEND;VALUE=DATE:20300121
-SUMMARY;LANGUAGE=zh-CN:星座季节｜水瓶座
+SUMMARY;LANGUAGE=zh-CN:水瓶座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入水瓶座黄道区段：北京时间
   2030年01月20日 08:54。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1481,14 +1298,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300218
 DTEND;VALUE=DATE:20300219
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双鱼座
+SUMMARY;LANGUAGE=zh-CN:双鱼座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双鱼座黄道区段：北京时间
   2030年02月18日 22:59。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1505,14 +1319,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300320
 DTEND;VALUE=DATE:20300321
-SUMMARY;LANGUAGE=zh-CN:星座季节｜白羊座
+SUMMARY;LANGUAGE=zh-CN:白羊座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入白羊座黄道区段：北京时间
   2030年03月20日 21:51。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1529,14 +1340,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300420
 DTEND;VALUE=DATE:20300421
-SUMMARY;LANGUAGE=zh-CN:星座季节｜金牛座
+SUMMARY;LANGUAGE=zh-CN:金牛座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入金牛座黄道区段：北京时间
   2030年04月20日 08:43。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1553,14 +1361,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300521
 DTEND;VALUE=DATE:20300522
-SUMMARY;LANGUAGE=zh-CN:星座季节｜双子座
+SUMMARY;LANGUAGE=zh-CN:双子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入双子座黄道区段：北京时间
   2030年05月21日 07:40。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1577,14 +1382,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300621
 DTEND;VALUE=DATE:20300622
-SUMMARY;LANGUAGE=zh-CN:星座季节｜巨蟹座
+SUMMARY;LANGUAGE=zh-CN:巨蟹座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入巨蟹座黄道区段：北京时间
   2030年06月21日 15:31。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1601,14 +1403,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300723
 DTEND;VALUE=DATE:20300724
-SUMMARY;LANGUAGE=zh-CN:星座季节｜狮子座
+SUMMARY;LANGUAGE=zh-CN:狮子座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入狮子座黄道区段：北京时间
   2030年07月23日 02:25。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1625,14 +1424,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300823
 DTEND;VALUE=DATE:20300824
-SUMMARY;LANGUAGE=zh-CN:星座季节｜处女座
+SUMMARY;LANGUAGE=zh-CN:处女座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入处女座黄道区段：北京时间
   2030年08月23日 09:36。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1649,14 +1445,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20300923
 DTEND;VALUE=DATE:20300924
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天秤座
+SUMMARY;LANGUAGE=zh-CN:天秤座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天秤座黄道区段：北京时间
   2030年09月23日 07:27。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1673,14 +1466,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301023
 DTEND;VALUE=DATE:20301024
-SUMMARY;LANGUAGE=zh-CN:星座季节｜天蝎座
+SUMMARY;LANGUAGE=zh-CN:天蝎座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入天蝎座黄道区段：北京时间
   2030年10月23日 17:00。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1697,14 +1487,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301122
 DTEND;VALUE=DATE:20301123
-SUMMARY;LANGUAGE=zh-CN:星座季节｜射手座
+SUMMARY;LANGUAGE=zh-CN:射手座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入射手座黄道区段：北京时间
   2030年11月22日 14:44。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1721,14 +1508,11 @@ LAST-MODIFIED:20260820T000000Z
 SEQUENCE:0
 DTSTART;VALUE=DATE:20301222
 DTEND;VALUE=DATE:20301223
-SUMMARY;LANGUAGE=zh-CN:星座季节｜摩羯座
+SUMMARY;LANGUAGE=zh-CN:摩羯座季节开始
 DESCRIPTION;LANGUAGE=zh-CN:太阳进入摩羯座黄道区段：北京时间
   2030年12月22日 04:09。\n这里采用热带黄道的十二等分定义
  ，不等同于 IAU 天文学星座边界。\n本频道只发布可复现
- 的星象时间，不提供个人运势解读。\n计算：Astronomy Engin
- e 2.1.19（MIT License）\n来源：https://github.com/cosinekitty/astrono
- my
-URL:https://github.com/cosinekitty/astronomy
+ 的星象时间，不提供个人运势解读。
 CLASS:PUBLIC
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT

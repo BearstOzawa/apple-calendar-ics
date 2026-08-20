@@ -69,7 +69,6 @@ def _event_lines(event: CalendarEvent, metadata: Metadata) -> list[str]:
             f"DESCRIPTION;LANGUAGE={metadata.default_language}:"
             f"{escape_text(event.description)}"
         ),
-        f"URL:{event.source_url}",
         "CLASS:PUBLIC",
         "STATUS:CONFIRMED",
         "TRANSP:TRANSPARENT",

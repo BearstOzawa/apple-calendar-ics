@@ -47,26 +47,12 @@ class SiteTests(unittest.TestCase):
                 reference,
             )
 
-    def test_every_published_feed_has_subscribe_and_copy_controls(self) -> None:
-        document = load_site_document()
+    def test_every_published_feed_is_present_in_interactive_catalogue(self) -> None:
         manifest = json.loads((DIST_DIR / "manifest.json").read_text(encoding="utf-8"))
-        links = {
-            attrs["href"]
-            for tag, attrs in document.attributes
-            if tag == "a" and "href" in attrs
-        }
-        copy_targets = {
-            attrs["data-copy"]
-            for tag, attrs in document.attributes
-            if tag == "button" and "data-copy" in attrs
-        }
+        app = (SITE_DIR / "app.js").read_text(encoding="utf-8")
 
         for filename in manifest["feeds"]:
-            self.assertIn(
-                f"webcal://apple-calendar.lili.uno/{filename}",
-                links,
-            )
-            self.assertIn(filename, copy_targets)
+            self.assertIn(f'"{filename}"', app)
 
     def test_manifest_fields_have_static_fallbacks(self) -> None:
         document = load_site_document()
@@ -81,9 +67,14 @@ class SiteTests(unittest.TestCase):
                 "data-work-rest-year",
                 "data-culture-year",
                 "data-dataset-version",
-                "data-feed-count",
+                "data-channel-count",
             }.issubset(names)
         )
+
+    def test_tarot_is_not_part_of_calendar_product(self) -> None:
+        html = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+        self.assertNotIn("塔罗", html)
+        self.assertFalse((SITE_DIR / "tarot.js").exists())
 
 
 if __name__ == "__main__":

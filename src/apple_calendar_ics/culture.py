@@ -35,14 +35,10 @@ SOLAR_TERM_CONCEPTS = {
 }
 
 
-def _computed_description(kind: str, config: CultureConfig) -> str:
-    return "\n".join(
-        [
-            f"类型：{kind}。本事件依据公开历法规则计算，不代表放假安排。",
-            f"计算库：{config.source.title}（{config.source.license}）",
-            f"来源：{config.source.url}",
-        ]
-    )
+def _computed_description(kind: str) -> str:
+    if kind == "传统节日":
+        return "传统节日；是否放假以当年官方安排为准。"
+    return "二十四节气。"
 
 
 def culture_events(
@@ -68,9 +64,8 @@ def culture_events(
                     title=rule.name,
                     start=current,
                     end=current + timedelta(days=1),
-                    description=_computed_description("传统节日", config),
+                    description=_computed_description("传统节日"),
                     categories=("中国日历", "传统节日"),
-                    source_url=config.source.url,
                     last_modified=modified,
                     data_status="computed",
                 )
@@ -90,9 +85,8 @@ def culture_events(
                         title="除夕",
                         start=current,
                         end=tomorrow,
-                        description=_computed_description("传统节日", config),
+                        description=_computed_description("传统节日"),
                         categories=("中国日历", "传统节日"),
-                        source_url=config.source.url,
                         last_modified=modified,
                         data_status="computed",
                     )
@@ -110,9 +104,8 @@ def culture_events(
                         title=term,
                         start=current,
                         end=current + timedelta(days=1),
-                        description=_computed_description("二十四节气", config),
+                        description=_computed_description("二十四节气"),
                         categories=("中国日历", "二十四节气"),
-                        source_url=config.source.url,
                         last_modified=modified,
                         data_status="computed",
                     )

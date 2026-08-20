@@ -38,8 +38,6 @@ calendar-validate dist
 ruff check src tests
 ruff format --check src tests
 node --check site/app.js
-node --check site/tarot.js
-node tests/test_tarot.js
 node --check worker/src/index.mjs
 node tests/test_worker.mjs
 python -m unittest discover -s tests -v
@@ -68,10 +66,6 @@ python -m unittest discover -s tests -v
 - 将“全球发生”与“本地可见”分开表述，不根据单一地点误判所有订阅者的可见性。
 - 流星雨等年表数据需要保留原始机构、参考版本和峰值可能浮动的说明。
 - 星座内容应区分可复现的黄道时间和编辑性质的运势解读；后者不进入公共订阅。
-
-## 修改个人日历工具
-
-个人工具必须默认在浏览器本地运行，不上传输入或生成结果。生成的 ICS 应使用稳定日期语义、CRLF 行尾、75 字节折行、透明事件且不包含默认提醒。若引入图片或第三方牌义文字，必须先解决来源与再分发许可。
 
 ## 修改页面或工程代码
 

@@ -1,6 +1,6 @@
 # 中国日历频道
 
-面向 iPhone、iPad 与 Mac 的可组合中国日期信息服务。提供法定班休、传统黄历、二十八星宿、中国时令、月相、重要天象与星座季节；数据来源可追溯，算法版本固定，构建结果可复现。
+面向 iPhone、iPad 与 Mac 的可组合中国日期信息服务。订阅前可在真实月视图中预览频道密度和重复关系；数据来源可追溯，算法版本固定，构建结果可复现。
 
 [![Verify calendars](https://github.com/BearstOzawa/apple-calendar-ics/actions/workflows/ci.yml/badge.svg)](https://github.com/BearstOzawa/apple-calendar-ics/actions/workflows/ci.yml)
 [![Publish calendars](https://github.com/BearstOzawa/apple-calendar-ics/actions/workflows/publish.yml/badge.svg)](https://github.com/BearstOzawa/apple-calendar-ics/actions/workflows/publish.yml)
@@ -13,50 +13,51 @@
 
 本项目遵循四项产品原则：
 
-- **基础日历保持安静**：精选只包含班休、核心传统节日与二十四节气。
-- **高频内容独立订阅**：每日黄历和星宿不会默认进入精选。
+- **先预览再订阅**：网站展示预计月度事件数和 Apple 月视图效果，不用盲选。
+- **基础日历保持安静**：精选只包含班休、核心传统节日与二十四节气，并按假期范围去重。
+- **标题不重复频道名**：日历颜色已经表达频道，事件标题只保留真正有用的信息。
+- **高频内容明确隔离**：每日黄历和星宿默认折叠、互斥，不进入推荐搭配。
 - **可信度明确分层**：官方、算法、年表与民俗内容使用不同说明。
-- **个性化信息留在本地**：塔罗工具在浏览器生成个人 ICS，不上传用户输入或结果。
+- **拒绝伪丰富**：天气、股价、影视上新、模板化运势等动态信息不进入公共频道。
 
 ## 订阅频道
 
-### 基础日历
+### 推荐入口
 
-两个基础方案二选一；`essential.ics` 已包含 `work-rest.ics` 的全部内容。
+`essential.ics` 是一份清爽预设，已经包含班休、核心传统节日和二十四节气。不要再同时订阅它的拆分频道。
 
-| 频道 | 内容 | 更新依据 | 订阅 |
+| 频道 | 月视图内容 | 频率 | 订阅 |
 | --- | --- | --- | --- |
-| **中国日历・精选** | 法定班休、核心传统节日、二十四节气 | 国务院正式通知 + 固定历法规则 | [`essential.ics`](https://apple-calendar.lili.uno/essential.ics) |
-| **中国班休** | 仅法定放假与调休上班 | 国务院正式通知 | [`work-rest.ics`](https://apple-calendar.lili.uno/work-rest.ics) |
+| **中国日历・精选** | 假期、调休、核心节日与节气 | 约每月 3 条 | [`essential.ics`](https://apple-calendar.lili.uno/essential.ics) |
 
-### 传统历法
+### 可拆分的基础频道
 
-| 频道 | 内容 | 频率 | 订阅 |
+希望分别设置颜色时，用下列频道替代“精选”。
+
+| 频道 | 月视图内容 | 频率 | 订阅 |
 | --- | --- | --- | --- |
-| **中国黄历** | 农历、干支、宜忌、冲煞、彭祖百忌、神位、星宿摘要 | 每日一条 | [`almanac.ics`](https://apple-calendar.lili.uno/almanac.ics) |
-| **二十八星宿** | 星宿吉凶、十二值星、值日天神、九星、星宿歌 | 每日一条 | [`lunar-mansions.ics`](https://apple-calendar.lili.uno/lunar-mansions.ics) |
-| **中国时令** | 七十二候、数九、三伏 | 约每五日 | [`seasonal.ics`](https://apple-calendar.lili.uno/seasonal.ics) |
+| **中国班休** | 法定放假与调休上班 | 按官方通知 | [`work-rest.ics`](https://apple-calendar.lili.uno/work-rest.ics) |
+| **传统节日** | 除夕、元宵、七夕、中元、重阳等 | 每年约 10 条 | [`festivals.ics`](https://apple-calendar.lili.uno/festivals.ics) |
+| **二十四节气** | 立春、春分、夏至、冬至等 | 每月 2 条 | [`solar-terms.ics`](https://apple-calendar.lili.uno/solar-terms.ics) |
+| **公众节日与纪念日** | 妇女节、青年节、教师节及全国性纪念日 | 每年 13 条 | [`observances.ics`](https://apple-calendar.lili.uno/observances.ics) |
 
-黄历已经包含星宿摘要。只想查看完整星宿信息时选择“二十八星宿”；同时订阅两份会在每天产生两条传统历法事件。
+### 按需扩展
 
-### 天文与星象
-
-| 频道 | 内容 | 频率 | 订阅 |
+| 频道 | 月视图内容 | 频率 | 订阅 |
 | --- | --- | --- | --- |
-| **月相** | 新月、上弦月、满月、下弦月 | 每月四次 | [`moon-phases.ics`](https://apple-calendar.lili.uno/moon-phases.ics) |
-| **重要天象** | 日月食、主要流星雨、火木土星冲日、水星金星大距 | 不定期 | [`sky-events.ics`](https://apple-calendar.lili.uno/sky-events.ics) |
-| **星座季节** | 太阳进入十二热带黄道区段的北京时间 | 每月一次 | [`zodiac-seasons.ics`](https://apple-calendar.lili.uno/zodiac-seasons.ics) |
+| **中国时令** | 七十二候、数九、三伏 | 约每月 7 条 | [`seasonal.ics`](https://apple-calendar.lili.uno/seasonal.ics) |
+| **月相** | 新月、上弦月、满月、下弦月 | 每月约 4 条 | [`moon-phases.ics`](https://apple-calendar.lili.uno/moon-phases.ics) |
+| **重要天象** | 日月食、主要流星雨、冲日与大距 | 不定期 | [`sky-events.ics`](https://apple-calendar.lili.uno/sky-events.ics) |
+| **星座季节** | 太阳进入十二热带黄道区段 | 每月 1 条 | [`zodiac-seasons.ics`](https://apple-calendar.lili.uno/zodiac-seasons.ics) |
 
-“星座季节”只发布可复现的黄道时间，不提供模板化每日运势。热带黄道的十二等分也不等同于 IAU 天文学星座边界。
+### 高频文化频道
 
-## 塔罗个人工具
+| 频道 | 月视图标题 | 频率 | 订阅 |
+| --- | --- | --- | --- |
+| **黄历宜忌** | `宜 纳财 · 忌 移徙`，完整信息在详情 | 每天 1 条 | [`almanac.ics`](https://apple-calendar.lili.uno/almanac.ics) |
+| **二十八星宿** | `角木蛟 · 吉`，完整星宿歌在详情 | 每天 1 条 | [`lunar-mansions.ics`](https://apple-calendar.lili.uno/lunar-mansions.ics) |
 
-[频道中心](https://apple-calendar.lili.uno/#tarot) 提供两个完全在浏览器运行的工具：
-
-- **每日一牌**：同一设备当天结果保持稳定，可下载为一条私人全天事件。
-- **塔罗 78 日研习**：选择开始日期后生成包含 78 张牌的个人 ICS。
-
-项目不提供一份所有人相同的公共塔罗订阅，也不上传问题、生日或抽牌结果。塔罗内容用于文化学习与自我反思，不构成心理、医疗、财务或其他专业建议。
+这两个频道都会覆盖一年 365 天，且信息存在重叠。频道搭配器默认折叠并保持二选一。
 
 ## 数据范围
 
@@ -64,6 +65,7 @@
 | --- | --- | --- | --- |
 | 法定放假与调休 | 2025—2026 | 国务院办公厅正式通知 | 人工复核；不使用预测数据 |
 | 传统节日与节气 | 2025—2030 | `lunar-python==1.4.8` | 固定规则计算 |
+| 公众节日与纪念日 | 2025—2030 | 国务院行政法规 | 固定日期，详情注明放假性质 |
 | 黄历、星宿与时令 | 2025—2030 | `lunar-python==1.4.8` | 固定规则计算，标注民俗参考 |
 | 月相、日月食与行星事件 | 2025—2030 | `astronomy-engine==2.1.19` | 固定天文算法，北京时间呈现 |
 | 主要流星雨 | 2025—2030 | IMO 参考太阳黄经 + 天文算法 | 发布参考极大，说明观测条件 |
@@ -79,13 +81,13 @@
 2. 公共频道均为全天、透明事件，不占用忙闲状态，不包含 `VALARM`。
 3. UID 来自固定逻辑 ID，不依赖标题、随机数或构建时间。
 4. 只有事件实质变化时才调整 `SEQUENCE` 和数据版本。
-5. 所有事件保留 HTTPS 来源、内容类型和数据状态元数据。
+5. 事件详情只保留对当天有用的内容；来源、许可证与算法版本集中在 Manifest 和数据说明中，避免逐条重复小尾巴。
 6. 高频频道独立发布，精选频道不因新增内容而持续膨胀。
 7. 天象详情采用北京时间；实际可见性仍取决于位置、昼夜和天气。
 
 ## 安装方式
 
-最简单的方式是访问[国内频道中心](https://apple-calendar.lili.uno/)，点击对应频道的“添加频道”。也可以复制 HTTPS 地址手动添加：
+最简单的方式是访问[国内频道中心](https://apple-calendar.lili.uno/)，先在月视图中搭配频道，再打开订阅清单逐个添加。也可以复制 HTTPS 地址手动添加：
 
 - **iPhone / iPad**：设置 → 日历账户 → 添加账户 → 其他 → 添加已订阅的日历。
 - **Mac**：日历 → 文件 → 新建日历订阅。
@@ -139,16 +141,16 @@ GitHub 的计划任务可能延迟；公共仓库连续 60 天没有活动时，
 ```text
 data/                       已审核的正式班休数据与文化规则
 dist/                       可直接订阅的 ICS 与版本清单
-site/                       GitHub Pages 频道中心与本地个人工具
+site/                       GitHub Pages 频道搭配器与月视图预览
 worker/                     Cloudflare Worker 固定源站代理
 src/apple_calendar_ics/     构建、历法、天文、校验与监测逻辑
-tests/                      数据、ICS、站点和塔罗生成测试
+tests/                      数据、ICS、站点与代理测试
 .github/workflows/          校验、发布与上游监测
 ```
 
 ## 本地开发
 
-要求 Python 3.11 或更高版本，并使用可执行 Node.js 语法检查和塔罗生成测试。
+要求 Python 3.11 或更高版本，并使用 Node.js 检查前端与 Worker 脚本。
 
 ```bash
 python3 -m venv .venv
@@ -160,8 +162,6 @@ calendar-validate dist
 ruff check src tests
 ruff format --check src tests
 node --check site/app.js
-node --check site/tarot.js
-node tests/test_tarot.js
 node --check worker/src/index.mjs
 node tests/test_worker.mjs
 python -m unittest discover -s tests -v
@@ -177,7 +177,7 @@ npx --yes wrangler@4.124.0 deploy --config worker/wrangler.jsonc
 
 ## 能力边界
 
-- ICS 无法复制国产系统的系统级农历层、桌面组件、卡片或专用班休样式。
+- ICS 无法复制国产系统的系统级农历层、桌面组件、卡片或专用班休样式；每日黄历只能表现为全天事件。
 - 黄历和星宿属于传统民俗，不同资料可能存在口径差异。
 - 日月食、流星雨与行星事件并不保证在所有地区可见。
 - 本项目不发布随机生成的星座运势，不接入需要持续抓取的天气、限行、影视或赛事接口。
@@ -189,4 +189,4 @@ npx --yes wrangler@4.124.0 deploy --config worker/wrangler.jsonc
 
 ## 许可
 
-代码采用 [MIT License](LICENSE)。政府公开信息、历法与天文依赖、IMO 年表及塔罗文本的许可边界见[数据来源与许可说明](DATA_LICENSE.md)。
+代码采用 [MIT License](LICENSE)。政府公开信息、历法与天文依赖及 IMO 年表的许可边界见[数据来源与许可说明](DATA_LICENSE.md)。

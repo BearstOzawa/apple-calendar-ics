@@ -34,14 +34,6 @@ def _join(values: list[str]) -> str:
     return "、".join(values) if values else "无"
 
 
-def _source_lines(config: CultureConfig) -> list[str]:
-    return [
-        "说明：传统民俗信息仅供文化参考，不构成决策建议。",
-        f"计算库：{config.source.title}（{config.source.license}）",
-        f"来源：{config.source.url}",
-    ]
-
-
 def almanac_events(
     config: CultureConfig, metadata: Metadata
 ) -> tuple[CalendarEvent, ...]:
@@ -51,6 +43,8 @@ def almanac_events(
         lunar = _lunar(current)
         lunar_date = _lunar_date(lunar)
         xiu = f"{lunar.getXiu()}{lunar.getZheng()}{lunar.getAnimal()}"
+        day_yi = lunar.getDayYi()
+        day_ji = lunar.getDayJi()
         description = "\n".join(
             [
                 f"农历：{lunar.getYearInGanZhi()}年（{lunar.getYearShengXiao()}年）{lunar_date}",
@@ -61,8 +55,8 @@ def almanac_events(
                     f"{lunar.getDayInGanZhi()}日"
                 ),
                 f"纳音：{lunar.getDayNaYin()}",
-                f"宜：{_join(lunar.getDayYi())}",
-                f"忌：{_join(lunar.getDayJi())}",
+                f"宜：{_join(day_yi)}",
+                f"忌：{_join(day_ji)}",
                 f"冲煞：冲{lunar.getDayChongDesc()}，煞{lunar.getDaySha()}",
                 f"彭祖百忌：{lunar.getPengZuGan()}；{lunar.getPengZuZhi()}",
                 (
@@ -77,7 +71,6 @@ def almanac_events(
                     f"财神{lunar.getDayPositionCaiDesc()}"
                 ),
                 f"胎神：{lunar.getDayPositionTai()}",
-                *_source_lines(config),
             ]
         )
         events.append(
@@ -85,12 +78,14 @@ def almanac_events(
                 logical_id=f"cn-{current.isoformat()}-almanac",
                 kind="almanac-day",
                 concepts=("traditional-almanac",),
-                title=(f"黄历｜农历{lunar_date} · {lunar.getDayInGanZhi()}日"),
+                title=(
+                    f"宜 {day_yi[0] if day_yi else '无'} · "
+                    f"忌 {day_ji[0] if day_ji else '无'}"
+                ),
                 start=current,
                 end=current + timedelta(days=1),
                 description=description,
                 categories=("中国日历", "传统黄历"),
-                source_url=config.source.url,
                 last_modified=modified,
                 data_status="computed",
             )
@@ -117,7 +112,6 @@ def lunar_mansion_events(
                 ),
                 f"九星：{lunar.getDayNineStar()}",
                 f"星宿歌：{lunar.getXiuSong()}",
-                *_source_lines(config),
             ]
         )
         events.append(
@@ -125,12 +119,11 @@ def lunar_mansion_events(
                 logical_id=f"cn-{current.isoformat()}-lunar-mansion",
                 kind="lunar-mansion-day",
                 concepts=("twenty-eight-lunar-mansions",),
-                title=f"星宿｜{xiu} · {lunar.getXiuLuck()}",
+                title=f"{xiu} · {lunar.getXiuLuck()}",
                 start=current,
                 end=current + timedelta(days=1),
                 description=description,
                 categories=("中国日历", "二十八星宿"),
-                source_url=config.source.url,
                 last_modified=modified,
                 data_status="computed",
             )
@@ -153,18 +146,16 @@ def seasonal_events(
                     logical_id=f"cn-{current.isoformat()}-wuhou",
                     kind="seasonal-marker",
                     concepts=("seventy-two-pentads",),
-                    title=f"物候｜{wuhou}",
+                    title=wuhou,
                     start=current,
                     end=current + timedelta(days=1),
                     description="\n".join(
                         [
                             f"节气阶段：{lunar.getHou()}",
                             f"七十二候：{wuhou}",
-                            *_source_lines(config),
                         ]
                     ),
                     categories=("中国日历", "中国时令", "七十二候"),
-                    source_url=config.source.url,
                     last_modified=modified,
                     data_status="computed",
                 )
@@ -178,17 +169,11 @@ def seasonal_events(
                     logical_id=f"cn-{current.isoformat()}-shujiu",
                     kind="seasonal-marker",
                     concepts=("shu-jiu", shujiu.getName()),
-                    title=f"数九｜{shujiu.getName()}开始",
+                    title=f"{shujiu.getName()}开始",
                     start=current,
                     end=current + timedelta(days=1),
-                    description="\n".join(
-                        [
-                            f"{shujiu.getName()}第1天，从今天起共9天。",
-                            *_source_lines(config),
-                        ]
-                    ),
+                    description=f"{shujiu.getName()}第1天，从今天起共9天。",
                     categories=("中国日历", "中国时令", "数九"),
-                    source_url=config.source.url,
                     last_modified=modified,
                     data_status="computed",
                 )
@@ -201,14 +186,11 @@ def seasonal_events(
                     logical_id=f"cn-{current.isoformat()}-fu",
                     kind="seasonal-marker",
                     concepts=("san-fu", fu.getName()),
-                    title=f"三伏｜{fu.getName()}开始",
+                    title=f"{fu.getName()}开始",
                     start=current,
                     end=current + timedelta(days=1),
-                    description="\n".join(
-                        [f"{fu.getName()}第1天。", *_source_lines(config)]
-                    ),
+                    description=f"{fu.getName()}第1天。",
                     categories=("中国日历", "中国时令", "三伏"),
-                    source_url=config.source.url,
                     last_modified=modified,
                     data_status="computed",
                 )

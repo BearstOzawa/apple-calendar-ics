@@ -53,20 +53,29 @@ class IcsTests(unittest.TestCase):
                 {
                     "almanac.ics",
                     "essential.ics",
+                    "festivals.ics",
                     "lunar-mansions.ics",
                     "moon-phases.ics",
+                    "observances.ics",
                     "seasonal.ics",
                     "sky-events.ics",
+                    "solar-terms.ics",
                     "work-rest.ics",
                     "zodiac-seasons.ics",
                 },
                 set(results),
             )
-            self.assertEqual(224, results["essential.ics"]["event_count"])
+            self.assertEqual(220, results["essential.ics"]["event_count"])
             self.assertEqual(24, results["work-rest.ics"]["event_count"])
             for filename in results:
                 calendar = Calendar.from_ical((output / filename).read_bytes())
-                self.assertGreater(len(tuple(calendar.walk("VEVENT"))), 0)
+                events = tuple(calendar.walk("VEVENT"))
+                self.assertGreater(len(events), 0)
+                for event in events:
+                    self.assertIsNone(event.get("URL"), filename)
+                    description = str(event.get("DESCRIPTION", ""))
+                    self.assertNotIn("计算库：", description, filename)
+                    self.assertNotIn("来源：http", description, filename)
 
     def test_essential_feed_uses_contextual_deduplication(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -82,15 +91,15 @@ class IcsTests(unittest.TestCase):
                 and "dragon-boat" in str(item.get("X-CN-CALENDAR-CONCEPTS", ""))
             ]
             self.assertEqual(1, len(dragon_boat))
-            self.assertEqual("休｜端午节假期（3天）", str(dragon_boat[0]["SUMMARY"]))
+            self.assertEqual("端午节假期（3天）", str(dragon_boat[0]["SUMMARY"]))
 
-            spring_festival = [
+            duplicated_spring_festival = [
                 item
                 for item in components
                 if item.decoded("DTSTART").isoformat() == "2026-02-17"
                 and str(item.get("SUMMARY", "")) == "春节"
             ]
-            self.assertEqual(1, len(spring_festival))
+            self.assertEqual(0, len(duplicated_spring_festival))
 
 
 if __name__ == "__main__":

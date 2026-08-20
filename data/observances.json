@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "start_year": 2025,
+  "end_year": 2030,
+  "observances": [
+    {
+      "id": "february-seventh-memorial",
+      "concept": "february-seventh-memorial",
+      "name": "二七纪念日",
+      "month": 2,
+      "day": 7,
+      "note": "全国性纪念日，不放假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "womens-day",
+      "concept": "womens-day",
+      "name": "妇女节",
+      "month": 3,
+      "day": 8,
+      "note": "妇女放假半天；适逢周六、周日不补假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "arbor-day",
+      "concept": "arbor-day",
+      "name": "植树节",
+      "month": 3,
+      "day": 12,
+      "note": "全国性节日、纪念日，不放假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "youth-day",
+      "concept": "youth-day",
+      "name": "青年节",
+      "month": 5,
+      "day": 4,
+      "note": "14周岁以上青年放假半天；适逢周六、周日不补假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "nurses-day",
+      "concept": "nurses-day",
+      "name": "护士节",
+      "month": 5,
+      "day": 12,
+      "note": "全国性节日、纪念日，不放假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "may-thirtieth-memorial",
+      "concept": "may-thirtieth-memorial",
+      "name": "五卅纪念日",
+      "month": 5,
+      "day": 30,
+      "note": "全国性纪念日，不放假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "childrens-day",
+      "concept": "childrens-day",
+      "name": "儿童节",
+      "month": 6,
+      "day": 1,
+      "note": "不满14周岁的少年儿童放假1天；适逢周六、周日不补假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "july-seventh-memorial",
+      "concept": "july-seventh-memorial",
+      "name": "七七抗战纪念日",
+      "month": 7,
+      "day": 7,
+      "note": "全国性纪念日，不放假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "pla-day",
+      "concept": "pla-day",
+      "name": "建军节",
+      "month": 8,
+      "day": 1,
+      "note": "现役军人放假半天；适逢周六、周日不补假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "victory-day",
+      "concept": "victory-day",
+      "name": "九三抗战胜利纪念日",
+      "month": 9,
+      "day": 3,
+      "note": "全国性纪念日，不放假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "teachers-day",
+      "concept": "teachers-day",
+      "name": "教师节",
+      "month": 9,
+      "day": 10,
+      "note": "全国性节日、纪念日，不放假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "september-eighteenth-memorial",
+      "concept": "september-eighteenth-memorial",
+      "name": "九一八纪念日",
+      "month": 9,
+      "day": 18,
+      "note": "全国性纪念日，不放假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    },
+    {
+      "id": "journalists-day",
+      "concept": "journalists-day",
+      "name": "记者节",
+      "month": 11,
+      "day": 8,
+      "note": "全国性节日、纪念日，不放假。",
+      "source": {
+        "title": "全国年节及纪念日放假办法（2024年修订）",
+        "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      }
+    }
+  ]
+}

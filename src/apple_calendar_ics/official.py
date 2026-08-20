@@ -42,7 +42,6 @@ def official_events(years: tuple[OfficialYear, ...]) -> tuple[CalendarEvent, ...
                 [
                     f"官方通知：{year_data.source.title}",
                     f"文号：{year_data.source.document_number}",
-                    f"来源：{year_data.source.url}",
                 ]
             )
             events.append(
@@ -50,12 +49,11 @@ def official_events(years: tuple[OfficialYear, ...]) -> tuple[CalendarEvent, ...
                     logical_id=(f"cn-{year_data.year}-{period.id}-holiday-period"),
                     kind="holiday-period",
                     concepts=period.concepts,
-                    title=f"休｜{period.name}假期（{period.duration_days}天）",
+                    title=f"{period.name}假期（{period.duration_days}天）",
                     start=period.start,
                     end=period.end_inclusive + timedelta(days=1),
                     description="\n".join(description_parts),
                     categories=("中国日历", "放假"),
-                    source_url=year_data.source.url,
                     last_modified=modified,
                     sequence=period.sequence,
                     data_status="confirmed",
@@ -69,7 +67,6 @@ def official_events(years: tuple[OfficialYear, ...]) -> tuple[CalendarEvent, ...
                         "这是全天提示，不会占用忙闲状态，也不包含默认提醒。",
                         f"官方通知：{year_data.source.title}",
                         f"文号：{year_data.source.document_number}",
-                        f"来源：{year_data.source.url}",
                     ]
                 )
                 events.append(
@@ -79,12 +76,11 @@ def official_events(years: tuple[OfficialYear, ...]) -> tuple[CalendarEvent, ...
                         ),
                         kind="alternate-workday",
                         concepts=period.concepts,
-                        title=f"班｜{period.name}调休",
+                        title=f"{period.name}调休上班",
                         start=workday.date,
                         end=workday.date + timedelta(days=1),
                         description=description,
                         categories=("中国日历", "调休上班"),
-                        source_url=year_data.source.url,
                         last_modified=modified,
                         sequence=workday.sequence,
                         data_status="confirmed",
