@@ -5,9 +5,10 @@
 ## 变更类型
 
 - [ ] 法定班休数据
-- [ ] 传统节日或节气数据
+- [ ] 传统历法、黄历或星宿数据
+- [ ] 月相、天象或星象数据
 - [ ] ICS 构建或校验
-- [ ] 订阅页面
+- [ ] 订阅页面或个人工具
 - [ ] 自动化或依赖
 - [ ] 文档与仓库维护
 
@@ -29,6 +30,10 @@
 - [ ] `ruff check src tests`
 - [ ] `ruff format --check src tests`
 - [ ] `node --check site/app.js`
+- [ ] `node --check site/tarot.js`
+- [ ] `node tests/test_tarot.js`
+- [ ] `node --check worker/src/index.mjs`
+- [ ] `node tests/test_worker.mjs`
 - [ ] `python -m unittest discover -s tests -v`
 - [ ] 已确认生成产物符合预期，或本次变更不影响 `dist/`
 

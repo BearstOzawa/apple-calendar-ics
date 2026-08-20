@@ -1,0 +1,2 @@
+# RFC 5545 requires CRLF; keep generated calendars byte-exact and out of text diffs.
+*.ics binary

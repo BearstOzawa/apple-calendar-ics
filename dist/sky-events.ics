@@ -1,0 +1,3335 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BearstOzawa//Apple Calendar ICS//ZH-CN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME;LANGUAGE=zh-CN:重要天象
+X-WR-CALDESC;LANGUAGE=zh-CN:日月食、主要流星雨、行星冲日与
+ 水星金星大距。
+X-WR-TIMEZONE:Asia/Shanghai
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:astro-2025-quadrantids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250103
+DTEND;VALUE=DATE:20250104
+SUMMARY;LANGUAGE=zh-CN:流星雨｜象限仪座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2025年01月03日 14
+ :59。\n常见活跃期：12月28日至1月12日；参考 ZHR：约80。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,quadrantids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-01-10-venus-elongation@apple-calendar-ics.bearstozawa.github
+ .io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250110
+DTEND;VALUE=DATE:20250111
+SUMMARY;LANGUAGE=zh-CN:行星｜金星东大距
+DESCRIPTION;LANGUAGE=zh-CN:金星东大距，适合傍晚观测。\n北京
+ 时间：2025年01月10日 12:57。\n与太阳最大角距约 47.2°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,venus
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-01-16-mars-opposition@apple-calendar-ics.bearstozawa.github.
+ io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250116
+DTEND;VALUE=DATE:20250117
+SUMMARY;LANGUAGE=zh-CN:行星｜火星冲日
+DESCRIPTION;LANGUAGE=zh-CN:火星冲日发生于北京时间 2025年01月16
+ 日 10:30。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,mars
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-03-08-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250308
+DTEND;VALUE=DATE:20250309
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2025年03月08日 14:05。\n与太阳最大角距约 18.2°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-03-14-lunar-eclipse-total@apple-calendar-ics.bearstozawa.git
+ hub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250314
+DTEND;VALUE=DATE:20250315
+SUMMARY;LANGUAGE=zh-CN:月食｜全食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2025年03月14日 14:58。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,total
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-03-29-solar-eclipse-partial@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250329
+DTEND;VALUE=DATE:20250330
+SUMMARY;LANGUAGE=zh-CN:日食｜偏食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2025年03月29日 18:47。
+ \n本事件为全球日食；具体可见区域需另行查询。\n请勿
+ 在没有合格日食观测设备的情况下直视太阳。\n计算：Ast
+ ronomy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinek
+ itty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,partial
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-lyrids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250422
+DTEND;VALUE=DATE:20250423
+SUMMARY;LANGUAGE=zh-CN:流星雨｜天琴座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2025年04月22日 12
+ :58。\n常见活跃期：4月14日至30日；参考 ZHR：约18。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,lyrids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-04-22-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250422
+DTEND;VALUE=DATE:20250423
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2025年04月22日 02:41。\n与太阳最大角距约 27.4°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-eta-aquariids-maximum@apple-calendar-ics.bearstozawa.github.
+ io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250506
+DTEND;VALUE=DATE:20250507
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座η流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2025年05月06日 02
+ :20。\n常见活跃期：4月19日至5月28日；参考 ZHR：约50。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,eta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-06-01-venus-elongation@apple-calendar-ics.bearstozawa.github
+ .io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250601
+DTEND;VALUE=DATE:20250602
+SUMMARY;LANGUAGE=zh-CN:行星｜金星西大距
+DESCRIPTION;LANGUAGE=zh-CN:金星西大距，适合清晨观测。\n北京
+ 时间：2025年06月01日 11:28。\n与太阳最大角距约 45.9°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,venus
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-07-04-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250704
+DTEND;VALUE=DATE:20250705
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2025年07月04日 12:31。\n与太阳最大角距约 25.9°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-southern-delta-aquariids-maximum@apple-calendar-ics.bearstoz
+ awa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250731
+DTEND;VALUE=DATE:20250801
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座δ南流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2025年07月31日 06
+ :20。\n常见活跃期：7月12日至8月23日；参考 ZHR：约25。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,southern-delta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-perseids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250812
+DTEND;VALUE=DATE:20250813
+SUMMARY;LANGUAGE=zh-CN:流星雨｜英仙座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2025年08月12日 19
+ :01。\n常见活跃期：7月17日至8月24日；参考 ZHR：约100。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,perseids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-08-19-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250819
+DTEND;VALUE=DATE:20250820
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2025年08月19日 17:46。\n与太阳最大角距约 18.6°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-09-08-lunar-eclipse-total@apple-calendar-ics.bearstozawa.git
+ hub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250908
+DTEND;VALUE=DATE:20250909
+SUMMARY;LANGUAGE=zh-CN:月食｜全食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2025年09月08日 02:11。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,total
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-09-21-saturn-opposition@apple-calendar-ics.bearstozawa.githu
+ b.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250921
+DTEND;VALUE=DATE:20250922
+SUMMARY;LANGUAGE=zh-CN:行星｜土星冲日
+DESCRIPTION;LANGUAGE=zh-CN:土星冲日发生于北京时间 2025年09月21
+ 日 13:29。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,saturn
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-09-22-solar-eclipse-partial@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20250922
+DTEND;VALUE=DATE:20250923
+SUMMARY;LANGUAGE=zh-CN:日食｜偏食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2025年09月22日 03:41。
+ \n本事件为全球日食；具体可见区域需另行查询。\n请勿
+ 在没有合格日食观测设备的情况下直视太阳。\n计算：Ast
+ ronomy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinek
+ itty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,partial
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-orionids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20251021
+DTEND;VALUE=DATE:20251022
+SUMMARY;LANGUAGE=zh-CN:流星雨｜猎户座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2025年10月21日 11
+ :37。\n常见活跃期：10月2日至11月7日；参考 ZHR：20以上。
+ \n极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后
+ 浮动。\n观测效果取决于月光、天气、光污染和辐射点高
+ 度。\n数据依据：International Meteor Organization 年度流星雨
+ 日历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,orionids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-10-30-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20251030
+DTEND;VALUE=DATE:20251031
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2025年10月30日 05:56。\n与太阳最大角距约 23.9°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-leonids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20251117
+DTEND;VALUE=DATE:20251118
+SUMMARY;LANGUAGE=zh-CN:流星雨｜狮子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2025年11月17日 17
+ :08。\n常见活跃期：11月6日至30日；参考 ZHR：约15。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,leonids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-12-08-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20251208
+DTEND;VALUE=DATE:20251209
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2025年12月08日 05:03。\n与太阳最大角距约 20.7°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-geminids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20251214
+DTEND;VALUE=DATE:20251215
+SUMMARY;LANGUAGE=zh-CN:流星雨｜双子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2025年12月14日 07
+ :09。\n常见活跃期：12月4日至20日；参考 ZHR：约150。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,geminids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2025-ursids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20251222
+DTEND;VALUE=DATE:20251223
+SUMMARY;LANGUAGE=zh-CN:流星雨｜小熊座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2025年12月22日 15
+ :32。\n常见活跃期：12月17日至26日；参考 ZHR：约10。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,ursids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-quadrantids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260103
+DTEND;VALUE=DATE:20260104
+SUMMARY;LANGUAGE=zh-CN:流星雨｜象限仪座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2026年01月03日 20
+ :48。\n常见活跃期：12月28日至1月12日；参考 ZHR：约80。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,quadrantids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-01-10-jupiter-opposition@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260110
+DTEND;VALUE=DATE:20260111
+SUMMARY;LANGUAGE=zh-CN:行星｜木星冲日
+DESCRIPTION;LANGUAGE=zh-CN:木星冲日发生于北京时间 2026年01月10
+ 日 16:29。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,jupiter
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-02-17-solar-eclipse-annular@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260217
+DTEND;VALUE=DATE:20260218
+SUMMARY;LANGUAGE=zh-CN:日食｜日环食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2026年02月17日 20:11。
+ \n全球食甚中心约位于纬度 -64.7°、经度 86.7°。\n请勿在
+ 没有合格日食观测设备的情况下直视太阳。\n计算：Astron
+ omy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinekitt
+ y/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,annular
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-02-20-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260220
+DTEND;VALUE=DATE:20260221
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2026年02月20日 01:41。\n与太阳最大角距约 18.1°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-03-03-lunar-eclipse-total@apple-calendar-ics.bearstozawa.git
+ hub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260303
+DTEND;VALUE=DATE:20260304
+SUMMARY;LANGUAGE=zh-CN:月食｜全食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2026年03月03日 19:33。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,total
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-04-04-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260404
+DTEND;VALUE=DATE:20260405
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2026年04月04日 06:34。\n与太阳最大角距约 27.8°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-lyrids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260422
+DTEND;VALUE=DATE:20260423
+SUMMARY;LANGUAGE=zh-CN:流星雨｜天琴座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2026年04月22日 18
+ :41。\n常见活跃期：4月14日至30日；参考 ZHR：约18。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,lyrids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-eta-aquariids-maximum@apple-calendar-ics.bearstozawa.github.
+ io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260506
+DTEND;VALUE=DATE:20260507
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座η流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2026年05月06日 08
+ :12。\n常见活跃期：4月19日至5月28日；参考 ZHR：约50。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,eta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-06-16-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260616
+DTEND;VALUE=DATE:20260617
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2026年06月16日 04:02。\n与太阳最大角距约 24.5°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-southern-delta-aquariids-maximum@apple-calendar-ics.bearstoz
+ awa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座δ南流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2026年07月31日 12
+ :12。\n常见活跃期：7月12日至8月23日；参考 ZHR：约25。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,southern-delta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-08-02-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260802
+DTEND;VALUE=DATE:20260803
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2026年08月02日 16:02。\n与太阳最大角距约 19.5°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-perseids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260813
+DTEND;VALUE=DATE:20260814
+SUMMARY;LANGUAGE=zh-CN:流星雨｜英仙座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2026年08月13日 00
+ :47。\n常见活跃期：7月17日至8月24日；参考 ZHR：约100。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,perseids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-08-13-solar-eclipse-total@apple-calendar-ics.bearstozawa.git
+ hub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260813
+DTEND;VALUE=DATE:20260814
+SUMMARY;LANGUAGE=zh-CN:日食｜全食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2026年08月13日 01:45。
+ \n全球食甚中心约位于纬度 65.2°、经度 -25.2°。\n请勿在
+ 没有合格日食观测设备的情况下直视太阳。\n计算：Astron
+ omy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinekitt
+ y/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,total
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-08-15-venus-elongation@apple-calendar-ics.bearstozawa.github
+ .io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY;LANGUAGE=zh-CN:行星｜金星东大距
+DESCRIPTION;LANGUAGE=zh-CN:金星东大距，适合傍晚观测。\n北京
+ 时间：2026年08月15日 14:23。\n与太阳最大角距约 45.9°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,venus
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-08-28-lunar-eclipse-partial@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260828
+DTEND;VALUE=DATE:20260829
+SUMMARY;LANGUAGE=zh-CN:月食｜偏食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2026年08月28日 12:12。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,partial
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-10-04-saturn-opposition@apple-calendar-ics.bearstozawa.githu
+ b.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261005
+SUMMARY;LANGUAGE=zh-CN:行星｜土星冲日
+DESCRIPTION;LANGUAGE=zh-CN:土星冲日发生于北京时间 2026年10月04
+ 日 20:12。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,saturn
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-10-12-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2026年10月12日 18:06。\n与太阳最大角距约 25.2°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-orionids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY;LANGUAGE=zh-CN:流星雨｜猎户座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2026年10月21日 17
+ :22。\n常见活跃期：10月2日至11月7日；参考 ZHR：20以上。
+ \n极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后
+ 浮动。\n观测效果取决于月光、天气、光污染和辐射点高
+ 度。\n数据依据：International Meteor Organization 年度流星雨
+ 日历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,orionids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-leonids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY;LANGUAGE=zh-CN:流星雨｜狮子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2026年11月17日 22
+ :52。\n常见活跃期：11月6日至30日；参考 ZHR：约15。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,leonids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-11-21-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2026年11月21日 07:35。\n与太阳最大角距约 19.6°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-geminids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261215
+SUMMARY;LANGUAGE=zh-CN:流星雨｜双子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2026年12月14日 12
+ :52。\n常见活跃期：12月4日至20日；参考 ZHR：约150。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,geminids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2026-ursids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+SUMMARY;LANGUAGE=zh-CN:流星雨｜小熊座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2026年12月22日 21
+ :20。\n常见活跃期：12月17日至26日；参考 ZHR：约10。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,ursids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-quadrantids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+SUMMARY;LANGUAGE=zh-CN:流星雨｜象限仪座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2027年01月04日 02
+ :37。\n常见活跃期：12月28日至1月12日；参考 ZHR：约80。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,quadrantids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-01-04-venus-elongation@apple-calendar-ics.bearstozawa.github
+ .io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+SUMMARY;LANGUAGE=zh-CN:行星｜金星西大距
+DESCRIPTION;LANGUAGE=zh-CN:金星西大距，适合清晨观测。\n北京
+ 时间：2027年01月04日 01:56。\n与太阳最大角距约 47.0°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,venus
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-02-03-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270203
+DTEND;VALUE=DATE:20270204
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2027年02月03日 14:20。\n与太阳最大角距约 18.3°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-02-06-solar-eclipse-annular@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
+SUMMARY;LANGUAGE=zh-CN:日食｜日环食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2027年02月06日 23:59。
+ \n全球食甚中心约位于纬度 -31.3°、经度 -48.5°。\n请勿在
+ 没有合格日食观测设备的情况下直视太阳。\n计算：Astron
+ omy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinekitt
+ y/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,annular
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-02-11-jupiter-opposition@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270211
+DTEND;VALUE=DATE:20270212
+SUMMARY;LANGUAGE=zh-CN:行星｜木星冲日
+DESCRIPTION;LANGUAGE=zh-CN:木星冲日发生于北京时间 2027年02月11
+ 日 08:17。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,jupiter
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-02-19-mars-opposition@apple-calendar-ics.bearstozawa.github.
+ io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270219
+DTEND;VALUE=DATE:20270220
+SUMMARY;LANGUAGE=zh-CN:行星｜火星冲日
+DESCRIPTION;LANGUAGE=zh-CN:火星冲日发生于北京时间 2027年02月19
+ 日 23:44。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,mars
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-02-21-lunar-eclipse-penumbral@apple-calendar-ics.bearstozawa
+ .github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270221
+DTEND;VALUE=DATE:20270222
+SUMMARY;LANGUAGE=zh-CN:月食｜半影月食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2027年02月21日 07:12。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,penumbral
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-03-17-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270317
+DTEND;VALUE=DATE:20270318
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2027年03月17日 14:56。\n与太阳最大角距约 27.6°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-lyrids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270424
+SUMMARY;LANGUAGE=zh-CN:流星雨｜天琴座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2027年04月23日 00
+ :21。\n常见活跃期：4月14日至30日；参考 ZHR：约18。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,lyrids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-eta-aquariids-maximum@apple-calendar-ics.bearstozawa.github.
+ io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270506
+DTEND;VALUE=DATE:20270507
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座η流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2027年05月06日 13
+ :47。\n常见活跃期：4月19日至5月28日；参考 ZHR：约50。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,eta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-05-28-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270528
+DTEND;VALUE=DATE:20270529
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2027年05月28日 18:01。\n与太阳最大角距约 22.9°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-07-16-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270716
+DTEND;VALUE=DATE:20270717
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2027年07月16日 03:29。\n与太阳最大角距约 20.7°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-07-19-lunar-eclipse-penumbral@apple-calendar-ics.bearstozawa
+ .github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270719
+DTEND;VALUE=DATE:20270720
+SUMMARY;LANGUAGE=zh-CN:月食｜半影月食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2027年07月19日 00:02。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,penumbral
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-southern-delta-aquariids-maximum@apple-calendar-ics.bearstoz
+ awa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270731
+DTEND;VALUE=DATE:20270801
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座δ南流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2027年07月31日 17
+ :59。\n常见活跃期：7月12日至8月23日；参考 ZHR：约25。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,southern-delta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-08-02-solar-eclipse-total@apple-calendar-ics.bearstozawa.git
+ hub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270802
+DTEND;VALUE=DATE:20270803
+SUMMARY;LANGUAGE=zh-CN:日食｜全食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2027年08月02日 18:06。
+ \n全球食甚中心约位于纬度 25.5°、经度 33.2°。\n请勿在
+ 没有合格日食观测设备的情况下直视太阳。\n计算：Astron
+ omy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinekitt
+ y/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,total
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-perseids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270813
+DTEND;VALUE=DATE:20270814
+SUMMARY;LANGUAGE=zh-CN:流星雨｜英仙座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2027年08月13日 06
+ :34。\n常见活跃期：7月17日至8月24日；参考 ZHR：约100。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,perseids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-08-17-lunar-eclipse-penumbral@apple-calendar-ics.bearstozawa
+ .github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270817
+DTEND;VALUE=DATE:20270818
+SUMMARY;LANGUAGE=zh-CN:月食｜半影月食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2027年08月17日 15:13。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,penumbral
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-09-25-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270925
+DTEND;VALUE=DATE:20270926
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2027年09月25日 06:05。\n与太阳最大角距约 26.3°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-10-18-saturn-opposition@apple-calendar-ics.bearstozawa.githu
+ b.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20271018
+DTEND;VALUE=DATE:20271019
+SUMMARY;LANGUAGE=zh-CN:行星｜土星冲日
+DESCRIPTION;LANGUAGE=zh-CN:土星冲日发生于北京时间 2027年10月18
+ 日 08:18。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,saturn
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-orionids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20271021
+DTEND;VALUE=DATE:20271022
+SUMMARY;LANGUAGE=zh-CN:流星雨｜猎户座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2027年10月21日 23
+ :18。\n常见活跃期：10月2日至11月7日；参考 ZHR：20以上。
+ \n极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后
+ 浮动。\n观测效果取决于月光、天气、光污染和辐射点高
+ 度。\n数据依据：International Meteor Organization 年度流星雨
+ 日历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,orionids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-11-04-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20271104
+DTEND;VALUE=DATE:20271105
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2027年11月04日 16:55。\n与太阳最大角距约 18.8°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-leonids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20271118
+DTEND;VALUE=DATE:20271119
+SUMMARY;LANGUAGE=zh-CN:流星雨｜狮子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2027年11月18日 04
+ :46。\n常见活跃期：11月6日至30日；参考 ZHR：约15。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,leonids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-geminids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20271214
+DTEND;VALUE=DATE:20271215
+SUMMARY;LANGUAGE=zh-CN:流星雨｜双子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2027年12月14日 18
+ :43。\n常见活跃期：12月4日至20日；参考 ZHR：约150。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,geminids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2027-ursids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20271223
+DTEND;VALUE=DATE:20271224
+SUMMARY;LANGUAGE=zh-CN:流星雨｜小熊座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2027年12月23日 03
+ :11。\n常见活跃期：12月17日至26日；参考 ZHR：约10。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,ursids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-quadrantids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280104
+DTEND;VALUE=DATE:20280105
+SUMMARY;LANGUAGE=zh-CN:流星雨｜象限仪座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2028年01月04日 08
+ :20。\n常见活跃期：12月28日至1月12日；参考 ZHR：约80。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,quadrantids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-01-12-lunar-eclipse-partial@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280112
+DTEND;VALUE=DATE:20280113
+SUMMARY;LANGUAGE=zh-CN:月食｜偏食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2028年01月12日 12:13。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,partial
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-01-18-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280118
+DTEND;VALUE=DATE:20280119
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2028年01月18日 01:18。\n与太阳最大角距约 18.8°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-01-26-solar-eclipse-annular@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280126
+DTEND;VALUE=DATE:20280127
+SUMMARY;LANGUAGE=zh-CN:日食｜日环食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2028年01月26日 23:07。
+ \n全球食甚中心约位于纬度 3.0°、经度 -51.5°。\n请勿在
+ 没有合格日食观测设备的情况下直视太阳。\n计算：Astron
+ omy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinekitt
+ y/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,annular
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-02-28-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280228
+DTEND;VALUE=DATE:20280229
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2028年02月28日 00:31。\n与太阳最大角距约 26.9°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-03-12-jupiter-opposition@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280312
+DTEND;VALUE=DATE:20280313
+SUMMARY;LANGUAGE=zh-CN:行星｜木星冲日
+DESCRIPTION;LANGUAGE=zh-CN:木星冲日发生于北京时间 2028年03月12
+ 日 23:26。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,jupiter
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-03-22-venus-elongation@apple-calendar-ics.bearstozawa.github
+ .io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280322
+DTEND;VALUE=DATE:20280323
+SUMMARY;LANGUAGE=zh-CN:行星｜金星东大距
+DESCRIPTION;LANGUAGE=zh-CN:金星东大距，适合傍晚观测。\n北京
+ 时间：2028年03月22日 20:21。\n与太阳最大角距约 46.1°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,venus
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-lyrids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280422
+DTEND;VALUE=DATE:20280423
+SUMMARY;LANGUAGE=zh-CN:流星雨｜天琴座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2028年04月22日 06
+ :11。\n常见活跃期：4月14日至30日；参考 ZHR：约18。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,lyrids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-eta-aquariids-maximum@apple-calendar-ics.bearstozawa.github.
+ io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280505
+DTEND;VALUE=DATE:20280506
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座η流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2028年05月05日 19
+ :35。\n常见活跃期：4月19日至5月28日；参考 ZHR：约50。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,eta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-05-09-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280509
+DTEND;VALUE=DATE:20280510
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2028年05月09日 14:07。\n与太阳最大角距约 21.4°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-06-27-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280627
+DTEND;VALUE=DATE:20280628
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2028年06月27日 03:34。\n与太阳最大角距约 22.2°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-07-07-lunar-eclipse-partial@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280707
+DTEND;VALUE=DATE:20280708
+SUMMARY;LANGUAGE=zh-CN:月食｜偏食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2028年07月07日 02:19。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,partial
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-07-22-solar-eclipse-total@apple-calendar-ics.bearstozawa.git
+ hub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280722
+DTEND;VALUE=DATE:20280723
+SUMMARY;LANGUAGE=zh-CN:日食｜全食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2028年07月22日 10:55。
+ \n全球食甚中心约位于纬度 -15.6°、经度 126.7°。\n请勿在
+ 没有合格日食观测设备的情况下直视太阳。\n计算：Astron
+ omy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinekitt
+ y/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,total
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-southern-delta-aquariids-maximum@apple-calendar-ics.bearstoz
+ awa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280730
+DTEND;VALUE=DATE:20280731
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座δ南流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2028年07月30日 23
+ :47。\n常见活跃期：7月12日至8月23日；参考 ZHR：约25。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,southern-delta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-08-11-venus-elongation@apple-calendar-ics.bearstozawa.github
+ .io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280811
+DTEND;VALUE=DATE:20280812
+SUMMARY;LANGUAGE=zh-CN:行星｜金星西大距
+DESCRIPTION;LANGUAGE=zh-CN:金星西大距，适合清晨观测。\n北京
+ 时间：2028年08月11日 00:05。\n与太阳最大角距约 45.8°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,venus
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-perseids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280812
+DTEND;VALUE=DATE:20280813
+SUMMARY;LANGUAGE=zh-CN:流星雨｜英仙座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2028年08月12日 12
+ :30。\n常见活跃期：7月17日至8月24日；参考 ZHR：约100。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,perseids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-09-06-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20280906
+DTEND;VALUE=DATE:20280907
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2028年09月06日 18:15。\n与太阳最大角距约 27.1°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-10-18-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20281018
+DTEND;VALUE=DATE:20281019
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2028年10月18日 06:59。\n与太阳最大角距约 18.2°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-orionids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20281021
+DTEND;VALUE=DATE:20281022
+SUMMARY;LANGUAGE=zh-CN:流星雨｜猎户座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2028年10月21日 04
+ :59。\n常见活跃期：10月2日至11月7日；参考 ZHR：20以上。
+ \n极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后
+ 浮动。\n观测效果取决于月光、天气、光污染和辐射点高
+ 度。\n数据依据：International Meteor Organization 年度流星雨
+ 日历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,orionids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-10-31-saturn-opposition@apple-calendar-ics.bearstozawa.githu
+ b.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20281031
+DTEND;VALUE=DATE:20281101
+SUMMARY;LANGUAGE=zh-CN:行星｜土星冲日
+DESCRIPTION;LANGUAGE=zh-CN:土星冲日发生于北京时间 2028年10月31
+ 日 01:17。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,saturn
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-leonids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20281117
+DTEND;VALUE=DATE:20281118
+SUMMARY;LANGUAGE=zh-CN:流星雨｜狮子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2028年11月17日 10
+ :27。\n常见活跃期：11月6日至30日；参考 ZHR：约15。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,leonids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-geminids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20281214
+DTEND;VALUE=DATE:20281215
+SUMMARY;LANGUAGE=zh-CN:流星雨｜双子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2028年12月14日 00
+ :27。\n常见活跃期：12月4日至20日；参考 ZHR：约150。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,geminids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-ursids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20281222
+DTEND;VALUE=DATE:20281223
+SUMMARY;LANGUAGE=zh-CN:流星雨｜小熊座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2028年12月22日 08
+ :49。\n常见活跃期：12月17日至26日；参考 ZHR：约10。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,ursids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2028-12-31-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20281231
+DTEND;VALUE=DATE:20290101
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2028年12月31日 08:37。\n与太阳最大角距约 19.6°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-01-01-lunar-eclipse-total@apple-calendar-ics.bearstozawa.git
+ hub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290101
+DTEND;VALUE=DATE:20290102
+SUMMARY;LANGUAGE=zh-CN:月食｜全食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2029年01月01日 00:51。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,total
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-quadrantids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290103
+DTEND;VALUE=DATE:20290104
+SUMMARY;LANGUAGE=zh-CN:流星雨｜象限仪座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2029年01月03日 14
+ :07。\n常见活跃期：12月28日至1月12日；参考 ZHR：约80。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,quadrantids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-01-15-solar-eclipse-partial@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290115
+DTEND;VALUE=DATE:20290116
+SUMMARY;LANGUAGE=zh-CN:日食｜偏食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2029年01月15日 01:12。
+ \n本事件为全球日食；具体可见区域需另行查询。\n请勿
+ 在没有合格日食观测设备的情况下直视太阳。\n计算：Ast
+ ronomy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinek
+ itty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,partial
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-02-09-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290209
+DTEND;VALUE=DATE:20290210
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2029年02月09日 09:43。\n与太阳最大角距约 25.7°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-03-25-mars-opposition@apple-calendar-ics.bearstozawa.github.
+ io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290325
+DTEND;VALUE=DATE:20290326
+SUMMARY;LANGUAGE=zh-CN:行星｜火星冲日
+DESCRIPTION;LANGUAGE=zh-CN:火星冲日发生于北京时间 2029年03月25
+ 日 15:41。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,mars
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-04-12-jupiter-opposition@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290412
+DTEND;VALUE=DATE:20290413
+SUMMARY;LANGUAGE=zh-CN:行星｜木星冲日
+DESCRIPTION;LANGUAGE=zh-CN:木星冲日发生于北京时间 2029年04月12
+ 日 11:52。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,jupiter
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-04-21-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290421
+DTEND;VALUE=DATE:20290422
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2029年04月21日 21:35。\n与太阳最大角距约 20.1°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-lyrids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290422
+DTEND;VALUE=DATE:20290423
+SUMMARY;LANGUAGE=zh-CN:流星雨｜天琴座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2029年04月22日 11
+ :58。\n常见活跃期：4月14日至30日；参考 ZHR：约18。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,lyrids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-eta-aquariids-maximum@apple-calendar-ics.bearstozawa.github.
+ io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290506
+DTEND;VALUE=DATE:20290507
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座η流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2029年05月06日 01
+ :31。\n常见活跃期：4月19日至5月28日；参考 ZHR：约50。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,eta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-06-08-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290608
+DTEND;VALUE=DATE:20290609
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2029年06月08日 19:44。\n与太阳最大角距约 23.9°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-06-12-solar-eclipse-partial@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290612
+DTEND;VALUE=DATE:20290613
+SUMMARY;LANGUAGE=zh-CN:日食｜偏食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2029年06月12日 12:04。
+ \n本事件为全球日食；具体可见区域需另行查询。\n请勿
+ 在没有合格日食观测设备的情况下直视太阳。\n计算：Ast
+ ronomy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinek
+ itty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,partial
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-06-26-lunar-eclipse-total@apple-calendar-ics.bearstozawa.git
+ hub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290626
+DTEND;VALUE=DATE:20290627
+SUMMARY;LANGUAGE=zh-CN:月食｜全食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2029年06月26日 11:22。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,total
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-07-11-solar-eclipse-partial@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290711
+DTEND;VALUE=DATE:20290712
+SUMMARY;LANGUAGE=zh-CN:日食｜偏食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2029年07月11日 23:36。
+ \n本事件为全球日食；具体可见区域需另行查询。\n请勿
+ 在没有合格日食观测设备的情况下直视太阳。\n计算：Ast
+ ronomy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinek
+ itty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,partial
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-southern-delta-aquariids-maximum@apple-calendar-ics.bearstoz
+ awa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290731
+DTEND;VALUE=DATE:20290801
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座δ南流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2029年07月31日 05
+ :42。\n常见活跃期：7月12日至8月23日；参考 ZHR：约25。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,southern-delta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-perseids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290812
+DTEND;VALUE=DATE:20290813
+SUMMARY;LANGUAGE=zh-CN:流星雨｜英仙座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2029年08月12日 18
+ :16。\n常见活跃期：7月17日至8月24日；参考 ZHR：约100。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,perseids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-08-20-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20290820
+DTEND;VALUE=DATE:20290821
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2029年08月20日 05:35。\n与太阳最大角距约 27.4°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-10-01-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20291001
+DTEND;VALUE=DATE:20291002
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2029年10月01日 23:09。\n与太阳最大角距约 17.9°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-orionids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20291021
+DTEND;VALUE=DATE:20291022
+SUMMARY;LANGUAGE=zh-CN:流星雨｜猎户座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2029年10月21日 10
+ :51。\n常见活跃期：10月2日至11月7日；参考 ZHR：20以上。
+ \n极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后
+ 浮动。\n观测效果取决于月光、天气、光污染和辐射点高
+ 度。\n数据依据：International Meteor Organization 年度流星雨
+ 日历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,orionids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-10-27-venus-elongation@apple-calendar-ics.bearstozawa.github
+ .io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20291027
+DTEND;VALUE=DATE:20291028
+SUMMARY;LANGUAGE=zh-CN:行星｜金星东大距
+DESCRIPTION;LANGUAGE=zh-CN:金星东大距，适合傍晚观测。\n北京
+ 时间：2029年10月27日 18:48。\n与太阳最大角距约 47.0°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,venus
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-11-13-saturn-opposition@apple-calendar-ics.bearstozawa.githu
+ b.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20291113
+DTEND;VALUE=DATE:20291114
+SUMMARY;LANGUAGE=zh-CN:行星｜土星冲日
+DESCRIPTION;LANGUAGE=zh-CN:土星冲日发生于北京时间 2029年11月13
+ 日 22:46。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,saturn
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-leonids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20291117
+DTEND;VALUE=DATE:20291118
+SUMMARY;LANGUAGE=zh-CN:流星雨｜狮子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2029年11月17日 16
+ :17。\n常见活跃期：11月6日至30日；参考 ZHR：约15。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,leonids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-12-05-solar-eclipse-partial@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20291205
+DTEND;VALUE=DATE:20291206
+SUMMARY;LANGUAGE=zh-CN:日食｜偏食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2029年12月05日 23:02。
+ \n本事件为全球日食；具体可见区域需另行查询。\n请勿
+ 在没有合格日食观测设备的情况下直视太阳。\n计算：Ast
+ ronomy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinek
+ itty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,partial
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-geminids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20291214
+DTEND;VALUE=DATE:20291215
+SUMMARY;LANGUAGE=zh-CN:流星雨｜双子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2029年12月14日 06
+ :14。\n常见活跃期：12月4日至20日；参考 ZHR：约150。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,geminids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-12-14-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20291214
+DTEND;VALUE=DATE:20291215
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2029年12月14日 10:55。\n与太阳最大角距约 20.6°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-12-21-lunar-eclipse-total@apple-calendar-ics.bearstozawa.git
+ hub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20291221
+DTEND;VALUE=DATE:20291222
+SUMMARY;LANGUAGE=zh-CN:月食｜全食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2029年12月21日 06:41。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,total
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2029-ursids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20291222
+DTEND;VALUE=DATE:20291223
+SUMMARY;LANGUAGE=zh-CN:流星雨｜小熊座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2029年12月22日 14
+ :44。\n常见活跃期：12月17日至26日；参考 ZHR：约10。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,ursids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-quadrantids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300103
+DTEND;VALUE=DATE:20300104
+SUMMARY;LANGUAGE=zh-CN:流星雨｜象限仪座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2030年01月03日 19
+ :58。\n常见活跃期：12月28日至1月12日；参考 ZHR：约80。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,quadrantids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-01-22-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300122
+DTEND;VALUE=DATE:20300123
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2030年01月22日 18:18。\n与太阳最大角距约 24.4°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-03-18-venus-elongation@apple-calendar-ics.bearstozawa.github
+ .io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300318
+DTEND;VALUE=DATE:20300319
+SUMMARY;LANGUAGE=zh-CN:行星｜金星西大距
+DESCRIPTION;LANGUAGE=zh-CN:金星西大距，适合清晨观测。\n北京
+ 时间：2030年03月18日 07:58。\n与太阳最大角距约 46.6°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,venus
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-04-04-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300404
+DTEND;VALUE=DATE:20300405
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2030年04月04日 16:22。\n与太阳最大角距约 19.1°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-lyrids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300422
+DTEND;VALUE=DATE:20300423
+SUMMARY;LANGUAGE=zh-CN:流星雨｜天琴座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2030年04月22日 17
+ :46。\n常见活跃期：4月14日至30日；参考 ZHR：约18。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,lyrids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-eta-aquariids-maximum@apple-calendar-ics.bearstozawa.github.
+ io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300506
+DTEND;VALUE=DATE:20300507
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座η流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2030年05月06日 07
+ :08。\n常见活跃期：4月19日至5月28日；参考 ZHR：约50。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,eta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-05-13-jupiter-opposition@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300513
+DTEND;VALUE=DATE:20300514
+SUMMARY;LANGUAGE=zh-CN:行星｜木星冲日
+DESCRIPTION;LANGUAGE=zh-CN:木星冲日发生于北京时间 2030年05月13
+ 日 19:20。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,jupiter
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-05-21-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300521
+DTEND;VALUE=DATE:20300522
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2030年05月21日 10:27。\n与太阳最大角距约 25.6°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-06-01-solar-eclipse-annular@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300601
+DTEND;VALUE=DATE:20300602
+SUMMARY;LANGUAGE=zh-CN:日食｜日环食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2030年06月01日 14:27。
+ \n全球食甚中心约位于纬度 56.5°、经度 80.1°。\n请勿在
+ 没有合格日食观测设备的情况下直视太阳。\n计算：Astron
+ omy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinekitt
+ y/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,annular
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-06-16-lunar-eclipse-partial@apple-calendar-ics.bearstozawa.g
+ ithub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300616
+DTEND;VALUE=DATE:20300617
+SUMMARY;LANGUAGE=zh-CN:月食｜偏食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2030年06月16日 02:33。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,partial
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-southern-delta-aquariids-maximum@apple-calendar-ics.bearstoz
+ awa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300731
+DTEND;VALUE=DATE:20300801
+SUMMARY;LANGUAGE=zh-CN:流星雨｜宝瓶座δ南流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2030年07月31日 11
+ :18。\n常见活跃期：7月12日至8月23日；参考 ZHR：约25。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,southern-delta-aquariids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-08-02-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300802
+DTEND;VALUE=DATE:20300803
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2030年08月02日 13:39。\n与太阳最大角距约 27.3°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-perseids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300812
+DTEND;VALUE=DATE:20300813
+SUMMARY;LANGUAGE=zh-CN:流星雨｜英仙座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2030年08月12日 23
+ :57。\n常见活跃期：7月17日至8月24日；参考 ZHR：约100。\n
+ 极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮
+ 动。\n观测效果取决于月光、天气、光污染和辐射点高度
+ 。\n数据依据：International Meteor Organization 年度流星雨日
+ 历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,perseids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-09-15-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20300915
+DTEND;VALUE=DATE:20300916
+SUMMARY;LANGUAGE=zh-CN:行星｜水星西大距
+DESCRIPTION;LANGUAGE=zh-CN:水星西大距，适合清晨观测。\n北京
+ 时间：2030年09月15日 14:28。\n与太阳最大角距约 17.9°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-orionids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20301021
+DTEND;VALUE=DATE:20301022
+SUMMARY;LANGUAGE=zh-CN:流星雨｜猎户座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2030年10月21日 16
+ :46。\n常见活跃期：10月2日至11月7日；参考 ZHR：20以上。
+ \n极大时间按 IMO 参考太阳黄经计算，实际峰值可能前后
+ 浮动。\n观测效果取决于月光、天气、光污染和辐射点高
+ 度。\n数据依据：International Meteor Organization 年度流星雨
+ 日历。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,orionids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-leonids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20301117
+DTEND;VALUE=DATE:20301118
+SUMMARY;LANGUAGE=zh-CN:流星雨｜狮子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2030年11月17日 22
+ :16。\n常见活跃期：11月6日至30日；参考 ZHR：约15。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,leonids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-11-25-solar-eclipse-total@apple-calendar-ics.bearstozawa.git
+ hub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20301125
+DTEND;VALUE=DATE:20301126
+SUMMARY;LANGUAGE=zh-CN:日食｜全食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2030年11月25日 14:50。
+ \n全球食甚中心约位于纬度 -43.6°、经度 71.2°。\n请勿在
+ 没有合格日食观测设备的情况下直视太阳。\n计算：Astron
+ omy Engine 2.1.19（MIT License）\n来源：https://github.com/cosinekitt
+ y/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,日食
+X-CN-CALENDAR-KIND:SOLAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:solar-eclipse,total
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-11-27-mercury-elongation@apple-calendar-ics.bearstozawa.gith
+ ub.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20301127
+DTEND;VALUE=DATE:20301128
+SUMMARY;LANGUAGE=zh-CN:行星｜水星东大距
+DESCRIPTION;LANGUAGE=zh-CN:水星东大距，适合傍晚观测。\n北京
+ 时间：2030年11月27日 07:33。\n与太阳最大角距约 21.8°。\n
+ 计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://github
+ .com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:maximum-elongation,mercury
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-11-27-saturn-opposition@apple-calendar-ics.bearstozawa.githu
+ b.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20301127
+DTEND;VALUE=DATE:20301128
+SUMMARY;LANGUAGE=zh-CN:行星｜土星冲日
+DESCRIPTION;LANGUAGE=zh-CN:土星冲日发生于北京时间 2030年11月27
+ 日 23:43。\n冲日前后通常是观测外行星的良好时段，实际
+ 效果受天气和位置影响。\n计算：Astronomy Engine 2.1.19（MIT 
+ License）\n来源：https://github.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,行星
+X-CN-CALENDAR-KIND:PLANETARY-EVENT
+X-CN-CALENDAR-CONCEPTS:opposition,saturn
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-12-10-lunar-eclipse-penumbral@apple-calendar-ics.bearstozawa
+ .github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20301210
+DTEND;VALUE=DATE:20301211
+SUMMARY;LANGUAGE=zh-CN:月食｜半影月食
+DESCRIPTION;LANGUAGE=zh-CN:食甚：北京时间 2030年12月10日 06:27。
+ \n实际可见情况取决于所在地是否处于夜间及天气条件。
+ \n计算：Astronomy Engine 2.1.19（MIT License）\n来源：https://gith
+ ub.com/cosinekitty/astronomy
+URL:https://github.com/cosinekitty/astronomy
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,月食
+X-CN-CALENDAR-KIND:LUNAR-ECLIPSE
+X-CN-CALENDAR-CONCEPTS:lunar-eclipse,penumbral
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-geminids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20301214
+DTEND;VALUE=DATE:20301215
+SUMMARY;LANGUAGE=zh-CN:流星雨｜双子座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2030年12月14日 12
+ :13。\n常见活跃期：12月4日至20日；参考 ZHR：约150。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,geminids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+BEGIN:VEVENT
+UID:astro-2030-ursids-maximum@apple-calendar-ics.bearstozawa.github.io
+DTSTAMP:20260820T000000Z
+CREATED:20260820T000000Z
+LAST-MODIFIED:20260820T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20301222
+DTEND;VALUE=DATE:20301223
+SUMMARY;LANGUAGE=zh-CN:流星雨｜小熊座流星雨极大
+DESCRIPTION;LANGUAGE=zh-CN:参考极大：北京时间 2030年12月22日 20
+ :39。\n常见活跃期：12月17日至26日；参考 ZHR：约10。\n极
+ 大时间按 IMO 参考太阳黄经计算，实际峰值可能前后浮动
+ 。\n观测效果取决于月光、天气、光污染和辐射点高度。
+ \n数据依据：International Meteor Organization 年度流星雨日历
+ 。\n来源：https://www.imo.net/resources/calendar/
+URL:https://www.imo.net/resources/calendar/
+CLASS:PUBLIC
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+CATEGORIES;LANGUAGE=zh-CN:中国日历,天象,流星雨
+X-CN-CALENDAR-KIND:METEOR-SHOWER
+X-CN-CALENDAR-CONCEPTS:meteor-shower,ursids
+X-CN-CALENDAR-DATA-STATUS:COMPUTED
+END:VEVENT
+END:VCALENDAR
