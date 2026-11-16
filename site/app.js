@@ -5,7 +5,8 @@ const selectionStorageKey = "cn-calendar-selected-feeds-v2";
 const themeStorageKey = "cn-calendar-theme";
 
 const statusNode = document.querySelector(".copy-status");
-const dialog = document.querySelector("[data-subscribe-dialog]");
+const subscribeDialog = document.querySelector("[data-subscribe-dialog]");
+const helpDialog = document.querySelector("[data-help-dialog]");
 const popover = document.querySelector("[data-event-popover]");
 const previewClock = CalendarPreview.calendarContext();
 
@@ -63,124 +64,85 @@ const displayOrder = [
   "lunar-mansions.ics",
 ];
 
-const fallbackFeeds = {
+// Consumer-facing concise labels & summaries (kept independent of backend ICS metadata)
+const uiCatalog = {
   "essential.ics": {
     name: "中国日历",
-    description: "法定班休、核心传统节日与二十四节气，已做跨频道去重。",
-    cadence: "约 3 条/月",
-    density: "低频",
+    summary: "放假调休、传统节日与二十四节气",
     tier: "core",
     featured: true,
-    events_per_year: 38,
     sample_titles: ["春节假期（9天）", "立春"],
   },
   "work-rest.ics": {
-    name: "中国班休",
-    description: "中国大陆法定放假与调休上班安排。",
-    cadence: "按官方通知",
-    density: "低频",
+    name: "法定班休",
+    summary: "国务院放假与周末调休上班",
     tier: "core",
-    featured: true,
-    events_per_year: 12,
     sample_titles: ["春节假期（9天）"],
   },
   "festivals.ics": {
     name: "传统节日",
-    description: "除夕、元宵、龙抬头、七夕、中元、重阳等传统节日。",
-    cadence: "每年约 10 次",
-    density: "低频",
+    summary: "除夕、元宵、端午、七夕、中秋、重阳等",
     tier: "core",
-    events_per_year: 10,
     sample_titles: ["除夕", "元宵节", "七夕"],
   },
   "solar-terms.ics": {
     name: "二十四节气",
-    description: "立春、雨水、春分、夏至、冬至等二十四节气。",
-    cadence: "每月 2 次",
-    density: "低频",
+    summary: "立春、雨水、春分、夏至、冬至等",
     tier: "core",
-    events_per_year: 24,
     sample_titles: ["立春", "雨水"],
   },
   "observances.ics": {
-    name: "公众节日与纪念日",
-    description: "妇女节、青年节、教师节及全国性纪念日，详情注明放假规定。",
-    cadence: "每年 13 次",
-    density: "低频",
+    name: "纪念日与节日",
+    summary: "妇女节、青年节、儿童节、教师节等",
     tier: "optional",
-    events_per_year: 13,
     sample_titles: ["妇女节", "青年节", "教师节"],
   },
   "holiday-reminders.ics": {
-    name: "假期提醒",
-    description: "每个已确认法定假期开始前 7 天提示一次，不做逐日倒计时。",
-    cadence: "每个假期 1 次",
-    density: "低频",
+    name: "长假提前提醒",
+    summary: "每次法定假期开始前 7 天提醒",
     tier: "optional",
-    events_per_year: 6.7,
     sample_titles: ["春节假期还有 7 天"],
   },
   "life-festivals.ics": {
     name: "生活节日",
-    description: "情人节、母亲节、父亲节、520、感恩节与圣诞节等常见日期。",
-    cadence: "每年 9 次",
-    density: "低频",
+    summary: "情人节、母亲节、父亲节、感恩节、圣诞节等",
     tier: "optional",
-    events_per_year: 9,
     sample_titles: ["情人节", "母亲节", "圣诞节"],
   },
   "lunar-days.ics": {
     name: "农历初一十五",
-    description: "仅保留每个农历月初一与十五，不生成每日农历事件。",
-    cadence: "每月 2 次",
-    density: "低频",
+    summary: "每个农历月的初一与十五",
     tier: "optional",
-    events_per_year: 24.7,
     sample_titles: ["正月初一", "正月十五"],
   },
   "seasonal.ics": {
-    name: "中国时令",
-    description: "七十二候、数九与三伏节点。",
-    cadence: "约每 5 日",
-    density: "中频",
+    name: "传统时令",
+    summary: "七十二候、数九与三伏",
     tier: "optional",
-    events_per_year: 84,
     sample_titles: ["东风解冻", "初伏开始"],
   },
   "moon-phases.ics": {
     name: "月相",
-    description: "新月、上弦月、满月与下弦月，按北京时间计算。",
-    cadence: "每月 4 次",
-    density: "低频",
+    summary: "新月、上弦月、满月、下弦月",
     tier: "optional",
-    events_per_year: 49.5,
     sample_titles: ["满月", "上弦月", "新月"],
   },
   "sky-events.ics": {
     name: "重要天象",
-    description: "日月食、主要流星雨极大、行星冲日与水星金星大距。",
-    cadence: "不定期",
-    density: "低频",
+    summary: "日月食、流星雨、行星冲日与大距",
     tier: "optional",
-    events_per_year: 23.5,
     sample_titles: ["双子座流星雨极大", "木星冲日"],
   },
   "almanac.ics": {
     name: "黄历宜忌",
-    description: "每天一条宜忌摘要，完整干支、冲煞与神位放在事件备注。",
-    cadence: "每日 1 条",
-    density: "高频",
+    summary: "每日宜忌、冲煞与吉神方位",
     tier: "dense",
-    events_per_year: 365.2,
     sample_titles: ["宜 祭祀 · 忌 动土", "宜 纳财 · 忌 移徙"],
   },
   "lunar-mansions.ics": {
     name: "二十八星宿",
-    description: "每天一条星宿、十二值星、值日天神与九星参考。",
-    cadence: "每日 1 条",
-    density: "高频",
+    summary: "每日值宿与吉凶参考",
     tier: "dense",
-    events_per_year: 365.2,
     sample_titles: ["角木蛟 · 吉", "轸水蚓 · 吉"],
   },
 };
@@ -201,7 +163,7 @@ const exclusive = {
   "lunar-mansions.ics": ["almanac.ics"],
 };
 
-let feeds = structuredClone(fallbackFeeds);
+let feeds = structuredClone(uiCatalog);
 let selected = new Set(loadSelection());
 let bundleState = {
   name: "",
@@ -217,7 +179,7 @@ function loadSelection() {
       return value;
     }
   } catch {
-    // Private browsing or disabled storage.
+    // Ignore storage errors.
   }
   return presets.quiet;
 }
@@ -226,7 +188,7 @@ function saveSelection() {
   try {
     window.localStorage.setItem(selectionStorageKey, JSON.stringify([...selected]));
   } catch {
-    // Non-persistent fallback.
+    // Ignore storage errors.
   }
 }
 
@@ -244,10 +206,10 @@ function showStatus(message) {
   statusNode.textContent = message;
   statusNode.classList.add("visible");
   window.clearTimeout(statusTimer);
-  statusTimer = window.setTimeout(() => statusNode.classList.remove("visible"), 2400);
+  statusTimer = window.setTimeout(() => statusNode.classList.remove("visible"), 2200);
 }
 
-async function copyText(text, successMessage = "订阅地址已复制") {
+async function copyText(text, successMessage = "链接已复制") {
   try {
     if (navigator.clipboard && window.isSecureContext) {
       await navigator.clipboard.writeText(text);
@@ -255,9 +217,9 @@ async function copyText(text, successMessage = "订阅地址已复制") {
       return;
     }
   } catch {
-    // Fall back to prompt below.
+    // Fall back below.
   }
-  window.prompt("复制以下订阅地址", text);
+  window.prompt("复制订阅链接", text);
 }
 
 function feedHttpsUrl(filename) {
@@ -277,9 +239,7 @@ function syncDefaultBundleColor() {
 
 function buildBundleUrls() {
   const filenames = displayOrder.filter((item) => selected.has(item));
-  if (!filenames.length) {
-    return null;
-  }
+  if (!filenames.length) return null;
 
   const trimmedName = bundleState.name.trim();
   const singleFeed = filenames.length === 1 ? filenames[0] : null;
@@ -290,12 +250,9 @@ function buildBundleUrls() {
     bundleState.color.toUpperCase() === colors[singleFeed].toUpperCase();
 
   if (isDefaultSingle) {
-    const https = feedHttpsUrl(singleFeed);
-    const webcal = feedWebcalUrl(singleFeed);
     return {
-      isStatic: true,
-      https,
-      webcal,
+      https: feedHttpsUrl(singleFeed),
+      webcal: feedWebcalUrl(singleFeed),
       download: singleFeed,
     };
   }
@@ -312,19 +269,16 @@ function buildBundleUrls() {
     prodUrl.searchParams.set("remind", bundleState.remind);
   }
 
-  const https = prodUrl.href;
-  const webcal = `webcal://${prodUrl.host}${prodUrl.pathname}${prodUrl.search}`;
   const dlUrl = new URL(prodUrl.href);
   dlUrl.searchParams.set("download", "1");
   return {
-    isStatic: false,
-    https,
-    webcal,
+    https: prodUrl.href,
+    webcal: `webcal://${prodUrl.host}${prodUrl.pathname}${prodUrl.search}`,
     download: dlUrl.href,
   };
 }
 
-/* Theme Handling */
+/* Theme */
 function applyTheme(mode) {
   document.documentElement.dataset.theme = mode;
   const meta = document.querySelector("[data-theme-meta]");
@@ -337,23 +291,8 @@ document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
   applyTheme(next);
   try {
     window.localStorage.setItem(themeStorageKey, next);
-  } catch {
-    // Ignore storage errors.
-  }
+  } catch {}
 });
-
-/* Hero Comparison Switch */
-for (const btn of document.querySelectorAll("[data-hero-mode]")) {
-  btn.addEventListener("click", () => {
-    const targetMode = btn.dataset.heroMode;
-    for (const tab of document.querySelectorAll("[data-hero-mode]")) {
-      tab.setAttribute("aria-selected", String(tab === btn));
-    }
-    for (const stage of document.querySelectorAll("[data-hero-stage]")) {
-      stage.hidden = stage.dataset.heroStage !== targetMode;
-    }
-  });
-}
 
 /* Dense Preview Lazy Loader */
 function ensureDensePreviewLoaded() {
@@ -376,7 +315,7 @@ function ensureDensePreviewLoaded() {
 }
 
 function denseEventsForMonth(filename, year, month) {
-  const titles = feeds[filename].sample_titles || ["每日事件"];
+  const titles = feeds[filename].sample_titles || ["每日日程"];
   const cells = CalendarPreview.monthCells(year, month);
   const feedLookup = densePreviewCache?.[filename] || null;
 
@@ -393,8 +332,7 @@ function denseEventsForMonth(filename, year, month) {
       start: cell.key,
       end: endKey,
       title: entry ? entry[0] : titles[index % titles.length],
-      description: entry ? entry[1] : feeds[filename].description,
-      kind: "dense-day",
+      description: entry ? entry[1] : feeds[filename].summary,
       filename,
     };
   });
@@ -417,8 +355,7 @@ function collectSelectedEvents() {
           start: ev.start,
           end: ev.end,
           title: ev.title,
-          description: ev.description || feed.description,
-          kind: ev.kind || "event",
+          description: ev.description || feed.summary,
           filename,
         });
       }
@@ -427,7 +364,7 @@ function collectSelectedEvents() {
   return raw;
 }
 
-/* Feed Options Rendering */
+/* Channel List */
 function renderFeedOption(filename, feed) {
   const checked = selected.has(filename);
   const color = feed.color || colors[filename];
@@ -436,15 +373,12 @@ function renderFeedOption(filename, feed) {
       <input type="checkbox" value="${escapeHtml(filename)}" ${checked ? "checked" : ""} />
       <span class="feed-check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3.2 8.2 3 3 6.6-6.6" /></svg></span>
       <span class="feed-option-body">
-        <span class="feed-option-top">
-          <span class="feed-option-title">
-            <i class="feed-dot" aria-hidden="true"></i>
-            <strong>${escapeHtml(feed.name)}</strong>
-            ${feed.featured ? "<em>推荐</em>" : ""}
-          </span>
-          <span class="feed-cadence">${escapeHtml(feed.cadence)}</span>
+        <span class="feed-option-title">
+          <i class="feed-dot" aria-hidden="true"></i>
+          <strong>${escapeHtml(feed.name)}</strong>
+          ${feed.featured ? "<em>推荐</em>" : ""}
         </span>
-        <small>${escapeHtml(feed.description)}</small>
+        <small>${escapeHtml(feed.summary)}</small>
       </span>
     </label>`;
 }
@@ -480,7 +414,7 @@ function toggleFeed(filename, enabled) {
   render();
 }
 
-/* Calendar Month Grid & Mobile View Rendering */
+/* Calendar Grid */
 function showOfficialBadges() {
   return selected.has("essential.ics") || selected.has("work-rest.ics");
 }
@@ -557,7 +491,6 @@ function renderCalendar() {
                 class="${classes}"
                 data-event-uid="${escapeHtml(seg.event.uid)}"
                 style="--feed-color:${escapeHtml(feedColor)};grid-column:${seg.colStart + 1} / span ${seg.colSpan};grid-row:${seg.lane + 1}"
-                title="${escapeHtml(seg.event.title)}"
               >
                 ${escapeHtml(seg.event.title)}
               </button>`;
@@ -661,7 +594,7 @@ function renderMobileCalendar(weeks) {
                 </button>`;
             })
             .join("")
-        : '<span class="agenda-empty">当天无订阅事件</span>';
+        : '<span class="agenda-empty">无日程</span>';
 
       return `
         <div class="agenda-day">
@@ -672,29 +605,44 @@ function renderMobileCalendar(weeks) {
     .join("");
 }
 
-/* Event Popover */
+/* Popover */
 function formatRangeLabel(ev) {
   const [sy, sm, sd] = ev.start.split("-").map(Number);
   const endInc = ev.endInclusive || CalendarPreview.inclusiveEndKey(ev.end);
   const [ey, em, ed] = endInc.split("-").map(Number);
   if (ev.start === endInc) {
-    return `${sy}年${sm}月${sd}日 · 全天 · 不占用忙闲`;
+    return `${sy}年${sm}月${sd}日`;
   }
   const span = ev.spanDays || 2;
   if (sy === ey && sm === em) {
-    return `${sy}年${sm}月${sd}日 – ${ed}日（共 ${span} 天）· 全天`;
+    return `${sy}年${sm}月${sd}日 – ${ed}日（共 ${span} 天）`;
   }
   return `${sy}年${sm}月${sd}日 – ${ey}年${em}月${ed}日（共 ${span} 天）`;
 }
 
+function cleanEventDescription(rawText) {
+  return String(rawText || "")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(
+      (line) =>
+        line &&
+        !line.startsWith("这是全天提示") &&
+        !line.startsWith("本频道用于日期识别") &&
+        !line.startsWith("官方通知：") &&
+        !line.startsWith("文号：") &&
+        !line.startsWith("依据："),
+    );
+}
+
 function positionPopover(anchorRect) {
   if (!popover) return;
-  const popWidth = Math.min(window.innerWidth - 24, 340);
+  const popWidth = Math.min(window.innerWidth - 24, 320);
   let left = anchorRect.left + anchorRect.width / 2 - popWidth / 2;
   left = Math.max(12, Math.min(left, window.innerWidth - popWidth - 12));
 
   let top = anchorRect.bottom + 8;
-  const estimatedHeight = popover.offsetHeight || 200;
+  const estimatedHeight = popover.offsetHeight || 170;
   if (top + estimatedHeight > window.innerHeight - 12) {
     top = Math.max(12, anchorRect.top - estimatedHeight - 8);
   }
@@ -708,13 +656,13 @@ function openEventPopover(ev, anchorEl) {
   const color = feed?.color || colors[ev.filename] || "#DE3D32";
   popover.querySelector("[data-popover-dot]").style.background = color;
   popover.querySelector("[data-popover-title]").textContent = ev.title;
-  popover.querySelector("[data-popover-meta]").textContent = `${feed?.name || "日历频道"} · 只读透明事件`;
+  popover.querySelector("[data-popover-meta]").textContent = feed?.name || "中国日历";
   popover.querySelector("[data-popover-range]").textContent = formatRangeLabel(ev);
 
-  const lines = String(ev.description || "").split("\n").filter(Boolean);
-  popover.querySelector("[data-popover-body]").innerHTML = lines
-    .map((line) => `<p>${escapeHtml(line)}</p>`)
-    .join("");
+  const lines = cleanEventDescription(ev.description);
+  const bodyNode = popover.querySelector("[data-popover-body]");
+  bodyNode.hidden = lines.length === 0;
+  bodyNode.innerHTML = lines.map((line) => `<p>${escapeHtml(line)}</p>`).join("");
 
   popover.hidden = false;
   positionPopover(anchorEl.getBoundingClientRect());
@@ -725,11 +673,13 @@ function openDayOverflowPopover(dayKey, anchorEl) {
   if (!list.length || !popover) return;
   const [y, m, d] = dayKey.split("-").map(Number);
   popover.querySelector("[data-popover-dot]").style.background = "var(--accent)";
-  popover.querySelector("[data-popover-title]").textContent = `${y}年${m}月${d}日 全部日程`;
-  popover.querySelector("[data-popover-meta]").textContent = `共 ${list.length} 条订阅事件`;
-  popover.querySelector("[data-popover-range]").textContent = `农历${lunarDays[dayKey] || ""}`;
-  popover.querySelector("[data-popover-body]").innerHTML = list
-    .map((ev) => `<p><strong>${escapeHtml(ev.title)}</strong>（${escapeHtml(feeds[ev.filename]?.name || "")}）</p>`)
+  popover.querySelector("[data-popover-title]").textContent = `${m}月${d}日`;
+  popover.querySelector("[data-popover-meta]").textContent = `农历${lunarDays[dayKey] || ""}`;
+  popover.querySelector("[data-popover-range]").textContent = `共 ${list.length} 项日程`;
+  const bodyNode = popover.querySelector("[data-popover-body]");
+  bodyNode.hidden = false;
+  bodyNode.innerHTML = list
+    .map((ev) => `<p><strong>${escapeHtml(ev.title)}</strong> · ${escapeHtml(feeds[ev.filename]?.name || "")}</p>`)
     .join("");
 
   popover.hidden = false;
@@ -740,68 +690,31 @@ function hidePopover() {
   if (popover) popover.hidden = true;
 }
 
-/* Summary & Subscription Modal Rendering */
-function monthlyCount() {
-  return [...selected].reduce(
-    (total, filename) => total + (feeds[filename]?.events_per_year || 0) / 12,
-    0,
-  );
-}
-
+/* Summary & Subscribe Dialog */
 function renderSummary() {
-  const count = selected.size;
-  const monthly = monthlyCount();
-  const roundedMonthly = Math.round(monthly);
+  const filenames = displayOrder.filter((filename) => selected.has(filename));
+  const count = filenames.length;
 
   for (const node of document.querySelectorAll("[data-selected-count]")) {
     node.textContent = String(count);
   }
-  for (const node of document.querySelectorAll("[data-monthly-count]")) {
-    node.textContent = String(roundedMonthly);
-  }
 
-  const density = monthly > 28 ? "crowded" : monthly > 12 ? "balanced" : "quiet";
-  const densityLabels = {
-    quiet: `清爽 · 约 ${roundedMonthly} 条/月`,
-    balanced: `适中 · 约 ${roundedMonthly} 条/月`,
-    crowded: `密集 · 约 ${roundedMonthly} 条/月`,
-  };
-  const shortLabels = { quiet: "清爽", balanced: "适中", crowded: "密集" };
-
-  const pill = document.querySelector(".density-pill");
-  if (pill) pill.dataset.density = density;
-  const densityNode = document.querySelector("[data-density-label]");
-  if (densityNode) densityNode.textContent = densityLabels[density];
-
-  const mobileDock = document.querySelector("[data-mobile-selection-dock]");
-  if (mobileDock) mobileDock.dataset.density = density;
-  for (const node of document.querySelectorAll("[data-mobile-density-label]")) {
-    node.textContent = shortLabels[density];
-  }
-
-  const message = document.querySelector("[data-selection-message]");
-  if (message) {
-    if (!count) {
-      message.textContent = "尚未选择任何频道，可点击上方「清爽推荐」快速开始。";
-    } else if ([...selected].some((filename) => feeds[filename]?.tier === "dense")) {
-      message.textContent = "已包含每日文化频道，月视图每一天都会显示一条全天事件。";
-    } else if (selected.has("essential.ics")) {
-      message.textContent = "「中国日历」已合并法定班休、传统节日与二十四节气，无需重复勾选拆分项。";
-    } else {
-      message.textContent = "当前为拆分组合：可一键边缘合订为一本日历，也可分频道添加以设置不同颜色。";
-    }
+  const mobileNames = document.querySelector("[data-mobile-names]");
+  if (mobileNames) {
+    mobileNames.textContent = filenames.length
+      ? filenames.map((fn) => feeds[fn].name).join("、")
+      : "未选择日历";
   }
 
   const legend = document.querySelector("[data-preview-legend]");
   if (legend) {
     legend.innerHTML =
-      displayOrder
-        .filter((filename) => selected.has(filename))
+      filenames
         .map((filename) => {
           const c = feeds[filename]?.color || colors[filename];
           return `<span style="--feed-color:${escapeHtml(c)}"><i></i>${escapeHtml(feeds[filename].name)}</span>`;
         })
-        .join("") || "<span>尚未勾选频道</span>";
+        .join("") || "<span>请在左侧勾选要订阅的内容</span>";
   }
 
   const current = [...selected].sort().join(",");
@@ -813,14 +726,26 @@ function renderSummary() {
 
 function renderSubscriptionDialog() {
   const filenames = displayOrder.filter((filename) => selected.has(filename));
+  const tabsBar = document.querySelector("[data-sub-tabs]");
   const chipsNode = document.querySelector("[data-bundle-chips]");
   const swatchesNode = document.querySelector("[data-bundle-colors]");
-  const urlCode = document.querySelector("[data-bundle-url]");
-  const routeHint = document.querySelector("[data-bundle-route-hint]");
   const webcalBtn = document.querySelector("[data-bundle-webcal]");
   const downloadBtn = document.querySelector("[data-bundle-download]");
   const qrContainer = document.querySelector("[data-qr-container]");
   const splitList = document.querySelector("[data-subscription-list]");
+
+  // Hide mode switcher when only 1 channel is selected
+  if (tabsBar) {
+    tabsBar.hidden = filenames.length <= 1;
+    if (filenames.length <= 1) {
+      for (const tab of document.querySelectorAll("[data-sub-mode]")) {
+        tab.setAttribute("aria-selected", String(tab.dataset.subMode === "bundle"));
+      }
+      for (const panel of document.querySelectorAll("[data-sub-panel]")) {
+        panel.hidden = panel.dataset.subPanel !== "bundle";
+      }
+    }
+  }
 
   if (chipsNode) {
     chipsNode.innerHTML = filenames.length
@@ -830,14 +755,14 @@ function renderSubscriptionDialog() {
             return `<span class="bundle-chip" style="--feed-color:${escapeHtml(c)}"><i></i>${escapeHtml(feeds[fn].name)}</span>`;
           })
           .join("")
-      : '<span class="bundle-chip">未选择频道</span>';
+      : '<span class="bundle-chip">未选择</span>';
   }
 
   if (swatchesNode) {
     swatchesNode.innerHTML = bundlePalette
       .map((hex) => {
         const active = hex.toUpperCase() === bundleState.color.toUpperCase();
-        return `<button type="button" class="swatch-btn" role="radio" aria-checked="${active}" data-swatch="${hex}" style="--swatch:${hex}" aria-label="颜色 ${hex}"></button>`;
+        return `<button type="button" class="swatch-btn" role="radio" aria-checked="${active}" data-swatch="${hex}" style="--swatch:${hex}" aria-label="颜色"></button>`;
       })
       .join("");
   }
@@ -848,52 +773,35 @@ function renderSubscriptionDialog() {
 
   const urls = buildBundleUrls();
   if (urls) {
-    if (urlCode) urlCode.textContent = urls.webcal;
-    if (routeHint) {
-      routeHint.textContent = urls.isStatic ? "单频道静态直出" : "Cloudflare 边缘实时合订";
-    }
-    if (webcalBtn) {
-      webcalBtn.href = urls.webcal;
-      webcalBtn.removeAttribute("aria-disabled");
-    }
-    if (downloadBtn) {
-      downloadBtn.href = urls.download;
-      downloadBtn.removeAttribute("aria-disabled");
-    }
+    if (webcalBtn) webcalBtn.href = urls.webcal;
+    if (downloadBtn) downloadBtn.href = urls.download;
     if (qrContainer && typeof QrSvg !== "undefined") {
       try {
         qrContainer.innerHTML = QrSvg.renderSvg(urls.webcal);
       } catch {
-        qrContainer.innerHTML = '<span style="font-size:11px;color:#666">链接较长，请直接复制地址</span>';
+        qrContainer.innerHTML = "";
       }
     }
-  } else {
-    if (urlCode) urlCode.textContent = "请先返回勾选至少一个频道";
-    if (qrContainer) qrContainer.innerHTML = "";
+  } else if (qrContainer) {
+    qrContainer.innerHTML = "";
   }
 
   if (splitList) {
-    if (!filenames.length) {
-      splitList.innerHTML = '<p style="padding:28px;text-align:center;color:var(--muted);margin:0">尚未选择频道。</p>';
-    } else {
-      splitList.innerHTML = filenames
-        .map((fn, index) => {
-          const c = feeds[fn]?.color || colors[fn];
-          const isAdded = addedSplitFeeds.has(fn);
-          return `
-            <article class="subscription-row${isAdded ? " added" : ""}" style="--feed-color:${escapeHtml(c)}">
-              <span class="subscription-index">${isAdded ? "✓" : index + 1}</span>
-              <div class="subscription-meta">
-                <strong>${escapeHtml(feeds[fn].name)}</strong>
-                <small>${escapeHtml(feeds[fn].cadence)} · 默认色 ${escapeHtml(c)}</small>
-              </div>
-              <a class="row-btn row-btn-primary" href="${feedWebcalUrl(fn)}" data-split-add="${escapeHtml(fn)}">${isAdded ? "重新打开" : "订阅"}</a>
-              <button class="row-btn" type="button" data-copy-feed="${escapeHtml(fn)}">复制</button>
-              <a class="row-btn row-download" href="${escapeHtml(fn)}" download="${escapeHtml(fn)}">下载</a>
-            </article>`;
-        })
-        .join("");
-    }
+    splitList.innerHTML = filenames.length
+      ? filenames
+          .map((fn) => {
+            const c = feeds[fn]?.color || colors[fn];
+            const isAdded = addedSplitFeeds.has(fn);
+            return `
+              <div class="subscription-row" style="--feed-color:${escapeHtml(c)}">
+                <i class="sub-dot" aria-hidden="true"></i>
+                <div class="subscription-meta"><strong>${escapeHtml(feeds[fn].name)}</strong></div>
+                <a class="row-btn row-btn-primary" href="${feedWebcalUrl(fn)}" data-split-add="${escapeHtml(fn)}">${isAdded ? "再次打开" : "添加"}</a>
+                <button class="row-btn" type="button" data-copy-feed="${escapeHtml(fn)}">复制链接</button>
+              </div>`;
+          })
+          .join("")
+      : '<p style="padding:24px;text-align:center;color:var(--muted);margin:0">请先选择日历</p>';
   }
 }
 
@@ -904,7 +812,7 @@ function render() {
   renderSubscriptionDialog();
 }
 
-/* Event Listeners */
+/* Listeners */
 for (const button of document.querySelectorAll("[data-preset]")) {
   button.addEventListener("click", () => {
     selected = new Set(presets[button.dataset.preset]);
@@ -948,18 +856,31 @@ for (const btn of document.querySelectorAll("[data-jump-month]")) {
 
 for (const button of document.querySelectorAll("[data-open-subscriptions]")) {
   button.addEventListener("click", () => {
+    if (!selected.size) {
+      showStatus("请先在左侧选择至少一项内容");
+      return;
+    }
     hidePopover();
     renderSubscriptionDialog();
-    if (typeof dialog?.showModal === "function") dialog.showModal();
+    if (typeof subscribeDialog?.showModal === "function") subscribeDialog.showModal();
   });
 }
 
-document.querySelector("[data-dialog-close]")?.addEventListener("click", () => {
-  dialog?.close();
-});
+for (const button of document.querySelectorAll("[data-open-help]")) {
+  button.addEventListener("click", () => {
+    hidePopover();
+    if (typeof helpDialog?.showModal === "function") helpDialog.showModal();
+  });
+}
 
-dialog?.addEventListener("click", (event) => {
-  if (event.target === dialog) dialog.close();
+document.querySelector("[data-dialog-close]")?.addEventListener("click", () => subscribeDialog?.close());
+document.querySelector("[data-help-close]")?.addEventListener("click", () => helpDialog?.close());
+
+subscribeDialog?.addEventListener("click", (e) => {
+  if (e.target === subscribeDialog) subscribeDialog.close();
+});
+helpDialog?.addEventListener("click", (e) => {
+  if (e.target === helpDialog) helpDialog.close();
 });
 
 for (const tab of document.querySelectorAll("[data-sub-mode]")) {
@@ -1026,22 +947,16 @@ document.addEventListener("click", async (event) => {
     return;
   }
 
-  if (event.target.closest("[data-bundle-copy-https]")) {
+  if (event.target.closest("[data-bundle-copy-https]") || event.target.closest("[data-quick-copy]")) {
     const urls = buildBundleUrls();
-    if (urls) await copyText(urls.https, "HTTPS 订阅地址已复制");
-    return;
-  }
-
-  if (event.target.closest("[data-quick-copy]")) {
-    const urls = buildBundleUrls();
-    if (urls) await copyText(urls.https, "当前搭配订阅链接已复制");
-    else showStatus("请先选择至少一个日历频道");
+    if (urls) await copyText(urls.https, "订阅链接已复制");
+    else showStatus("请先选择至少一项内容");
     return;
   }
 
   const splitCopy = event.target.closest("[data-copy-feed]");
   if (splitCopy) {
-    await copyText(feedHttpsUrl(splitCopy.dataset.copyFeed), "频道 HTTPS 地址已复制");
+    await copyText(feedHttpsUrl(splitCopy.dataset.copyFeed), "链接已复制");
     return;
   }
 
@@ -1061,28 +976,15 @@ document.addEventListener("keydown", (event) => {
 const platformTabs = [...document.querySelectorAll("[data-platform]")];
 const platformPanels = [...document.querySelectorAll("[data-panel]")];
 
-function activatePlatform(activeTab, moveFocus = false) {
-  const platform = activeTab.dataset.platform;
-  for (const tab of platformTabs) {
-    const active = tab === activeTab;
-    tab.setAttribute("aria-selected", String(active));
-    tab.tabIndex = active ? 0 : -1;
-  }
-  for (const panel of platformPanels) panel.hidden = panel.dataset.panel !== platform;
-  if (moveFocus) activeTab.focus();
-}
-
-for (const [index, tab] of platformTabs.entries()) {
-  tab.addEventListener("click", () => activatePlatform(tab));
-  tab.addEventListener("keydown", (event) => {
-    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
-    event.preventDefault();
-    let target = index;
-    if (event.key === "ArrowLeft") target = (index - 1 + platformTabs.length) % platformTabs.length;
-    if (event.key === "ArrowRight") target = (index + 1) % platformTabs.length;
-    if (event.key === "Home") target = 0;
-    if (event.key === "End") target = platformTabs.length - 1;
-    activatePlatform(platformTabs[target], true);
+for (const tab of platformTabs) {
+  tab.addEventListener("click", () => {
+    const platform = tab.dataset.platform;
+    for (const item of platformTabs) {
+      const active = item === tab;
+      item.setAttribute("aria-selected", String(active));
+      item.tabIndex = active ? 0 : -1;
+    }
+    for (const panel of platformPanels) panel.hidden = panel.dataset.panel !== platform;
   });
 }
 
@@ -1097,7 +999,16 @@ fetch("manifest.json")
   })
   .then((manifest) => {
     if (manifest.schema_version < 4) throw new Error("manifest schema is outdated");
-    feeds = { ...feeds, ...manifest.feeds };
+    // Merge event data & colors without overwriting clean consumer UI copy
+    for (const [filename, meta] of Object.entries(manifest.feeds || {})) {
+      if (!feeds[filename]) continue;
+      feeds[filename] = {
+        ...feeds[filename],
+        color: meta.color || colors[filename],
+        preview_events: meta.preview_events || [],
+        sample_titles: meta.sample_titles || feeds[filename].sample_titles,
+      };
+    }
     lunarDays = manifest.calendar_days || {};
     officialBadges = manifest.official_badges || {};
     selected = new Set([...selected].filter((filename) => feeds[filename]));
@@ -1105,16 +1016,8 @@ fetch("manifest.json")
     syncDefaultBundleColor();
 
     const workRestNode = document.querySelector("[data-work-rest-year]");
-    const cultureNode = document.querySelector("[data-culture-year]");
-    const versionNode = document.querySelector("[data-dataset-version]");
-    const countNode = document.querySelector("[data-channel-count]");
     if (workRestNode) workRestNode.textContent = manifest.confirmed_work_rest_through;
-    if (cultureNode) cultureNode.textContent = manifest.culture_years[1];
-    if (versionNode) versionNode.textContent = manifest.dataset_version.replaceAll("-", ".");
-    if (countNode) countNode.textContent = Object.keys(manifest.feeds).length;
 
     render();
   })
-  .catch(() => {
-    // Embedded fallback keeps UI usable offline.
-  });
+  .catch(() => {});
