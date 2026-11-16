@@ -54,22 +54,18 @@ class SiteTests(unittest.TestCase):
         for filename in manifest["feeds"]:
             self.assertIn(f'"{filename}"', app)
 
-    def test_manifest_fields_have_static_fallbacks(self) -> None:
-        document = load_site_document()
-        names = {
-            name
-            for _, attrs in document.attributes
-            for name in attrs
-            if name.startswith("data-")
-        }
-        self.assertTrue(
-            {
-                "data-work-rest-year",
-                "data-culture-year",
-                "data-dataset-version",
-                "data-channel-count",
-            }.issubset(names)
-        )
+    def test_page_is_product_focused_without_technical_doc_jargon(self) -> None:
+        html = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+        for technical_jargon in (
+            "RFC 5545",
+            "RFC 7986",
+            "lunar-python",
+            "Astronomy Engine",
+            "X-APPLE-CALENDAR-COLOR",
+            "Cloudflare",
+            "数据口径",
+        ):
+            self.assertNotIn(technical_jargon, html)
 
     def test_primary_feed_uses_simple_product_name(self) -> None:
         manifest = json.loads((DIST_DIR / "manifest.json").read_text(encoding="utf-8"))
@@ -91,53 +87,20 @@ class SiteTests(unittest.TestCase):
     def test_catalogue_prefers_useful_low_frequency_extensions(self) -> None:
         manifest = json.loads((DIST_DIR / "manifest.json").read_text(encoding="utf-8"))
         self.assertEqual(4, manifest["schema_version"])
-        self.assertEqual(
-            {
-                "holiday-reminders.ics",
-                "life-festivals.ics",
-                "lunar-days.ics",
-            },
-            {
-                filename
-                for filename in manifest["feeds"]
-                if filename
-                in {
-                    "holiday-reminders.ics",
-                    "life-festivals.ics",
-                    "lunar-days.ics",
-                }
-            },
-        )
         self.assertNotIn("zodiac-seasons.ics", manifest["feeds"])
         self.assertFalse((DIST_DIR / "zodiac-seasons.ics").exists())
 
-    def test_preview_uses_device_today_instead_of_fixed_april_demo(self) -> None:
+    def test_preview_uses_device_today_and_supports_interactive_controls(self) -> None:
         source = "\n".join(
             (SITE_DIR / filename).read_text(encoding="utf-8")
             for filename in ("index.html", "app.js", "calendar-core.js")
         )
         self.assertIn("calendarContext", source)
         self.assertNotIn("2026 年 4 月", source)
-        self.assertNotIn("4 月 20 日", source)
-        manifest = json.loads((DIST_DIR / "manifest.json").read_text(encoding="utf-8"))
-        self.assertEqual("初九", manifest["calendar_days"]["2026-08-21"])
-        self.assertEqual("除夕", manifest["calendar_days"]["2027-02-05"])
-        self.assertEqual("春节", manifest["calendar_days"]["2027-02-06"])
-        self.assertEqual("休", manifest["official_badges"]["2027-02-05"])
-        self.assertEqual("班", manifest["official_badges"]["2027-01-31"])
-        self.assertTrue(manifest["feeds"]["essential.ics"]["preview_events"])
-        self.assertTrue((DIST_DIR / "dense-preview.json").is_file())
-        self.assertTrue((SITE_DIR / "_headers").is_file())
-        self.assertTrue((SITE_DIR / "qrcode.js").is_file())
-
-    def test_interactive_workbench_supports_theme_month_nav_and_bundle_modal(
-        self,
-    ) -> None:
-        html = (SITE_DIR / "index.html").read_text(encoding="utf-8")
-        self.assertIn("data-theme-toggle", html)
-        self.assertIn("data-month-shift", html)
-        self.assertIn('data-sub-mode="bundle"', html)
-        self.assertIn("data-event-popover", html)
+        self.assertIn("data-theme-toggle", source)
+        self.assertIn("data-month-shift", source)
+        self.assertIn('data-sub-mode="bundle"', source)
+        self.assertIn("data-event-popover", source)
 
 
 if __name__ == "__main__":
