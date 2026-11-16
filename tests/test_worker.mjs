@@ -97,7 +97,7 @@ for (const line of body.split("\r\n").slice(0, -1)) {
 const eventCount = body.split("BEGIN:VEVENT\r\n").length - 1;
 assert.equal(eventCount, 228);
 
-// Conditional If-None-Match -> 304
+// Conditional If-None-Match -> 304 (both strong and weak W/ ETag from Brotli/Gzip edge)
 const notModified = await handleRequest(
   new Request(
     "https://apple-calendar.lili.uno/bundle.ics?feeds=work-rest,festivals,solar-terms&name=我的中国日历&color=%23DE3D32&remind=09:00&download=1",
@@ -107,6 +107,35 @@ const notModified = await handleRequest(
   { waitUntil() {} },
 );
 assert.equal(notModified.status, 304);
+
+const weakNotModified = await handleRequest(
+  new Request(
+    "https://apple-calendar.lili.uno/bundle.ics?feeds=work-rest,festivals,solar-terms&name=我的中国日历&color=%23DE3D32&remind=09:00&download=1",
+    { headers: { "If-None-Match": `W/${etag}` } },
+  ),
+  env,
+  { waitUntil() {} },
+);
+assert.equal(weakNotModified.status, 304);
+
+// Internal X-CN-CALENDAR-* metadata stripped from bundle output to shrink wire size
+assert.ok(!body.includes("X-CN-CALENDAR-KIND:"));
+assert.ok(!body.includes("X-CN-CALENDAR-CONCEPTS:"));
+
+// 6-feed user bundle + worst-case almanac bundle performance check
+const sixFeedStart = performance.now();
+const sixFeedRes = await handleRequest(
+  new Request(
+    "https://apple-calendar.lili.uno/bundle.ics?feeds=essential%2Cobservances%2Choliday-reminders%2Clife-festivals%2Clunar-days%2Csky-events",
+  ),
+  env,
+  { waitUntil() {} },
+);
+const sixFeedMs = performance.now() - sixFeedStart;
+const sixFeedBody = await sixFeedRes.text();
+assert.equal(sixFeedRes.status, 200);
+assert.equal(sixFeedBody.split("BEGIN:VEVENT\r\n").length - 1, 669);
+console.log(`6-feed bundle: ${encoder.encode(sixFeedBody).byteLength} bytes in ${sixFeedMs.toFixed(2)}ms`);
 
 // Long folded UID preservation check (sky-events southern-delta-aquariids)
 const skyBundle = await handleRequest(
