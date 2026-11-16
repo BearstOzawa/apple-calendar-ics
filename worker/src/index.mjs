@@ -189,12 +189,26 @@ function parseEventsFromIcs(icsText) {
     const endIdx = chunk.lastIndexOf(endMarker);
     if (endIdx === -1) continue;
     const inner = chunk.slice(0, endIdx);
-    const uid = readHeaderField(inner, "UID:");
-    const start = readHeaderField(inner, "DTSTART;VALUE=DATE:");
-    const end = readHeaderField(inner, "DTEND;VALUE=DATE:");
-    const kind = readHeaderField(inner, "X-CN-CALENDAR-KIND:").toLowerCase();
-    const conceptsRaw = readHeaderField(inner, "X-CN-CALENDAR-CONCEPTS:");
+    const head = inner.length > 360 ? inner.slice(0, 360) : inner;
+    const uid = readHeaderField(head, "UID:");
+    const start = readHeaderField(head, "DTSTART;VALUE=DATE:");
+    const end = readHeaderField(head, "DTEND;VALUE=DATE:");
+
+    const xIdx = inner.indexOf("\r\nX-CN-CALENDAR-");
+    const metaSlice = xIdx !== -1 ? inner.slice(xIdx + 2) : inner;
+    const kind = readHeaderField(metaSlice, "X-CN-CALENDAR-KIND:").toLowerCase();
+    const conceptsRaw = readHeaderField(metaSlice, "X-CN-CALENDAR-CONCEPTS:");
     const concepts = conceptsRaw ? conceptsRaw.split(",").filter(Boolean).sort() : [];
+
+    let cleanInner = inner;
+    if (xIdx !== -1) {
+      const specialIdx = inner.indexOf("\r\nX-APPLE-SPECIAL-DAY:", xIdx);
+      cleanInner =
+        specialIdx !== -1
+          ? inner.slice(0, xIdx) + inner.slice(specialIdx)
+          : inner.slice(0, xIdx);
+    }
+
     parsed.push({
       uid,
       start,
@@ -202,7 +216,7 @@ function parseEventsFromIcs(icsText) {
       kind,
       concepts,
       semanticKey: `${start}|${end}|${kind}|${concepts.join(",")}`,
-      vevent: `BEGIN:VEVENT\r\n${inner}\r\nEND:VEVENT`,
+      vevent: `BEGIN:VEVENT\r\n${cleanInner}\r\nEND:VEVENT`,
     });
   }
   return parsed;
@@ -221,12 +235,25 @@ function injectAlarm(vevent, trigger) {
 
 export function synthesizeBundleIcs(feedPayloads, options) {
   const allCandidates = [];
+  const holidayByConcept = new Map();
+
   for (const text of feedPayloads) {
     const events = parseEventsFromIcs(text);
-    for (const item of events) allCandidates.push(item);
+    for (const item of events) {
+      allCandidates.push(item);
+      if (item.kind === "holiday-period") {
+        for (const concept of item.concepts) {
+          let ranges = holidayByConcept.get(concept);
+          if (!ranges) {
+            ranges = [];
+            holidayByConcept.set(concept, ranges);
+          }
+          ranges.push(item);
+        }
+      }
+    }
   }
 
-  const holidayPeriods = allCandidates.filter((item) => item.kind === "holiday-period");
   const seenUids = new Set();
   const seenSemantics = new Set();
   const merged = [];
@@ -242,16 +269,19 @@ export function synthesizeBundleIcs(feedPayloads, options) {
     if (seenUids.has(event.uid) || seenSemantics.has(event.semanticKey)) {
       continue;
     }
-    if (
-      (event.kind === "festival" || event.kind === "solar-term") &&
-      holidayPeriods.some(
-        (period) =>
-          period.start <= event.start &&
-          event.start < period.end &&
-          event.concepts.some((concept) => period.concepts.includes(concept)),
-      )
-    ) {
-      continue;
+    if (event.kind === "festival" || event.kind === "solar-term") {
+      let coveredByHoliday = false;
+      for (const concept of event.concepts) {
+        const periods = holidayByConcept.get(concept);
+        if (
+          periods &&
+          periods.some((period) => period.start <= event.start && event.start < period.end)
+        ) {
+          coveredByHoliday = true;
+          break;
+        }
+      }
+      if (coveredByHoliday) continue;
     }
     seenUids.add(event.uid);
     seenSemantics.add(event.semanticKey);
@@ -261,7 +291,7 @@ export function synthesizeBundleIcs(feedPayloads, options) {
   }
 
   const feedNames = options.slugs.map((slug) => KNOWN_FEEDS[slug].name).join("、");
-  const description = `包含频道：${feedNames}；由中国日历边缘合成并自动去重。`;
+  const description = `包含频道：${feedNames}`;
   const headerLines = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
@@ -349,19 +379,21 @@ export async function handleRequest(request, env, ctx) {
     }
 
     const canonicalKeyUrl = new URL("https://apple-calendar.lili.uno/bundle.ics");
+    canonicalKeyUrl.searchParams.set("_v", "2");
     canonicalKeyUrl.searchParams.set("feeds", parsed.slugs.join(","));
     canonicalKeyUrl.searchParams.set("name", parsed.name);
     canonicalKeyUrl.searchParams.set("color", parsed.color);
     if (parsed.remind) canonicalKeyUrl.searchParams.set("remind", parsed.remind);
     if (parsed.download) canonicalKeyUrl.searchParams.set("download", "1");
 
+    const inm = request.headers.get("If-None-Match");
     const edgeCache = typeof caches !== "undefined" ? caches.default : null;
     const cacheRequest = new Request(canonicalKeyUrl.href, { method: "GET" });
     if (edgeCache) {
       const cached = await edgeCache.match(cacheRequest);
       if (cached) {
         const cachedEtag = cached.headers.get("ETag");
-        if (cachedEtag && request.headers.get("If-None-Match") === cachedEtag) {
+        if (cachedEtag && inm && (inm === cachedEtag || inm === `W/${cachedEtag}`)) {
           return new Response(null, { status: 304, headers: cached.headers });
         }
         if (request.method === "HEAD") {
@@ -402,8 +434,9 @@ export async function handleRequest(request, env, ctx) {
       new Headers({
         "Content-Type": "text/calendar; charset=utf-8",
         "Cache-Control":
-          "public, max-age=300, s-maxage=300, stale-while-revalidate=60, stale-if-error=86400",
+          "public, max-age=300, s-maxage=3600, stale-while-revalidate=600, stale-if-error=86400",
         ETag: etag,
+        Vary: "Accept-Encoding",
         "X-Calendar-Edge": "cloudflare-bundle",
       }),
     );
@@ -411,7 +444,7 @@ export async function handleRequest(request, env, ctx) {
       headers.set("Content-Disposition", 'attachment; filename="china-calendar.ics"');
     }
 
-    if (request.headers.get("If-None-Match") === etag) {
+    if (inm && (inm === etag || inm === `W/${etag}`)) {
       return new Response(null, { status: 304, headers });
     }
 
