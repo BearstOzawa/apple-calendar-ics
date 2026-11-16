@@ -6,6 +6,7 @@
 
 - 2025 年：[国务院办公厅关于2025年部分节假日安排的通知](https://www.gov.cn/zhengce/zhengceku/202411/content_6986383.htm)
 - 2026 年：[国务院办公厅关于2026年部分节假日安排的通知](https://www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm)
+- 2027 年：[国务院办公厅关于2027年部分节假日安排的通知](https://www.gov.cn/zhengce/zhengceku/202611/content_7085102.htm)
 
 ## 中国历法、黄历、星宿、初一十五与时令
 

@@ -48,7 +48,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REVIEW_BRANCH: automation/source-monitor
         run: |
-          git fetch origin "$REVIEW_BRANCH:refs/remotes/origin/$REVIEW_BRANCH" || true
+          if git fetch origin "$REVIEW_BRANCH:refs/remotes/origin/$REVIEW_BRANCH" 2>/dev/null; then
+            if git show "remotes/origin/$REVIEW_BRANCH:reports/upstream-diff.json" > /tmp/existing-diff.json 2>/dev/null; then
+              if cmp -s reports/upstream-diff.json /tmp/existing-diff.json; then
+                echo "Upstream diff matches existing review branch; skipping redundant push."
+                exit 0
+              fi
+            fi
+          fi
           git switch -C "$REVIEW_BRANCH"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

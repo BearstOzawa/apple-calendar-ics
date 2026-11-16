@@ -2,9 +2,8 @@ from __future__ import annotations
 
 from datetime import date, datetime, time, timedelta, timezone
 
-from lunar_python import Solar
-
 from .model import CalendarEvent, CultureConfig, Metadata
+from .traditional import _lunar
 
 
 def _month_name(lunar: object) -> str:
@@ -20,7 +19,7 @@ def lunar_day_events(
     current = date(config.start_year, 1, 1)
     end = date(config.end_year + 1, 1, 1)
     while current < end:
-        lunar = Solar.fromYmd(current.year, current.month, current.day).getLunar()
+        lunar = _lunar(current)
         lunar_day = lunar.getDay()
         if lunar_day in {1, 15}:
             month_name = _month_name(lunar)

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "year": 2027,
+  "published_at": "2026-11-05",
+  "source": {
+    "title": "国务院办公厅关于2027年部分节假日安排的通知",
+    "url": "https://www.gov.cn/zhengce/zhengceku/202611/content_7085102.htm",
+    "document_number": "国办发明电〔2026〕10号"
+  },
+  "periods": [
+    {
+      "id": "new-year",
+      "name": "元旦",
+      "concepts": ["new-year"],
+      "start": "2027-01-01",
+      "end_inclusive": "2027-01-03",
+      "sequence": 0,
+      "workdays": []
+    },
+    {
+      "id": "spring-festival",
+      "name": "春节",
+      "concepts": ["spring-festival"],
+      "start": "2027-02-05",
+      "end_inclusive": "2027-02-13",
+      "sequence": 0,
+      "workdays": [
+        {"id": "makeup-1", "date": "2027-01-31", "sequence": 0},
+        {"id": "makeup-2", "date": "2027-02-14", "sequence": 0}
+      ]
+    },
+    {
+      "id": "qingming",
+      "name": "清明节",
+      "concepts": ["qingming"],
+      "start": "2027-04-03",
+      "end_inclusive": "2027-04-05",
+      "sequence": 0,
+      "workdays": []
+    },
+    {
+      "id": "labour-day",
+      "name": "劳动节",
+      "concepts": ["labour-day"],
+      "start": "2027-05-01",
+      "end_inclusive": "2027-05-05",
+      "sequence": 0,
+      "workdays": [
+        {"id": "makeup-1", "date": "2027-05-08", "sequence": 0}
+      ]
+    },
+    {
+      "id": "dragon-boat",
+      "name": "端午节",
+      "concepts": ["dragon-boat"],
+      "start": "2027-06-09",
+      "end_inclusive": "2027-06-09",
+      "sequence": 0,
+      "workdays": []
+    },
+    {
+      "id": "mid-autumn",
+      "name": "中秋节",
+      "concepts": ["mid-autumn"],
+      "start": "2027-09-15",
+      "end_inclusive": "2027-09-15",
+      "sequence": 0,
+      "workdays": []
+    },
+    {
+      "id": "national-day",
+      "name": "国庆节",
+      "concepts": ["national-day"],
+      "start": "2027-10-01",
+      "end_inclusive": "2027-10-07",
+      "sequence": 0,
+      "workdays": [
+        {"id": "makeup-1", "date": "2027-09-26", "sequence": 0},
+        {"id": "makeup-2", "date": "2027-10-09", "sequence": 0}
+      ]
+    }
+  ]
+}

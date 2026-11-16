@@ -34,6 +34,7 @@ def _join(values: list[str]) -> str:
     return "、".join(values) if values else "无"
 
 
+@lru_cache(maxsize=8)
 def almanac_events(
     config: CultureConfig, metadata: Metadata
 ) -> tuple[CalendarEvent, ...]:
@@ -93,6 +94,7 @@ def almanac_events(
     return tuple(events)
 
 
+@lru_cache(maxsize=8)
 def lunar_mansion_events(
     config: CultureConfig, metadata: Metadata
 ) -> tuple[CalendarEvent, ...]:
@@ -131,6 +133,7 @@ def lunar_mansion_events(
     return tuple(events)
 
 
+@lru_cache(maxsize=8)
 def seasonal_events(
     config: CultureConfig, metadata: Metadata
 ) -> tuple[CalendarEvent, ...]:

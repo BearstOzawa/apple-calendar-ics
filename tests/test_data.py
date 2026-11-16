@@ -22,13 +22,13 @@ from apple_calendar_ics.model import LifestyleRule
 class DataTests(unittest.TestCase):
     def test_reviewed_official_years_expand_to_expected_day_counts(self) -> None:
         years = load_official_years(DEFAULT_DATA_DIR)
-        self.assertEqual([2025, 2026], [item.year for item in years])
+        self.assertEqual([2025, 2026, 2027], [item.year for item in years])
         counts = {
             item.year: sum(period.duration_days for period in item.periods)
             + sum(len(period.workdays) for period in item.periods)
             for item in years
         }
-        self.assertEqual({2025: 33, 2026: 39}, counts)
+        self.assertEqual({2025: 33, 2026: 39, 2027: 34}, counts)
 
     def test_official_events_use_one_event_per_holiday_period(self) -> None:
         events = official_events(load_official_years(DEFAULT_DATA_DIR))
@@ -40,6 +40,16 @@ class DataTests(unittest.TestCase):
         self.assertEqual(1, len(spring_2026))
         self.assertEqual(9, spring_2026[0].duration_days)
         self.assertEqual("春节假期（9天）", spring_2026[0].title)
+
+        spring_2027 = next(
+            event
+            for event in events
+            if event.logical_id == "cn-2027-spring-festival-holiday-period"
+        )
+        self.assertEqual(9, spring_2027.duration_days)
+        self.assertIn("2月5日为除夕", spring_2027.description)
+        self.assertIn("2月6日为春节（正月初一）", spring_2027.description)
+        self.assertIn("国办发明电〔2026〕10号", spring_2027.description)
 
     def test_culture_has_known_festivals_and_24_terms_per_year(self) -> None:
         metadata = load_metadata(DEFAULT_DATA_DIR)

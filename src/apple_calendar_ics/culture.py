@@ -2,9 +2,8 @@ from __future__ import annotations
 
 from datetime import date, datetime, time, timedelta, timezone
 
-from lunar_python import Solar
-
 from .model import CalendarEvent, CultureConfig, Metadata
+from .traditional import _lunar
 
 
 SOLAR_TERM_CONCEPTS = {
@@ -51,7 +50,7 @@ def culture_events(
     end = date(config.end_year + 1, 1, 1)
 
     while current < end:
-        lunar = Solar.fromYmd(current.year, current.month, current.day).getLunar()
+        lunar = _lunar(current)
         lunar_month = lunar.getMonth()
         lunar_day = lunar.getDay()
         rule = rules.get((lunar_month, lunar_day)) if lunar_month > 0 else None
@@ -73,9 +72,7 @@ def culture_events(
 
         if config.include_lunar_new_years_eve and lunar_month == 12:
             tomorrow = current + timedelta(days=1)
-            next_lunar = Solar.fromYmd(
-                tomorrow.year, tomorrow.month, tomorrow.day
-            ).getLunar()
+            next_lunar = _lunar(tomorrow)
             if next_lunar.getMonth() == 1 and next_lunar.getDay() == 1:
                 events.append(
                     CalendarEvent(

@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import date, datetime, time, timedelta, timezone
 
 from .model import CalendarEvent, OfficialPeriod, OfficialYear
+from .traditional import _lunar
 
 
 def _utc_midnight(day: date) -> datetime:
@@ -24,6 +25,28 @@ def _format_range(period: OfficialPeriod) -> str:
     return f"{_format_date(period.start)}至{_format_date(period.end_inclusive)}"
 
 
+def _spring_festival_key_dates(period: OfficialPeriod) -> str | None:
+    if "spring-festival" not in period.concepts or period.duration_days <= 1:
+        return None
+    eve_date: date | None = None
+    new_year_date: date | None = None
+    current = period.start
+    while current <= period.end_inclusive:
+        lunar = _lunar(current)
+        if lunar.getMonth() == 1 and lunar.getDay() == 1:
+            new_year_date = current
+        tomorrow_lunar = _lunar(current + timedelta(days=1))
+        if tomorrow_lunar.getMonth() == 1 and tomorrow_lunar.getDay() == 1:
+            eve_date = current
+        current += timedelta(days=1)
+    parts: list[str] = []
+    if eve_date is not None:
+        parts.append(f"{_format_date(eve_date)}为除夕")
+    if new_year_date is not None:
+        parts.append(f"{_format_date(new_year_date)}为春节（正月初一）")
+    return f"其中{'，'.join(parts)}。" if parts else None
+
+
 def official_events(years: tuple[OfficialYear, ...]) -> tuple[CalendarEvent, ...]:
     events: list[CalendarEvent] = []
     for year_data in years:
@@ -36,6 +59,9 @@ def official_events(years: tuple[OfficialYear, ...]) -> tuple[CalendarEvent, ...
                 f"{year_data.year}年{period.name}放假安排：{_format_range(period)}，"
                 f"共{period.duration_days}天。"
             ]
+            spring_note = _spring_festival_key_dates(period)
+            if spring_note:
+                description_parts.append(spring_note)
             if workday_text:
                 description_parts.append(f"调休上班：{workday_text}。")
             description_parts.extend(

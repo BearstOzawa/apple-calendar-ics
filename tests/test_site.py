@@ -121,7 +121,23 @@ class SiteTests(unittest.TestCase):
         self.assertNotIn("4 月 20 日", source)
         manifest = json.loads((DIST_DIR / "manifest.json").read_text(encoding="utf-8"))
         self.assertEqual("初九", manifest["calendar_days"]["2026-08-21"])
+        self.assertEqual("除夕", manifest["calendar_days"]["2027-02-05"])
+        self.assertEqual("春节", manifest["calendar_days"]["2027-02-06"])
+        self.assertEqual("休", manifest["official_badges"]["2027-02-05"])
+        self.assertEqual("班", manifest["official_badges"]["2027-01-31"])
         self.assertTrue(manifest["feeds"]["essential.ics"]["preview_events"])
+        self.assertTrue((DIST_DIR / "dense-preview.json").is_file())
+        self.assertTrue((SITE_DIR / "_headers").is_file())
+        self.assertTrue((SITE_DIR / "qrcode.js").is_file())
+
+    def test_interactive_workbench_supports_theme_month_nav_and_bundle_modal(
+        self,
+    ) -> None:
+        html = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+        self.assertIn("data-theme-toggle", html)
+        self.assertIn("data-month-shift", html)
+        self.assertIn('data-sub-mode="bundle"', html)
+        self.assertIn("data-event-popover", html)
 
 
 if __name__ == "__main__":

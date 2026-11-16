@@ -27,6 +27,7 @@ jobs:
           ruff format --check src tests
           node --check site/app.js
           node --check site/calendar-core.js
+          node --check site/qrcode.js
           node --check worker/src/index.mjs
           node tests/test_calendar_core.mjs
           node tests/test_worker.mjs
