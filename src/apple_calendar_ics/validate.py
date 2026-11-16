@@ -53,6 +53,14 @@ def validate_file(path: Path, *, max_active_events_per_day: int = 3) -> dict[str
 
     if str(calendar.get("VERSION")) != "2.0":
         raise CalendarValidationError(f"{path}: VERSION must be 2.0")
+    apple_color = str(calendar.get("X-APPLE-CALENDAR-COLOR", ""))
+    if not re.fullmatch(r"#[0-9A-F]{6}", apple_color):
+        raise CalendarValidationError(
+            f"{path}: missing or invalid X-APPLE-CALENDAR-COLOR {apple_color!r}"
+        )
+    css_color = str(calendar.get("COLOR", ""))
+    if not css_color or not css_color.isalpha():
+        raise CalendarValidationError(f"{path}: missing or invalid COLOR {css_color!r}")
     events = tuple(calendar.walk("VEVENT"))
     if not events:
         raise CalendarValidationError(f"{path}: calendar contains no events")
@@ -228,6 +236,8 @@ def validate_directory(path: Path) -> dict[str, dict[str, Any]]:
         for key in (
             "name",
             "description",
+            "color",
+            "css_color",
             "category",
             "cadence",
             "source_type",
@@ -238,6 +248,10 @@ def validate_directory(path: Path) -> dict[str, dict[str, Any]]:
                 raise CalendarValidationError(
                     f"{manifest_path}: {filename} lacks {key}"
                 )
+        if not re.fullmatch(r"#[0-9A-F]{6}", expected["color"]):
+            raise CalendarValidationError(
+                f"{manifest_path}: {filename} has invalid hex color"
+            )
         if expected["tier"] not in {"core", "optional", "dense"}:
             raise CalendarValidationError(
                 f"{manifest_path}: {filename} has invalid tier"

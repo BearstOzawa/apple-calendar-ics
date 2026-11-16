@@ -151,3 +151,5 @@ class Feed:
     tier: str = "optional"
     overlaps: tuple[str, ...] = ()
     featured: bool = False
+    color: str = "#DE3D32"
+    css_color: str = "crimson"

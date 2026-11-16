@@ -67,10 +67,14 @@ class IcsTests(unittest.TestCase):
                 },
                 set(results),
             )
-            self.assertEqual(220, results["essential.ics"]["event_count"])
-            self.assertEqual(24, results["work-rest.ics"]["event_count"])
+            self.assertEqual(228, results["essential.ics"]["event_count"])
+            self.assertEqual(36, results["work-rest.ics"]["event_count"])
             for filename in results:
                 calendar = Calendar.from_ical((output / filename).read_bytes())
+                self.assertTrue(
+                    str(calendar.get("X-APPLE-CALENDAR-COLOR", "")).startswith("#")
+                )
+                self.assertTrue(bool(calendar.get("COLOR")))
                 events = tuple(calendar.walk("VEVENT"))
                 self.assertGreater(len(events), 0)
                 for event in events:

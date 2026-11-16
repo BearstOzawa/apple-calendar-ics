@@ -36,8 +36,11 @@ class MonitorTests(unittest.TestCase):
         self.assertIsNotNone(difference)
         self.assertEqual(day, difference["status_changed"][0]["date"])
 
-    def test_monitor_writes_only_actionable_reports(self) -> None:
+    def test_monitor_tolerates_missing_next_year_and_writes_actionable_reports(
+        self,
+    ) -> None:
         years = load_official_years(DEFAULT_DATA_DIR)
+        next_year = max(item.year for item in years) + 1
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             for year_data in years:
@@ -52,11 +55,9 @@ class MonitorTests(unittest.TestCase):
                 (root / f"{year_data.year}.json").write_text(
                     json.dumps(payload), encoding="utf-8"
                 )
-            (root / "2027.json").write_text(
-                json.dumps({"year": 2027, "papers": [], "days": []}),
-                encoding="utf-8",
-            )
             report = root / "report.json"
+
+            # Missing next_year.json should be skipped cleanly without error
             differences = monitor(
                 DEFAULT_DATA_DIR,
                 report,
@@ -66,11 +67,15 @@ class MonitorTests(unittest.TestCase):
             self.assertFalse(report.exists())
 
             future = {
-                "year": 2027,
+                "year": next_year,
                 "papers": ["https://www.gov.cn/example"],
-                "days": [{"date": "2027-01-01", "name": "元旦", "isOffDay": True}],
+                "days": [
+                    {"date": f"{next_year}-01-01", "name": "元旦", "isOffDay": True}
+                ],
             }
-            (root / "2027.json").write_text(json.dumps(future), encoding="utf-8")
+            (root / f"{next_year}.json").write_text(
+                json.dumps(future), encoding="utf-8"
+            )
             differences = monitor(
                 DEFAULT_DATA_DIR,
                 report,

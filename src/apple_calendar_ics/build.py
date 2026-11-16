@@ -6,8 +6,6 @@ import json
 from datetime import date, timedelta
 from pathlib import Path
 
-from lunar_python import Solar
-
 from .celestial import moon_phase_events, sky_event_events
 from .culture import culture_events
 from .ics import serialize_feed
@@ -20,12 +18,12 @@ from .loader import (
     load_official_years,
 )
 from .lunar_days import lunar_day_events
-from .model import CalendarEvent, Feed
+from .model import CalendarEvent, Feed, OfficialYear
 from .observances import observance_events
 from .official import official_events
 from .paths import DEFAULT_DATA_DIR, DEFAULT_OUTPUT_DIR
 from .reminders import holiday_reminder_events
-from .traditional import almanac_events, lunar_mansion_events, seasonal_events
+from .traditional import _lunar, almanac_events, lunar_mansion_events, seasonal_events
 
 
 def _deduplicate(events: list[CalendarEvent]) -> tuple[CalendarEvent, ...]:
@@ -90,6 +88,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
         tier="core",
         overlaps=("essential.ics",),
         featured=True,
+        color="#684B83",
+        css_color="rebeccapurple",
     )
     essential = Feed(
         slug="essential",
@@ -103,6 +103,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
         tier="core",
         overlaps=("work-rest.ics", "festivals.ics", "solar-terms.ics"),
         featured=True,
+        color="#DE3D32",
+        css_color="crimson",
     )
     return (
         essential,
@@ -118,6 +120,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             density="低频",
             tier="core",
             overlaps=("essential.ics",),
+            color="#D66B2C",
+            css_color="chocolate",
         ),
         Feed(
             slug="solar-terms",
@@ -130,6 +134,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             density="低频",
             tier="core",
             overlaps=("essential.ics",),
+            color="#BF8626",
+            css_color="goldenrod",
         ),
         Feed(
             slug="observances",
@@ -141,6 +147,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             source_type="国务院行政法规",
             density="低频",
             tier="optional",
+            color="#5B708F",
+            css_color="slategray",
         ),
         Feed(
             slug="holiday-reminders",
@@ -152,6 +160,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             source_type="官方",
             density="低频",
             tier="optional",
+            color="#CC5F3B",
+            css_color="coral",
         ),
         Feed(
             slug="life-festivals",
@@ -163,6 +173,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             source_type="通行日期规则",
             density="低频",
             tier="optional",
+            color="#BA506D",
+            css_color="mediumvioletred",
         ),
         Feed(
             slug="lunar-days",
@@ -175,6 +187,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             density="低频",
             tier="optional",
             overlaps=("festivals.ics",),
+            color="#52705E",
+            css_color="seagreen",
         ),
         Feed(
             slug="almanac",
@@ -187,6 +201,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             density="高频",
             tier="dense",
             overlaps=("lunar-mansions.ics",),
+            color="#9A4FA5",
+            css_color="darkorchid",
         ),
         Feed(
             slug="lunar-mansions",
@@ -199,6 +215,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             density="高频",
             tier="dense",
             overlaps=("almanac.ics",),
+            color="#765D45",
+            css_color="sienna",
         ),
         Feed(
             slug="seasonal",
@@ -210,6 +228,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             source_type="算法",
             density="中频",
             tier="optional",
+            color="#8A6235",
+            css_color="peru",
         ),
         Feed(
             slug="moon-phases",
@@ -221,6 +241,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             source_type="天文算法",
             density="低频",
             tier="optional",
+            color="#47749F",
+            css_color="steelblue",
         ),
         Feed(
             slug="sky-events",
@@ -232,6 +254,8 @@ def build_feeds(data_dir: Path) -> tuple[Feed, ...]:
             source_type="天文算法 + 年表",
             density="低频",
             tier="optional",
+            color="#B72F59",
+            css_color="firebrick",
         ),
     )
 
@@ -241,15 +265,58 @@ def _lunar_calendar_days(start_year: int, end_year: int) -> dict[str, str]:
     current = date(start_year, 1, 1)
     end = date(end_year + 1, 1, 1)
     while current < end:
-        lunar = Solar.fromYmd(current.year, current.month, current.day).getLunar()
-        if lunar.getDay() == 1:
+        lunar = _lunar(current)
+        lunar_month = lunar.getMonth()
+        lunar_day = lunar.getDay()
+        if lunar_month == 1 and lunar_day == 1:
+            label = "春节"
+        elif (
+            lunar_month == 12
+            and _lunar(current + timedelta(days=1)).getMonth() == 1
+            and _lunar(current + timedelta(days=1)).getDay() == 1
+        ):
+            label = "除夕"
+        elif lunar_day == 1:
             month = lunar.getMonthInChinese()
-            label = f"{'闰' if lunar.getMonth() < 0 else ''}{month}月"
+            label = f"{'闰' if lunar_month < 0 else ''}{month}月"
         else:
             label = lunar.getDayInChinese()
         result[current.isoformat()] = label
         current += timedelta(days=1)
     return result
+
+
+def _official_badges(years: tuple[OfficialYear, ...]) -> dict[str, str]:
+    badges: dict[str, str] = {}
+    for year_data in years:
+        for period in year_data.periods:
+            current = period.start
+            while current <= period.end_inclusive:
+                badges[current.isoformat()] = "休"
+                current += timedelta(days=1)
+            for workday in period.workdays:
+                badges[workday.date.isoformat()] = "班"
+    return dict(sorted(badges.items()))
+
+
+def _compact_dense_description(description: str) -> str:
+    lines = description.splitlines()
+    picked = [
+        line
+        for line in lines
+        if line.startswith(
+            (
+                "农历：",
+                "宜：",
+                "忌：",
+                "冲煞：",
+                "二十八星宿：",
+                "十二值星：",
+                "值日天神：",
+            )
+        )
+    ]
+    return "\n".join(picked[:4])
 
 
 def _write_if_changed(path: Path, payload: bytes) -> bool:
@@ -271,36 +338,57 @@ def build(data_dir: Path, output_dir: Path) -> dict[str, object]:
     for stale_path in output_dir.glob("*.ics"):
         if stale_path.name not in expected_files:
             stale_path.unlink()
+
     feed_manifest: dict[str, object] = {}
+    dense_preview: dict[str, dict[str, list[str]]] = {}
+
     for feed in feeds:
+        filename = f"{feed.slug}.ics"
         payload = serialize_feed(feed, metadata)
-        path = output_dir / f"{feed.slug}.ics"
+        path = output_dir / filename
         changed = _write_if_changed(path, payload)
+        sha256_hex = hashlib.sha256(payload).hexdigest()
         coverage_years = (
             max(event.start.year for event in feed.events)
             - min(event.start.year for event in feed.events)
             + 1
         )
-        preview_events = [
-            event
-            for event in feed.events
-            if event.start.year == 2026 and event.start.month == 4
-        ] or [event for event in feed.events if event.start.year == 2026]
+        preview_candidates = (
+            [
+                event
+                for event in feed.events
+                if event.start.year == 2027 and event.start.month == 2
+            ]
+            or [event for event in feed.events if event.start.year == 2027]
+            or list(feed.events)
+        )
         sample_titles: list[str] = []
-        for event in preview_events:
+        for event in preview_candidates:
             if event.title not in sample_titles:
                 sample_titles.append(event.title)
             if len(sample_titles) == 3:
                 break
-        feed_manifest[f"{feed.slug}.ics"] = {
+
+        if feed.tier == "dense":
+            dense_preview[filename] = {
+                event.start.isoformat(): [
+                    event.title,
+                    _compact_dense_description(event.description),
+                ]
+                for event in feed.events
+            }
+
+        feed_manifest[filename] = {
             "name": feed.name,
             "description": feed.description,
+            "color": feed.color,
+            "css_color": feed.css_color,
             "event_count": len(feed.events),
             "first_date": min(event.start for event in feed.events).isoformat(),
             "last_date": max(
                 event.end - timedelta(days=1) for event in feed.events
             ).isoformat(),
-            "sha256": hashlib.sha256(payload).hexdigest(),
+            "sha256": sha256_hex,
             "category": feed.category,
             "cadence": feed.cadence,
             "source_type": feed.source_type,
@@ -314,6 +402,8 @@ def build(data_dir: Path, output_dir: Path) -> dict[str, object]:
                         "start": event.start.isoformat(),
                         "end": event.end.isoformat(),
                         "title": event.title,
+                        "kind": event.kind,
+                        "description": event.description,
                     }
                     for event in feed.events
                 ]
@@ -342,6 +432,7 @@ def build(data_dir: Path, output_dir: Path) -> dict[str, object]:
         "calendar_days": _lunar_calendar_days(
             culture_config.start_year, culture_config.end_year
         ),
+        "official_badges": _official_badges(official_years),
         "algorithm_sources": [
             {
                 "title": culture_config.source.title,
@@ -365,6 +456,7 @@ def build(data_dir: Path, output_dir: Path) -> dict[str, object]:
                 "year": year.year,
                 "title": year.source.title,
                 "url": year.source.url,
+                "document_number": year.source.document_number,
                 "published_at": year.published_at.isoformat(),
             }
             for year in official_years
@@ -382,6 +474,18 @@ def build(data_dir: Path, output_dir: Path) -> dict[str, object]:
         + "\n"
     ).encode("utf-8")
     _write_if_changed(output_dir / "manifest.json", manifest_payload)
+
+    dense_payload = (
+        json.dumps(
+            dense_preview, ensure_ascii=False, separators=(",", ":"), sort_keys=True
+        )
+        + "\n"
+    ).encode("utf-8")
+    _write_if_changed(output_dir / "dense-preview.json", dense_payload)
+    stale_bundle = output_dir / "bundle-data.json"
+    if stale_bundle.exists():
+        stale_bundle.unlink()
+
     return manifest
 
 

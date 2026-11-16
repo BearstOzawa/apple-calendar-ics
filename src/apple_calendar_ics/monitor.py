@@ -113,16 +113,32 @@ def compare_year(
     }
 
 
-def fetch_year(base_url: str, year: int, timeout: float = 30.0) -> dict[str, Any]:
+def fetch_year(
+    base_url: str,
+    year: int,
+    *,
+    allow_missing: bool = False,
+    timeout: float = 30.0,
+) -> dict[str, Any] | None:
     url = f"{base_url.rstrip('/')}/{year}.json"
     request = Request(
         url,
-        headers={"User-Agent": "apple-calendar-ics-source-monitor/0.1"},
+        headers={"User-Agent": "apple-calendar-ics-source-monitor/0.2"},
     )
     try:
         with urlopen(request, timeout=timeout) as response:
             payload = json.load(response)
-    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as error:
+    except HTTPError as error:
+        if allow_missing and error.code == 404:
+            return None
+        raise UpstreamError(f"cannot fetch {url}: {error}") from error
+    except (URLError, TimeoutError, json.JSONDecodeError) as error:
+        if (
+            allow_missing
+            and isinstance(error, URLError)
+            and isinstance(error.reason, FileNotFoundError)
+        ):
+            return None
         raise UpstreamError(f"cannot fetch {url}: {error}") from error
     return _parse_upstream(payload, year)
 
@@ -136,10 +152,17 @@ def monitor(
 ) -> list[dict[str, Any]]:
     official_years = load_official_years(data_dir)
     local_by_year = {item.year: item for item in official_years}
-    checked_years = years or sorted([*local_by_year, max(local_by_year) + 1])
+    max_local_year = max(local_by_year)
+    checked_years = years or sorted([*local_by_year, max_local_year + 1])
     differences: list[dict[str, Any]] = []
     for year in checked_years:
-        upstream = fetch_year(base_url, year)
+        upstream = fetch_year(
+            base_url,
+            year,
+            allow_missing=year > max_local_year,
+        )
+        if upstream is None:
+            continue
         difference = compare_year(upstream, local_by_year.get(year))
         if difference:
             differences.append(difference)

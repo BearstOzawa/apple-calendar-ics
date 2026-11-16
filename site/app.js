@@ -2,27 +2,50 @@
 
 const publishedBase = "https://apple-calendar.lili.uno/";
 const selectionStorageKey = "cn-calendar-selected-feeds-v2";
+const themeStorageKey = "cn-calendar-theme";
+
 const statusNode = document.querySelector(".copy-status");
 const dialog = document.querySelector("[data-subscribe-dialog]");
+const popover = document.querySelector("[data-event-popover]");
 const previewClock = CalendarPreview.calendarContext();
+
+let viewYear = previewClock.year;
+let viewMonth = previewClock.month;
+let activeMobileDayKey = previewClock.todayKey;
 let statusTimer;
 let lunarDays = {};
+let officialBadges = {};
+let densePreviewCache = null;
+let densePreviewLoading = false;
+const eventRegistry = new Map();
+const dayEventsRegistry = new Map();
+const addedSplitFeeds = new Set();
 
 const colors = {
-  "essential.ics": "#de3d32",
-  "work-rest.ics": "#684b83",
-  "festivals.ics": "#d66b2c",
-  "solar-terms.ics": "#bf8626",
-  "observances.ics": "#5b708f",
-  "holiday-reminders.ics": "#cc5f3b",
-  "life-festivals.ics": "#ba506d",
-  "lunar-days.ics": "#52705e",
-  "seasonal.ics": "#8a6235",
-  "moon-phases.ics": "#47749f",
-  "sky-events.ics": "#b72f59",
-  "almanac.ics": "#9a4fa5",
-  "lunar-mansions.ics": "#765d45",
+  "essential.ics": "#DE3D32",
+  "work-rest.ics": "#684B83",
+  "festivals.ics": "#D66B2C",
+  "solar-terms.ics": "#BF8626",
+  "observances.ics": "#5B708F",
+  "holiday-reminders.ics": "#CC5F3B",
+  "life-festivals.ics": "#BA506D",
+  "lunar-days.ics": "#52705E",
+  "seasonal.ics": "#8A6235",
+  "moon-phases.ics": "#47749F",
+  "sky-events.ics": "#B72F59",
+  "almanac.ics": "#9A4FA5",
+  "lunar-mansions.ics": "#765D45",
 };
+
+const bundlePalette = [
+  "#DE3D32",
+  "#D66B2C",
+  "#BF8626",
+  "#2F7D57",
+  "#47749F",
+  "#684B83",
+  "#BA506D",
+];
 
 const displayOrder = [
   "essential.ics",
@@ -43,28 +66,28 @@ const displayOrder = [
 const fallbackFeeds = {
   "essential.ics": {
     name: "中国日历",
-    description: "班休、核心传统节日与二十四节气，已做跨频道去重。",
-    cadence: "约每月 3 条",
+    description: "法定班休、核心传统节日与二十四节气，已做跨频道去重。",
+    cadence: "约 3 条/月",
     density: "低频",
     tier: "core",
     featured: true,
-    events_per_year: 36.7,
-    sample_titles: ["清明节假期（3天）", "谷雨"],
+    events_per_year: 38,
+    sample_titles: ["春节假期（9天）", "立春"],
   },
   "work-rest.ics": {
     name: "中国班休",
-    description: "只保留法定放假与调休上班。",
-    cadence: "按官方通知更新",
+    description: "中国大陆法定放假与调休上班安排。",
+    cadence: "按官方通知",
     density: "低频",
     tier: "core",
     featured: true,
     events_per_year: 12,
-    sample_titles: ["清明节假期（3天）"],
+    sample_titles: ["春节假期（9天）"],
   },
   "festivals.ics": {
     name: "传统节日",
-    description: "除夕、元宵、龙抬头、七夕、中元、重阳等。",
-    cadence: "每年约十次",
+    description: "除夕、元宵、龙抬头、七夕、中元、重阳等传统节日。",
+    cadence: "每年约 10 次",
     density: "低频",
     tier: "core",
     events_per_year: 10,
@@ -72,17 +95,17 @@ const fallbackFeeds = {
   },
   "solar-terms.ics": {
     name: "二十四节气",
-    description: "单独订阅立春、春分、夏至、冬至等节气。",
-    cadence: "每月两次",
+    description: "立春、雨水、春分、夏至、冬至等二十四节气。",
+    cadence: "每月 2 次",
     density: "低频",
     tier: "core",
     events_per_year: 24,
-    sample_titles: ["清明", "谷雨"],
+    sample_titles: ["立春", "雨水"],
   },
   "observances.ics": {
     name: "公众节日与纪念日",
-    description: "妇女节、青年节、教师节与全国性纪念日。",
-    cadence: "每年十三次",
+    description: "妇女节、青年节、教师节及全国性纪念日，详情注明放假规定。",
+    cadence: "每年 13 次",
     density: "低频",
     tier: "optional",
     events_per_year: 13,
@@ -91,74 +114,74 @@ const fallbackFeeds = {
   "holiday-reminders.ics": {
     name: "假期提醒",
     description: "每个已确认法定假期开始前 7 天提示一次，不做逐日倒计时。",
-    cadence: "每个假期一次",
+    cadence: "每个假期 1 次",
     density: "低频",
     tier: "optional",
-    events_per_year: 6.5,
+    events_per_year: 6.7,
     sample_titles: ["春节假期还有 7 天"],
   },
   "life-festivals.ics": {
     name: "生活节日",
-    description: "母亲节、父亲节、情人节、520、感恩节与圣诞节等常用日期。",
-    cadence: "每年九次",
+    description: "情人节、母亲节、父亲节、520、感恩节与圣诞节等常见日期。",
+    cadence: "每年 9 次",
     density: "低频",
     tier: "optional",
     events_per_year: 9,
-    sample_titles: ["母亲节", "父亲节", "圣诞节"],
+    sample_titles: ["情人节", "母亲节", "圣诞节"],
   },
   "lunar-days.ics": {
     name: "农历初一十五",
-    description: "每个农历月的初一和十五；不生成每日农历事件。",
-    cadence: "每月两次",
+    description: "仅保留每个农历月初一与十五，不生成每日农历事件。",
+    cadence: "每月 2 次",
     density: "低频",
     tier: "optional",
     events_per_year: 24.7,
-    sample_titles: ["四月初一", "四月十五"],
+    sample_titles: ["正月初一", "正月十五"],
   },
   "seasonal.ics": {
     name: "中国时令",
     description: "七十二候、数九与三伏节点。",
-    cadence: "约每五日",
+    cadence: "约每 5 日",
     density: "中频",
     tier: "optional",
     events_per_year: 84,
-    sample_titles: ["桐始华", "虹始见", "初伏开始"],
+    sample_titles: ["东风解冻", "初伏开始"],
   },
   "moon-phases.ics": {
     name: "月相",
-    description: "新月、上弦月、满月与下弦月。",
-    cadence: "每月四次",
+    description: "新月、上弦月、满月与下弦月，按北京时间计算。",
+    cadence: "每月 4 次",
     density: "低频",
     tier: "optional",
     events_per_year: 49.5,
-    sample_titles: ["满月", "下弦月", "新月"],
+    sample_titles: ["满月", "上弦月", "新月"],
   },
   "sky-events.ics": {
     name: "重要天象",
-    description: "日月食、主要流星雨、冲日与大距。",
+    description: "日月食、主要流星雨极大、行星冲日与水星金星大距。",
     cadence: "不定期",
     density: "低频",
     tier: "optional",
     events_per_year: 23.5,
-    sample_titles: ["水星西大距", "天琴座流星雨极大"],
+    sample_titles: ["双子座流星雨极大", "木星冲日"],
   },
   "almanac.ics": {
     name: "黄历宜忌",
-    description: "每天一条宜忌摘要，完整信息在事件详情。",
-    cadence: "每天一条",
+    description: "每天一条宜忌摘要，完整干支、冲煞与神位放在事件备注。",
+    cadence: "每日 1 条",
     density: "高频",
     tier: "dense",
     events_per_year: 365.2,
-    sample_titles: ["宜 纳财 · 忌 移徙", "宜 嫁娶 · 忌 开市"],
+    sample_titles: ["宜 祭祀 · 忌 动土", "宜 纳财 · 忌 移徙"],
   },
   "lunar-mansions.ics": {
     name: "二十八星宿",
-    description: "每天一条星宿、值星、天神与九星信息。",
-    cadence: "每天一条",
+    description: "每天一条星宿、十二值星、值日天神与九星参考。",
+    cadence: "每日 1 条",
     density: "高频",
     tier: "dense",
     events_per_year: 365.2,
-    sample_titles: ["轸水蚓 · 吉", "角木蛟 · 吉"],
+    sample_titles: ["角木蛟 · 吉", "轸水蚓 · 吉"],
   },
 };
 
@@ -180,15 +203,21 @@ const exclusive = {
 
 let feeds = structuredClone(fallbackFeeds);
 let selected = new Set(loadSelection());
+let bundleState = {
+  name: "",
+  color: "#DE3D32",
+  remind: "",
+  colorTouched: false,
+};
 
 function loadSelection() {
   try {
     const value = JSON.parse(window.localStorage.getItem(selectionStorageKey));
-    if (Array.isArray(value) && value.every((item) => displayOrder.includes(item))) {
+    if (Array.isArray(value) && value.length && value.every((item) => displayOrder.includes(item))) {
       return value;
     }
   } catch {
-    // Storage can be disabled in private browsing.
+    // Private browsing or disabled storage.
   }
   return presets.quiet;
 }
@@ -197,7 +226,7 @@ function saveSelection() {
   try {
     window.localStorage.setItem(selectionStorageKey, JSON.stringify([...selected]));
   } catch {
-    // The configurator still works without persistence.
+    // Non-persistent fallback.
   }
 }
 
@@ -215,39 +244,207 @@ function showStatus(message) {
   statusNode.textContent = message;
   statusNode.classList.add("visible");
   window.clearTimeout(statusTimer);
-  statusTimer = window.setTimeout(() => statusNode.classList.remove("visible"), 2600);
+  statusTimer = window.setTimeout(() => statusNode.classList.remove("visible"), 2400);
 }
 
-function httpsUrl(filename) {
+async function copyText(text, successMessage = "订阅地址已复制") {
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      showStatus(successMessage);
+      return;
+    }
+  } catch {
+    // Fall back to prompt below.
+  }
+  window.prompt("复制以下订阅地址", text);
+}
+
+function feedHttpsUrl(filename) {
   return new URL(filename, publishedBase).href;
 }
 
-function webcalUrl(filename) {
+function feedWebcalUrl(filename) {
   const url = new URL(filename, publishedBase);
   return `webcal://${url.host}${url.pathname}`;
 }
 
-async function copyUrl(filename) {
-  const url = httpsUrl(filename);
-  if (navigator.clipboard && window.isSecureContext) {
-    await navigator.clipboard.writeText(url);
-    showStatus("HTTPS 订阅地址已复制");
-    return;
-  }
-  window.prompt("复制以下订阅地址", url);
+function syncDefaultBundleColor() {
+  if (bundleState.colorTouched) return;
+  const first = displayOrder.find((item) => selected.has(item));
+  bundleState.color = first ? colors[first] : "#DE3D32";
 }
 
-function feedOption(filename, feed) {
+function buildBundleUrls() {
+  const filenames = displayOrder.filter((item) => selected.has(item));
+  if (!filenames.length) {
+    return null;
+  }
+
+  const trimmedName = bundleState.name.trim();
+  const singleFeed = filenames.length === 1 ? filenames[0] : null;
+  const isDefaultSingle =
+    singleFeed &&
+    !trimmedName &&
+    !bundleState.remind &&
+    bundleState.color.toUpperCase() === colors[singleFeed].toUpperCase();
+
+  if (isDefaultSingle) {
+    const https = feedHttpsUrl(singleFeed);
+    const webcal = feedWebcalUrl(singleFeed);
+    return {
+      isStatic: true,
+      https,
+      webcal,
+      download: singleFeed,
+    };
+  }
+
+  const slugs = filenames.map((item) => item.replace(/\.ics$/, ""));
+  const prodUrl = new URL("bundle.ics", publishedBase);
+  prodUrl.searchParams.set("feeds", slugs.join(","));
+  if (trimmedName) prodUrl.searchParams.set("name", trimmedName);
+  const defaultPrimaryColor = colors[filenames[0]].toUpperCase();
+  if (bundleState.color.toUpperCase() !== defaultPrimaryColor) {
+    prodUrl.searchParams.set("color", bundleState.color.toUpperCase());
+  }
+  if (bundleState.remind) {
+    prodUrl.searchParams.set("remind", bundleState.remind);
+  }
+
+  const https = prodUrl.href;
+  const webcal = `webcal://${prodUrl.host}${prodUrl.pathname}${prodUrl.search}`;
+  const dlUrl = new URL(prodUrl.href);
+  dlUrl.searchParams.set("download", "1");
+  return {
+    isStatic: false,
+    https,
+    webcal,
+    download: dlUrl.href,
+  };
+}
+
+/* Theme Handling */
+function applyTheme(mode) {
+  document.documentElement.dataset.theme = mode;
+  const meta = document.querySelector("[data-theme-meta]");
+  if (meta) meta.setAttribute("content", mode === "dark" ? "#0b0c0f" : "#f5f6f8");
+}
+
+document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
+  const current = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+  const next = current === "dark" ? "light" : "dark";
+  applyTheme(next);
+  try {
+    window.localStorage.setItem(themeStorageKey, next);
+  } catch {
+    // Ignore storage errors.
+  }
+});
+
+/* Hero Comparison Switch */
+for (const btn of document.querySelectorAll("[data-hero-mode]")) {
+  btn.addEventListener("click", () => {
+    const targetMode = btn.dataset.heroMode;
+    for (const tab of document.querySelectorAll("[data-hero-mode]")) {
+      tab.setAttribute("aria-selected", String(tab === btn));
+    }
+    for (const stage of document.querySelectorAll("[data-hero-stage]")) {
+      stage.hidden = stage.dataset.heroStage !== targetMode;
+    }
+  });
+}
+
+/* Dense Preview Lazy Loader */
+function ensureDensePreviewLoaded() {
+  if (densePreviewCache || densePreviewLoading) return;
+  const hasDenseSelected = [...selected].some((item) => feeds[item]?.tier === "dense");
+  if (!hasDenseSelected) return;
+  densePreviewLoading = true;
+  fetch("dense-preview.json")
+    .then((res) => (res.ok ? res.json() : null))
+    .then((payload) => {
+      if (payload) {
+        densePreviewCache = payload;
+        renderCalendar();
+      }
+    })
+    .catch(() => {})
+    .finally(() => {
+      densePreviewLoading = false;
+    });
+}
+
+function denseEventsForMonth(filename, year, month) {
+  const titles = feeds[filename].sample_titles || ["每日事件"];
+  const cells = CalendarPreview.monthCells(year, month);
+  const feedLookup = densePreviewCache?.[filename] || null;
+
+  return cells.map((cell, index) => {
+    const entry = feedLookup?.[cell.key];
+    const nextDay = new Date(cell.year, cell.month - 1, cell.day + 1, 12);
+    const endKey = CalendarPreview.dateKey(
+      nextDay.getFullYear(),
+      nextDay.getMonth() + 1,
+      nextDay.getDate(),
+    );
+    return {
+      uid: `dense-${filename}-${cell.key}`,
+      start: cell.key,
+      end: endKey,
+      title: entry ? entry[0] : titles[index % titles.length],
+      description: entry ? entry[1] : feeds[filename].description,
+      kind: "dense-day",
+      filename,
+    };
+  });
+}
+
+function collectSelectedEvents() {
+  const raw = [];
+  for (const filename of displayOrder) {
+    if (!selected.has(filename)) continue;
+    const feed = feeds[filename];
+    if (!feed) continue;
+    if (feed.tier === "dense") {
+      for (const item of denseEventsForMonth(filename, viewYear, viewMonth)) {
+        raw.push(item);
+      }
+    } else {
+      for (const [idx, ev] of (feed.preview_events || []).entries()) {
+        raw.push({
+          uid: `${filename}-${idx}-${ev.start}`,
+          start: ev.start,
+          end: ev.end,
+          title: ev.title,
+          description: ev.description || feed.description,
+          kind: ev.kind || "event",
+          filename,
+        });
+      }
+    }
+  }
+  return raw;
+}
+
+/* Feed Options Rendering */
+function renderFeedOption(filename, feed) {
   const checked = selected.has(filename);
-  const sample = feed.sample_titles?.[0] || "查看事件示例";
+  const color = feed.color || colors[filename];
   return `
-    <label class="feed-option${checked ? " selected" : ""}" style="--feed-color:${colors[filename]}">
+    <label class="feed-option${checked ? " selected" : ""}" style="--feed-color:${escapeHtml(color)}">
       <input type="checkbox" value="${escapeHtml(filename)}" ${checked ? "checked" : ""} />
-      <span class="feed-check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3 8 3 3 7-7" /></svg></span>
-      <span class="feed-option-copy">
-        <span class="feed-option-title"><strong>${escapeHtml(feed.name)}</strong>${feed.featured ? "<em>推荐</em>" : ""}</span>
+      <span class="feed-check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3.2 8.2 3 3 6.6-6.6" /></svg></span>
+      <span class="feed-option-body">
+        <span class="feed-option-top">
+          <span class="feed-option-title">
+            <i class="feed-dot" aria-hidden="true"></i>
+            <strong>${escapeHtml(feed.name)}</strong>
+            ${feed.featured ? "<em>推荐</em>" : ""}
+          </span>
+          <span class="feed-cadence">${escapeHtml(feed.cadence)}</span>
+        </span>
         <small>${escapeHtml(feed.description)}</small>
-        <span class="feed-option-meta"><b>${escapeHtml(feed.cadence)}</b><i>月视图：${escapeHtml(sample)}</i></span>
       </span>
     </label>`;
 }
@@ -257,11 +454,15 @@ function renderFeedOptions() {
     const tier = container.dataset.feedTier;
     container.innerHTML = displayOrder
       .filter((filename) => feeds[filename]?.tier === tier)
-      .map((filename) => feedOption(filename, feeds[filename]))
+      .map((filename) => renderFeedOption(filename, feeds[filename]))
       .join("");
   }
   for (const input of document.querySelectorAll('.feed-option input[type="checkbox"]')) {
     input.addEventListener("change", () => toggleFeed(input.value, input.checked));
+  }
+  const denseDetails = document.querySelector("[data-dense-details]");
+  if (denseDetails && [...selected].some((item) => feeds[item]?.tier === "dense")) {
+    denseDetails.open = true;
   }
 }
 
@@ -272,122 +473,336 @@ function toggleFeed(filename, enabled) {
   } else {
     selected.delete(filename);
   }
+  syncDefaultBundleColor();
   saveSelection();
+  hidePopover();
+  ensureDensePreviewLoaded();
   render();
 }
 
-function denseEvents(filename) {
-  const titles = feeds[filename].sample_titles;
-  const daysInMonth = new Date(previewClock.year, previewClock.month, 0).getDate();
-  return Array.from({ length: daysInMonth }, (_, index) => ({
-    key: CalendarPreview.dateKey(previewClock.year, previewClock.month, index + 1),
-    title: titles[index % titles.length],
-    continuation: false,
-  }));
+/* Calendar Month Grid & Mobile View Rendering */
+function showOfficialBadges() {
+  return selected.has("essential.ics") || selected.has("work-rest.ics");
 }
 
-function selectedEvents() {
-  const result = [];
-  for (const filename of displayOrder) {
-    if (!selected.has(filename)) continue;
-    const definitions = feeds[filename].tier === "dense"
-      ? denseEvents(filename)
-      : CalendarPreview.expandEvents(
-        feeds[filename].preview_events,
-        previewClock.year,
-        previewClock.month,
-      );
-    for (const definition of definitions) {
-      result.push({ ...definition, filename });
-    }
-  }
-  return result;
-}
-
-function dayCell(cell, events) {
-  const lunar = cell.currentMonth ? lunarDays[cell.key] || "" : "";
-  const lines = events
-    .filter((event) => cell.currentMonth && event.key === cell.key)
-    .map((event) => `
-      <span class="preview-event${event.continuation ? " continuation" : ""}" style="--feed-color:${colors[event.filename]}" title="${escapeHtml(feeds[event.filename].name)}：${escapeHtml(event.title)}">
-        ${event.title ? escapeHtml(event.title) : "&nbsp;"}
-      </span>`)
-    .join("");
-  const today = cell.key === previewClock.todayKey;
-  return `
-    <div class="calendar-day${cell.currentMonth ? "" : " outside"}${today ? " today" : ""}">
-      <div class="calendar-date"><span>${escapeHtml(lunar)}</span><b>${cell.day}${cell.currentMonth ? "" : "日"}</b></div>
-      <div class="calendar-events">${lines}</div>
-    </div>`;
+function renderBadgeHtml(dateKey) {
+  if (!showOfficialBadges()) return "";
+  const mark = officialBadges[dateKey];
+  if (mark === "休") return '<i class="tag-rest">休</i>';
+  if (mark === "班") return '<i class="tag-work">班</i>';
+  return "";
 }
 
 function renderCalendar() {
-  const events = selectedEvents();
+  const titleNode = document.querySelector("#preview-title");
+  if (titleNode) titleNode.textContent = `${viewYear} 年 ${viewMonth} 月`;
+
+  const monthKey = `${viewYear}-${String(viewMonth).padStart(2, "0")}`;
+  for (const btn of document.querySelectorAll("[data-jump-month]")) {
+    btn.classList.toggle("active", btn.dataset.jumpMonth === monthKey);
+  }
+
+  const events = collectSelectedEvents();
+  const weeks = CalendarPreview.layoutMonthWeeks(viewYear, viewMonth, events, 3);
+
+  eventRegistry.clear();
+  dayEventsRegistry.clear();
+
   const grid = document.querySelector("[data-calendar-grid]");
-  if (!grid) return;
-  document.querySelector("#preview-title").textContent = `${previewClock.year} 年 ${previewClock.month} 月`;
-  grid.innerHTML = CalendarPreview.monthCells(previewClock.year, previewClock.month)
-    .map((cell) => dayCell(cell, events))
+  if (grid) {
+    grid.innerHTML = weeks
+      .map((week) => {
+        const bgCells = week.cells
+          .map((cell) => {
+            dayEventsRegistry.set(cell.key, week.eventsByKey[cell.key] || []);
+            const lunar = lunarDays[cell.key] || "";
+            const isSpecialLunar = lunar === "除夕" || lunar === "春节";
+            const isToday = cell.key === previewClock.todayKey;
+            const classes = [
+              "week-day-cell",
+              cell.currentMonth ? "" : "outside",
+              cell.isWeekend ? "weekend" : "",
+              isToday ? "today" : "",
+            ]
+              .filter(Boolean)
+              .join(" ");
+
+            return `
+              <div class="${classes}">
+                <div class="day-head">
+                  <span class="day-lunar${isSpecialLunar ? " special" : ""}">${escapeHtml(lunar)}</span>
+                  <span class="day-num-group">
+                    ${renderBadgeHtml(cell.key)}
+                    <b class="day-num">${cell.day}</b>
+                  </span>
+                </div>
+              </div>`;
+          })
+          .join("");
+
+        const segHtml = week.segments
+          .map((seg) => {
+            eventRegistry.set(seg.event.uid, seg.event);
+            const feedColor = feeds[seg.event.filename]?.color || colors[seg.event.filename];
+            const classes = [
+              "event-segment",
+              seg.continuesLeft ? "continues-left" : "",
+              seg.continuesRight ? "continues-right" : "",
+            ]
+              .filter(Boolean)
+              .join(" ");
+            return `
+              <button
+                type="button"
+                class="${classes}"
+                data-event-uid="${escapeHtml(seg.event.uid)}"
+                style="--feed-color:${escapeHtml(feedColor)};grid-column:${seg.colStart + 1} / span ${seg.colSpan};grid-row:${seg.lane + 1}"
+                title="${escapeHtml(seg.event.title)}"
+              >
+                ${escapeHtml(seg.event.title)}
+              </button>`;
+          })
+          .join("");
+
+        const overflowHtml = week.overflowByCol
+          .map((count, colIndex) => {
+            if (!count) return "";
+            const cellKey = week.cells[colIndex].key;
+            return `
+              <button
+                type="button"
+                class="event-overflow"
+                data-overflow-day="${escapeHtml(cellKey)}"
+                style="grid-column:${colIndex + 1};grid-row:4"
+              >
+                +${count} 项
+              </button>`;
+          })
+          .join("");
+
+        return `
+          <div class="calendar-week">
+            <div class="week-days-bg">${bgCells}</div>
+            <div class="week-events-layer">${segHtml}${overflowHtml}</div>
+          </div>`;
+      })
+      .join("");
+  }
+
+  renderMobileCalendar(weeks);
+}
+
+function renderMobileCalendar(weeks) {
+  const miniGrid = document.querySelector("[data-mobile-mini-grid]");
+  const agenda = document.querySelector("[data-mobile-agenda]");
+  if (!miniGrid || !agenda) return;
+
+  const allCells = weeks.flatMap((w) => w.cells);
+  if (!allCells.some((c) => c.key === activeMobileDayKey && c.currentMonth)) {
+    const fallbackToday = allCells.find((c) => c.key === previewClock.todayKey && c.currentMonth);
+    const firstWithEvent = allCells.find((c) => c.currentMonth && (dayEventsRegistry.get(c.key)?.length || 0) > 0);
+    const firstCurrent = allCells.find((c) => c.currentMonth);
+    activeMobileDayKey = (fallbackToday || firstWithEvent || firstCurrent || allCells[0]).key;
+  }
+
+  miniGrid.innerHTML = allCells
+    .map((cell) => {
+      const dayEvents = dayEventsRegistry.get(cell.key) || [];
+      for (const ev of dayEvents) eventRegistry.set(ev.uid, ev);
+      const uniqueColors = [...new Set(dayEvents.map((ev) => feeds[ev.filename]?.color || colors[ev.filename]))].slice(0, 3);
+      const dots = uniqueColors
+        .map((c) => `<i style="--feed-color:${escapeHtml(c)}"></i>`)
+        .join("");
+      const lunar = lunarDays[cell.key] || "";
+      const classes = [
+        "mini-day-btn",
+        cell.currentMonth ? "" : "outside",
+        cell.key === previewClock.todayKey ? "today" : "",
+        cell.key === activeMobileDayKey ? "selected" : "",
+      ]
+        .filter(Boolean)
+        .join(" ");
+
+      return `
+        <button type="button" class="${classes}" data-mobile-day="${escapeHtml(cell.key)}">
+          <span class="mini-day-top"><b>${cell.day}</b></span>
+          <span class="mini-day-lunar">${escapeHtml(lunar)}</span>
+          <span class="mini-dots">${dots}</span>
+        </button>`;
+    })
     .join("");
 
-  const eventKeys = [...new Set(events.filter((event) => event.title).map((event) => event.key))].sort();
-  const upcoming = eventKeys.filter((key) => key >= previewClock.todayKey);
-  const previous = eventKeys.filter((key) => key < previewClock.todayKey).reverse();
-  const agendaKeys = [...new Set([previewClock.todayKey, ...upcoming, ...previous])]
-    .slice(0, 6)
-    .sort();
-  const agenda = document.querySelector("[data-mobile-agenda]");
-  agenda.innerHTML = agendaKeys
+  const currentMonthCells = allCells.filter((c) => c.currentMonth);
+  const startEventDays = currentMonthCells
+    .map((c) => c.key)
+    .filter((key) => (dayEventsRegistry.get(key) || []).some((ev) => ev.start === key));
+  const orderedKeys = [
+    ...new Set([
+      activeMobileDayKey,
+      ...startEventDays.filter((k) => k > activeMobileDayKey),
+      ...startEventDays.filter((k) => k < activeMobileDayKey),
+    ]),
+  ].slice(0, 7);
+
+  agenda.innerHTML = orderedKeys
     .map((key) => {
-      const [, month, day] = key.split("-").map(Number);
-      const dayEvents = events.filter((event) => event.key === key && !event.continuation);
-      const lines = dayEvents.length
-        ? dayEvents.map((event) => `
-            <span class="agenda-event" style="--feed-color:${colors[event.filename]}">
-              <i></i><b>${escapeHtml(event.title)}</b><small>${escapeHtml(feeds[event.filename].name)}</small>
-            </span>`).join("")
-        : '<span class="agenda-empty">没有订阅事件</span>';
-      return `<div class="agenda-day${key === previewClock.todayKey ? " today" : ""}"><time><b>${day}</b><span>${month} 月</span></time><div>${lines}</div></div>`;
+      const [, m, d] = key.split("-").map(Number);
+      const list = dayEventsRegistry.get(key) || [];
+      const lunar = lunarDays[key] || "";
+      const rows = list.length
+        ? list
+            .map((ev) => {
+              const feedColor = feeds[ev.filename]?.color || colors[ev.filename];
+              const feedName = feeds[ev.filename]?.name || "";
+              return `
+                <button type="button" class="agenda-event" data-event-uid="${escapeHtml(ev.uid)}" style="--feed-color:${escapeHtml(feedColor)}">
+                  <b>${escapeHtml(ev.title)}</b>
+                  <small>${escapeHtml(feedName)}</small>
+                </button>`;
+            })
+            .join("")
+        : '<span class="agenda-empty">当天无订阅事件</span>';
+
+      return `
+        <div class="agenda-day">
+          <time><b>${d}</b><span>${m}月 · ${escapeHtml(lunar)}</span></time>
+          <div class="agenda-events">${rows}</div>
+        </div>`;
     })
     .join("");
 }
 
+/* Event Popover */
+function formatRangeLabel(ev) {
+  const [sy, sm, sd] = ev.start.split("-").map(Number);
+  const endInc = ev.endInclusive || CalendarPreview.inclusiveEndKey(ev.end);
+  const [ey, em, ed] = endInc.split("-").map(Number);
+  if (ev.start === endInc) {
+    return `${sy}年${sm}月${sd}日 · 全天 · 不占用忙闲`;
+  }
+  const span = ev.spanDays || 2;
+  if (sy === ey && sm === em) {
+    return `${sy}年${sm}月${sd}日 – ${ed}日（共 ${span} 天）· 全天`;
+  }
+  return `${sy}年${sm}月${sd}日 – ${ey}年${em}月${ed}日（共 ${span} 天）`;
+}
+
+function positionPopover(anchorRect) {
+  if (!popover) return;
+  const popWidth = Math.min(window.innerWidth - 24, 340);
+  let left = anchorRect.left + anchorRect.width / 2 - popWidth / 2;
+  left = Math.max(12, Math.min(left, window.innerWidth - popWidth - 12));
+
+  let top = anchorRect.bottom + 8;
+  const estimatedHeight = popover.offsetHeight || 200;
+  if (top + estimatedHeight > window.innerHeight - 12) {
+    top = Math.max(12, anchorRect.top - estimatedHeight - 8);
+  }
+  popover.style.left = `${Math.round(left)}px`;
+  popover.style.top = `${Math.round(top)}px`;
+}
+
+function openEventPopover(ev, anchorEl) {
+  if (!popover || !ev) return;
+  const feed = feeds[ev.filename];
+  const color = feed?.color || colors[ev.filename] || "#DE3D32";
+  popover.querySelector("[data-popover-dot]").style.background = color;
+  popover.querySelector("[data-popover-title]").textContent = ev.title;
+  popover.querySelector("[data-popover-meta]").textContent = `${feed?.name || "日历频道"} · 只读透明事件`;
+  popover.querySelector("[data-popover-range]").textContent = formatRangeLabel(ev);
+
+  const lines = String(ev.description || "").split("\n").filter(Boolean);
+  popover.querySelector("[data-popover-body]").innerHTML = lines
+    .map((line) => `<p>${escapeHtml(line)}</p>`)
+    .join("");
+
+  popover.hidden = false;
+  positionPopover(anchorEl.getBoundingClientRect());
+}
+
+function openDayOverflowPopover(dayKey, anchorEl) {
+  const list = dayEventsRegistry.get(dayKey) || [];
+  if (!list.length || !popover) return;
+  const [y, m, d] = dayKey.split("-").map(Number);
+  popover.querySelector("[data-popover-dot]").style.background = "var(--accent)";
+  popover.querySelector("[data-popover-title]").textContent = `${y}年${m}月${d}日 全部日程`;
+  popover.querySelector("[data-popover-meta]").textContent = `共 ${list.length} 条订阅事件`;
+  popover.querySelector("[data-popover-range]").textContent = `农历${lunarDays[dayKey] || ""}`;
+  popover.querySelector("[data-popover-body]").innerHTML = list
+    .map((ev) => `<p><strong>${escapeHtml(ev.title)}</strong>（${escapeHtml(feeds[ev.filename]?.name || "")}）</p>`)
+    .join("");
+
+  popover.hidden = false;
+  positionPopover(anchorEl.getBoundingClientRect());
+}
+
+function hidePopover() {
+  if (popover) popover.hidden = true;
+}
+
+/* Summary & Subscription Modal Rendering */
 function monthlyCount() {
-  return [...selected].reduce((total, filename) => total + (feeds[filename]?.events_per_year || 0) / 12, 0);
+  return [...selected].reduce(
+    (total, filename) => total + (feeds[filename]?.events_per_year || 0) / 12,
+    0,
+  );
 }
 
 function renderSummary() {
   const count = selected.size;
   const monthly = monthlyCount();
-  for (const node of document.querySelectorAll("[data-selected-count]")) node.textContent = String(count);
-  for (const node of document.querySelectorAll("[data-monthly-count]")) node.textContent = String(Math.round(monthly));
+  const roundedMonthly = Math.round(monthly);
+
+  for (const node of document.querySelectorAll("[data-selected-count]")) {
+    node.textContent = String(count);
+  }
+  for (const node of document.querySelectorAll("[data-monthly-count]")) {
+    node.textContent = String(roundedMonthly);
+  }
 
   const density = monthly > 28 ? "crowded" : monthly > 12 ? "balanced" : "quiet";
-  const densityLabels = { quiet: "清爽", balanced: "适中", crowded: "拥挤" };
-  const score = document.querySelector(".density-score");
-  score.dataset.density = density;
+  const densityLabels = {
+    quiet: `清爽 · 约 ${roundedMonthly} 条/月`,
+    balanced: `适中 · 约 ${roundedMonthly} 条/月`,
+    crowded: `密集 · 约 ${roundedMonthly} 条/月`,
+  };
+  const shortLabels = { quiet: "清爽", balanced: "适中", crowded: "密集" };
+
+  const pill = document.querySelector(".density-pill");
+  if (pill) pill.dataset.density = density;
+  const densityNode = document.querySelector("[data-density-label]");
+  if (densityNode) densityNode.textContent = densityLabels[density];
+
   const mobileDock = document.querySelector("[data-mobile-selection-dock]");
   if (mobileDock) mobileDock.dataset.density = density;
-  for (const node of document.querySelectorAll("[data-density-label], [data-mobile-density-label]")) {
-    node.textContent = densityLabels[density];
+  for (const node of document.querySelectorAll("[data-mobile-density-label]")) {
+    node.textContent = shortLabels[density];
   }
 
   const message = document.querySelector("[data-selection-message]");
-  if (!count) {
-    message.textContent = "还没有选择频道。可以从“清爽推荐”开始。";
-  } else if ([...selected].some((filename) => feeds[filename].tier === "dense")) {
-    message.textContent = "当前包含每日频道：月视图会在每一天增加一条全天事件。";
-  } else if (selected.has("essential.ics")) {
-    message.textContent = "“中国日历”已经包含班休、传统节日和二十四节气，不需要重复添加。";
-  } else {
-    message.textContent = "你正在拆分基础频道，可以为班休、节日和节气分别设置颜色。";
+  if (message) {
+    if (!count) {
+      message.textContent = "尚未选择任何频道，可点击上方「清爽推荐」快速开始。";
+    } else if ([...selected].some((filename) => feeds[filename]?.tier === "dense")) {
+      message.textContent = "已包含每日文化频道，月视图每一天都会显示一条全天事件。";
+    } else if (selected.has("essential.ics")) {
+      message.textContent = "「中国日历」已合并法定班休、传统节日与二十四节气，无需重复勾选拆分项。";
+    } else {
+      message.textContent = "当前为拆分组合：可一键边缘合订为一本日历，也可分频道添加以设置不同颜色。";
+    }
   }
 
   const legend = document.querySelector("[data-preview-legend]");
-  legend.innerHTML = displayOrder
-    .filter((filename) => selected.has(filename))
-    .map((filename) => `<span style="--feed-color:${colors[filename]}"><i></i>${escapeHtml(feeds[filename].name)}</span>`)
-    .join("") || "<span>尚未选择频道</span>";
+  if (legend) {
+    legend.innerHTML =
+      displayOrder
+        .filter((filename) => selected.has(filename))
+        .map((filename) => {
+          const c = feeds[filename]?.color || colors[filename];
+          return `<span style="--feed-color:${escapeHtml(c)}"><i></i>${escapeHtml(feeds[filename].name)}</span>`;
+        })
+        .join("") || "<span>尚未勾选频道</span>";
+  }
 
   const current = [...selected].sort().join(",");
   for (const button of document.querySelectorAll("[data-preset]")) {
@@ -396,75 +811,251 @@ function renderSummary() {
   }
 }
 
-function renderSubscriptionList() {
-  const list = document.querySelector("[data-subscription-list]");
+function renderSubscriptionDialog() {
   const filenames = displayOrder.filter((filename) => selected.has(filename));
-  if (!filenames.length) {
-    list.innerHTML = '<p class="empty-subscriptions">还没有选择频道。</p>';
-    return;
-  }
-  list.innerHTML = filenames.map((filename, index) => `
-    <article class="subscription-row" style="--feed-color:${colors[filename]}">
-      <span class="subscription-index">${index + 1}</span>
-      <div><strong>${escapeHtml(feeds[filename].name)}</strong><small>${escapeHtml(feeds[filename].cadence)}</small></div>
-      <a href="${webcalUrl(filename)}">添加</a>
-      <button type="button" data-copy="${escapeHtml(filename)}">复制</button>
-    </article>`).join("");
-}
+  const chipsNode = document.querySelector("[data-bundle-chips]");
+  const swatchesNode = document.querySelector("[data-bundle-colors]");
+  const urlCode = document.querySelector("[data-bundle-url]");
+  const routeHint = document.querySelector("[data-bundle-route-hint]");
+  const webcalBtn = document.querySelector("[data-bundle-webcal]");
+  const downloadBtn = document.querySelector("[data-bundle-download]");
+  const qrContainer = document.querySelector("[data-qr-container]");
+  const splitList = document.querySelector("[data-subscription-list]");
 
-function renderDensityDemo() {
-  for (const node of document.querySelectorAll("[data-demo-month]")) {
-    node.textContent = `${previewClock.year} 年 ${previewClock.month} 月`;
+  if (chipsNode) {
+    chipsNode.innerHTML = filenames.length
+      ? filenames
+          .map((fn) => {
+            const c = feeds[fn]?.color || colors[fn];
+            return `<span class="bundle-chip" style="--feed-color:${escapeHtml(c)}"><i></i>${escapeHtml(feeds[fn].name)}</span>`;
+          })
+          .join("")
+      : '<span class="bundle-chip">未选择频道</span>';
   }
-  for (const node of document.querySelectorAll("[data-demo-today]")) {
-    node.textContent = String(previewClock.day);
+
+  if (swatchesNode) {
+    swatchesNode.innerHTML = bundlePalette
+      .map((hex) => {
+        const active = hex.toUpperCase() === bundleState.color.toUpperCase();
+        return `<button type="button" class="swatch-btn" role="radio" aria-checked="${active}" data-swatch="${hex}" style="--swatch:${hex}" aria-label="颜色 ${hex}"></button>`;
+      })
+      .join("");
   }
-  for (const node of document.querySelectorAll("[data-demo-date]")) {
-    node.textContent = `${previewClock.month} 月 ${previewClock.day} 日`;
+
+  for (const btn of document.querySelectorAll("[data-remind-val]")) {
+    btn.setAttribute("aria-pressed", String(btn.dataset.remindVal === bundleState.remind));
   }
-  const quietEvent = document.querySelector("[data-demo-quiet-event]");
-  const currentEvent = feeds["essential.ics"].preview_events?.find(
-    (event) => event.start <= previewClock.todayKey && previewClock.todayKey < event.end,
-  );
-  quietEvent.textContent = currentEvent?.title || "今天没有额外事件";
-  quietEvent.classList.toggle("empty", !currentEvent);
+
+  const urls = buildBundleUrls();
+  if (urls) {
+    if (urlCode) urlCode.textContent = urls.webcal;
+    if (routeHint) {
+      routeHint.textContent = urls.isStatic ? "单频道静态直出" : "Cloudflare 边缘实时合订";
+    }
+    if (webcalBtn) {
+      webcalBtn.href = urls.webcal;
+      webcalBtn.removeAttribute("aria-disabled");
+    }
+    if (downloadBtn) {
+      downloadBtn.href = urls.download;
+      downloadBtn.removeAttribute("aria-disabled");
+    }
+    if (qrContainer && typeof QrSvg !== "undefined") {
+      try {
+        qrContainer.innerHTML = QrSvg.renderSvg(urls.webcal);
+      } catch {
+        qrContainer.innerHTML = '<span style="font-size:11px;color:#666">链接较长，请直接复制地址</span>';
+      }
+    }
+  } else {
+    if (urlCode) urlCode.textContent = "请先返回勾选至少一个频道";
+    if (qrContainer) qrContainer.innerHTML = "";
+  }
+
+  if (splitList) {
+    if (!filenames.length) {
+      splitList.innerHTML = '<p style="padding:28px;text-align:center;color:var(--muted);margin:0">尚未选择频道。</p>';
+    } else {
+      splitList.innerHTML = filenames
+        .map((fn, index) => {
+          const c = feeds[fn]?.color || colors[fn];
+          const isAdded = addedSplitFeeds.has(fn);
+          return `
+            <article class="subscription-row${isAdded ? " added" : ""}" style="--feed-color:${escapeHtml(c)}">
+              <span class="subscription-index">${isAdded ? "✓" : index + 1}</span>
+              <div class="subscription-meta">
+                <strong>${escapeHtml(feeds[fn].name)}</strong>
+                <small>${escapeHtml(feeds[fn].cadence)} · 默认色 ${escapeHtml(c)}</small>
+              </div>
+              <a class="row-btn row-btn-primary" href="${feedWebcalUrl(fn)}" data-split-add="${escapeHtml(fn)}">${isAdded ? "重新打开" : "订阅"}</a>
+              <button class="row-btn" type="button" data-copy-feed="${escapeHtml(fn)}">复制</button>
+              <a class="row-btn row-download" href="${escapeHtml(fn)}" download="${escapeHtml(fn)}">下载</a>
+            </article>`;
+        })
+        .join("");
+    }
+  }
 }
 
 function render() {
   renderFeedOptions();
-  renderDensityDemo();
   renderCalendar();
   renderSummary();
-  renderSubscriptionList();
+  renderSubscriptionDialog();
 }
 
+/* Event Listeners */
 for (const button of document.querySelectorAll("[data-preset]")) {
   button.addEventListener("click", () => {
     selected = new Set(presets[button.dataset.preset]);
+    bundleState.colorTouched = false;
+    syncDefaultBundleColor();
     saveSelection();
+    hidePopover();
+    ensureDensePreviewLoaded();
     render();
+  });
+}
+
+for (const btn of document.querySelectorAll("[data-month-shift]")) {
+  btn.addEventListener("click", () => {
+    const delta = Number(btn.dataset.monthShift);
+    const next = CalendarPreview.shiftMonth(viewYear, viewMonth, delta);
+    viewYear = next.year;
+    viewMonth = next.month;
+    hidePopover();
+    renderCalendar();
+  });
+}
+
+document.querySelector("[data-month-today]")?.addEventListener("click", () => {
+  viewYear = previewClock.year;
+  viewMonth = previewClock.month;
+  activeMobileDayKey = previewClock.todayKey;
+  hidePopover();
+  renderCalendar();
+});
+
+for (const btn of document.querySelectorAll("[data-jump-month]")) {
+  btn.addEventListener("click", () => {
+    const [y, m] = btn.dataset.jumpMonth.split("-").map(Number);
+    viewYear = y;
+    viewMonth = m;
+    hidePopover();
+    renderCalendar();
   });
 }
 
 for (const button of document.querySelectorAll("[data-open-subscriptions]")) {
   button.addEventListener("click", () => {
-    renderSubscriptionList();
+    hidePopover();
+    renderSubscriptionDialog();
     if (typeof dialog?.showModal === "function") dialog.showModal();
   });
 }
 
-document.addEventListener("click", async (event) => {
-  const button = event.target.closest("[data-copy]");
-  if (!button) return;
-  try {
-    await copyUrl(button.dataset.copy);
-  } catch {
-    window.prompt("复制以下订阅地址", httpsUrl(button.dataset.copy));
-  }
+document.querySelector("[data-dialog-close]")?.addEventListener("click", () => {
+  dialog?.close();
 });
 
 dialog?.addEventListener("click", (event) => {
   if (event.target === dialog) dialog.close();
+});
+
+for (const tab of document.querySelectorAll("[data-sub-mode]")) {
+  tab.addEventListener("click", () => {
+    const mode = tab.dataset.subMode;
+    for (const item of document.querySelectorAll("[data-sub-mode]")) {
+      item.setAttribute("aria-selected", String(item === tab));
+    }
+    for (const panel of document.querySelectorAll("[data-sub-panel]")) {
+      panel.hidden = panel.dataset.subPanel !== mode;
+    }
+  });
+}
+
+document.querySelector("[data-bundle-name]")?.addEventListener("input", (event) => {
+  bundleState.name = event.target.value;
+  renderSubscriptionDialog();
+});
+
+document.addEventListener("click", async (event) => {
+  const eventBtn = event.target.closest("[data-event-uid]");
+  if (eventBtn) {
+    event.stopPropagation();
+    const ev = eventRegistry.get(eventBtn.dataset.eventUid);
+    if (ev) openEventPopover(ev, eventBtn);
+    return;
+  }
+
+  const overflowBtn = event.target.closest("[data-overflow-day]");
+  if (overflowBtn) {
+    event.stopPropagation();
+    openDayOverflowPopover(overflowBtn.dataset.overflowDay, overflowBtn);
+    return;
+  }
+
+  if (event.target.closest("[data-popover-close]")) {
+    hidePopover();
+    return;
+  }
+
+  if (popover && !popover.hidden && !event.target.closest("[data-event-popover]")) {
+    hidePopover();
+  }
+
+  const mobileDayBtn = event.target.closest("[data-mobile-day]");
+  if (mobileDayBtn) {
+    activeMobileDayKey = mobileDayBtn.dataset.mobileDay;
+    renderCalendar();
+    return;
+  }
+
+  const swatchBtn = event.target.closest("[data-swatch]");
+  if (swatchBtn) {
+    bundleState.color = swatchBtn.dataset.swatch;
+    bundleState.colorTouched = true;
+    renderSubscriptionDialog();
+    return;
+  }
+
+  const remindBtn = event.target.closest("[data-remind-val]");
+  if (remindBtn) {
+    bundleState.remind = remindBtn.dataset.remindVal;
+    renderSubscriptionDialog();
+    return;
+  }
+
+  if (event.target.closest("[data-bundle-copy-https]")) {
+    const urls = buildBundleUrls();
+    if (urls) await copyText(urls.https, "HTTPS 订阅地址已复制");
+    return;
+  }
+
+  if (event.target.closest("[data-quick-copy]")) {
+    const urls = buildBundleUrls();
+    if (urls) await copyText(urls.https, "当前搭配订阅链接已复制");
+    else showStatus("请先选择至少一个日历频道");
+    return;
+  }
+
+  const splitCopy = event.target.closest("[data-copy-feed]");
+  if (splitCopy) {
+    await copyText(feedHttpsUrl(splitCopy.dataset.copyFeed), "频道 HTTPS 地址已复制");
+    return;
+  }
+
+  const splitAdd = event.target.closest("[data-split-add]");
+  if (splitAdd) {
+    addedSplitFeeds.add(splitAdd.dataset.splitAdd);
+    window.setTimeout(() => renderSubscriptionDialog(), 120);
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && popover && !popover.hidden) {
+    hidePopover();
+  }
 });
 
 const platformTabs = [...document.querySelectorAll("[data-platform]")];
@@ -484,7 +1075,7 @@ function activatePlatform(activeTab, moveFocus = false) {
 for (const [index, tab] of platformTabs.entries()) {
   tab.addEventListener("click", () => activatePlatform(tab));
   tab.addEventListener("keydown", (event) => {
-    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
     event.preventDefault();
     let target = index;
     if (event.key === "ArrowLeft") target = (index - 1 + platformTabs.length) % platformTabs.length;
@@ -495,9 +1086,11 @@ for (const [index, tab] of platformTabs.entries()) {
   });
 }
 
+syncDefaultBundleColor();
+ensureDensePreviewLoaded();
 render();
 
-fetch("manifest.json", { cache: "no-store" })
+fetch("manifest.json")
   .then((response) => {
     if (!response.ok) throw new Error(`manifest HTTP ${response.status}`);
     return response.json();
@@ -506,13 +1099,22 @@ fetch("manifest.json", { cache: "no-store" })
     if (manifest.schema_version < 4) throw new Error("manifest schema is outdated");
     feeds = { ...feeds, ...manifest.feeds };
     lunarDays = manifest.calendar_days || {};
+    officialBadges = manifest.official_badges || {};
     selected = new Set([...selected].filter((filename) => feeds[filename]));
-    document.querySelector("[data-work-rest-year]").textContent = manifest.confirmed_work_rest_through;
-    document.querySelector("[data-culture-year]").textContent = manifest.culture_years[1];
-    document.querySelector("[data-dataset-version]").textContent = manifest.dataset_version.replaceAll("-", ".");
-    document.querySelector("[data-channel-count]").textContent = Object.keys(manifest.feeds).length;
+    if (!selected.size) selected = new Set(presets.quiet);
+    syncDefaultBundleColor();
+
+    const workRestNode = document.querySelector("[data-work-rest-year]");
+    const cultureNode = document.querySelector("[data-culture-year]");
+    const versionNode = document.querySelector("[data-dataset-version]");
+    const countNode = document.querySelector("[data-channel-count]");
+    if (workRestNode) workRestNode.textContent = manifest.confirmed_work_rest_through;
+    if (cultureNode) cultureNode.textContent = manifest.culture_years[1];
+    if (versionNode) versionNode.textContent = manifest.dataset_version.replaceAll("-", ".");
+    if (countNode) countNode.textContent = Object.keys(manifest.feeds).length;
+
     render();
   })
   .catch(() => {
-    // The embedded feed catalogue keeps the configurator usable offline.
+    // Embedded fallback keeps UI usable offline.
   });

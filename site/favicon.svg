@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="15" fill="#d43d34"/>
-  <path d="M12 24h40M23 10v10M41 10v10M22 39l7 7 14-18" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5"/>
+  <rect width="64" height="64" rx="15" fill="#fff"/>
+  <rect width="64" height="64" rx="15" fill="#de3d32" fill-opacity="0.06"/>
+  <path d="M0 15C0 6.716 6.716 0 15 0h34c8.284 0 15 6.716 15 15v7H0v-7Z" fill="#de3d32"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="14.25" fill="none" stroke="#000" stroke-opacity="0.08" stroke-width="1.5"/>
+  <text x="32" y="49" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', sans-serif" font-size="25" font-weight="700" letter-spacing="-1" fill="#1c1d21">初一</text>
 </svg>

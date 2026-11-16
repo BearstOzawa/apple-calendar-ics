@@ -83,13 +83,26 @@ def _event_lines(event: CalendarEvent, metadata: Metadata) -> list[str]:
     return lines
 
 
+def serialize_event(event: CalendarEvent, metadata: Metadata) -> str:
+    return "\r\n".join(
+        fold_content_line(line) for line in _event_lines(event, metadata)
+    )
+
+
 def serialize_feed(feed: Feed, metadata: Metadata) -> bytes:
-    lines = [
+    header_lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
         f"PRODID:{PRODID}",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
+        f"NAME;LANGUAGE={metadata.default_language}:{escape_text(feed.name)}",
+        (
+            f"DESCRIPTION;LANGUAGE={metadata.default_language}:"
+            f"{escape_text(feed.description)}"
+        ),
+        f"COLOR:{feed.css_color}",
+        f"X-APPLE-CALENDAR-COLOR:{feed.color.upper()}",
         f"X-WR-CALNAME;LANGUAGE={metadata.default_language}:{escape_text(feed.name)}",
         (
             f"X-WR-CALDESC;LANGUAGE={metadata.default_language}:"
@@ -99,9 +112,8 @@ def serialize_feed(feed: Feed, metadata: Metadata) -> bytes:
         "REFRESH-INTERVAL;VALUE=DURATION:PT12H",
         "X-PUBLISHED-TTL:PT12H",
     ]
+    chunks = [fold_content_line(line) for line in header_lines]
     for event in sorted(feed.events, key=lambda item: item.sort_key):
-        lines.extend(_event_lines(event, metadata))
-    lines.append("END:VCALENDAR")
-    return ("\r\n".join(fold_content_line(line) for line in lines) + "\r\n").encode(
-        "utf-8"
-    )
+        chunks.append(serialize_event(event, metadata))
+    chunks.append("END:VCALENDAR")
+    return ("\r\n".join(chunks) + "\r\n").encode("utf-8")

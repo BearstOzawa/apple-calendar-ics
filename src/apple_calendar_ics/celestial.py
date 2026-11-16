@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime, time, timedelta, timezone
+from functools import lru_cache
 from zoneinfo import ZoneInfo
 
 import astronomy
@@ -89,6 +90,7 @@ def _eclipse_title(body: str, kind_name: str) -> str:
     return f"{body}{kind_name}"
 
 
+@lru_cache(maxsize=8)
 def moon_phase_events(
     config: CultureConfig, metadata: Metadata
 ) -> tuple[CalendarEvent, ...]:
@@ -309,6 +311,7 @@ def _planet_events(config: CultureConfig, metadata: Metadata) -> list[CalendarEv
     return events
 
 
+@lru_cache(maxsize=8)
 def sky_event_events(
     config: CultureConfig, metadata: Metadata
 ) -> tuple[CalendarEvent, ...]:
