@@ -3,8 +3,6 @@ name: Publish calendars
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: "17 3 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -50,7 +48,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
-            echo "::notice::CLOUDFLARE_API_TOKEN 未配置，已跳过自动推送；可在仓库 Secrets 配置后启用自动部署，或本地执行 npx wrangler deploy --config worker/wrangler.jsonc。"
+            echo "::notice::CLOUDFLARE_API_TOKEN 未配置，已跳过自动推送；可在仓库 Secrets 配置后启用自动部署。"
             exit 0
           fi
           npx --yes wrangler@4.124.0 deploy --config worker/wrangler.jsonc

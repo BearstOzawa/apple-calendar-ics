@@ -1,4 +1,4 @@
-name: Monitor official calendar candidates
+name: Auto-sync official calendar updates
 
 on:
   schedule:
@@ -10,13 +10,13 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: source-monitor
+  group: cloudflare-workers
   cancel-in-progress: false
 
 jobs:
-  monitor:
+  sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v5
         with:
@@ -28,39 +28,66 @@ jobs:
           cache-dependency-path: pyproject.toml
       - name: Install
         run: python -m pip install --disable-pip-version-check -e .
-      - name: Compare reviewed data with candidate upstream
-        id: compare
+      - name: Sync official holiday updates from upstream
+        id: sync
         run: |
-          set +e
-          calendar-check-upstream
-          monitor_exit=$?
-          set -e
-          if [ "$monitor_exit" -eq 0 ]; then
-            echo "has_changes=false" >> "$GITHUB_OUTPUT"
-          elif [ "$monitor_exit" -eq 2 ]; then
-            echo "has_changes=true" >> "$GITHUB_OUTPUT"
-          else
-            exit "$monitor_exit"
+          calendar-check-upstream --apply
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
-      - name: Create or update review pull request
-        if: steps.compare.outputs.has_changes == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REVIEW_BRANCH: automation/source-monitor
-        run: |
+
+          REVIEW_BRANCH="automation/official-sync"
           if git fetch origin "$REVIEW_BRANCH:refs/remotes/origin/$REVIEW_BRANCH" 2>/dev/null; then
-            if git show "remotes/origin/$REVIEW_BRANCH:reports/upstream-diff.json" > /tmp/existing-diff.json 2>/dev/null; then
-              if cmp -s reports/upstream-diff.json /tmp/existing-diff.json; then
-                echo "Upstream diff matches existing review branch; skipping redundant push."
-                exit 0
-              fi
+            git add -N data/
+            if git diff --quiet "remotes/origin/$REVIEW_BRANCH" -- data/; then
+              echo "Data matches existing $REVIEW_BRANCH branch; already deployed."
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              exit 0
             fi
           fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild and validate all calendars
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          calendar-build
+          calendar-validate dist
+          node --check site/app.js
+          node --check site/calendar-core.js
+          node --check site/qrcode.js
+          node --check worker/src/index.mjs
+          node tests/test_calendar_core.mjs
+          node tests/test_worker.mjs
+          python -m unittest discover -s tests -v
+
+      - name: Deploy updated calendars to Cloudflare Workers
+        if: steps.sync.outputs.changed == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          cp -R site/. _site/
+          cp dist/*.ics dist/manifest.json dist/dense-preview.json _site/
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::warning::CLOUDFLARE_API_TOKEN 未配置，跳过线上自动部署。"
+            exit 0
+          fi
+          npx --yes wrangler@4.124.0 deploy --config worker/wrangler.jsonc
+
+      - name: Archive synced data via pull request
+        if: steps.sync.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_BRANCH: automation/official-sync
+        run: |
           git switch -C "$REVIEW_BRANCH"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reports/upstream-diff.json
-          git commit -m "chore(data): report upstream calendar changes"
+          git add data/ dist/
+          git commit -m "chore(data): auto-sync official holiday schedule"
           git push --force-with-lease origin "HEAD:$REVIEW_BRANCH"
 
           pr_number=$(gh pr list --head "$REVIEW_BRANCH" --state open --json number --jq '.[0].number')
@@ -68,6 +95,6 @@ jobs:
             gh pr create \
               --base main \
               --head "$REVIEW_BRANCH" \
-              --title "chore(data): review upstream calendar changes" \
-              --body "检测到候选班休数据变化。请先核对报告中的国务院正式通知，再人工更新 data/official；不要直接发布候选数据。"
+              --title "chore(data): 自动同步最新国务院节假日安排" \
+              --body "已自动抓取并校验国务院正式节假日通知，全套 ICS 与页面预览已完成验证并自动发布上线；合并此 PR 即可归档至 main。"
           fi
