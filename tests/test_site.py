@@ -56,6 +56,15 @@ class SiteTests(unittest.TestCase):
 
     def test_page_is_product_focused_without_technical_doc_jargon(self) -> None:
         html = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+        for product_section in (
+            'class="hero"',
+            "facts-bar",
+            "builder-section",
+            "delivery-bar",
+            "info-section",
+        ):
+            self.assertIn(product_section, html)
+
         for technical_jargon in (
             "RFC 5545",
             "RFC 7986",
@@ -64,6 +73,9 @@ class SiteTests(unittest.TestCase):
             "X-APPLE-CALENDAR-COLOR",
             "Cloudflare",
             "数据口径",
+            "固定算法",
+            "数据版本",
+            "标准 ICS",
         ):
             self.assertNotIn(technical_jargon, html)
 
