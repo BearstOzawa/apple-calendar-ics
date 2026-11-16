@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta
       name="description"
-      content="中国日历订阅：自由选择法定节假日调休、传统节日、二十四节气、生活节日与天象，预览月历效果后一键添加到 iPhone、iPad 与 Mac。"
+      content="面向 iPhone、iPad 与 Mac 的中国日历订阅：涵盖法定节假日调休、传统节日、二十四节气、生活节日与天象，在线预览月历效果后一键添加。"
     />
     <meta name="theme-color" content="#f5f6f8" data-theme-meta />
     <meta name="color-scheme" content="light dark" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
-    <meta property="og:title" content="中国日历" />
-    <meta property="og:description" content="按需搭配节假日、节气与传统节日，添加到 Apple 日历。" />
+    <meta property="og:title" content="中国日历｜节假日调休、传统节日与节气订阅" />
+    <meta property="og:description" content="先在月历看清排版效果，再一键合订或分项设色添加到 Apple 日历。" />
     <meta property="og:url" content="https://apple-calendar.lili.uno/" />
     <link rel="canonical" href="https://apple-calendar.lili.uno/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <title>中国日历</title>
+    <title>中国日历｜节假日调休与传统岁时订阅</title>
     <script>
       (function () {
         try {
@@ -35,20 +35,20 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand-group">
-          <a class="brand" href="./" aria-label="中国日历">
+          <a class="brand" href="./" aria-label="中国日历首页">
             <img src="favicon.svg" width="28" height="28" alt="" />
             <span>中国日历</span>
           </a>
-          <div class="segmented preset-bar desktop-presets" aria-label="快捷方案">
-            <button type="button" data-preset="quiet" aria-pressed="true">推荐</button>
-            <button type="button" data-preset="custom" aria-pressed="false">基础分色</button>
-            <button type="button" data-preset="life" aria-pressed="false">节日提醒</button>
-            <button type="button" data-preset="sky" aria-pressed="false">时令观星</button>
-          </div>
+          <a class="status-pill" href="#builder">2027 放假已更新</a>
         </div>
 
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="#builder">搭配预览</a>
+          <a href="#guide">添加说明</a>
+          <a href="#faq">常见问题</a>
+        </nav>
+
         <div class="header-actions">
-          <button class="ghost-btn" type="button" data-open-help>使用帮助</button>
           <button
             class="icon-button"
             type="button"
@@ -71,9 +71,144 @@
       </div>
     </header>
 
-    <main class="workspace">
-      <div class="container">
-        <div class="mobile-presets">
+    <main>
+      <section class="hero">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">面向 iPhone · iPad · Mac</p>
+            <h1>原生日历里的中国节假与岁时。</h1>
+            <p class="hero-lead">
+              完整收录国务院放假调休、传统节日、二十四节气与重要天象。先在下方月历看清真实排版，再一键整套订阅，或按喜好自由组合并独立设色。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#builder">
+                搭配并预览
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3.5v9M4.5 9 8 12.5 11.5 9" /></svg>
+              </a>
+              <a class="button button-secondary" href="webcal://apple-calendar.lili.uno/essential.ics">
+                直接订阅推荐日历
+              </a>
+            </div>
+            <ul class="hero-traits" aria-label="产品特性">
+              <li>每年自动同步</li>
+              <li>自带推荐配色</li>
+              <li>可设提前提醒</li>
+              <li>随时隐藏或退订</li>
+            </ul>
+          </div>
+
+          <div class="hero-window" aria-label="日历排版效果对比">
+            <div class="window-bar">
+              <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="segmented segmented-sm" role="tablist" aria-label="视图切换">
+                <button type="button" role="tab" aria-selected="true" data-hero-mode="clean">整洁排版</button>
+                <button type="button" role="tab" aria-selected="false" data-hero-mode="noisy">常见杂乱日历</button>
+              </div>
+              <span class="window-meta">2027 年 2 月</span>
+            </div>
+
+            <div class="hero-stage" data-hero-stage="clean">
+              <div class="mini-week-head" aria-hidden="true">
+                <span>周四</span><span>周五</span><span>周六</span><span>周日</span>
+              </div>
+              <div class="mini-week-grid clean-view">
+                <div class="mini-cell">
+                  <div class="mini-date"><span>廿八</span><b>4</b></div>
+                  <div class="mini-events">
+                    <span class="mini-pill pill-gold">立春</span>
+                  </div>
+                </div>
+                <div class="mini-cell">
+                  <div class="mini-date"><span class="accent-lunar">除夕</span><span><i class="tag-rest">休</i><b>5</b></span></div>
+                </div>
+                <div class="mini-cell">
+                  <div class="mini-date"><span class="accent-lunar">春节</span><span><i class="tag-rest">休</i><b>6</b></span></div>
+                </div>
+                <div class="mini-cell weekend">
+                  <div class="mini-date"><span>初二</span><span><i class="tag-rest">休</i><b>7</b></span></div>
+                </div>
+                <div class="mini-span-bar">春节假期（9天）</div>
+              </div>
+              <p class="window-caption">连续长假合并为一条横跨日程，以颜色区分主题，留白清晰不遮挡个人安排。</p>
+            </div>
+
+            <div class="hero-stage" data-hero-stage="noisy" hidden>
+              <div class="mini-week-head" aria-hidden="true">
+                <span>周四</span><span>周五</span><span>周六</span><span>周日</span>
+              </div>
+              <div class="mini-week-grid noisy-view">
+                <div class="mini-cell">
+                  <div class="mini-date"><span>廿八</span><b>4</b></div>
+                  <div class="mini-events">
+                    <span class="mini-pill pill-noisy">节气｜立春</span>
+                    <span class="mini-pill pill-noisy-alt">距春节还有 1 天</span>
+                    <span class="mini-pill pill-noisy-muted">黄历｜宜祭祀 祈福</span>
+                    <span class="mini-pill pill-noisy-muted">天气｜多云 -1~8℃</span>
+                  </div>
+                </div>
+                <div class="mini-cell">
+                  <div class="mini-date"><span>除夕</span><b>5</b></div>
+                  <div class="mini-events">
+                    <span class="mini-pill pill-noisy">春节放假 第 1 天</span>
+                    <span class="mini-pill pill-noisy-alt">传统节日｜除夕</span>
+                    <span class="mini-pill pill-noisy-muted">黄历｜宜嫁娶 纳采</span>
+                    <span class="mini-pill pill-noisy-muted">+2 项被折叠…</span>
+                  </div>
+                </div>
+                <div class="mini-cell">
+                  <div class="mini-date"><span>正月</span><b>6</b></div>
+                  <div class="mini-events">
+                    <span class="mini-pill pill-noisy">春节放假 第 2 天</span>
+                    <span class="mini-pill pill-noisy-alt">传统节日｜春节</span>
+                    <span class="mini-pill pill-noisy-muted">黄历｜宜出行 会友</span>
+                    <span class="mini-pill pill-noisy-muted">+3 项被折叠…</span>
+                  </div>
+                </div>
+                <div class="mini-cell weekend">
+                  <div class="mini-date"><span>初二</span><b>7</b></div>
+                  <div class="mini-events">
+                    <span class="mini-pill pill-noisy">春节放假 第 3 天</span>
+                    <span class="mini-pill pill-noisy-alt">距上班还有 7 天</span>
+                    <span class="mini-pill pill-noisy-muted">黄历｜忌动土 开市</span>
+                    <span class="mini-pill pill-noisy-muted">+2 项被折叠…</span>
+                  </div>
+                </div>
+              </div>
+              <p class="window-caption">逐日倒计时、重复前缀和无关资讯迅速塞满月历，挤占真正重要的行程。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container facts-bar" aria-label="内容概览">
+          <div class="fact-item">
+            <span>法定节假日</span>
+            <strong>已同步至 <b data-work-rest-year>2027</b> 年</strong>
+            <small>含春节 9 天长假与调休补班</small>
+          </div>
+          <div class="fact-item">
+            <span>可选日程频道</span>
+            <strong><b data-channel-count>13</b> 类细分主题</strong>
+            <small>班休、节气、节日、天象与黄历</small>
+          </div>
+          <div class="fact-item">
+            <span>日程覆盖跨度</span>
+            <strong>2025 — <b data-culture-year>2030</b> 年</strong>
+            <small>六年完整日程，方便跨年规划</small>
+          </div>
+          <div class="fact-item">
+            <span>全设备同步</span>
+            <strong>iPhone · iPad · Mac</strong>
+            <small>原生日历直连，iCloud 多端同步</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="builder-section" id="builder">
+        <div class="container builder-header">
+          <div>
+            <h2>自由搭配与月历预览</h2>
+            <p>勾选左侧频道，右侧实时预览在日历中的跨日排版；点击任意日程条可查看详情。</p>
+          </div>
           <div class="segmented preset-bar" aria-label="快捷方案">
             <button type="button" data-preset="quiet" aria-pressed="true">推荐</button>
             <button type="button" data-preset="custom" aria-pressed="false">基础分色</button>
@@ -82,26 +217,37 @@
           </div>
         </div>
 
-        <div class="workspace-grid">
+        <div class="container workspace-grid">
           <aside class="feed-picker" aria-label="日历列表">
             <section class="feed-card">
               <div class="card-head">
-                <h2>常用</h2>
+                <div>
+                  <h3>常用基础</h3>
+                  <p>「中国日历」已包含班休、节日与节气；想分开设置颜色可改选下方三项。</p>
+                </div>
+                <span class="tier-badge">核心</span>
               </div>
               <div class="feed-options" data-feed-tier="core"></div>
             </section>
 
             <section class="feed-card">
               <div class="card-head">
-                <h2>更多日程</h2>
+                <div>
+                  <h3>更多日程</h3>
+                  <p>纪念日、长假提前提醒、初一十五、月相与年度重要天象。</p>
+                </div>
+                <span class="tier-badge">按需</span>
               </div>
               <div class="feed-options" data-feed-tier="optional"></div>
             </section>
 
             <details class="feed-card dense-tier" data-dense-details>
               <summary class="card-head dense-summary">
-                <h2>老黄历与星宿</h2>
-                <span class="tier-badge">每日</span>
+                <div>
+                  <h3>老黄历与星宿</h3>
+                  <p>每天一条全天日程，默认收起，两项之间二选一。</p>
+                </div>
+                <span class="tier-badge badge-dense">每日</span>
               </summary>
               <div class="feed-options" data-feed-tier="dense"></div>
             </details>
@@ -114,18 +260,23 @@
                   <button class="nav-btn" type="button" data-month-shift="-1" aria-label="上个月">
                     <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5 5.5 8 10 12.5" /></svg>
                   </button>
-                  <h1 id="preview-title">2026 年 11 月</h1>
+                  <h3 id="preview-title">2026 年 11 月</h3>
                   <button class="nav-btn" type="button" data-month-shift="1" aria-label="下个月">
                     <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5" /></svg>
                   </button>
                   <button class="today-btn" type="button" data-month-today>今天</button>
                 </div>
 
-                <div class="jump-pills" aria-label="假期预览">
+                <div class="jump-pills" aria-label="假期快捷定位">
                   <button type="button" data-jump-month="2027-01">元旦</button>
                   <button type="button" data-jump-month="2027-02">春节</button>
                   <button type="button" data-jump-month="2027-05">五一</button>
                   <button type="button" data-jump-month="2027-10">国庆</button>
+                </div>
+
+                <div class="density-pill" data-density="quiet">
+                  <i aria-hidden="true"></i>
+                  <span data-density-label>清爽</span>
                 </div>
               </div>
 
@@ -142,22 +293,91 @@
 
               <div class="calendar-footer">
                 <div class="preview-legend" data-preview-legend></div>
-                <div class="footer-actions">
-                  <button class="button button-secondary button-sm" type="button" data-quick-copy>复制链接</button>
-                  <button class="button button-primary button-sm" type="button" data-open-subscriptions>
-                    添加到日历
-                  </button>
-                </div>
+                <span class="calendar-tip">点击日程条可查看详情</span>
               </div>
             </section>
+
+            <div class="delivery-bar">
+              <div class="delivery-summary">
+                <div class="delivery-counts">
+                  <strong>已选 <b data-selected-count>1</b> 项 · 本月 <b data-monthly-count>3</b> 条日程</strong>
+                  <span class="delivery-badge">支持合订与自选配色</span>
+                </div>
+                <p data-selection-message>「中国日历」已包含法定班休、传统节日和二十四节气，日常使用选这一项即可。</p>
+              </div>
+              <div class="delivery-actions">
+                <button class="button button-secondary" type="button" data-quick-copy>复制链接</button>
+                <button class="button button-primary" type="button" data-open-subscriptions>
+                  添加到日历
+                  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3.5 4.5 4.5L6 12.5" /></svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="info-section">
+        <div class="container info-grid">
+          <article class="info-card" id="guide">
+            <div class="info-head">
+              <div>
+                <h2>添加与退订说明</h2>
+                <p>添加到系统日历后可随时改色、单独隐藏或取消订阅，不会修改你原有的个人日程。</p>
+              </div>
+              <div class="segmented segmented-sm" role="tablist" aria-label="设备切换">
+                <button type="button" role="tab" aria-selected="true" data-platform="iphone">iPhone / iPad</button>
+                <button type="button" role="tab" aria-selected="false" tabindex="-1" data-platform="mac">Mac</button>
+              </div>
+            </div>
+
+            <div class="guide-panel" role="tabpanel" data-panel="iphone">
+              <ol class="step-list">
+                <li><b>1</b><div><strong>一键添加或扫码</strong><span>在自带浏览器点击「打开日历添加」，或直接用手机相机扫描订阅弹窗中的二维码。</span></div></li>
+                <li><b>2</b><div><strong>手动粘贴链接（备选）</strong><span>打开「日历 → 底部『日历』→ 添加日历 → 添加订阅日历」，粘贴复制的订阅链接。</span></div></li>
+                <li><b>3</b><div><strong>修改颜色或取消订阅</strong><span>在日历列表中点击右侧「ⓘ」，即可更换专属颜色、管理提醒，或滑到底部取消订阅。</span></div></li>
+              </ol>
+            </div>
+
+            <div class="guide-panel" role="tabpanel" data-panel="mac" hidden>
+              <ol class="step-list">
+                <li><b>1</b><div><strong>新建日历订阅</strong><span>点击页面上的「打开日历添加」，或在日历顶部菜单栏选择「文件 → 新建日历订阅」。</span></div></li>
+                <li><b>2</b><div><strong>多设备自动同步</strong><span>位置选择「iCloud」，即可自动同步到同一账号下的 iPhone 与 iPad。</span></div></li>
+                <li><b>3</b><div><strong>改色与取消订阅</strong><span>在左侧日历栏右键点击对应日历，可进入「显示简介」修改名称颜色，或直接选择「取消订阅」。</span></div></li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="info-card" id="faq">
+            <div class="info-head">
+              <div>
+                <h2>常见问题</h2>
+                <p>关于后续年份更新、合并与分色、提醒通知的常见疑问。</p>
+              </div>
+            </div>
+
+            <div class="faq-list">
+              <div class="faq-item">
+                <strong>明年放假安排公布后，需要重新添加吗？</strong>
+                <p>不需要。每年国务院公布最新节假日安排后会自动同步，手机和电脑上的日历会自动更新，无需再次操作。</p>
+              </div>
+              <div class="faq-item">
+                <strong>「合并为一个日历」和「分开添加」怎么选？</strong>
+                <p>合并为一个日历最省心，列表里只多出一项，适合大多数人；分开添加可以为班休、节气、天象各自设置不同颜色，也能随时单独隐藏某一类。</p>
+              </div>
+              <div class="faq-item">
+                <strong>会弹通知打扰我，或把整天标成忙碌吗？</strong>
+                <p>默认静默显示，不弹通知，也不会占用你的忙闲状态；如果希望提前收到放假或节日提醒，可在点击「添加到日历」后按需开启。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
 
     <div class="mobile-dock" data-mobile-selection-dock aria-live="polite">
       <div class="mobile-dock-info">
-        <strong>已选 <b data-selected-count>1</b> 项</strong>
+        <strong>已选 <b data-selected-count>1</b> 项 · 本月 <b data-monthly-count>3</b> 条</strong>
         <span data-mobile-names>中国日历</span>
       </div>
       <button class="button button-primary button-sm" type="button" data-open-subscriptions>添加到日历</button>
@@ -165,10 +385,11 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>法定节假日已更新至 <b data-work-rest-year>2027</b> 年</span>
+        <span>中国日历 · 法定节假日已同步至 <b data-work-rest-year>2027</b> 年</span>
         <nav aria-label="底部链接">
-          <button type="button" class="footer-link-btn" data-open-help>添加与退订说明</button>
-          <a href="https://github.com/BearstOzawa/apple-calendar-ics/issues/new/choose" target="_blank" rel="noreferrer">反馈问题</a>
+          <a href="#builder">搭配预览</a>
+          <a href="#guide">添加说明</a>
+          <a href="https://github.com/BearstOzawa/apple-calendar-ics/issues/new/choose" target="_blank" rel="noreferrer">问题反馈</a>
           <a href="https://github.com/BearstOzawa/apple-calendar-ics" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
       </div>
@@ -269,40 +490,6 @@
 
         <div class="sub-panel" data-sub-panel="split" hidden>
           <div class="subscription-list" data-subscription-list></div>
-        </div>
-      </div>
-    </dialog>
-
-    <dialog class="app-dialog help-dialog" data-help-dialog>
-      <div class="dialog-shell">
-        <div class="dialog-header">
-          <div>
-            <h2>添加与退订说明</h2>
-          </div>
-          <button class="icon-button" type="button" data-help-close aria-label="关闭">
-            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8" /></svg>
-          </button>
-        </div>
-
-        <div class="segmented dialog-tabs" role="tablist" aria-label="设备">
-          <button type="button" role="tab" aria-selected="true" data-platform="iphone">iPhone / iPad</button>
-          <button type="button" role="tab" aria-selected="false" tabindex="-1" data-platform="mac">Mac</button>
-        </div>
-
-        <div class="guide-panel" role="tabpanel" data-panel="iphone">
-          <ol class="step-list">
-            <li><b>1</b><div><strong>一键添加</strong><span>在自带浏览器点击「打开日历添加」，或直接用相机扫描二维码。</span></div></li>
-            <li><b>2</b><div><strong>手动粘贴链接</strong><span>打开「日历 → 底部『日历』→ 添加日历 → 添加订阅日历」，粘贴复制的链接。</span></div></li>
-            <li><b>3</b><div><strong>改色或取消订阅</strong><span>在日历列表点右侧「ⓘ」，即可更换颜色或滑到底部取消订阅。</span></div></li>
-          </ol>
-        </div>
-
-        <div class="guide-panel" role="tabpanel" data-panel="mac" hidden>
-          <ol class="step-list">
-            <li><b>1</b><div><strong>新建订阅</strong><span>点击「打开日历添加」，或在日历顶部菜单选择「文件 → 新建日历订阅」。</span></div></li>
-            <li><b>2</b><div><strong>多设备同步</strong><span>位置选「iCloud」即可自动同步到同一账号下的 iPhone 和 iPad。</span></div></li>
-            <li><b>3</b><div><strong>取消订阅</strong><span>在左侧日历栏右键点击对应日历，选择「取消订阅」。</span></div></li>
-          </ol>
         </div>
       </div>
     </dialog>

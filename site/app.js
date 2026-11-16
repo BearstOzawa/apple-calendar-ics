@@ -6,13 +6,13 @@ const themeStorageKey = "cn-calendar-theme";
 
 const statusNode = document.querySelector(".copy-status");
 const subscribeDialog = document.querySelector("[data-subscribe-dialog]");
-const helpDialog = document.querySelector("[data-help-dialog]");
 const popover = document.querySelector("[data-event-popover]");
 const previewClock = CalendarPreview.calendarContext();
 
 let viewYear = previewClock.year;
 let viewMonth = previewClock.month;
 let activeMobileDayKey = previewClock.todayKey;
+let monthlyEventCount = 0;
 let statusTimer;
 let lunarDays = {};
 let officialBadges = {};
@@ -69,6 +69,7 @@ const uiCatalog = {
   "essential.ics": {
     name: "中国日历",
     summary: "放假调休、传统节日与二十四节气",
+    cadence: "约 45 条/年",
     tier: "core",
     featured: true,
     sample_titles: ["春节假期（9天）", "立春"],
@@ -76,72 +77,84 @@ const uiCatalog = {
   "work-rest.ics": {
     name: "法定班休",
     summary: "国务院放假与周末调休上班",
+    cadence: "约 14 条/年",
     tier: "core",
     sample_titles: ["春节假期（9天）"],
   },
   "festivals.ics": {
     name: "传统节日",
     summary: "除夕、元宵、端午、七夕、中秋、重阳等",
+    cadence: "13 条/年",
     tier: "core",
     sample_titles: ["除夕", "元宵节", "七夕"],
   },
   "solar-terms.ics": {
     name: "二十四节气",
     summary: "立春、雨水、春分、夏至、冬至等",
+    cadence: "24 条/年",
     tier: "core",
     sample_titles: ["立春", "雨水"],
   },
   "observances.ics": {
     name: "纪念日与节日",
     summary: "妇女节、青年节、儿童节、教师节等",
+    cadence: "12 条/年",
     tier: "optional",
     sample_titles: ["妇女节", "青年节", "教师节"],
   },
   "holiday-reminders.ics": {
     name: "长假提前提醒",
     summary: "每次法定假期开始前 7 天提醒",
+    cadence: "7 条/年",
     tier: "optional",
     sample_titles: ["春节假期还有 7 天"],
   },
   "life-festivals.ics": {
     name: "生活节日",
     summary: "情人节、母亲节、父亲节、感恩节、圣诞节等",
+    cadence: "8 条/年",
     tier: "optional",
     sample_titles: ["情人节", "母亲节", "圣诞节"],
   },
   "lunar-days.ics": {
     name: "农历初一十五",
     summary: "每个农历月的初一与十五",
+    cadence: "24 条/年",
     tier: "optional",
     sample_titles: ["正月初一", "正月十五"],
   },
   "seasonal.ics": {
     name: "传统时令",
     summary: "七十二候、数九与三伏",
+    cadence: "84 条/年",
     tier: "optional",
     sample_titles: ["东风解冻", "初伏开始"],
   },
   "moon-phases.ics": {
     name: "月相",
     summary: "新月、上弦月、满月、下弦月",
+    cadence: "约 50 条/年",
     tier: "optional",
     sample_titles: ["满月", "上弦月", "新月"],
   },
   "sky-events.ics": {
     name: "重要天象",
     summary: "日月食、流星雨、行星冲日与大距",
+    cadence: "约 26 条/年",
     tier: "optional",
     sample_titles: ["双子座流星雨极大", "木星冲日"],
   },
   "almanac.ics": {
     name: "黄历宜忌",
     summary: "每日宜忌、冲煞与吉神方位",
+    cadence: "每日一条",
     tier: "dense",
     sample_titles: ["宜 祭祀 · 忌 动土", "宜 纳财 · 忌 移徙"],
   },
   "lunar-mansions.ics": {
     name: "二十八星宿",
     summary: "每日值宿与吉凶参考",
+    cadence: "每日一条",
     tier: "dense",
     sample_titles: ["角木蛟 · 吉", "轸水蚓 · 吉"],
   },
@@ -278,7 +291,7 @@ function buildBundleUrls() {
   };
 }
 
-/* Theme */
+/* Theme & Hero Preview Toggle */
 function applyTheme(mode) {
   document.documentElement.dataset.theme = mode;
   const meta = document.querySelector("[data-theme-meta]");
@@ -294,6 +307,18 @@ document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
   } catch {}
 });
 
+for (const heroTab of document.querySelectorAll("[data-hero-mode]")) {
+  heroTab.addEventListener("click", () => {
+    const mode = heroTab.dataset.heroMode;
+    for (const btn of document.querySelectorAll("[data-hero-mode]")) {
+      btn.setAttribute("aria-selected", String(btn === heroTab));
+    }
+    for (const stage of document.querySelectorAll("[data-hero-stage]")) {
+      stage.hidden = stage.dataset.heroStage !== mode;
+    }
+  });
+}
+
 /* Dense Preview Lazy Loader */
 function ensureDensePreviewLoaded() {
   if (densePreviewCache || densePreviewLoading) return;
@@ -306,6 +331,7 @@ function ensureDensePreviewLoaded() {
       if (payload) {
         densePreviewCache = payload;
         renderCalendar();
+        renderSummary();
       }
     })
     .catch(() => {})
@@ -373,10 +399,13 @@ function renderFeedOption(filename, feed) {
       <input type="checkbox" value="${escapeHtml(filename)}" ${checked ? "checked" : ""} />
       <span class="feed-check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="m3.2 8.2 3 3 6.6-6.6" /></svg></span>
       <span class="feed-option-body">
-        <span class="feed-option-title">
-          <i class="feed-dot" aria-hidden="true"></i>
-          <strong>${escapeHtml(feed.name)}</strong>
-          ${feed.featured ? "<em>推荐</em>" : ""}
+        <span class="feed-option-top">
+          <span class="feed-option-title">
+            <i class="feed-dot" aria-hidden="true"></i>
+            <strong>${escapeHtml(feed.name)}</strong>
+            ${feed.featured ? "<em>推荐</em>" : ""}
+          </span>
+          <span class="feed-cadence">${escapeHtml(feed.cadence || "")}</span>
         </span>
         <small>${escapeHtml(feed.summary)}</small>
       </span>
@@ -441,6 +470,7 @@ function renderCalendar() {
 
   eventRegistry.clear();
   dayEventsRegistry.clear();
+  const uniqueMonthUids = new Set();
 
   const grid = document.querySelector("[data-calendar-grid]");
   if (grid) {
@@ -448,7 +478,11 @@ function renderCalendar() {
       .map((week) => {
         const bgCells = week.cells
           .map((cell) => {
-            dayEventsRegistry.set(cell.key, week.eventsByKey[cell.key] || []);
+            const cellEvents = week.eventsByKey[cell.key] || [];
+            dayEventsRegistry.set(cell.key, cellEvents);
+            if (cell.currentMonth) {
+              for (const ev of cellEvents) uniqueMonthUids.add(ev.uid);
+            }
             const lunar = lunarDays[cell.key] || "";
             const isSpecialLunar = lunar === "除夕" || lunar === "春节";
             const isToday = cell.key === previewClock.todayKey;
@@ -520,6 +554,27 @@ function renderCalendar() {
           </div>`;
       })
       .join("");
+  }
+
+  monthlyEventCount = uniqueMonthUids.size;
+  for (const node of document.querySelectorAll("[data-monthly-count]")) {
+    node.textContent = String(monthlyEventCount);
+  }
+
+  const densityPill = document.querySelector("[data-density]");
+  const densityLabel = document.querySelector("[data-density-label]");
+  const hasDense = [...selected].some((item) => feeds[item]?.tier === "dense");
+  if (densityPill && densityLabel) {
+    if (hasDense || monthlyEventCount >= 22) {
+      densityPill.dataset.density = "crowded";
+      densityLabel.textContent = hasDense ? "每日日程" : "较满";
+    } else if (monthlyEventCount >= 10) {
+      densityPill.dataset.density = "balanced";
+      densityLabel.textContent = "适中";
+    } else {
+      densityPill.dataset.density = "quiet";
+      densityLabel.textContent = "清爽";
+    }
   }
 
   renderMobileCalendar(weeks);
@@ -671,7 +726,7 @@ function openEventPopover(ev, anchorEl) {
 function openDayOverflowPopover(dayKey, anchorEl) {
   const list = dayEventsRegistry.get(dayKey) || [];
   if (!list.length || !popover) return;
-  const [y, m, d] = dayKey.split("-").map(Number);
+  const [, m, d] = dayKey.split("-").map(Number);
   popover.querySelector("[data-popover-dot]").style.background = "var(--accent)";
   popover.querySelector("[data-popover-title]").textContent = `${m}月${d}日`;
   popover.querySelector("[data-popover-meta]").textContent = `农历${lunarDays[dayKey] || ""}`;
@@ -704,6 +759,20 @@ function renderSummary() {
     mobileNames.textContent = filenames.length
       ? filenames.map((fn) => feeds[fn].name).join("、")
       : "未选择日历";
+  }
+
+  const messageNode = document.querySelector("[data-selection-message]");
+  if (messageNode) {
+    const hasDense = filenames.some((fn) => feeds[fn]?.tier === "dense");
+    if (!filenames.length) {
+      messageNode.textContent = "请先在左侧勾选至少一项要订阅的日程内容。";
+    } else if (hasDense) {
+      messageNode.textContent = "已包含每日日程频道；建议在弹窗中选择「分开添加」，方便在日历里随时隐藏。";
+    } else if (filenames.length === 1 && filenames[0] === "essential.ics") {
+      messageNode.textContent = "「中国日历」已包含法定班休、传统节日和二十四节气，日常使用选这一项即可。";
+    } else {
+      messageNode.textContent = "点击「添加到日历」可合并为一个日历订阅，也可按频道分开添加并各自设置颜色。";
+    }
   }
 
   const legend = document.querySelector("[data-preview-legend]");
@@ -833,6 +902,7 @@ for (const btn of document.querySelectorAll("[data-month-shift]")) {
     viewMonth = next.month;
     hidePopover();
     renderCalendar();
+    renderSummary();
   });
 }
 
@@ -842,6 +912,7 @@ document.querySelector("[data-month-today]")?.addEventListener("click", () => {
   activeMobileDayKey = previewClock.todayKey;
   hidePopover();
   renderCalendar();
+  renderSummary();
 });
 
 for (const btn of document.querySelectorAll("[data-jump-month]")) {
@@ -851,6 +922,7 @@ for (const btn of document.querySelectorAll("[data-jump-month]")) {
     viewMonth = m;
     hidePopover();
     renderCalendar();
+    renderSummary();
   });
 }
 
@@ -866,21 +938,10 @@ for (const button of document.querySelectorAll("[data-open-subscriptions]")) {
   });
 }
 
-for (const button of document.querySelectorAll("[data-open-help]")) {
-  button.addEventListener("click", () => {
-    hidePopover();
-    if (typeof helpDialog?.showModal === "function") helpDialog.showModal();
-  });
-}
-
 document.querySelector("[data-dialog-close]")?.addEventListener("click", () => subscribeDialog?.close());
-document.querySelector("[data-help-close]")?.addEventListener("click", () => helpDialog?.close());
 
 subscribeDialog?.addEventListener("click", (e) => {
   if (e.target === subscribeDialog) subscribeDialog.close();
-});
-helpDialog?.addEventListener("click", (e) => {
-  if (e.target === helpDialog) helpDialog.close();
 });
 
 for (const tab of document.querySelectorAll("[data-sub-mode]")) {
@@ -1015,8 +1076,17 @@ fetch("manifest.json")
     if (!selected.size) selected = new Set(presets.quiet);
     syncDefaultBundleColor();
 
-    const workRestNode = document.querySelector("[data-work-rest-year]");
-    if (workRestNode) workRestNode.textContent = manifest.confirmed_work_rest_through;
+    for (const node of document.querySelectorAll("[data-work-rest-year]")) {
+      node.textContent = manifest.confirmed_work_rest_through;
+    }
+    const channelCountNode = document.querySelector("[data-channel-count]");
+    if (channelCountNode) {
+      channelCountNode.textContent = String(Object.keys(manifest.feeds || {}).length);
+    }
+    const cultureYearNode = document.querySelector("[data-culture-year]");
+    if (cultureYearNode && manifest.culture_through) {
+      cultureYearNode.textContent = manifest.culture_through;
+    }
 
     render();
   })
